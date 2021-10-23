@@ -1,0 +1,60 @@
+div.enemyahead {
+    position: relative;
+    left: 250px;
+    top: 140px;
+    width: 50px;
+    display: inline;
+}
+
+
+div.enemybehind {
+    position: relative;
+    left: 350px;
+    top: 50px;
+    width: 50px;
+    display: inline;
+}
+
+
+div.meahead {
+    position: relative;
+    left: 90px;
+    top: 320px;
+    width: 50px;
+    display: inline;
+}
+
+
+
+div.mebehind {
+    position: relative;
+    top: 550px;
+    width: 50px;
+    display: inline;
+}
+
+
+div.goaway {
+    position: relative;
+    top: 1000px;
+    width: 50px;
+    display: inline;
+}
+
+div.heading {
+    position: relative;
+    top: 100px;
+    width: 50px;
+    display: inline;
+}
+
+#container {
+    position: absolute;
+    left: 90px;
+    top: 320px;
+}
+
+#containermore {
+
+    display: grid;
+}
