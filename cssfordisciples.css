@@ -63,3 +63,8 @@ div.heading {
     background: aqua;
     opacity: 50%;
 }
+
+.hoverclass:hover {
+    background: red;
+    opacity: 50%;
+}
