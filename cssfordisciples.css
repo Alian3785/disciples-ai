@@ -58,3 +58,8 @@ div.heading {
 
     display: grid;
 }
+
+.onewhomoves {
+    background: aqua;
+    opacity: 50%;
+}

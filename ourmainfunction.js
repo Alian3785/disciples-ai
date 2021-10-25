@@ -1214,7 +1214,6 @@ const creatures = [
 
 // Превращенные в импов
 
-
 animation1_stay.play();
 animation2_stay.play();
 animation3_stay.play();
@@ -1384,6 +1383,18 @@ rect1.onclick = function() {
     attack(0);
     console.log("Атакован 1 контейнер");
 };
+
+rect2.classList.toggle("onewhomoves");
+rect3.classList.toggle("onewhomoves");
+rect4.classList.toggle("onewhomoves");
+rect5.classList.toggle("onewhomoves");
+rect6.classList.toggle("onewhomoves");
+rect7.classList.toggle("onewhomoves");
+rect8.classList.toggle("onewhomoves");
+rect9.classList.toggle("onewhomoves");
+rect10.classList.toggle("onewhomoves");
+rect11.classList.toggle("onewhomoves");
+rect12.classList.toggle("onewhomoves");
 
 /*let cont3 = document.getElementById('other-container3');
 
@@ -2018,6 +2029,46 @@ const nextTurn = () => {
 
     else {
         console.log(creatures[creatures.length - 1]["initiative"]);
+// Отметка кто ходит
+        yourfucknigturn = creatures[0]["id"];
+        console.log(yourfucknigturn);
+        if (yourfucknigturn === 1) {
+            rect1.classList.toggle("onewhomoves");
+        }
+        if (yourfucknigturn === 2) {
+            rect2.classList.toggle("onewhomoves");
+        }
+        if (yourfucknigturn === 3) {
+            rect3.classList.toggle("onewhomoves");
+        }
+        if (yourfucknigturn === 4) {
+            rect4.classList.toggle("onewhomoves");
+        }
+        if (yourfucknigturn === 5) {
+            rect5.classList.toggle("onewhomoves");
+        }
+        if (yourfucknigturn === 6) {
+            rect6.classList.toggle("onewhomoves");
+        }
+        if (yourfucknigturn === 7) {
+            rect7.classList.toggle("onewhomoves");
+        }
+        if (yourfucknigturn === 8) {
+            rect8.classList.toggle("onewhomoves");
+        }
+        if (yourfucknigturn === 9) {
+            rect9.classList.toggle("onewhomoves");
+        }
+        if (yourfucknigturn === 10) {
+            rect10.classList.toggle("onewhomoves");
+        }
+        if (yourfucknigturn === 11) {
+            rect11.classList.toggle("onewhomoves");
+        }
+        if (yourfucknigturn === 12) {
+            rect12.classList.toggle("onewhomoves");
+        }
+
 if (creatures[creatures.length - 1]["initiative"] > 1) {
     attackerCreature.initiative = attackerCreature.initiative - 200;
 }
@@ -2374,6 +2425,45 @@ else {}
         console.log((aliveCreatures.indexOf(attackerCreature) + 1) % aliveCreatures.length)
         console.log((aliveCreatures.indexOf(attackerCreature) + 1) % aliveCreatures.length)
         console.log((aliveCreatures.indexOf(attackerCreature) + 1) % aliveCreatures.length)
+    }
+
+    yourfucknigturn = creatures[0]["id"];
+    console.log(yourfucknigturn);
+    if (yourfucknigturn === 1) {
+        rect1.classList.toggle("onewhomoves");
+    }
+    if (yourfucknigturn === 2) {
+        rect2.classList.toggle("onewhomoves");
+    }
+    if (yourfucknigturn === 3) {
+        rect3.classList.toggle("onewhomoves");
+    }
+    if (yourfucknigturn === 4) {
+        rect4.classList.toggle("onewhomoves");
+    }
+    if (yourfucknigturn === 5) {
+        rect5.classList.toggle("onewhomoves");
+    }
+    if (yourfucknigturn === 6) {
+        rect6.classList.toggle("onewhomoves");
+    }
+    if (yourfucknigturn === 7) {
+        rect7.classList.toggle("onewhomoves");
+    }
+    if (yourfucknigturn === 8) {
+        rect8.classList.toggle("onewhomoves");
+    }
+    if (yourfucknigturn === 9) {
+        rect9.classList.toggle("onewhomoves");
+    }
+    if (yourfucknigturn === 10) {
+        rect10.classList.toggle("onewhomoves");
+    }
+    if (yourfucknigturn === 11) {
+        rect11.classList.toggle("onewhomoves");
+    }
+    if (yourfucknigturn === 12) {
+        rect12.classList.toggle("onewhomoves");
     }
 }
 
