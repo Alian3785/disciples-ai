@@ -562,6 +562,127 @@ let animation2_magic = bodymovin.loadAnimation({
     name: "Demo Animation", // optional
 });
 
+let animation1_death = bodymovin.loadAnimation({
+
+    container: document.getElementById('death-container'), // required
+    path: 'forbeta/humandeath.json', // required
+    renderer: 'svg', // required
+    loop: false, // optional
+    autoplay: false, // optional
+    name: "Demo Animation", // optional
+});
+
+let animation2_death = bodymovin.loadAnimation({
+
+    container: document.getElementById('death-container2'), // required
+    path: 'forbeta/humandeath.json', // required
+    renderer: 'svg', // required
+    loop: false, // optional
+    autoplay: false, // optional
+    name: "Demo Animation", // optional
+});
+
+let animation3_death = bodymovin.loadAnimation({
+
+    container: document.getElementById('death-container3'), // required
+    path: 'forbeta/humandeath.json', // required
+    renderer: 'svg', // required
+    loop: false, // optional
+    autoplay: false, // optional
+    name: "Demo Animation", // optional
+});
+
+let animation4_death = bodymovin.loadAnimation({
+
+    container: document.getElementById('death-container4'), // required
+    path: 'forbeta/humandeath.json', // required
+    renderer: 'svg', // required
+    loop: false, // optional
+    autoplay: false, // optional
+    name: "Demo Animation", // optional
+});
+
+let animation5_death = bodymovin.loadAnimation({
+
+    container: document.getElementById('death-container5'), // required
+    path: 'forbeta/humandeath.json', // required
+    renderer: 'svg', // required
+    loop: false, // optional
+    autoplay: false, // optional
+    name: "Demo Animation", // optional
+});
+
+let animation6_death = bodymovin.loadAnimation({
+
+    container: document.getElementById('death-container6'), // required
+    path: 'forbeta/humandeath.json', // required
+    renderer: 'svg', // required
+    loop: false, // optional
+    autoplay: false, // optional
+    name: "Demo Animation", // optional
+});
+
+let animation7_death = bodymovin.loadAnimation({
+
+    container: document.getElementById('death-container7'), // required
+    path: 'forbeta/humandeath.json', // required
+    renderer: 'svg', // required
+    loop: false, // optional
+    autoplay: false, // optional
+    name: "Demo Animation", // optional
+});
+
+let animation8_death = bodymovin.loadAnimation({
+
+    container: document.getElementById('death-container8'), // required
+    path: 'forbeta/humandeath.json', // required
+    renderer: 'svg', // required
+    loop: false, // optional
+    autoplay: false, // optional
+    name: "Demo Animation", // optional
+});
+
+let animation9_death = bodymovin.loadAnimation({
+
+    container: document.getElementById('death-container9'), // required
+    path: 'forbeta/humandeath.json', // required
+    renderer: 'svg', // required
+    loop: false, // optional
+    autoplay: false, // optional
+    name: "Demo Animation", // optional
+});
+
+let animation10_death = bodymovin.loadAnimation({
+
+    container: document.getElementById('death-container10'), // required
+    path: 'forbeta/humandeath.json', // required
+    renderer: 'svg', // required
+    loop: false, // optional
+    autoplay: false, // optional
+    name: "Demo Animation", // optional
+});
+
+let animation11_death = bodymovin.loadAnimation({
+
+    container: document.getElementById('death-container11'), // required
+    path: 'forbeta/humandeath.json', // required
+    renderer: 'svg', // required
+    loop: false, // optional
+    autoplay: false, // optional
+    name: "Demo Animation", // optional
+});
+
+let animation12_death = bodymovin.loadAnimation({
+
+    container: document.getElementById('death-container12'), // required
+    path: 'forbeta/humandeath.json', // required
+    renderer: 'svg', // required
+    loop: false, // optional
+    autoplay: false, // optional
+    name: "Demo Animation", // optional
+});
+
+
 
 const creatures = [
     {
@@ -574,7 +695,7 @@ const creatures = [
     position: 3,
     type: "archer",
     who: "Прорицательница",
-        initiative: 130,
+        initiative: 35,
         realinit: 130,
     paralized: 0,
         petrification: 0,
@@ -610,6 +731,9 @@ const creatures = [
         },
         animmagic: function() {
             animation1_magic.playSegments([0, 46], true);
+        },
+        animdeath: function() {
+            animation1_death.playSegments([0, 46], true);
         },
         sound: function() {
             sound1.play();
@@ -664,6 +788,9 @@ const creatures = [
         animmagic: function() {
             animation2_magic.playSegments([0, 46], true);
         },
+        animdeath: function() {
+            animation2_death.playSegments([0, 46], true);
+        },
         sound: function() {
             sound2.play();
         },
@@ -716,6 +843,9 @@ const creatures = [
         },
         animmagic: function() {
             animation3_magic.playSegments([0, 46], true);
+        },
+        animdeath: function() {
+            animation3_death.playSegments([0, 46], true);
         },
         sound: function() {
             sound3.play();
@@ -770,6 +900,9 @@ const creatures = [
         animmagic: function() {
             animation4_magic.playSegments([0, 46], true);
         },
+        animdeath: function() {
+            animation4_death.playSegments([0, 46], true);
+        },
         sound: function() {
             sound4.play();
         },
@@ -822,6 +955,9 @@ const creatures = [
         },
         animmagic: function() {
             animation5_magic.playSegments([0, 46], true);
+        },
+        animdeath: function() {
+            animation5_death.playSegments([0, 46], true);
         },
         sound: function() {
             sound6.play();
@@ -876,6 +1012,9 @@ const creatures = [
         animmagic: function() {
             animation6_magic.playSegments([0, 46], true);
         },
+        animdeath: function() {
+            animation6_death.playSegments([0, 46], true);
+        },
         sound: function() {
             sound7.play();
         },
@@ -928,6 +1067,9 @@ const creatures = [
         },
         animmagic: function() {
             animation7_magic.playSegments([0, 46], true);
+        },
+        animdeath: function() {
+            animation7_death.playSegments([0, 46], true);
         },
         sound: function() {
             sound8.play();
@@ -983,6 +1125,9 @@ const creatures = [
         animmagic: function() {
             animation8_magic.playSegments([0, 46], true);
         },
+        animdeath: function() {
+            animation8_death.playSegments([0, 46], true);
+        },
         sound: function () {
             sound1.play();
         },
@@ -1035,6 +1180,9 @@ const creatures = [
         },
         animmagic: function() {
             animation9_magic.playSegments([0, 46], true);
+        },
+        animdeath: function() {
+            animation9_death.playSegments([0, 46], true);
         },
         sound: function() {
             sound9.play();
@@ -1089,6 +1237,9 @@ const creatures = [
         animmagic: function() {
             animation10_magic.playSegments([0, 46], true);
         },
+        animdeath: function() {
+            animation10_death.playSegments([0, 46], true);
+        },
         sound: function() {
             sound10.play();
         },
@@ -1142,6 +1293,9 @@ const creatures = [
         },
         animmagic: function() {
             animation11_magic.playSegments([0, 46], true);
+        },
+        animdeath: function() {
+            animation11_death.playSegments([0, 46], true);
         },
         sound: function() {
             sound11.play();
@@ -1199,6 +1353,9 @@ const creatures = [
         },
         animmagic: function() {
             animation12_magic.playSegments([0, 46], true);
+        },
+        animdeath: function() {
+            animation12_death.playSegments([0, 46], true);
         },
         sound: function() {
             sound12.play();
@@ -1274,6 +1431,20 @@ document.getElementById("weapon-container9").style.visibility = "hidden";
 document.getElementById("weapon-container10").style.visibility = "hidden";
 document.getElementById("weapon-container11").style.visibility = "hidden";
 document.getElementById("weapon-container12").style.visibility = "hidden";
+
+document.getElementById("death-container").style.visibility = "hidden";
+document.getElementById("death-container2").style.visibility = "hidden";
+document.getElementById("death-container3").style.visibility = "hidden";
+document.getElementById("death-container4").style.visibility = "hidden";
+document.getElementById("death-container5").style.visibility = "hidden";
+document.getElementById("death-container6").style.visibility = "hidden";
+document.getElementById("death-container7").style.visibility = "hidden";
+document.getElementById("death-container8").style.visibility = "hidden";
+document.getElementById("death-container9").style.visibility = "hidden";
+document.getElementById("death-container10").style.visibility = "hidden";
+document.getElementById("death-container11").style.visibility = "hidden";
+document.getElementById("death-container12").style.visibility = "hidden";
+
 
 //document.getElementById("mage-container").style.visibility = "hidden";
 //document.getElementById("mage-container2").style.visibility = "hidden";
@@ -1384,6 +1555,9 @@ rect1.onclick = function() {
     console.log("Атакован 1 контейнер");
 };
 
+sortByinit(creatures);
+
+rect1.classList.toggle("onewhomoves");
 rect2.classList.toggle("onewhomoves");
 rect3.classList.toggle("onewhomoves");
 rect4.classList.toggle("onewhomoves");
@@ -1395,6 +1569,46 @@ rect9.classList.toggle("onewhomoves");
 rect10.classList.toggle("onewhomoves");
 rect11.classList.toggle("onewhomoves");
 rect12.classList.toggle("onewhomoves");
+
+yourfucknigturn = creatures[0]["id"];
+console.log(yourfucknigturn);
+
+if (yourfucknigturn === 1) {
+    rect1.classList.toggle("onewhomoves");
+}
+if (yourfucknigturn === 2) {
+    rect2.classList.toggle("onewhomoves");
+}
+if (yourfucknigturn === 3) {
+    rect3.classList.toggle("onewhomoves");
+}
+if (yourfucknigturn === 4) {
+    rect4.classList.toggle("onewhomoves");
+}
+if (yourfucknigturn === 5) {
+    rect5.classList.toggle("onewhomoves");
+}
+if (yourfucknigturn === 6) {
+    rect6.classList.toggle("onewhomoves");
+}
+if (yourfucknigturn === 7) {
+    rect7.classList.toggle("onewhomoves");
+}
+if (yourfucknigturn === 8) {
+    rect8.classList.toggle("onewhomoves");
+}
+if (yourfucknigturn === 9) {
+    rect9.classList.toggle("onewhomoves");
+}
+if (yourfucknigturn === 10) {
+    rect10.classList.toggle("onewhomoves");
+}
+if (yourfucknigturn === 11) {
+    rect11.classList.toggle("onewhomoves");
+}
+if (yourfucknigturn === 12) {
+    rect12.classList.toggle("onewhomoves");
+}
 
 /*let cont3 = document.getElementById('other-container3');
 
@@ -2030,7 +2244,10 @@ const nextTurn = () => {
     else {
         console.log(creatures[creatures.length - 1]["initiative"]);
 // Отметка кто ходит
-        yourfucknigturn = creatures[0]["id"];
+        let newstillaliveCreatures = creatures
+            .filter(creature => (creature.health > 0))
+            .filter(creature => (creature.initiative > 0))
+        yourfucknigturn = newstillaliveCreatures[0]["id"];
         console.log(yourfucknigturn);
         if (yourfucknigturn === 1) {
             rect1.classList.toggle("onewhomoves");
@@ -2427,7 +2644,11 @@ else {}
         console.log((aliveCreatures.indexOf(attackerCreature) + 1) % aliveCreatures.length)
     }
 
-    yourfucknigturn = creatures[0]["id"];
+    let newstillaliveCreatures = creatures
+        .filter(creature => (creature.health > 0))
+        .filter(creature => (creature.initiative > 0))
+
+    yourfucknigturn = newstillaliveCreatures[0]["id"];
     console.log(yourfucknigturn);
     if (yourfucknigturn === 1) {
         rect1.classList.toggle("onewhomoves");
@@ -2465,6 +2686,22 @@ else {}
     if (yourfucknigturn === 12) {
         rect12.classList.toggle("onewhomoves");
     }
+
+    // кто-то умер
+    creatures.map(function(name) {
+
+        someoneisdead = name["health"];
+        console.log(someoneisdead);
+        if (someoneisdead <= 0)
+        {
+            name.animat('stay', true);
+            name.animat('death', false);
+            name.animdeath();
+            console.log("разве ты не мертв")
+        }
+
+    })
+
 }
 
 
