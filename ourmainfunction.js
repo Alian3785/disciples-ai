@@ -1679,6 +1679,33 @@ animation2_attack.addEventListener('enterFrame', () => {
     }
 });
 
+animation1_death.addEventListener('enterFrame', () => {
+    animation1_death.setSubframe(false);
+    if (animation1_death.currentFrame === 45)
+        {
+            creatures[0].animat('death', true);
+            creatures[0].animat('stay', true);
+        }
+    });
+
+animation2_death.addEventListener('enterFrame', () => {
+    animation2_death.setSubframe(false);
+    if (animation1_death.currentFrame === 45)
+     {
+         creatures[0].animat('death', true);
+         creatures[0].animat('stay', true);
+        }
+    });
+
+animation3_death.addEventListener('enterFrame', () => {
+    animation3_death.setSubframe(false);
+    if (animation3_death.currentFrame === 45)
+    {
+        creatures[0].animat('death', true);
+        creatures[0].animat('stay', true);
+    }
+});
+
 animation1_attack.addEventListener('enterFrame', () => {
     animation1_attack.setSubframe(false);
     if (animation1_attack.currentFrame === 45) {
