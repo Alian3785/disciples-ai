@@ -1706,6 +1706,15 @@ animation3_death.addEventListener('enterFrame', () => {
     }
 });
 
+animation4_death.addEventListener('enterFrame', () => {
+    animation4_death.setSubframe(false);
+    if (animation4_death.currentFrame === 45)
+    {
+        creatures[0].animat('death', true);
+        creatures[0].animat('stay', true);
+    }
+});
+
 animation1_attack.addEventListener('enterFrame', () => {
     animation1_attack.setSubframe(false);
     if (animation1_attack.currentFrame === 45) {
