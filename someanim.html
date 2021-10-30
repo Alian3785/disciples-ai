@@ -1,0 +1,15 @@
+
+
+<script src="https://cdnjs.com/libraries/bodymovin" type="text/javascript"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+<div id="bm"> </div>
+
+<script> const animation = bodymovin.loadAnimation({
+  container: document.getElementById("bm"),
+  path: 'data.json', // Required
+  renderer: 'svg', // Required
+  loop: true, // Optional
+  autoplay: true, // Optional
+});
+</script>
