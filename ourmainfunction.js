@@ -55,7 +55,7 @@ const sound12 = new Howl({
 let animation1_attack = bodymovin.loadAnimation({
 
     container: document.getElementById('attack-container'), // required
-    path: '/forbeta/attackstrelok.json', // required
+    path: 'forbeta/attackstrelok.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -65,7 +65,7 @@ let animation1_attack = bodymovin.loadAnimation({
 let animation1_stay = bodymovin.loadAnimation({
 
     container: document.getElementById('stay-container'), // required
-    path: '/forbeta/staystrelok.json', // required
+    path: 'forbeta/staystrelok.json', // required
     renderer: 'svg', // required
     loop: true, // optional
     autoplay: false, // optional
@@ -75,7 +75,7 @@ let animation1_stay = bodymovin.loadAnimation({
 let animation1_hurt = bodymovin.loadAnimation({
 
     container: document.getElementById('hurt-container'), // required
-    path: '/forbeta/hurtstrelok.json', // required
+    path: 'forbeta/hurtstrelok.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -85,7 +85,7 @@ let animation1_hurt = bodymovin.loadAnimation({
 let animation1_weapon = bodymovin.loadAnimation({
 
     container: document.getElementById('weapon-container'), // required
-    path: '/forbeta/weaponstrelok.json', // required
+    path: 'forbeta/weaponstrelok.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
