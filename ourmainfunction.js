@@ -890,7 +890,7 @@ const creatures = [
         alive: 1,
         id: 4,
         animattack: function() {
-            animation4_attack.playSegments([0, 46], true);
+            animation4_attack.playSegments([0, 56], true);
         },
         animstay: function() {
             animation4_stay.play();
@@ -962,7 +962,7 @@ const creatures = [
             animation5_magic.playSegments([0, 46], true);
         },
         animdeath: function() {
-            animation5_death.playSegments([0, 46], true);
+            animation5_death.playSegments([0, 56], true);
         },
         sound: function() {
             sound6.play();
@@ -1019,7 +1019,7 @@ const creatures = [
             animation6_magic.playSegments([0, 46], true);
         },
         animdeath: function() {
-            animation6_death.playSegments([0, 46], true);
+            animation6_death.playSegments([0, 56], true);
         },
         sound: function() {
             sound7.play();
@@ -1076,7 +1076,7 @@ const creatures = [
             animation7_magic.playSegments([0, 46], true);
         },
         animdeath: function() {
-            animation7_death.playSegments([0, 46], true);
+            animation7_death.playSegments([0, 56], true);
         },
         sound: function() {
             sound8.play();
@@ -1134,7 +1134,7 @@ const creatures = [
             animation8_magic.playSegments([0, 46], true);
         },
         animdeath: function() {
-            animation8_death.playSegments([0, 46], true);
+            animation8_death.playSegments([0, 56], true);
         },
         sound: function () {
             sound1.play();
@@ -1191,7 +1191,7 @@ const creatures = [
             animation9_magic.playSegments([0, 46], true);
         },
         animdeath: function() {
-            animation9_death.playSegments([0, 46], true);
+            animation9_death.playSegments([0, 56], true);
         },
         sound: function() {
             sound9.play();
@@ -1864,8 +1864,6 @@ animation9_death.addEventListener('enterFrame', () => {
     }
 });
 
-// поменять смерть на 46
-
 animation4_death.addEventListener('enterFrame', () => {
     animation4_death.setSubframe(false);
     if (animation4_death.currentFrame === 55)
@@ -1891,10 +1889,12 @@ animation1_attack.addEventListener('enterFrame', () => {
             })
         }
         else {
-            globalattacker.realattacker.animat('attack', true);
-            globalattacker.realattacker.animat('stay', false);
-            globalattacked.realattacked.animat('stay', false);
-            globalattacked.realattacked.animat('hurt', true);
+            if (globalattacker.realattacker.health > 0) {
+                globalattacker.realattacker.animat('attack', true);
+                globalattacker.realattacker.animat('stay', false);
+                globalattacked.realattacked.animat('stay', false);
+                globalattacked.realattacked.animat('hurt', true);
+            }
         }
     }
 });
@@ -1924,10 +1924,12 @@ animation1_attack.addEventListener('enterFrame', () => {
             globalattacker.realattacker.animat('stay', false);
         }
         else {
-            globalattacked.realattacked.animat('hurt', false);
-            globalattacked.realattacked.animat('stay', true);
-            globalattacker.realattacker.animat('weapon', true);
-            globalattacked.realattacked.animhurt();
+            if (globalattacker.realattacker.health > 0) {
+                globalattacked.realattacked.animat('hurt', false);
+                globalattacked.realattacked.animat('stay', true);
+                globalattacker.realattacker.animat('weapon', true);
+                globalattacked.realattacked.animhurt();
+            }
         }
     }
 });
@@ -2158,10 +2160,12 @@ animation11_attack.addEventListener('enterFrame', () => {
             //document.getElementById("mage-container").style.visibility = "hidden";
         }
         else {
-            globalattacker.realattacker.animat('attack', true);
-            globalattacker.realattacker.animat('stay', false);
-            globalattacked.realattacked.animat('stay', false);
-            globalattacked.realattacked.animat('hurt', true);
+            if (globalattacker.realattacker.health > 0) {
+                globalattacker.realattacker.animat('attack', true);
+                globalattacker.realattacker.animat('stay', false);
+                globalattacked.realattacked.animat('stay', false);
+                globalattacked.realattacked.animat('hurt', true);
+            }
         }
     }
 });
