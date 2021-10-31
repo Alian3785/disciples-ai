@@ -716,6 +716,7 @@ const creatures = [
         armor: 0.2,
         defensearmor: 0,
         accuracy: [1, 0.1],
+        alive: 1,
         id: 1,
         animattack: function() {
             animation1_attack.playSegments([0, 46], true);
@@ -733,7 +734,7 @@ const creatures = [
             animation1_magic.playSegments([0, 46], true);
         },
         animdeath: function() {
-            animation1_death.playSegments([0, 46], true);
+            animation1_death.playSegments([0, 56], true);
         },
         sound: function() {
             sound1.play();
@@ -772,6 +773,7 @@ const creatures = [
         armor: 0,
         defensearmor: 0,
         accuracy: [0.8],
+        alive: 1,
         id: 2,
         animattack: function() {
             animation2_attack.playSegments([0, 46], true);
@@ -789,7 +791,7 @@ const creatures = [
             animation2_magic.playSegments([0, 46], true);
         },
         animdeath: function() {
-            animation2_death.playSegments([0, 46], true);
+            animation2_death.playSegments([0, 56], true);
         },
         sound: function() {
             sound2.play();
@@ -828,6 +830,7 @@ const creatures = [
         armor: 0,
         defensearmor: 0,
         accuracy: [0.8],
+        alive: 1,
         id: 3,
         animattack: function() {
             animation3_attack.playSegments([0, 46], true);
@@ -845,7 +848,7 @@ const creatures = [
             animation3_magic.playSegments([0, 46], true);
         },
         animdeath: function() {
-            animation3_death.playSegments([0, 46], true);
+            animation3_death.playSegments([0, 56], true);
         },
         sound: function() {
             sound3.play();
@@ -884,6 +887,7 @@ const creatures = [
         armor: 0,
         defensearmor: 0,
         accuracy: [0.8],
+        alive: 1,
         id: 4,
         animattack: function() {
             animation4_attack.playSegments([0, 46], true);
@@ -901,7 +905,7 @@ const creatures = [
             animation4_magic.playSegments([0, 46], true);
         },
         animdeath: function() {
-            animation4_death.playSegments([0, 46], true);
+            animation4_death.playSegments([0, 56], true);
         },
         sound: function() {
             sound4.play();
@@ -940,6 +944,7 @@ const creatures = [
         armor: 0.5,
         defensearmor: 0,
         accuracy: [0.7],
+        alive: 1,
         id: 6,
         animattack: function() {
             animation6_attack.playSegments([0, 46], true);
@@ -996,6 +1001,7 @@ const creatures = [
         armor: 0.5,
         defensearmor: 0,
         accuracy: [0.8],
+        alive: 1,
         id: 7,
         animattack: function() {
             animation7_attack.playSegments([0, 46], true);
@@ -1052,6 +1058,7 @@ const creatures = [
         armor: 0.2,
         defensearmor: 0,
         accuracy: [1],
+        alive: 1,
         id: 8,
         animattack: function() {
             animation8_attack.playSegments([0, 46], true);
@@ -1109,6 +1116,7 @@ const creatures = [
         armor: 0.2,
         defensearmor: 0,
         accuracy: [0.8],
+        alive: 1,
         id: 5,
         animattack: function () {
             animation5_attack.playSegments([0, 46], true);
@@ -1165,6 +1173,7 @@ const creatures = [
         armor: 0,
         defensearmor: 0,
         accuracy: [0.5],
+        alive: 1,
         id: 9,
         animattack: function() {
             animation9_attack.playSegments([0, 46], true);
@@ -1221,6 +1230,7 @@ const creatures = [
         armor: 0,
         defensearmor: 0,
         accuracy: [0.8, 0.7],
+        alive: 1,
         id: 10,
         animattack: function() {
             animation10_attack.playSegments([0, 46], true);
@@ -1278,6 +1288,7 @@ const creatures = [
         armor: 0,
         defensearmor: 0,
         accuracy: [1],
+        alive: 1,
         id: 11,
         animattack: function() {
             animation11_attack.playSegments([0, 46], true);
@@ -1338,6 +1349,7 @@ const creatures = [
         armor: 0,
         defensearmor: 0,
         accuracy: [1],
+        alive: 1,
         id: 12,
         animattack: function() {
             animation12_attack.playSegments([0, 46], true);
@@ -1632,6 +1644,7 @@ animation2_attack.addEventListener('enterFrame', () => {
             console.log(globalattacked.realattacked.team);
             animmagicteam = creatures
                 .filter(creature => creature.team === globalattacked.realattacked.team)
+                .filter(creature => creature.health > 0)
             animmagicteam.map(function (name) {
                 console.log(name);
                 name.animat('stay', false);
@@ -1661,6 +1674,7 @@ animation2_attack.addEventListener('enterFrame', () => {
             globalattacker.realattacker.animat('stay', false);
             animmagicteam = creatures
                 .filter(creature => creature.team === globalattacked.realattacked.team)
+                .filter(creature => creature.health > 0)
             animmagicteam.map(function (name) {
                 console.log(name);
                 name.animat('hurt', false);
@@ -1681,34 +1695,180 @@ animation2_attack.addEventListener('enterFrame', () => {
 
 animation1_death.addEventListener('enterFrame', () => {
     animation1_death.setSubframe(false);
-    if (animation1_death.currentFrame === 45)
+    if (animation1_death.currentFrame === 55)
         {
-            creatures[0].animat('death', true);
-            creatures[0].animat('stay', true);
+            creatures.map(function(name) {
+
+                someoneisskull = name["health"];
+                console.log(someoneisdead);
+                if (someoneisskull <= 0)
+                {
+                    name.animat('death', true);
+                    name.animat('stay', true);
+                    name.animat('hurt', true);
+                    name.alive = 2;
+                }
+            })
         }
     });
 
 animation2_death.addEventListener('enterFrame', () => {
     animation2_death.setSubframe(false);
-    if (animation1_death.currentFrame === 45)
-     {
-         creatures[0].animat('death', true);
-         creatures[0].animat('stay', true);
-        }
-    });
+    if (animation2_death.currentFrame === 55)
+    {
+        creatures.map(function(name) {
+
+            someoneisskull = name["health"];
+            console.log(someoneisdead);
+            if (someoneisskull <= 0)
+            {
+                name.animat('death', true);
+                name.animat('stay', true);
+                name.animat('hurt', true);
+                name.alive = 2;
+            }
+        })
+    }
+});
 
 animation3_death.addEventListener('enterFrame', () => {
     animation3_death.setSubframe(false);
-    if (animation3_death.currentFrame === 45)
+    if (animation3_death.currentFrame === 55)
     {
-        creatures[0].animat('death', true);
-        creatures[0].animat('stay', true);
+        creatures.map(function(name) {
+
+            someoneisskull = name["health"];
+            console.log(someoneisdead);
+            if (someoneisskull <= 0)
+            {
+                name.animat('death', true);
+                name.animat('stay', true);
+                name.animat('hurt', true);
+                name.alive = 2;
+            }
+        })
     }
 });
 
 animation4_death.addEventListener('enterFrame', () => {
     animation4_death.setSubframe(false);
-    if (animation4_death.currentFrame === 45)
+    if (animation4_death.currentFrame === 55)
+    {
+        creatures.map(function(name) {
+
+            someoneisskull = name["health"];
+            console.log(someoneisdead);
+            if (someoneisskull <= 0)
+            {
+                name.animat('death', true);
+                name.animat('stay', true);
+                name.animat('hurt', true);
+                name.alive = 2;
+            }
+        })
+    }
+});
+
+animation5_death.addEventListener('enterFrame', () => {
+    animation5_death.setSubframe(false);
+    if (animation5_death.currentFrame === 55)
+    {
+        creatures.map(function(name) {
+
+            someoneisskull = name["health"];
+            console.log(someoneisdead);
+            if (someoneisskull <= 0)
+            {
+                name.animat('death', true);
+                name.animat('stay', true);
+                name.animat('hurt', true);
+                name.alive = 2;
+            }
+        })
+    }
+});
+
+animation6_death.addEventListener('enterFrame', () => {
+    animation6_death.setSubframe(false);
+    if (animation6_death.currentFrame === 55)
+    {
+        creatures.map(function(name) {
+
+            someoneisskull = name["health"];
+            console.log(someoneisdead);
+            if (someoneisskull <= 0)
+            {
+                name.animat('death', true);
+                name.animat('stay', true);
+                name.animat('hurt', true);
+                name.alive = 2;
+            }
+        })
+    }
+});
+
+animation7_death.addEventListener('enterFrame', () => {
+    animation7_death.setSubframe(false);
+    if (animation7_death.currentFrame === 55)
+    {
+        creatures.map(function(name) {
+
+            someoneisskull = name["health"];
+            console.log(someoneisdead);
+            if (someoneisskull <= 0)
+            {
+                name.animat('death', true);
+                name.animat('stay', true);
+                name.animat('hurt', true);
+                name.alive = 2;
+            }
+        })
+    }
+});
+
+animation8_death.addEventListener('enterFrame', () => {
+    animation8_death.setSubframe(false);
+    if (animation8_death.currentFrame === 55)
+    {
+        creatures.map(function(name) {
+
+            someoneisskull = name["health"];
+            console.log(someoneisdead);
+            if (someoneisskull <= 0)
+            {
+                name.animat('death', true);
+                name.animat('stay', true);
+                name.animat('hurt', true);
+                name.alive = 2;
+            }
+        })
+    }
+});
+
+animation9_death.addEventListener('enterFrame', () => {
+    animation9_death.setSubframe(false);
+    if (animation9_death.currentFrame === 55)
+    {
+        creatures.map(function(name) {
+
+            someoneisskull = name["health"];
+            console.log(someoneisdead);
+            if (someoneisskull <= 0)
+            {
+                name.animat('death', true);
+                name.animat('stay', true);
+                name.animat('hurt', true);
+                name.alive = 2;
+            }
+        })
+    }
+});
+
+// поменять смерть на 46
+
+animation4_death.addEventListener('enterFrame', () => {
+    animation4_death.setSubframe(false);
+    if (animation4_death.currentFrame === 55)
     {
         creatures[0].animat('death', true);
         creatures[0].animat('stay', true);
@@ -1723,6 +1883,7 @@ animation1_attack.addEventListener('enterFrame', () => {
             console.log(globalattacked.realattacked.team);
             animmagicteam = creatures
                 .filter(creature => creature.team === globalattacked.realattacked.team)
+                .filter(creature => creature.health > 0)
             animmagicteam.map(function (name) {
                 console.log(name);
                 name.animat('stay', false);
@@ -1752,6 +1913,7 @@ animation1_attack.addEventListener('enterFrame', () => {
             globalattacker.realattacker.animat('stay', false);
             animmagicteam = creatures
                 .filter(creature => creature.team === globalattacked.realattacked.team)
+                .filter(creature => creature.health > 0)
             animmagicteam.map(function (name) {
                 console.log(name);
                 name.animat('hurt', false);
@@ -1779,6 +1941,7 @@ animation3_attack.addEventListener('enterFrame', () => {
         console.log(globalattacked.realattacked.team);
         animmagicteam = creatures
             .filter(creature => creature.team === globalattacked.realattacked.team)
+            .filter(creature => creature.health > 0)
         animmagicteam.map(function(name) {
             console.log(name);
             name.animhurt();
@@ -1814,6 +1977,7 @@ animation4_attack.addEventListener('enterFrame', () => {
         console.log(globalattacked.realattacked.team);
         animmagicteam = creatures
             .filter(creature => creature.team === globalattacked.realattacked.team)
+            .filter(creature => creature.health > 0)
         animmagicteam.map(function(name) {
             name.animhurt();
         })
@@ -1985,6 +2149,7 @@ animation11_attack.addEventListener('enterFrame', () => {
             console.log(globalattacked.realattacked.team);
             animmagicteam = creatures
                 .filter(creature => creature.team === globalattacked.realattacked.team)
+                .filter(creature => creature.health > 0)
             animmagicteam.map(function (name) {
                 console.log(name);
                 name.animat('stay', false);
@@ -2017,6 +2182,7 @@ animation11_attack.addEventListener('enterFrame', () => {
             globalattacker.realattacker.animat('stay', false);
             animmagicteam = creatures
                 .filter(creature => creature.team === globalattacked.realattacked.team)
+                .filter(creature => creature.health > 0)
             animmagicteam.map(function (name) {
                 console.log(name);
                 name.animat('hurt', false);
@@ -2043,6 +2209,7 @@ animation12_attack.addEventListener('enterFrame', () => {
             console.log(globalattacked.realattacked.team);
             animmagicteam = creatures
                 .filter(creature => creature.team === globalattacked.realattacked.team)
+                .filter(creature => creature.health > 0)
             animmagicteam.map(function (name) {
                 console.log(name);
                 name.animat('stay', false);
@@ -2073,6 +2240,7 @@ animation12_attack.addEventListener('enterFrame', () => {
             globalattacker.realattacker.animat('stay', false);
             animmagicteam = creatures
                 .filter(creature => creature.team === globalattacked.realattacked.team)
+                .filter(creature => creature.health > 0)
             animmagicteam.map(function (name) {
                 console.log(name);
                 name.animat('hurt', false);
@@ -2730,14 +2898,28 @@ else {}
         console.log(someoneisdead);
         if (someoneisdead <= 0)
         {
-            name.animat('stay', true);
-            name.animat('death', false);
-            name.animdeath();
-            console.log("разве ты не мертв")
+            if (name.alive === 1) {
+                name.animat('stay', true);
+                name.animat('death', false);
+                name.animdeath();
+                name.alive = 0;
+                console.log("разве ты не мертв")
+            }
         }
 
     })
 
+    creatures.map(function(name) {
+
+        someoneisskull2 = name.alive;
+        if (someoneisskull2 === 2)
+        {
+            name.animat('death', true);
+            name.animat('stay', true);
+            name.animat('hurt', true);
+        }
+    })
+    // это может помочь избавиться от артефактов weapon
 }
 
 
