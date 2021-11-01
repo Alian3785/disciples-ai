@@ -655,7 +655,7 @@ let animation9_death = bodymovin.loadAnimation({
 let animation10_death = bodymovin.loadAnimation({
 
     container: document.getElementById('death-container10'), // required
-    path: 'forbeta/humandeath.json', // required
+    path: 'forbeta/demondeath.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -665,7 +665,7 @@ let animation10_death = bodymovin.loadAnimation({
 let animation11_death = bodymovin.loadAnimation({
 
     container: document.getElementById('death-container11'), // required
-    path: 'forbeta/humandeath.json', // required
+    path: 'forbeta/demondeath.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -675,7 +675,7 @@ let animation11_death = bodymovin.loadAnimation({
 let animation12_death = bodymovin.loadAnimation({
 
     container: document.getElementById('death-container12'), // required
-    path: 'forbeta/humandeath.json', // required
+    path: 'forbeta/demondeath.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -1848,6 +1848,63 @@ animation8_death.addEventListener('enterFrame', () => {
 animation9_death.addEventListener('enterFrame', () => {
     animation9_death.setSubframe(false);
     if (animation9_death.currentFrame === 55)
+    {
+        creatures.map(function(name) {
+
+            someoneisskull = name["health"];
+            console.log(someoneisdead);
+            if (someoneisskull <= 0)
+            {
+                name.animat('death', true);
+                name.animat('stay', true);
+                name.animat('hurt', true);
+                name.alive = 2;
+            }
+        })
+    }
+});
+
+animation10_death.addEventListener('enterFrame', () => {
+    animation10_death.setSubframe(false);
+    if (animation10_death.currentFrame === 55)
+    {
+        creatures.map(function(name) {
+
+            someoneisskull = name["health"];
+            console.log(someoneisdead);
+            if (someoneisskull <= 0)
+            {
+                name.animat('death', true);
+                name.animat('stay', true);
+                name.animat('hurt', true);
+                name.alive = 2;
+            }
+        })
+    }
+});
+
+animation11_death.addEventListener('enterFrame', () => {
+    animation11_death.setSubframe(false);
+    if (animation11_death.currentFrame === 55)
+    {
+        creatures.map(function(name) {
+
+            someoneisskull = name["health"];
+            console.log(someoneisdead);
+            if (someoneisskull <= 0)
+            {
+                name.animat('death', true);
+                name.animat('stay', true);
+                name.animat('hurt', true);
+                name.alive = 2;
+            }
+        })
+    }
+});
+
+animation12_death.addEventListener('enterFrame', () => {
+    animation12_death.setSubframe(false);
+    if (animation12_death.currentFrame === 55)
     {
         creatures.map(function(name) {
 
