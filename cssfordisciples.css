@@ -73,4 +73,9 @@ div.heading {
     filter: opacity(0.8) drop-shadow(0 0 0 red) brightness(2) saturate(2);
 }
 
+.numberclass {
+    z-index: 3;
+    color: red;
+}
+
 

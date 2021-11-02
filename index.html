@@ -15,8 +15,18 @@
         border: 5px solid #d1e231;
         display: grid;
         grid-template-columns: 125px 125px 1fr 125px 125px;
-        grid-template-rows: 200px 150px 30px 150px 30px 150px 30px 200px
+        grid-template-rows: 200px 150px 30px 150px 30px 150px 30px 200px;
+        position: relative;
+    }
 
+    .grid2 {
+        width: 1vm;
+        border: 5px solid #d1e231;
+        display: grid;
+        grid-template-columns: 125px 125px 1fr 125px 125px;
+        grid-template-rows: 200px 150px 30px 150px 30px 150px 30px 200px;
+        position: relative;
+        bottom: 950px;
     }
 
     /*внешний вид ячеек*/
@@ -44,10 +54,7 @@
 <br>;
 <br>;
 <br>;
-<br>;
-<br>;
-<br>;
-<br>;
+
 
     <!-- создаём контейнер, который будет отвечать за нашу сетку -->
     <div class="grid">
@@ -57,12 +64,12 @@
         <div></div>
         <div></div>
         <div></div>
-        <div id="myDIV"><img src="forbeta/shooterface.PNG" alt="why"></div>
+        <div id="myDIV" ><img src="forbeta/shooterface.PNG" alt="why"></div>
         <div id="myDIV2"><img src="forbeta/dospehface.PNG" alt="why"></div>
         <div></div>
         <div id="myDIV3"><img src="forbeta/darkpaladinface.PNG" alt="why"></div>
         <div id="myDIV4"><img src="forbeta/darkmageface.PNG" alt="why"></div>
-        <div class="el" align="center" id="delta2">500</div>
+        <div align="center" id="delta2">500</div>
         <div align="center" id="delta8">700</div>
         <div></div>
         <div align="center" id="delta5">3</div>
@@ -94,6 +101,49 @@
         <div></div>
     </div>
 
+<div class="grid2">
+    <!-- и создаём 16 вложенных элементов -->
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="numberclass">+400</div>
+    <div class="numberclass">+500</div>
+    <div></div>
+    <div class="numberclass">+400</div>
+    <div class="numberclass">+400</div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="numberclass">+400</div>
+    <div class="numberclass">+400</div>
+    <div></div>
+    <div class="numberclass">+400</div>
+    <div class="numberclass">+400</div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="numberclass">+400</div>
+    <div class="numberclass">+400</div>
+    <div></div>
+    <div class="numberclass">+400</div>
+    <div class="numberclass">+400</div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
 
 <div style="width: 800px; height: 600px; position: absolute; left: 400px;top: 1px" id="attack-container"></div>
 
