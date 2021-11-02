@@ -742,7 +742,17 @@ const creatures = [
         animat: (type, hide) => {
             document.getElementById(type + "-container").style.visibility = hide ? "hidden" : "visible";
         },
-}, {
+        glowred: function() {
+            document.getElementById("myDIV9").classList.add("el");
+        },
+        removered: function() {
+            document.getElementById("myDIV9").classList.remove("el");
+        },
+        removerednow: function() {
+            setTimeout(this.removered, 1000);
+        },
+},
+    {
     damage: 50,
         lastingdamage: 0,
     health: 120,
@@ -798,6 +808,15 @@ const creatures = [
         },
         animat: (type, hide) => {
             document.getElementById(type + "-container2").style.visibility = hide ? "hidden" : "visible";
+        },
+        glowred: function() {
+            document.getElementById("myDIV5").classList.add("el");
+        },
+        removered: function() {
+            document.getElementById("myDIV5").classList.remove("el");
+        },
+        removerednow: function() {
+            setTimeout(this.removered, 1000);
         },
 }, {
     damage: 50,
@@ -856,6 +875,15 @@ const creatures = [
         animat: (type, hide) => {
             document.getElementById(type + "-container3").style.visibility = hide ? "hidden" : "visible";
         },
+        glowred: function() {
+            document.getElementById("myDIV").classList.add("el");
+        },
+        removered: function() {
+            document.getElementById("myDIV").classList.remove("el");
+        },
+        removerednow: function() {
+        setTimeout(this.removered, 1000);
+},
 }, {
     damage: 50,
         lastingdamage: 0,
@@ -912,6 +940,15 @@ const creatures = [
         },
         animat: (type, hide) => {
             document.getElementById(type + "-container4").style.visibility = hide ? "hidden" : "visible";
+        },
+        glowred: function() {
+            document.getElementById("myDIV10").classList.add("el");
+        },
+        removered: function() {
+            document.getElementById("myDIV10").classList.remove("el");
+        },
+        removerednow: function() {
+            setTimeout(this.removered, 1000);
         },
 },  {
     damage: 40,
@@ -970,6 +1007,15 @@ const creatures = [
         animat: (type, hide) => {
             document.getElementById(type + "-container6").style.visibility = hide ? "hidden" : "visible";
         },
+        glowred: function() {
+            document.getElementById("myDIV3").classList.add("el");
+        },
+        removered: function() {
+            document.getElementById("myDIV3").classList.remove("el");
+        },
+        removerednow: function() {
+            setTimeout(this.removered, 1000);
+        }
 }, {
     damage: 80,
         lastingdamage: 0,
@@ -1027,6 +1073,15 @@ const creatures = [
         animat: (type, hide) => {
             document.getElementById(type + "-container7").style.visibility = hide ? "hidden" : "visible";
         },
+        glowred: function() {
+            document.getElementById("myDIV11").classList.add("el");
+        },
+        removered: function() {
+            document.getElementById("myDIV11").classList.remove("el");
+        },
+        removerednow: function() {
+            setTimeout(this.removered, 1000);
+        },
 }, {
     damage: 100,
         lastingdamage: 0,
@@ -1083,6 +1138,15 @@ const creatures = [
         },
         animat: (type, hide) => {
             document.getElementById(type + "-container8").style.visibility = hide ? "hidden" : "visible";
+        },
+        glowred: function() {
+            document.getElementById("myDIV6").classList.add("el");
+        },
+        removered: function() {
+            document.getElementById("myDIV6").classList.remove("el");
+        },
+        removerednow: function() {
+            setTimeout(this.removered, 1000);
         },
 },
     {
@@ -1142,6 +1206,15 @@ const creatures = [
         animat: (type, hide) => {
             document.getElementById(type + "-container5").style.visibility = hide ? "hidden" : "visible";
         },
+        glowred: function() {
+            document.getElementById("myDIV7").classList.add("el");
+        },
+        removered: function() {
+            document.getElementById("myDIV7").classList.remove("el");
+        },
+        removerednow: function() {
+            setTimeout(this.removered, 1000);
+        },
     }, {
         damage: 100,
         lastingdamage: 0,
@@ -1199,6 +1272,15 @@ const creatures = [
         animat: (type, hide) => {
             document.getElementById(type + "-container9").style.visibility = hide ? "hidden" : "visible";
         },
+        glowred: function() {
+            document.getElementById("myDIV2").classList.add("el");
+        },
+        removered: function() {
+            document.getElementById("myDIV2").classList.remove("el");
+        },
+        removerednow: function() {
+            setTimeout(this.removered, 1000);
+        },
     },{
         damage: 150,
         lastingdamage: 20,
@@ -1255,6 +1337,15 @@ const creatures = [
         },
         animat: (type, hide) => {
             document.getElementById(type + "-container10").style.visibility = hide ? "hidden" : "visible";
+        },
+        glowred: function() {
+            document.getElementById("myDIV12").classList.add("el");
+        },
+        removered: function() {
+            document.getElementById("myDIV12").classList.remove("el");
+        },
+        removerednow: function() {
+            setTimeout(this.removered, 1000);
         },
     },
     {
@@ -1317,6 +1408,15 @@ const creatures = [
         animatmage: (type, hide) => {
             document.getElementById(type + "-container2").style.visibility = hide ? "hidden" : "visible";
         },
+        glowred: function() {
+            document.getElementById("myDIV8").classList.add("el");
+        },
+        removered: function() {
+            document.getElementById("myDIV8").classList.remove("el");
+        },
+        removerednow: function() {
+            setTimeout(this.removered, 1000);
+        },
     },
     {
         damage: 100,
@@ -1378,6 +1478,15 @@ const creatures = [
         animatmage: (type, hide) => {
             document.getElementById(type + "-container2").style.visibility = hide ? "hidden" : "visible";
         },
+        glowred: function() {
+            document.getElementById("myDIV4").classList.add("el");
+        },
+        removered: function() {
+            document.getElementById("myDIV4").classList.remove("el");
+        },
+        removerednow: function() {
+            setTimeout(this.removered, 1000);
+        },
     },
     ];
 
@@ -1403,6 +1512,7 @@ animation12_stay.play();
 
 //animation11.play();
 //animation12.play();
+
 
 
 document.getElementById("attack-container").style.visibility = "hidden";
@@ -3836,6 +3946,8 @@ firstpartofpuzzle = vampiresum;
                 attackerCreature.animattack();
                 attackerCreature.sound();
                 attackerCreature.animweapon();
+                attackedCreature.glowred();
+                attackedCreature.removerednow();
                 console.log("Не синяя команда")
                 window.globalattacker = {
                     realattacker: attackerCreature,
@@ -3851,6 +3963,8 @@ firstpartofpuzzle = vampiresum;
                 attackerCreature.animattack();
                 attackerCreature.sound();
                 attackerCreature.animweapon();
+                attackedCreature.glowred();
+                attackedCreature.removerednow();
                 console.log("Не синяя команда")
                 window.globalattacker = {
                     realattacker: attackerCreature,

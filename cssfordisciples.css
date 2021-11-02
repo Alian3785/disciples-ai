@@ -68,3 +68,9 @@ div.heading {
     background: red;
     opacity: 50%;
 }
+
+.el {
+    filter: opacity(0.8) drop-shadow(0 0 0 red) brightness(0.9);
+}
+
+
