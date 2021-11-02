@@ -3575,6 +3575,8 @@ else {
         if (attackerCreature.type === "mage") {
             checkshild ();
             enemyTeam.forEach(creature => creature.health -= Math.floor((attackerCreature.damage * (1 - creature.armor) * (1 - creature.defensearmor))));
+            enemyTeam.forEach(creature => creature.glowred());
+            enemyTeam.forEach(creature => creature.removerednow());
             if (attackedCreature.team === "blue") {
                 attackerCreature.animat('attack', false);
                 attackerCreature.animat('weapon', false);
