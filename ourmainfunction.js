@@ -3688,7 +3688,7 @@ else {
             enemyTeam.forEach(creature => creature.glowred());
             enemyTeam.forEach(creature => creature.removerednow());
 
-            enemyTeam.forEach(creature => creature.glownumber(Math.floor((attackerCreature.damage * (1 - creature.armor) * (1 - creature.defensearmor)))));
+            enemyTeam.forEach(creature => creature.glownumber(-Math.floor((attackerCreature.damage * (1 - creature.armor) * (1 - creature.defensearmor)))));
             enemyTeam.forEach(creature => creature.removenumbernow());
             if (attackedCreature.team === "blue") {
                 attackerCreature.animat('attack', false);
