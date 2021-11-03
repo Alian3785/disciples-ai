@@ -73,9 +73,11 @@ div.heading {
     filter: opacity(0.8) drop-shadow(0 0 0 red) brightness(2) saturate(2);
 }
 
-.numberclass {
+.appearnumber {
     z-index: 3;
-    color: red;
+    color: blue;
+    text-align: center;
+    margin-top: 50px;
 }
 
 

@@ -62,10 +62,12 @@ let animation1_attack = bodymovin.loadAnimation({
     name: "Demo Animation", // optional
 });
 
+varforanim = 'forbeta/staystrelok.json';
+
 let animation1_stay = bodymovin.loadAnimation({
 
     container: document.getElementById('stay-container'), // required
-    path: 'forbeta/staystrelok.json', // required
+    path: varforanim, // required
     renderer: 'svg', // required
     loop: true, // optional
     autoplay: false, // optional
@@ -751,6 +753,15 @@ const creatures = [
         removerednow: function() {
             setTimeout(this.removered, 1000);
         },
+        glownumber: function(othertype) {
+            document.getElementById("numberclass9").innerHTML = othertype;
+        },
+        removenumber: function() {
+            document.getElementById("numberclass9").innerHTML = "";
+        },
+        removenumbernow: function() {
+            setTimeout(this.removenumber, 1000);
+        },
 },
     {
     damage: 50,
@@ -818,6 +829,15 @@ const creatures = [
         removerednow: function() {
             setTimeout(this.removered, 1000);
         },
+        glownumber: function(othertype) {
+            document.getElementById("numberclass5").innerHTML = othertype;
+        },
+        removenumber: function() {
+            document.getElementById("numberclass5").innerHTML = "";
+        },
+        removenumbernow: function() {
+            setTimeout(this.removenumber, 1000);
+        },
 }, {
     damage: 50,
         lastingdamage: 300,
@@ -884,6 +904,15 @@ const creatures = [
         removerednow: function() {
         setTimeout(this.removered, 1000);
 },
+        glownumber: function(othertype) {
+            document.getElementById("numberclass").innerHTML = othertype;
+        },
+        removenumber: function() {
+            document.getElementById("numberclass").innerHTML = "";
+        },
+        removenumbernow: function() {
+            setTimeout(this.removenumber, 1000);
+        },
 }, {
     damage: 50,
         lastingdamage: 0,
@@ -950,6 +979,15 @@ const creatures = [
         removerednow: function() {
             setTimeout(this.removered, 1000);
         },
+        glownumber: function(othertype) {
+            document.getElementById("numberclass10").innerHTML = othertype;
+        },
+        removenumber: function() {
+            document.getElementById("numberclass10").innerHTML = "";
+        },
+        removenumbernow: function() {
+            setTimeout(this.removenumber, 1000);
+        },
 },  {
     damage: 40,
         lastingdamage: 0,
@@ -1015,7 +1053,16 @@ const creatures = [
         },
         removerednow: function() {
             setTimeout(this.removered, 1000);
-        }
+        },
+        glownumber: function(othertype) {
+            document.getElementById("numberclass3").innerHTML = othertype;
+        },
+        removenumber: function() {
+            document.getElementById("numberclass3").innerHTML = "";
+        },
+        removenumbernow: function() {
+            setTimeout(this.removenumber, 1000);
+        },
 }, {
     damage: 80,
         lastingdamage: 0,
@@ -1044,7 +1091,7 @@ const creatures = [
         immunity: [],
         protection: ["life", "water", "air"],
         moreprotection: [1, 1, 1],
-        armor: 0.5,
+        armor: 0,
         defensearmor: 0,
         accuracy: [0.8],
         alive: 1,
@@ -1081,6 +1128,15 @@ const creatures = [
         },
         removerednow: function() {
             setTimeout(this.removered, 1000);
+        },
+        glownumber: function(othertype) {
+            document.getElementById("numberclass11").innerHTML = othertype;
+        },
+        removenumber: function() {
+            document.getElementById("numberclass11").innerHTML = "";
+        },
+        removenumbernow: function() {
+            setTimeout(this.removenumber, 1000);
         },
 }, {
     damage: 100,
@@ -1147,6 +1203,15 @@ const creatures = [
         },
         removerednow: function() {
             setTimeout(this.removered, 1000);
+        },
+        glownumber: function(othertype) {
+            document.getElementById("numberclass6").innerHTML = othertype;
+        },
+        removenumber: function() {
+            document.getElementById("numberclass6").innerHTML = "";
+        },
+        removenumbernow: function() {
+            setTimeout(this.removenumber, 1000);
         },
 },
     {
@@ -1215,6 +1280,15 @@ const creatures = [
         removerednow: function() {
             setTimeout(this.removered, 1000);
         },
+        glownumber: function(othertype) {
+            document.getElementById("numberclass7").innerHTML = othertype;
+        },
+        removenumber: function() {
+            document.getElementById("numberclass7").innerHTML = "";
+        },
+        removenumbernow: function() {
+            setTimeout(this.removenumber, 1000);
+        },
     }, {
         damage: 100,
         lastingdamage: 0,
@@ -1281,6 +1355,15 @@ const creatures = [
         removerednow: function() {
             setTimeout(this.removered, 1000);
         },
+        glownumber: function(othertype) {
+            document.getElementById("numberclass2").innerHTML = othertype;
+        },
+        removenumber: function() {
+            document.getElementById("numberclass2").innerHTML = "";
+        },
+        removenumbernow: function() {
+            setTimeout(this.removenumber, 1000);
+        },
     },{
         damage: 150,
         lastingdamage: 20,
@@ -1346,6 +1429,15 @@ const creatures = [
         },
         removerednow: function() {
             setTimeout(this.removered, 1000);
+        },
+        glownumber: function(othertype) {
+            document.getElementById("numberclass12").innerHTML = othertype;
+        },
+        removenumber: function() {
+            document.getElementById("numberclass12").innerHTML = "";
+        },
+        removenumbernow: function() {
+            setTimeout(this.removenumber, 1000);
         },
     },
     {
@@ -1417,6 +1509,15 @@ const creatures = [
         removerednow: function() {
             setTimeout(this.removered, 1000);
         },
+        glownumber: function(othertype) {
+            document.getElementById("numberclass8").innerHTML = othertype;
+        },
+        removenumber: function() {
+            document.getElementById("numberclass8").innerHTML = "";
+        },
+        removenumbernow: function() {
+            setTimeout(this.removenumber, 1000);
+        },
     },
     {
         damage: 100,
@@ -1486,6 +1587,15 @@ const creatures = [
         },
         removerednow: function() {
             setTimeout(this.removered, 1000);
+        },
+        glownumber: function(othertype) {
+            document.getElementById("numberclass4").innerHTML = othertype;
+        },
+        removenumber: function() {
+            document.getElementById("numberclass4").innerHTML = "";
+        },
+        removenumbernow: function() {
+            setTimeout(this.removenumber, 1000);
         },
     },
     ];
@@ -3577,6 +3687,9 @@ else {
             enemyTeam.forEach(creature => creature.health -= Math.floor((attackerCreature.damage * (1 - creature.armor) * (1 - creature.defensearmor))));
             enemyTeam.forEach(creature => creature.glowred());
             enemyTeam.forEach(creature => creature.removerednow());
+
+            enemyTeam.forEach(creature => creature.glownumber(Math.floor((attackerCreature.damage * (1 - creature.armor) * (1 - creature.defensearmor)))));
+            enemyTeam.forEach(creature => creature.removenumbernow());
             if (attackedCreature.team === "blue") {
                 attackerCreature.animat('attack', false);
                 attackerCreature.animat('weapon', false);
@@ -3939,6 +4052,7 @@ firstpartofpuzzle = vampiresum;
 // Лучник, да
         else if (attackerCreature.type === "archer") {
             protectedornot = justattack();
+            truedamage = Math.floor((attackerCreature.damage * (1 - attackedCreature.armor) * (1 - attackedCreature.defensearmor)));
             if (protectedornot === 1) {attackedCreature.health -= Math.floor((attackerCreature.damage * (1 - attackedCreature.armor) * (1 - attackedCreature.defensearmor)));}
             else {}
             if (attackedCreature.team === "blue") {
@@ -3949,6 +4063,8 @@ firstpartofpuzzle = vampiresum;
                 attackerCreature.sound();
                 attackerCreature.animweapon();
                 attackedCreature.glowred();
+                attackedCreature.glownumber(-truedamage);
+                attackedCreature.removenumbernow();
                 attackedCreature.removerednow();
                 console.log("Не синяя команда")
                 window.globalattacker = {
@@ -3966,6 +4082,8 @@ firstpartofpuzzle = vampiresum;
                 attackerCreature.sound();
                 attackerCreature.animweapon();
                 attackedCreature.glowred();
+                attackedCreature.glownumber(-truedamage);
+                attackedCreature.removenumbernow();
                 attackedCreature.removerednow();
                 console.log("Не синяя команда")
                 window.globalattacker = {
