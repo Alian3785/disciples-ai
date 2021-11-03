@@ -534,20 +534,11 @@ let animation12_weapon = bodymovin.loadAnimation({
     name: "Demo Animation", // optional
 });
 
-let animation11_magic = bodymovin.loadAnimation({
+
+let animation_magic = bodymovin.loadAnimation({
 
     container: document.getElementById('mage-container'), // required
-    path: 'forbeta/demonmagic.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation12_magic = bodymovin.loadAnimation({
-
-    container: document.getElementById('mage-container2'), // required
-    path: 'forbeta/demonmagic.json', // required
+    path: 'testmagic1.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -556,8 +547,108 @@ let animation12_magic = bodymovin.loadAnimation({
 
 let animation2_magic = bodymovin.loadAnimation({
 
-    container: document.getElementById('mage-container'), // required
-    path: 'forbeta/demonmagic.json', // required
+    container: document.getElementById('mage-container2'), // required
+    path: 'testmagic2.json', // required
+    renderer: 'svg', // required
+    loop: false, // optional
+    autoplay: false, // optional
+    name: "Demo Animation", // optional
+});
+
+let animation3_magic = bodymovin.loadAnimation({
+
+    container: document.getElementById('mage-container3'), // required
+    path: 'testmagic3.json', // required
+    renderer: 'svg', // required
+    loop: false, // optional
+    autoplay: false, // optional
+    name: "Demo Animation", // optional
+});
+
+let animation4_magic = bodymovin.loadAnimation({
+
+    container: document.getElementById('mage-container4'), // required
+    path: 'testmagic4.json', // required
+    renderer: 'svg', // required
+    loop: false, // optional
+    autoplay: false, // optional
+    name: "Demo Animation", // optional
+});
+
+let animation5_magic = bodymovin.loadAnimation({
+
+    container: document.getElementById('mage-container5'), // required
+    path: 'testmagic5.json', // required
+    renderer: 'svg', // required
+    loop: false, // optional
+    autoplay: false, // optional
+    name: "Demo Animation", // optional
+});
+
+let animation6_magic = bodymovin.loadAnimation({
+
+    container: document.getElementById('mage-container6'), // required
+    path: 'testmagic6.json', // required
+    renderer: 'svg', // required
+    loop: false, // optional
+    autoplay: false, // optional
+    name: "Demo Animation", // optional
+});
+
+let animation7_magic = bodymovin.loadAnimation({
+
+    container: document.getElementById('mage-container7'), // required
+    path: 'testmagic1.json', // required
+    renderer: 'svg', // required
+    loop: false, // optional
+    autoplay: false, // optional
+    name: "Demo Animation", // optional
+});
+
+let animation8_magic = bodymovin.loadAnimation({
+
+    container: document.getElementById('mage-container8'), // required
+    path: 'testmagic2.json', // required
+    renderer: 'svg', // required
+    loop: false, // optional
+    autoplay: false, // optional
+    name: "Demo Animation", // optional
+});
+
+let animation9_magic = bodymovin.loadAnimation({
+
+    container: document.getElementById('mage-container9'), // required
+    path: 'testmagic3.json', // required
+    renderer: 'svg', // required
+    loop: false, // optional
+    autoplay: false, // optional
+    name: "Demo Animation", // optional
+});
+
+let animation10_magic = bodymovin.loadAnimation({
+
+    container: document.getElementById('mage-container10'), // required
+    path: 'testmagic4.json', // required
+    renderer: 'svg', // required
+    loop: false, // optional
+    autoplay: false, // optional
+    name: "Demo Animation", // optional
+});
+
+let animation11_magic = bodymovin.loadAnimation({
+
+    container: document.getElementById('mage-container11'), // required
+    path: 'testmagic5.json', // required
+    renderer: 'svg', // required
+    loop: false, // optional
+    autoplay: false, // optional
+    name: "Demo Animation", // optional
+});
+
+let animation12_magic = bodymovin.loadAnimation({
+
+    container: document.getElementById('mage-container12'), // required
+    path: 'testmagic6.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -695,9 +786,9 @@ const creatures = [
         team: "blue",
     where: "behind",
     position: 3,
-    type: "archer",
+    type: "mage",
     who: "Прорицательница",
-        initiative: 35,
+        initiative: 130,
         realinit: 130,
     paralized: 0,
         petrification: 0,
@@ -709,7 +800,7 @@ const creatures = [
         summoned: 0,
         teammated: 0,
         runningaway: 0,
-        shotsleft: 1,
+        shotsleft: 0,
         typeofattack: "new",
         typeofsecondattack: "newnew",
         immunity: ["fire", "water", "air", "earth", "death", "poison", "mind", "weapon"],
@@ -733,7 +824,7 @@ const creatures = [
             animation1_weapon.playSegments([0, 18], true);
         },
         animmagic: function() {
-            animation1_magic.playSegments([0, 46], true);
+            animation_magic.playSegments([0, 46], true);
         },
         animdeath: function() {
             animation1_death.playSegments([0, 56], true);
@@ -771,7 +862,7 @@ const creatures = [
     team: "blue",
     where: "ahead",
     position: 2,
-    type: "mage",
+    type: "archer",
     who: "Маг",
         initiative: 120,
         realinit: 120,
@@ -1448,7 +1539,7 @@ const creatures = [
         team: "red",
         where: "behind",
         position: 3,
-        type: "mage",
+        type: "archer",
         who: "Демонолог",
         initiative: 30,
         realinit: 30,
@@ -1497,9 +1588,6 @@ const creatures = [
         animat: (type, hide) => {
             document.getElementById(type + "-container11").style.visibility = hide ? "hidden" : "visible";
         },
-        animatmage: (type, hide) => {
-            document.getElementById(type + "-container2").style.visibility = hide ? "hidden" : "visible";
-        },
         glowred: function() {
             document.getElementById("myDIV8").classList.add("el");
         },
@@ -1527,7 +1615,7 @@ const creatures = [
         team: "red",
         where: "behind",
         position: 3,
-        type: "mage",
+        type: "archer",
         who: "Колдун",
         initiative: 20,
         realinit: 20,
@@ -1575,9 +1663,6 @@ const creatures = [
         },
         animat: (type, hide) => {
             document.getElementById(type + "-container12").style.visibility = hide ? "hidden" : "visible";
-        },
-        animatmage: (type, hide) => {
-            document.getElementById(type + "-container2").style.visibility = hide ? "hidden" : "visible";
         },
         glowred: function() {
             document.getElementById("myDIV4").classList.add("el");
@@ -1676,6 +1761,20 @@ document.getElementById("death-container9").style.visibility = "hidden";
 document.getElementById("death-container10").style.visibility = "hidden";
 document.getElementById("death-container11").style.visibility = "hidden";
 document.getElementById("death-container12").style.visibility = "hidden";
+
+document.getElementById("mage-container").style.visibility = "hidden";
+document.getElementById("mage-container2").style.visibility = "hidden";
+document.getElementById("mage-container3").style.visibility = "hidden";
+document.getElementById("mage-container4").style.visibility = "hidden";
+document.getElementById("mage-container5").style.visibility = "hidden";
+document.getElementById("mage-container6").style.visibility = "hidden";
+document.getElementById("mage-container7").style.visibility = "hidden";
+document.getElementById("mage-container8").style.visibility = "hidden";
+document.getElementById("mage-container9").style.visibility = "hidden";
+document.getElementById("mage-container10").style.visibility = "hidden";
+document.getElementById("mage-container11").style.visibility = "hidden";
+document.getElementById("mage-container12").style.visibility = "hidden";
+
 
 
 //document.getElementById("mage-container").style.visibility = "hidden";
@@ -1842,736 +1941,8 @@ if (yourfucknigturn === 12) {
     rect12.classList.toggle("onewhomoves");
 }
 
-/*let cont3 = document.getElementById('other-container3');
 
-cont3.onclick = function() {
-    attack(5);
-};*/
 
-animation2_magic.addEventListener('enterFrame', () => {
-    animation2_magic.setSubframe(false);
-    if (animation2_magic.currentFrame === 45) {
-        if (globalattacker.realattacker.type === "mage") {
-            document.getElementById("mage-container").style.visibility = "hidden";
-    }
-}});
-
-animation2_attack.addEventListener('enterFrame', () => {
-    animation2_attack.setSubframe(false);
-    if (animation2_attack.currentFrame === 45) {
-        if (globalattacker.realattacker.type === "mage") {
-            globalattacker.realattacker.animat('weapon', true);
-            console.log(globalattacked.realattacked.team);
-            animmagicteam = creatures
-                .filter(creature => creature.team === globalattacked.realattacked.team)
-                .filter(creature => creature.health > 0)
-            animmagicteam.map(function (name) {
-                console.log(name);
-                name.animat('stay', false);
-                name.animat('hurt', true);
-            })
-        }
-        else {
-            globalattacker.realattacker.animat('attack', true);
-            globalattacker.realattacker.animat('stay', false);
-            globalattacked.realattacked.animat('stay', false);
-            globalattacked.realattacked.animat('hurt', true);
-        }
-    }
-});
-
-animation2_attack.addEventListener('enterFrame', () => {
-    animation2_attack.setSubframe(false);
-    console.log('enterFrame', animation1_attack.currentFrame);
-    if (animation2_attack.currentFrame === 25) {
-        if (globalattacker.realattacker.type === "mage") {
-            if (globalattacker.realattacker.team === "red") {
-                globalattacker.realattacker.animmagic();
-            } else {
-                globalattacker.realattacker.animmagic();
-            }
-            globalattacker.realattacker.animat('attack', true);
-            globalattacker.realattacker.animat('stay', false);
-            animmagicteam = creatures
-                .filter(creature => creature.team === globalattacked.realattacked.team)
-                .filter(creature => creature.health > 0)
-            animmagicteam.map(function (name) {
-                console.log(name);
-                name.animat('hurt', false);
-                name.animat('stay', true);
-                name.animhurt();
-            })
-            globalattacker.realattacker.animat('attack', true);
-            globalattacker.realattacker.animat('stay', false);
-        }
-        else {
-            globalattacked.realattacked.animat('hurt', false);
-            globalattacked.realattacked.animat('stay', true);
-            globalattacker.realattacker.animat('weapon', true);
-            globalattacked.realattacked.animhurt();
-        }
-    }
-});
-
-animation1_death.addEventListener('enterFrame', () => {
-    animation1_death.setSubframe(false);
-    if (animation1_death.currentFrame === 55)
-        {
-            creatures.map(function(name) {
-
-                someoneisskull = name["health"];
-                console.log(someoneisdead);
-                if (someoneisskull <= 0)
-                {
-                    name.animat('death', true);
-                    name.animat('stay', true);
-                    name.animat('hurt', true);
-                    name.alive = 2;
-                }
-            })
-        }
-    });
-
-animation2_death.addEventListener('enterFrame', () => {
-    animation2_death.setSubframe(false);
-    if (animation2_death.currentFrame === 55)
-    {
-        creatures.map(function(name) {
-
-            someoneisskull = name["health"];
-            console.log(someoneisdead);
-            if (someoneisskull <= 0)
-            {
-                name.animat('death', true);
-                name.animat('stay', true);
-                name.animat('hurt', true);
-                name.alive = 2;
-            }
-        })
-    }
-});
-
-animation3_death.addEventListener('enterFrame', () => {
-    animation3_death.setSubframe(false);
-    if (animation3_death.currentFrame === 55)
-    {
-        creatures.map(function(name) {
-
-            someoneisskull = name["health"];
-            console.log(someoneisdead);
-            if (someoneisskull <= 0)
-            {
-                name.animat('death', true);
-                name.animat('stay', true);
-                name.animat('hurt', true);
-                name.alive = 2;
-            }
-        })
-    }
-});
-
-animation4_death.addEventListener('enterFrame', () => {
-    animation4_death.setSubframe(false);
-    if (animation4_death.currentFrame === 55)
-    {
-        creatures.map(function(name) {
-
-            someoneisskull = name["health"];
-            console.log(someoneisdead);
-            if (someoneisskull <= 0)
-            {
-                name.animat('death', true);
-                name.animat('stay', true);
-                name.animat('hurt', true);
-                name.alive = 2;
-            }
-        })
-    }
-});
-
-animation5_death.addEventListener('enterFrame', () => {
-    animation5_death.setSubframe(false);
-    if (animation5_death.currentFrame === 55)
-    {
-        creatures.map(function(name) {
-
-            someoneisskull = name["health"];
-            console.log(someoneisdead);
-            if (someoneisskull <= 0)
-            {
-                name.animat('death', true);
-                name.animat('stay', true);
-                name.animat('hurt', true);
-                name.alive = 2;
-            }
-        })
-    }
-});
-
-animation6_death.addEventListener('enterFrame', () => {
-    animation6_death.setSubframe(false);
-    if (animation6_death.currentFrame === 55)
-    {
-        creatures.map(function(name) {
-
-            someoneisskull = name["health"];
-            console.log(someoneisdead);
-            if (someoneisskull <= 0)
-            {
-                name.animat('death', true);
-                name.animat('stay', true);
-                name.animat('hurt', true);
-                name.alive = 2;
-            }
-        })
-    }
-});
-
-animation7_death.addEventListener('enterFrame', () => {
-    animation7_death.setSubframe(false);
-    if (animation7_death.currentFrame === 55)
-    {
-        creatures.map(function(name) {
-
-            someoneisskull = name["health"];
-            console.log(someoneisdead);
-            if (someoneisskull <= 0)
-            {
-                name.animat('death', true);
-                name.animat('stay', true);
-                name.animat('hurt', true);
-                name.alive = 2;
-            }
-        })
-    }
-});
-
-animation8_death.addEventListener('enterFrame', () => {
-    animation8_death.setSubframe(false);
-    if (animation8_death.currentFrame === 55)
-    {
-        creatures.map(function(name) {
-
-            someoneisskull = name["health"];
-            console.log(someoneisdead);
-            if (someoneisskull <= 0)
-            {
-                name.animat('death', true);
-                name.animat('stay', true);
-                name.animat('hurt', true);
-                name.alive = 2;
-            }
-        })
-    }
-});
-
-animation9_death.addEventListener('enterFrame', () => {
-    animation9_death.setSubframe(false);
-    if (animation9_death.currentFrame === 55)
-    {
-        creatures.map(function(name) {
-
-            someoneisskull = name["health"];
-            console.log(someoneisdead);
-            if (someoneisskull <= 0)
-            {
-                name.animat('death', true);
-                name.animat('stay', true);
-                name.animat('hurt', true);
-                name.alive = 2;
-            }
-        })
-    }
-});
-
-animation10_death.addEventListener('enterFrame', () => {
-    animation10_death.setSubframe(false);
-    if (animation10_death.currentFrame === 55)
-    {
-        creatures.map(function(name) {
-
-            someoneisskull = name["health"];
-            console.log(someoneisdead);
-            if (someoneisskull <= 0)
-            {
-                name.animat('death', true);
-                name.animat('stay', true);
-                name.animat('hurt', true);
-                name.alive = 2;
-            }
-        })
-    }
-});
-
-animation11_death.addEventListener('enterFrame', () => {
-    animation11_death.setSubframe(false);
-    if (animation11_death.currentFrame === 55)
-    {
-        creatures.map(function(name) {
-
-            someoneisskull = name["health"];
-            console.log(someoneisdead);
-            if (someoneisskull <= 0)
-            {
-                name.animat('death', true);
-                name.animat('stay', true);
-                name.animat('hurt', true);
-                name.alive = 2;
-            }
-        })
-    }
-});
-
-animation12_death.addEventListener('enterFrame', () => {
-    animation12_death.setSubframe(false);
-    if (animation12_death.currentFrame === 55)
-    {
-        creatures.map(function(name) {
-
-            someoneisskull = name["health"];
-            console.log(someoneisdead);
-            if (someoneisskull <= 0)
-            {
-                name.animat('death', true);
-                name.animat('stay', true);
-                name.animat('hurt', true);
-                name.alive = 2;
-            }
-        })
-    }
-});
-
-animation4_death.addEventListener('enterFrame', () => {
-    animation4_death.setSubframe(false);
-    if (animation4_death.currentFrame === 55)
-    {
-        creatures[0].animat('death', true);
-        creatures[0].animat('stay', true);
-    }
-});
-
-animation1_attack.addEventListener('enterFrame', () => {
-    animation1_attack.setSubframe(false);
-    if (animation1_attack.currentFrame === 45) {
-        if (globalattacker.realattacker.type === "mage") {
-            globalattacker.realattacker.animat('weapon', true);
-            console.log(globalattacked.realattacked.team);
-            animmagicteam = creatures
-                .filter(creature => creature.team === globalattacked.realattacked.team)
-                .filter(creature => creature.health > 0)
-            animmagicteam.map(function (name) {
-                console.log(name);
-                name.animat('stay', false);
-                name.animat('hurt', true);
-            })
-        }
-        else {
-            if (globalattacker.realattacker.health > 0) {
-                globalattacker.realattacker.animat('attack', true);
-                globalattacker.realattacker.animat('stay', false);
-                globalattacked.realattacked.animat('stay', false);
-                globalattacked.realattacked.animat('hurt', true);
-            }
-        }
-    }
-});
-
-animation1_attack.addEventListener('enterFrame', () => {
-    animation1_attack.setSubframe(false);
-    console.log('enterFrame', animation1_attack.currentFrame);
-    if (animation1_attack.currentFrame === 25) {
-        if (globalattacker.realattacker.type === "mage") {
-            if (globalattacker.realattacker.team === "red") {
-                globalattacker.realattacker.animmagic();
-            } else {
-                globalattacker.realattacker.animmagic();
-            }
-            globalattacker.realattacker.animat('attack', true);
-            globalattacker.realattacker.animat('stay', false);
-            animmagicteam = creatures
-                .filter(creature => creature.team === globalattacked.realattacked.team)
-                .filter(creature => creature.health > 0)
-            animmagicteam.map(function (name) {
-                console.log(name);
-                name.animat('hurt', false);
-                name.animat('stay', true);
-                name.animhurt();
-            })
-            globalattacker.realattacker.animat('attack', true);
-            globalattacker.realattacker.animat('stay', false);
-        }
-        else {
-            if (globalattacker.realattacker.health > 0) {
-                globalattacked.realattacked.animat('hurt', false);
-                globalattacked.realattacked.animat('stay', true);
-                globalattacker.realattacker.animat('weapon', true);
-                globalattacked.realattacked.animhurt();
-            }
-        }
-    }
-});
-
-animation3_attack.addEventListener('enterFrame', () => {
-    animation3_attack.setSubframe(false);
-    if (animation3_attack.currentFrame === 25) {
-        globalattacked.realattacked.animat('hurt', false);
-        globalattacked.realattacked.animat('stay', true);
-        globalattacker.realattacker.animat('weapon', true);
-        console.log(globalattacked.realattacked.team);
-        animmagicteam = creatures
-            .filter(creature => creature.team === globalattacked.realattacked.team)
-            .filter(creature => creature.health > 0)
-        animmagicteam.map(function(name) {
-            console.log(name);
-            name.animhurt();
-        })
-        globalattacked.realattacked.animhurt();
-        animmagicteam[0].animhurt();
-        animmagicteam[1].animhurt();
-        animmagicteam[2].animhurt();
-        console.log(globalattacked.realattacked);
-        console.log(animmagicteam[0]);
-    }
-});
-
-
-
-animation3_attack.addEventListener('enterFrame', () => {
-    animation3_attack.setSubframe(false);
-    console.log('enterFrame', animation3_attack.currentFrame);
-    if (animation3_attack.currentFrame === 45) {
-        globalattacker.realattacker.animat('attack', true);
-        globalattacker.realattacker.animat('stay', false);
-        globalattacked.realattacked.animat('stay', false);
-        globalattacked.realattacked.animat('hurt', true);
-    }
-});
-
-animation4_attack.addEventListener('enterFrame', () => {
-    animation4_attack.setSubframe(false);
-    if (animation4_attack.currentFrame === 25) {
-        globalattacked.realattacked.animat('hurt', false);
-        globalattacked.realattacked.animat('stay', true);
-        globalattacker.realattacker.animat('weapon', true);
-        console.log(globalattacked.realattacked.team);
-        animmagicteam = creatures
-            .filter(creature => creature.team === globalattacked.realattacked.team)
-            .filter(creature => creature.health > 0)
-        animmagicteam.map(function(name) {
-            name.animhurt();
-        })
-        globalattacked.realattacked.animhurt();
-        console.log(globalattacked.realattacked);
-        console.log(animmagicteam[0]);
-        animmagicteam[0].animhurt();
-        animmagicteam[1].animhurt();
-        animmagicteam[2].animhurt();
-    }
-});
-
-
-
-animation4_attack.addEventListener('enterFrame', () => {
-    animation4_attack.setSubframe(false);
-    console.log('enterFrame', animation3_attack.currentFrame);
-    if (animation4_attack.currentFrame === 45) {
-        globalattacker.realattacker.animat('attack', true);
-        globalattacker.realattacker.animat('stay', false);
-        globalattacked.realattacked.animat('stay', false);
-        globalattacked.realattacked.animat('hurt', true);
-    }
-});
-
-animation5_attack.addEventListener('enterFrame', () => {
-    animation5_attack.setSubframe(false);
-    if (animation5_attack.currentFrame === 25) {
-        globalattacked.realattacked.animat('hurt', false);
-        globalattacked.realattacked.animat('stay', true);
-        globalattacker.realattacker.animat('weapon', true);
-        globalattacked.realattacked.animhurt();
-    }
-});
-
-
-
-animation5_attack.addEventListener('enterFrame', () => {
-    animation5_attack.setSubframe(false);
-    console.log('enterFrame', animation3_attack.currentFrame);
-    if (animation5_attack.currentFrame === 45) {
-        globalattacker.realattacker.animat('attack', true);
-        globalattacker.realattacker.animat('stay', false);
-        globalattacked.realattacked.animat('stay', false);
-        globalattacked.realattacked.animat('hurt', true);
-    }
-});
-
-animation6_attack.addEventListener('enterFrame', () => {
-    animation6_attack.setSubframe(false);
-    if (animation6_attack.currentFrame === 25) {
-        globalattacked.realattacked.animat('hurt', false);
-        globalattacked.realattacked.animat('stay', true);
-        globalattacker.realattacker.animat('weapon', true);
-        globalattacked.realattacked.animhurt();
-    }
-});
-
-
-
-animation6_attack.addEventListener('enterFrame', () => {
-    animation6_attack.setSubframe(false);
-    console.log('enterFrame', animation3_attack.currentFrame);
-    if (animation6_attack.currentFrame === 45) {
-        globalattacker.realattacker.animat('attack', true);
-        globalattacker.realattacker.animat('stay', false);
-        globalattacked.realattacked.animat('stay', false);
-        globalattacked.realattacked.animat('hurt', true);
-    }
-});
-
-animation7_attack.addEventListener('enterFrame', () => {
-    animation7_attack.setSubframe(false);
-    if (animation7_attack.currentFrame === 25) {
-        globalattacked.realattacked.animat('hurt', false);
-        globalattacked.realattacked.animat('stay', true);
-        globalattacker.realattacker.animat('weapon', true);
-        globalattacked.realattacked.animhurt();
-    }
-});
-
-
-
-animation7_attack.addEventListener('enterFrame', () => {
-    animation7_attack.setSubframe(false);
-    console.log('enterFrame', animation3_attack.currentFrame);
-    if (animation7_attack.currentFrame === 45) {
-        globalattacker.realattacker.animat('attack', true);
-        globalattacker.realattacker.animat('stay', false);
-        globalattacked.realattacked.animat('stay', false);
-        globalattacked.realattacked.animat('hurt', true);
-    }
-});
-
-animation8_attack.addEventListener('enterFrame', () => {
-    animation8_attack.setSubframe(false);
-    if (animation8_attack.currentFrame === 25) {
-        globalattacked.realattacked.animat('hurt', false);
-        globalattacked.realattacked.animat('stay', true);
-        globalattacker.realattacker.animat('weapon', true);
-        globalattacked.realattacked.animhurt();
-    }
-});
-
-
-
-animation8_attack.addEventListener('enterFrame', () => {
-    animation8_attack.setSubframe(false);
-    console.log('enterFrame', animation3_attack.currentFrame);
-    if (animation8_attack.currentFrame === 45) {
-        globalattacker.realattacker.animat('attack', true);
-        globalattacker.realattacker.animat('stay', false);
-        globalattacked.realattacked.animat('stay', false);
-        globalattacked.realattacked.animat('hurt', true);
-    }
-});
-
-animation9_attack.addEventListener('enterFrame', () => {
-    animation9_attack.setSubframe(false);
-    if (animation9_attack.currentFrame === 25) {
-        globalattacked.realattacked.animat('hurt', false);
-        globalattacked.realattacked.animat('stay', true);
-        globalattacker.realattacker.animat('weapon', true);
-        globalattacked.realattacked.animhurt();
-    }
-});
-
-
-
-animation9_attack.addEventListener('enterFrame', () => {
-    animation9_attack.setSubframe(false);
-    console.log('enterFrame', animation3_attack.currentFrame);
-    if (animation9_attack.currentFrame === 45) {
-        globalattacker.realattacker.animat('attack', true);
-        globalattacker.realattacker.animat('stay', false);
-        globalattacked.realattacked.animat('stay', false);
-        globalattacked.realattacked.animat('hurt', true);
-    }
-});
-
-animation10_attack.addEventListener('enterFrame', () => {
-    animation10_attack.setSubframe(false);
-    if (animation10_attack.currentFrame === 25) {
-        globalattacked.realattacked.animat('hurt', false);
-        globalattacked.realattacked.animat('stay', true);
-        globalattacker.realattacker.animat('weapon', true);
-        globalattacked.realattacked.animhurt();
-    }
-});
-
-
-
-animation10_attack.addEventListener('enterFrame', () => {
-    animation10_attack.setSubframe(false);
-    console.log('enterFrame', animation3_attack.currentFrame);
-    if (animation10_attack.currentFrame === 45) {
-        globalattacker.realattacker.animat('attack', true);
-        globalattacker.realattacker.animat('stay', false);
-        globalattacked.realattacked.animat('stay', false);
-        globalattacked.realattacked.animat('hurt', true);
-    }
-});
-
-animation11_attack.addEventListener('enterFrame', () => {
-    animation11_attack.setSubframe(false);
-    if (animation11_attack.currentFrame === 45) {
-        if (globalattacker.realattacker.type === "mage") {
-            globalattacker.realattacker.animat('weapon', true);
-            console.log(globalattacked.realattacked.team);
-            animmagicteam = creatures
-                .filter(creature => creature.team === globalattacked.realattacked.team)
-                .filter(creature => creature.health > 0)
-            animmagicteam.map(function (name) {
-                console.log(name);
-                name.animat('stay', false);
-                name.animat('hurt', true);
-            })
-            //document.getElementById("mage-container").style.visibility = "hidden";
-        }
-        else {
-            if (globalattacker.realattacker.health > 0) {
-                globalattacker.realattacker.animat('attack', true);
-                globalattacker.realattacker.animat('stay', false);
-                globalattacked.realattacked.animat('stay', false);
-                globalattacked.realattacked.animat('hurt', true);
-            }
-        }
-    }
-});
-
-animation11_attack.addEventListener('enterFrame', () => {
-    animation11_attack.setSubframe(false);
-    console.log('enterFrame', animation11_attack.currentFrame);
-    if (animation11_attack.currentFrame === 25) {
-        if (globalattacker.realattacker.type === "mage") {
-            if (globalattacker.realattacker.team === "red") {
-                console.log("икккккк");
-                globalattacker.realattacker.animmagic();
-            } else {
-                console.log("ик");
-                globalattacker.realattacker.animmagic();
-            }
-            globalattacker.realattacker.animat('attack', true);
-            globalattacker.realattacker.animat('stay', false);
-            animmagicteam = creatures
-                .filter(creature => creature.team === globalattacked.realattacked.team)
-                .filter(creature => creature.health > 0)
-            animmagicteam.map(function (name) {
-                console.log(name);
-                name.animat('hurt', false);
-                name.animat('stay', true);
-                name.animhurt();
-            })
-            globalattacker.realattacker.animat('attack', true);
-            globalattacker.realattacker.animat('stay', false);
-        }
-        else {
-            globalattacked.realattacked.animat('hurt', false);
-            globalattacked.realattacked.animat('stay', true);
-            globalattacker.realattacker.animat('weapon', true);
-            globalattacked.realattacked.animhurt();
-        }
-    }
-});
-
-animation12_attack.addEventListener('enterFrame', () => {
-    animation12_attack.setSubframe(false);
-    if (animation12_attack.currentFrame === 45) {
-        if (globalattacker.realattacker.type === "mage") {
-            globalattacker.realattacker.animat('weapon', true);
-            console.log(globalattacked.realattacked.team);
-            animmagicteam = creatures
-                .filter(creature => creature.team === globalattacked.realattacked.team)
-                .filter(creature => creature.health > 0)
-            animmagicteam.map(function (name) {
-                console.log(name);
-                name.animat('stay', false);
-                name.animat('hurt', true);
-            })
-            //document.getElementById("mage-container").style.visibility = "hidden";
-        }
-        else {
-            globalattacker.realattacker.animat('attack', true);
-            globalattacker.realattacker.animat('stay', false);
-            globalattacked.realattacked.animat('stay', false);
-            globalattacked.realattacked.animat('hurt', true);
-        }
-    }
-});
-
-animation12_attack.addEventListener('enterFrame', () => {
-    animation12_attack.setSubframe(false);
-    console.log('enterFrame', animation12_attack.currentFrame);
-    if (animation12_attack.currentFrame === 25) {
-        if (globalattacker.realattacker.type === "mage") {
-            if (globalattacker.realattacker.team === "red") {
-                globalattacker.realattacker.animmagic();
-            } else {
-                globalattacker.realattacker.animmagic();
-            }
-            globalattacker.realattacker.animat('attack', true);
-            globalattacker.realattacker.animat('stay', false);
-            animmagicteam = creatures
-                .filter(creature => creature.team === globalattacked.realattacked.team)
-                .filter(creature => creature.health > 0)
-            animmagicteam.map(function (name) {
-                console.log(name);
-                name.animat('hurt', false);
-                name.animat('stay', true);
-                name.animhurt();
-            })
-            globalattacker.realattacker.animat('attack', true);
-            globalattacker.realattacker.animat('stay', false);
-        }
-        else {
-            globalattacked.realattacked.animat('hurt', false);
-            globalattacked.realattacked.animat('stay', true);
-            globalattacker.realattacker.animat('weapon', true);
-            globalattacked.realattacked.animhurt();
-        }
-    }
-});
-
-/*
-animation1_attack.addEventListener('enterFrame', () => {
-    animation1_attack.setSubframe(false);
-    console.log('enterFrame', animation1_attack.currentFrame);
-    if (animation1_attack.currentFrame === 30) {
-        document.getElementById("stay-container2").style.visibility = "visible";
-        document.getElementById("attack-container").style.visibility = "hidden";
-        document.getElementById("weapon-container").style.visibility = "hidden";
-        document.getElementById("hurt-container").style.visibility = "hidden";
-        globalfunc.jjjj.animhurt;
-    }
-});
-*/
-
-/*document.addEventListener('DOMContentLoaded', function() {
-    var button = document.createElement('button');
-    button.type = 'button';
-    button.innerHTML = creatures[4].who;
-    button.setAttribute("style", "color:red")
-    button.style.position = 'absolute';
-    button.style.left = '250px';
-    button.style.top = '580px';
-
-    button.onclick = function() {
-        attack(5);
-
-    };
-
-    var container2 = document.getElementById('container2');
-    container2.appendChild(button);
-}, false);
-*/
 
 const transformedtoimps = [];
 
@@ -2628,6 +1999,20 @@ const updateHealthView = (creature, i) => {
     if (creatures[remembertheguy]["type"] === "empty") {elm.innerText = 'Empty'}
     if (creatures[remembertheguy]["health"] < 0) {creatures[remembertheguy]["health"] = 0}
 
+}
+
+function gethurt (attacked, attacker) {
+    attacked.animat('stay', true);
+    attacked.animat('hurt', false);
+    attacked.animhurt();
+}
+
+function backtostay (attacked, attacker) {
+    attacker.animat('stay', false);
+    attacker.animat('attack', true);
+    attacker.animat('weapon', true);
+    attacked.animat('stay', false);
+    attacked.animat('hurt', true);
 }
 
 // Функция для высшего вампира
@@ -3172,35 +2557,7 @@ else {}
         rect12.classList.toggle("onewhomoves");
     }
 
-    // кто-то умер
-    creatures.map(function(name) {
 
-        someoneisdead = name["health"];
-        console.log(someoneisdead);
-        if (someoneisdead <= 0)
-        {
-            if (name.alive === 1) {
-                name.animat('stay', true);
-                name.animat('death', false);
-                name.animdeath();
-                name.alive = 0;
-                console.log("разве ты не мертв")
-            }
-        }
-
-    })
-
-    creatures.map(function(name) {
-
-        someoneisskull2 = name.alive;
-        if (someoneisskull2 === 2)
-        {
-            name.animat('death', true);
-            name.animat('stay', true);
-            name.animat('hurt', true);
-        }
-    })
-    // это может помочь избавиться от артефактов weapon
 }
 
 
@@ -3687,15 +3044,17 @@ else {
             enemyTeam.forEach(creature => creature.health -= Math.floor((attackerCreature.damage * (1 - creature.armor) * (1 - creature.defensearmor))));
             enemyTeam.forEach(creature => creature.glowred());
             enemyTeam.forEach(creature => creature.removerednow());
-
+            enemyTeam.forEach(creature => setTimeout(gethurt, 400, creature, attackerCreature));
+            enemyTeam.forEach(creature => setTimeout(backtostay, 710, creature, attackerCreature));
             enemyTeam.forEach(creature => creature.glownumber(-Math.floor((attackerCreature.damage * (1 - creature.armor) * (1 - creature.defensearmor)))));
             enemyTeam.forEach(creature => creature.removenumbernow());
             if (attackedCreature.team === "blue") {
                 attackerCreature.animat('attack', false);
                 attackerCreature.animat('weapon', false);
-                attackerCreature.animatmage('mage', false);
+                attackerCreature.animat('mage', false);
                 attackerCreature.animat('stay', true);
                 attackerCreature.animattack();
+                attackerCreature.animmagic();
                 attackerCreature.sound();
                 attackerCreature.animweapon();
                 console.log("Не синяя команда")
@@ -3705,6 +3064,7 @@ else {
                 window.globalattacked = {
                     realattacked: attackedCreature,
                 };
+
             }
             else {
                 attackerCreature.animat('attack', false);
@@ -3712,6 +3072,7 @@ else {
                 attackerCreature.animat('mage', false);
                 attackerCreature.animat('stay', true);
                 attackerCreature.animattack();
+                attackerCreature.animmagic();
                 attackerCreature.sound();
                 attackerCreature.animweapon();
                 console.log("Не синяя команда")
@@ -4073,6 +3434,8 @@ firstpartofpuzzle = vampiresum;
                 window.globalattacked = {
                     realattacked: attackedCreature,
                 };
+                setTimeout(gethurt, 250, attackedCreature, attackerCreature);
+                setTimeout(backtostay, 710, attackedCreature, attackerCreature);
             }
             else {
                 attackerCreature.animat('attack', false);
@@ -4092,6 +3455,8 @@ firstpartofpuzzle = vampiresum;
                 window.globalattacked = {
                     realattacked: attackedCreature,
                 };
+                setTimeout(gethurt, 250, attackedCreature, attackerCreature);
+                setTimeout(backtostay, 710, attackedCreature, attackerCreature);
             }
         }
 
