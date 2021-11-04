@@ -1,6 +1,5 @@
 // дисклеймер 5 это 8, а 6 это 9
 
-alert(window.location.href);
 
 // Setup the new Howl.
 const sound1 = new Howl({
@@ -1687,6 +1686,8 @@ const creatures = [
     ];
 
 // Превращенные в импов
+
+alert(window.location.href);
 
 animation1_stay.play();
 animation2_stay.play();
