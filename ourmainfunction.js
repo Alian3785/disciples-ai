@@ -1,5 +1,6 @@
 // дисклеймер 5 это 8, а 6 это 9
 
+console.log(URL);
 
 // Setup the new Howl.
 const sound1 = new Howl({
