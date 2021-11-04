@@ -19,10 +19,9 @@
 <body>
 
 <select id="mySelect" onchange="myFunction()">
-    <option value="Audi">Audi</option>
-    <option value="BMW">BMW</option>
-    <option value="Mercedes">Mercedes</option>
-    <option value="Volvo">Volvo</option>
+    <option value="Юнит">Выбери юнита</option>
+    <option value="Герцог">Герцог</option>
+    <option value="Пегас">Пегас</option>
 </select>
 
 <p>When you select a new car, a function is triggered which outputs the value of the selected car.</p>
@@ -58,11 +57,11 @@ document.getElementById("stay-container7").style.visibility = "hidden";
 <script>
     function myFunction() {
         var x = document.getElementById("mySelect").value;
-        if (x === "Mercedes")  {
+        if (x === "Герцог")  {
             document.getElementById("stay-container7").style.visibility = "visible";
             animation7_stay.play();
         }
-        if (x === "BMW")  {
+        if (x === "Пегас")  {
             document.getElementById("stay-container7").style.visibility = "visible";
             animation8_stay.play();
         }
