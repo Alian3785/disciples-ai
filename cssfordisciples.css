@@ -80,4 +80,11 @@ div.heading {
     margin-top: 50px;
 }
 
+#cars {
+    opacity: 1;
+    width: 200px;
+    hight: 200px;
+    font-size: large;
+}
+
 
