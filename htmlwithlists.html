@@ -52,6 +52,11 @@
         <option value="Оживший доспех">Рыцарь</option>
         <option value="Голем">Скваер</option>
         <option value="Мизраэль">Рыцарь</option>
+        <option value="Рыцарь на пегасе">Рыцарь</option>
+        <option value="Рейнджер людей">Рыцарь</option>
+        <option value="Архимаг">Рыцарь</option>
+        <option value="Архангел">Рыцарь</option>
+        <option value="Вор империи">Рыцарь</option>
     </optgroup>
     <optgroup label="Легионы проклятых">
         <option value="Одержимый">Скваер</option>
@@ -84,6 +89,11 @@
         <option value="Белиарх">Скваер</option>
         <option value="Мститель">Рыцарь</option>
         <option value="Ашкаэль">Скваер</option>
+        <option value="Герцог">Скваер</option>
+        <option value="Советник">Скваер</option>
+        <option value="Архидьявол">Скваер</option>
+        <option value="Баронесса">Скваер</option>
+        <option value="Вор легионов">Скваер</option>
     </optgroup>
     <optgroup label="Горные кланы">
         <option value="Гном">Рыцарь</option>
@@ -115,6 +125,11 @@
         <option value="Валькирия">Рыцарь</option>
         <option value="Каменный предок">Рыцарь</option>
         <option value="Видар">Рыцарь</option>
+        <option value="Королевский страж">Рыцарь</option>
+        <option value="Инженер">Рыцарь</option>
+        <option value="Хранитель знаний">Рыцарь</option>
+        <option value="Жезловик гномов">Рыцарь</option>
+        <option value="Вор гномов">Рыцарь</option>
     </optgroup>
     <optgroup label="Орды нежити">
         <option value="Воин">Рыцарь</option>
@@ -148,6 +163,11 @@
         <option value="Кошмар">Рыцарь</option>
         <option value="Танатос">Рыцарь</option>
         <option value="Ашган">Рыцарь</option>
+        <option value="Рыцарь смерти">Рыцарь</option>
+        <option value="Носферату">Рыцарь</option>
+        <option value="Королева лич">Рыцарь</option>
+        <option value="Баньши">Рыцарь</option>
+        <option value="Вор нежити">Рыцарь</option>
     </optgroup>
     <optgroup label="Альянс эльфов">
         <option value="Кентавр копейщик">Рыцарь</option>
@@ -179,6 +199,11 @@
         <option value="Великий энт">Рыцарь</option>
         <option value="Буйный энт">Рыцарь</option>
         <option value="Иллюмиэлль">Рыцарь</option>
+        <option value="Лесной лорд">Рыцарь</option>
+        <option value="Хранитель леса">Рыцарь</option>
+        <option value="Дриада">Рыцарь</option>
+        <option value="Друид эльфов">Рыцарь</option>
+        <option value="Вор эльфов">Рыцарь</option>
     </optgroup>
     <optgroup label="Нейтралы">
         <option value="Крестьянин">Рыцарь</option>
@@ -754,6 +779,81 @@
             document.getElementById("stay-container" + yyy).style.visibility = "visible";
             animation8_stay.play();
         }
+        else if (x === "Рыцарь на пегасе")  {
+            let animation8_stay = bodymovin.loadAnimation({
+
+                container: document.getElementById('stay-container' + yyy), // required
+                path: 'stay2.json', // required
+                renderer: 'svg', // required
+                loop: true, // optional
+                autoplay: false, // optional
+                name: "Demo Animation", // optional
+            });
+            arraywithunits.set('key' + key, x);
+            console.log(arraywithunits);
+            document.getElementById("stay-container" + yyy).style.visibility = "visible";
+            animation8_stay.play();
+        }
+        else if (x === "Рейнджер людей")  {
+            let animation8_stay = bodymovin.loadAnimation({
+
+                container: document.getElementById('stay-container' + yyy), // required
+                path: 'stay2.json', // required
+                renderer: 'svg', // required
+                loop: true, // optional
+                autoplay: false, // optional
+                name: "Demo Animation", // optional
+            });
+            arraywithunits.set('key' + key, x);
+            console.log(arraywithunits);
+            document.getElementById("stay-container" + yyy).style.visibility = "visible";
+            animation8_stay.play();
+        }
+        else if (x === "Архимаг")  {
+            let animation8_stay = bodymovin.loadAnimation({
+
+                container: document.getElementById('stay-container' + yyy), // required
+                path: 'stay2.json', // required
+                renderer: 'svg', // required
+                loop: true, // optional
+                autoplay: false, // optional
+                name: "Demo Animation", // optional
+            });
+            arraywithunits.set('key' + key, x);
+            console.log(arraywithunits);
+            document.getElementById("stay-container" + yyy).style.visibility = "visible";
+            animation8_stay.play();
+        }
+        else if (x === "Архангел")  {
+            let animation8_stay = bodymovin.loadAnimation({
+
+                container: document.getElementById('stay-container' + yyy), // required
+                path: 'stay2.json', // required
+                renderer: 'svg', // required
+                loop: true, // optional
+                autoplay: false, // optional
+                name: "Demo Animation", // optional
+            });
+            arraywithunits.set('key' + key, x);
+            console.log(arraywithunits);
+            document.getElementById("stay-container" + yyy).style.visibility = "visible";
+            animation8_stay.play();
+        }
+        else if (x === "Вор империи")  {
+            let animation8_stay = bodymovin.loadAnimation({
+
+                container: document.getElementById('stay-container' + yyy), // required
+                path: 'stay2.json', // required
+                renderer: 'svg', // required
+                loop: true, // optional
+                autoplay: false, // optional
+                name: "Demo Animation", // optional
+            });
+            arraywithunits.set('key' + key, x);
+            console.log(arraywithunits);
+            document.getElementById("stay-container" + yyy).style.visibility = "visible";
+            animation8_stay.play();
+        }
         else if (x === "Одержимый")  {
             let animation8_stay = bodymovin.loadAnimation({
 
@@ -1204,6 +1304,82 @@
             document.getElementById("stay-container" + yyy).style.visibility = "visible";
             animation8_stay.play();
         }
+        else if (x === "Герцог")  {
+            let animation8_stay = bodymovin.loadAnimation({
+
+                container: document.getElementById('stay-container' + yyy), // required
+                path: 'stay2.json', // required
+                renderer: 'svg', // required
+                loop: true, // optional
+                autoplay: false, // optional
+                name: "Demo Animation", // optional
+            });
+            arraywithunits.set('key' + key, x);
+            console.log(arraywithunits);
+            document.getElementById("stay-container" + yyy).style.visibility = "visible";
+            animation8_stay.play();
+        }
+        else if (x === "Советник")  {
+            let animation8_stay = bodymovin.loadAnimation({
+
+                container: document.getElementById('stay-container' + yyy), // required
+                path: 'stay2.json', // required
+                renderer: 'svg', // required
+                loop: true, // optional
+                autoplay: false, // optional
+                name: "Demo Animation", // optional
+            });
+            arraywithunits.set('key' + key, x);
+            console.log(arraywithunits);
+            document.getElementById("stay-container" + yyy).style.visibility = "visible";
+            animation8_stay.play();
+        }
+        else if (x === "Архидьявол")  {
+            let animation8_stay = bodymovin.loadAnimation({
+
+                container: document.getElementById('stay-container' + yyy), // required
+                path: 'stay2.json', // required
+                renderer: 'svg', // required
+                loop: true, // optional
+                autoplay: false, // optional
+                name: "Demo Animation", // optional
+            });
+            arraywithunits.set('key' + key, x);
+            console.log(arraywithunits);
+            document.getElementById("stay-container" + yyy).style.visibility = "visible";
+            animation8_stay.play();
+        }
+        else if (x === "Баронесса")  {
+            let animation8_stay = bodymovin.loadAnimation({
+
+                container: document.getElementById('stay-container' + yyy), // required
+                path: 'stay2.json', // required
+                renderer: 'svg', // required
+                loop: true, // optional
+                autoplay: false, // optional
+                name: "Demo Animation", // optional
+            });
+            arraywithunits.set('key' + key, x);
+            console.log(arraywithunits);
+            document.getElementById("stay-container" + yyy).style.visibility = "visible";
+            animation8_stay.play();
+        }
+        else if (x === "Вор легионов")  {
+            let animation8_stay = bodymovin.loadAnimation({
+
+                container: document.getElementById('stay-container' + yyy), // required
+                path: 'stay2.json', // required
+                renderer: 'svg', // required
+                loop: true, // optional
+                autoplay: false, // optional
+                name: "Demo Animation", // optional
+            });
+            arraywithunits.set('key' + key, x);
+            console.log(arraywithunits);
+            document.getElementById("stay-container" + yyy).style.visibility = "visible";
+            animation8_stay.play();
+        }
+
         else if (x === "Гном")  {
             let animation8_stay = bodymovin.loadAnimation({
 
@@ -1625,6 +1801,81 @@
             animation8_stay.play();
         }
         else if (x === "Видар")  {
+            let animation8_stay = bodymovin.loadAnimation({
+
+                container: document.getElementById('stay-container' + yyy), // required
+                path: 'stay2.json', // required
+                renderer: 'svg', // required
+                loop: true, // optional
+                autoplay: false, // optional
+                name: "Demo Animation", // optional
+            });
+            arraywithunits.set('key' + key, x);
+            console.log(arraywithunits);
+            document.getElementById("stay-container" + yyy).style.visibility = "visible";
+            animation8_stay.play();
+        }
+        else if (x === "Королевский страж")  {
+            let animation8_stay = bodymovin.loadAnimation({
+
+                container: document.getElementById('stay-container' + yyy), // required
+                path: 'stay2.json', // required
+                renderer: 'svg', // required
+                loop: true, // optional
+                autoplay: false, // optional
+                name: "Demo Animation", // optional
+            });
+            arraywithunits.set('key' + key, x);
+            console.log(arraywithunits);
+            document.getElementById("stay-container" + yyy).style.visibility = "visible";
+            animation8_stay.play();
+        }
+        else if (x === "Инженер")  {
+            let animation8_stay = bodymovin.loadAnimation({
+
+                container: document.getElementById('stay-container' + yyy), // required
+                path: 'stay2.json', // required
+                renderer: 'svg', // required
+                loop: true, // optional
+                autoplay: false, // optional
+                name: "Demo Animation", // optional
+            });
+            arraywithunits.set('key' + key, x);
+            console.log(arraywithunits);
+            document.getElementById("stay-container" + yyy).style.visibility = "visible";
+            animation8_stay.play();
+        }
+        else if (x === "Хранитель знаний")  {
+            let animation8_stay = bodymovin.loadAnimation({
+
+                container: document.getElementById('stay-container' + yyy), // required
+                path: 'stay2.json', // required
+                renderer: 'svg', // required
+                loop: true, // optional
+                autoplay: false, // optional
+                name: "Demo Animation", // optional
+            });
+            arraywithunits.set('key' + key, x);
+            console.log(arraywithunits);
+            document.getElementById("stay-container" + yyy).style.visibility = "visible";
+            animation8_stay.play();
+        }
+        else if (x === "Жезловик гномов")  {
+            let animation8_stay = bodymovin.loadAnimation({
+
+                container: document.getElementById('stay-container' + yyy), // required
+                path: 'stay2.json', // required
+                renderer: 'svg', // required
+                loop: true, // optional
+                autoplay: false, // optional
+                name: "Demo Animation", // optional
+            });
+            arraywithunits.set('key' + key, x);
+            console.log(arraywithunits);
+            document.getElementById("stay-container" + yyy).style.visibility = "visible";
+            animation8_stay.play();
+        }
+        else if (x === "Вор гномов")  {
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -2104,6 +2355,81 @@
                 document.getElementById("stay-container" + yyy).style.visibility = "visible";
                 animation8_stay.play();
             }
+        else if (x === "Рыцарь смерти")  {
+            let animation8_stay = bodymovin.loadAnimation({
+
+                container: document.getElementById('stay-container' + yyy), // required
+                path: 'stay2.json', // required
+                renderer: 'svg', // required
+                loop: true, // optional
+                autoplay: false, // optional
+                name: "Demo Animation", // optional
+            });
+            arraywithunits.set('key' + key, x);
+            console.log(arraywithunits);
+            document.getElementById("stay-container" + yyy).style.visibility = "visible";
+            animation8_stay.play();
+        }
+        else if (x === "Носферату")  {
+            let animation8_stay = bodymovin.loadAnimation({
+
+                container: document.getElementById('stay-container' + yyy), // required
+                path: 'stay2.json', // required
+                renderer: 'svg', // required
+                loop: true, // optional
+                autoplay: false, // optional
+                name: "Demo Animation", // optional
+            });
+            arraywithunits.set('key' + key, x);
+            console.log(arraywithunits);
+            document.getElementById("stay-container" + yyy).style.visibility = "visible";
+            animation8_stay.play();
+        }
+        else if (x === "Королева лич")  {
+            let animation8_stay = bodymovin.loadAnimation({
+
+                container: document.getElementById('stay-container' + yyy), // required
+                path: 'stay2.json', // required
+                renderer: 'svg', // required
+                loop: true, // optional
+                autoplay: false, // optional
+                name: "Demo Animation", // optional
+            });
+            arraywithunits.set('key' + key, x);
+            console.log(arraywithunits);
+            document.getElementById("stay-container" + yyy).style.visibility = "visible";
+            animation8_stay.play();
+        }
+        else if (x === "Баньши")  {
+            let animation8_stay = bodymovin.loadAnimation({
+
+                container: document.getElementById('stay-container' + yyy), // required
+                path: 'stay2.json', // required
+                renderer: 'svg', // required
+                loop: true, // optional
+                autoplay: false, // optional
+                name: "Demo Animation", // optional
+            });
+            arraywithunits.set('key' + key, x);
+            console.log(arraywithunits);
+            document.getElementById("stay-container" + yyy).style.visibility = "visible";
+            animation8_stay.play();
+        }
+        else if (x === "Вор нежити")  {
+            let animation8_stay = bodymovin.loadAnimation({
+
+                container: document.getElementById('stay-container' + yyy), // required
+                path: 'stay2.json', // required
+                renderer: 'svg', // required
+                loop: true, // optional
+                autoplay: false, // optional
+                name: "Demo Animation", // optional
+            });
+            arraywithunits.set('key' + key, x);
+            console.log(arraywithunits);
+            document.getElementById("stay-container" + yyy).style.visibility = "visible";
+            animation8_stay.play();
+        }
         else if (x === "Кентавр копейщик")  {
                 let animation8_stay = bodymovin.loadAnimation({
 
@@ -2539,6 +2865,81 @@
                 document.getElementById("stay-container" + yyy).style.visibility = "visible";
                 animation8_stay.play();
             }
+        else if (x === "Лесной лорд")  {
+            let animation8_stay = bodymovin.loadAnimation({
+
+                container: document.getElementById('stay-container' + yyy), // required
+                path: 'stay2.json', // required
+                renderer: 'svg', // required
+                loop: true, // optional
+                autoplay: false, // optional
+                name: "Demo Animation", // optional
+            });
+            arraywithunits.set('key' + key, x);
+            console.log(arraywithunits);
+            document.getElementById("stay-container" + yyy).style.visibility = "visible";
+            animation8_stay.play();
+        }
+        else if (x === "Хранитель леса")  {
+            let animation8_stay = bodymovin.loadAnimation({
+
+                container: document.getElementById('stay-container' + yyy), // required
+                path: 'stay2.json', // required
+                renderer: 'svg', // required
+                loop: true, // optional
+                autoplay: false, // optional
+                name: "Demo Animation", // optional
+            });
+            arraywithunits.set('key' + key, x);
+            console.log(arraywithunits);
+            document.getElementById("stay-container" + yyy).style.visibility = "visible";
+            animation8_stay.play();
+        }
+        else if (x === "Дриада")  {
+            let animation8_stay = bodymovin.loadAnimation({
+
+                container: document.getElementById('stay-container' + yyy), // required
+                path: 'stay2.json', // required
+                renderer: 'svg', // required
+                loop: true, // optional
+                autoplay: false, // optional
+                name: "Demo Animation", // optional
+            });
+            arraywithunits.set('key' + key, x);
+            console.log(arraywithunits);
+            document.getElementById("stay-container" + yyy).style.visibility = "visible";
+            animation8_stay.play();
+        }
+        else if (x === "Друид эльфов")  {
+            let animation8_stay = bodymovin.loadAnimation({
+
+                container: document.getElementById('stay-container' + yyy), // required
+                path: 'stay2.json', // required
+                renderer: 'svg', // required
+                loop: true, // optional
+                autoplay: false, // optional
+                name: "Demo Animation", // optional
+            });
+            arraywithunits.set('key' + key, x);
+            console.log(arraywithunits);
+            document.getElementById("stay-container" + yyy).style.visibility = "visible";
+            animation8_stay.play();
+        }
+        else if (x === "Вор эльфов")  {
+            let animation8_stay = bodymovin.loadAnimation({
+
+                container: document.getElementById('stay-container' + yyy), // required
+                path: 'stay2.json', // required
+                renderer: 'svg', // required
+                loop: true, // optional
+                autoplay: false, // optional
+                name: "Demo Animation", // optional
+            });
+            arraywithunits.set('key' + key, x);
+            console.log(arraywithunits);
+            document.getElementById("stay-container" + yyy).style.visibility = "visible";
+            animation8_stay.play();
+        }
         else if (x === "Крестьянин")  {
                 let animation8_stay = bodymovin.loadAnimation({
 
@@ -3289,7 +3690,7 @@
                 document.getElementById("stay-container" + yyy).style.visibility = "visible";
                 animation8_stay.play();
             }
-        else if (x === "Чёрный дракон")  {
+        else if (x === "Эрхог Тёмная")  {
                 let animation8_stay = bodymovin.loadAnimation({
 
                     container: document.getElementById('stay-container' + yyy), // required
@@ -3304,7 +3705,7 @@
                 document.getElementById("stay-container" + yyy).style.visibility = "visible";
                 animation8_stay.play();
             }
-        else if (x === "Чёрный дракон")  {
+        else if (x === "Эрхог Некромант")  {
                 let animation8_stay = bodymovin.loadAnimation({
 
                     container: document.getElementById('stay-container' + yyy), // required
@@ -3319,7 +3720,7 @@
                 document.getElementById("stay-container" + yyy).style.visibility = "visible";
                 animation8_stay.play();
             }
-        else if (x === "Чёрный дракон")  {
+        else if (x === "Тёмный эльф Лиф")  {
                 let animation8_stay = bodymovin.loadAnimation({
 
                     container: document.getElementById('stay-container' + yyy), // required
@@ -3334,7 +3735,7 @@
                 document.getElementById("stay-container" + yyy).style.visibility = "visible";
                 animation8_stay.play();
             }
-        else if (x === "Чёрный дракон")  {
+        else if (x === "Хьюберт де Лейли")  {
                 let animation8_stay = bodymovin.loadAnimation({
 
                     container: document.getElementById('stay-container' + yyy), // required
@@ -3349,7 +3750,7 @@
                 document.getElementById("stay-container" + yyy).style.visibility = "visible";
                 animation8_stay.play();
             }
-        else if (x === "Чёрный дракон")  {
+        else if (x === "Утер ребенок")  {
                 let animation8_stay = bodymovin.loadAnimation({
 
                     container: document.getElementById('stay-container' + yyy), // required
@@ -3364,7 +3765,7 @@
                 document.getElementById("stay-container" + yyy).style.visibility = "visible";
                 animation8_stay.play();
             }
-        else if (x === "Чёрный дракон")  {
+        else if (x === "Утер")  {
                 let animation8_stay = bodymovin.loadAnimation({
 
                     container: document.getElementById('stay-container' + yyy), // required
@@ -3379,7 +3780,7 @@
                 document.getElementById("stay-container" + yyy).style.visibility = "visible";
                 animation8_stay.play();
             }
-        else if (x === "Чёрный дракон")  {
+        else if (x === "Утер демон")  {
                 let animation8_stay = bodymovin.loadAnimation({
 
                     container: document.getElementById('stay-container' + yyy), // required
@@ -3394,7 +3795,7 @@
                 document.getElementById("stay-container" + yyy).style.visibility = "visible";
                 animation8_stay.play();
             }
-        else if (x === "Чёрный дракон")  {
+        else if (x === "Маг хугин")  {
                 let animation8_stay = bodymovin.loadAnimation({
 
                     container: document.getElementById('stay-container' + yyy), // required
@@ -3409,7 +3810,7 @@
                 document.getElementById("stay-container" + yyy).style.visibility = "visible";
                 animation8_stay.play();
             }
-        else if (x === "Чёрный дракон")  {
+        else if (x === "Ятаа Халли")  {
                 let animation8_stay = bodymovin.loadAnimation({
 
                     container: document.getElementById('stay-container' + yyy), // required
@@ -3424,7 +3825,7 @@
                 document.getElementById("stay-container" + yyy).style.visibility = "visible";
                 animation8_stay.play();
             }
-        else if (x === "Чёрный дракон")  {
+        else if (x === "Король гномов")  {
                 let animation8_stay = bodymovin.loadAnimation({
 
                     container: document.getElementById('stay-container' + yyy), // required
@@ -3439,7 +3840,7 @@
                 document.getElementById("stay-container" + yyy).style.visibility = "visible";
                 animation8_stay.play();
             }
-        else if (x === "Чёрный дракон")  {
+        else if (x === "Нхиддог")  {
                 let animation8_stay = bodymovin.loadAnimation({
 
                     container: document.getElementById('stay-container' + yyy), // required
@@ -3454,7 +3855,7 @@
                 document.getElementById("stay-container" + yyy).style.visibility = "visible";
                 animation8_stay.play();
             }
-        else if (x === "Чёрный дракон")  {
+        else if (x === "Костяной лорд")  {
                 let animation8_stay = bodymovin.loadAnimation({
 
                     container: document.getElementById('stay-container' + yyy), // required
@@ -3469,7 +3870,7 @@
                 document.getElementById("stay-container" + yyy).style.visibility = "visible";
                 animation8_stay.play();
             }
-        else if (x === "Чёрный дракон")  {
+        else if (x === "Королева эльфов")  {
                 let animation8_stay = bodymovin.loadAnimation({
 
                     container: document.getElementById('stay-container' + yyy), // required
@@ -3484,7 +3885,7 @@
                 document.getElementById("stay-container" + yyy).style.visibility = "visible";
                 animation8_stay.play();
             }
-        else if (x === "Чёрный дракон")  {
+        else if (x === "Граф Фламель Кроули")  {
                 let animation8_stay = bodymovin.loadAnimation({
 
                     container: document.getElementById('stay-container' + yyy), // required
@@ -3499,7 +3900,7 @@
                 document.getElementById("stay-container" + yyy).style.visibility = "visible";
                 animation8_stay.play();
             }
-        else if (x === "Чёрный дракон")  {
+        else if (x === "Лаклаан")  {
                 let animation8_stay = bodymovin.loadAnimation({
 
                     container: document.getElementById('stay-container' + yyy), // required
@@ -3514,7 +3915,7 @@
                 document.getElementById("stay-container" + yyy).style.visibility = "visible";
                 animation8_stay.play();
             }
-        else if (x === "Чёрный дракон")  {
+        else if (x === "Тёмный Лаклаан")  {
                 let animation8_stay = bodymovin.loadAnimation({
 
                     container: document.getElementById('stay-container' + yyy), // required
@@ -3529,7 +3930,7 @@
                 document.getElementById("stay-container" + yyy).style.visibility = "visible";
                 animation8_stay.play();
             }
-        else if (x === "Чёрный дракон")  {
+        else if (x === "Драллиа ан")  {
                 let animation8_stay = bodymovin.loadAnimation({
 
                     container: document.getElementById('stay-container' + yyy), // required
@@ -3544,7 +3945,7 @@
                 document.getElementById("stay-container" + yyy).style.visibility = "visible";
                 animation8_stay.play();
             }
-        else if (x === "Чёрный дракон")  {
+        else if (x === "Дрега Зул")  {
                 let animation8_stay = bodymovin.loadAnimation({
 
                     container: document.getElementById('stay-container' + yyy), // required
@@ -3559,7 +3960,7 @@
                 document.getElementById("stay-container" + yyy).style.visibility = "visible";
                 animation8_stay.play();
             }
-        else if (x === "Чёрный дракон")  {
+        else if (x === "Небирос")  {
                 let animation8_stay = bodymovin.loadAnimation({
 
                     container: document.getElementById('stay-container' + yyy), // required
@@ -3574,7 +3975,7 @@
                 document.getElementById("stay-container" + yyy).style.visibility = "visible";
                 animation8_stay.play();
             }
-        else if (x === "Чёрный дракон")  {
+        else if (x === "Могильный голем")  {
                 let animation8_stay = bodymovin.loadAnimation({
 
                     container: document.getElementById('stay-container' + yyy), // required
@@ -3589,7 +3990,7 @@
                 document.getElementById("stay-container" + yyy).style.visibility = "visible";
                 animation8_stay.play();
             }
-        else if (x === "Чёрный дракон")  {
+        else if (x === "Зверь Галлеана")  {
                 let animation8_stay = bodymovin.loadAnimation({
 
                     container: document.getElementById('stay-container' + yyy), // required
@@ -3604,7 +4005,7 @@
                 document.getElementById("stay-container" + yyy).style.visibility = "visible";
                 animation8_stay.play();
             }
-        else if (x === "Чёрный дракон")  {
+        else if (x === "Гамтик кровавый")  {
                 let animation8_stay = bodymovin.loadAnimation({
 
                     container: document.getElementById('stay-container' + yyy), // required
@@ -3619,7 +4020,7 @@
                 document.getElementById("stay-container" + yyy).style.visibility = "visible";
                 animation8_stay.play();
             }
-        else if (x === "Чёрный дракон")  {
+        else if (x === "Сэр Аллемон")  {
                 let animation8_stay = bodymovin.loadAnimation({
 
                     container: document.getElementById('stay-container' + yyy), // required
@@ -3634,82 +4035,6 @@
                 document.getElementById("stay-container" + yyy).style.visibility = "visible";
                 animation8_stay.play();
             }
-        else if (x === "Чёрный дракон")  {
-                let animation8_stay = bodymovin.loadAnimation({
-
-                    container: document.getElementById('stay-container' + yyy), // required
-                    path: 'stay2.json', // required
-                    renderer: 'svg', // required
-                    loop: true, // optional
-                    autoplay: false, // optional
-                    name: "Demo Animation", // optional
-                });
-                arraywithunits.set('key' + key, x);
-                console.log(arraywithunits);
-                document.getElementById("stay-container" + yyy).style.visibility = "visible";
-                animation8_stay.play();
-            }
-        else if (x === "Чёрный дракон")  {
-                let animation8_stay = bodymovin.loadAnimation({
-
-                    container: document.getElementById('stay-container' + yyy), // required
-                    path: 'stay2.json', // required
-                    renderer: 'svg', // required
-                    loop: true, // optional
-                    autoplay: false, // optional
-                    name: "Demo Animation", // optional
-                });
-                arraywithunits.set('key' + key, x);
-                console.log(arraywithunits);
-                document.getElementById("stay-container" + yyy).style.visibility = "visible";
-                animation8_stay.play();
-            }
-        else if (x === "Чёрный дракон")  {
-                let animation8_stay = bodymovin.loadAnimation({
-
-                    container: document.getElementById('stay-container' + yyy), // required
-                    path: 'stay2.json', // required
-                    renderer: 'svg', // required
-                    loop: true, // optional
-                    autoplay: false, // optional
-                    name: "Demo Animation", // optional
-                });
-                arraywithunits.set('key' + key, x);
-                console.log(arraywithunits);
-                document.getElementById("stay-container" + yyy).style.visibility = "visible";
-                animation8_stay.play();
-            }
-        else if (x === "Чёрный дракон")  {
-                let animation8_stay = bodymovin.loadAnimation({
-
-                    container: document.getElementById('stay-container' + yyy), // required
-                    path: 'stay2.json', // required
-                    renderer: 'svg', // required
-                    loop: true, // optional
-                    autoplay: false, // optional
-                    name: "Demo Animation", // optional
-                });
-                arraywithunits.set('key' + key, x);
-                console.log(arraywithunits);
-                document.getElementById("stay-container" + yyy).style.visibility = "visible";
-                animation8_stay.play();
-            }
-        else if (x === "Чёрный дракон")  {
-                let animation8_stay = bodymovin.loadAnimation({
-
-                    container: document.getElementById('stay-container' + yyy), // required
-                    path: 'stay2.json', // required
-                    renderer: 'svg', // required
-                    loop: true, // optional
-                    autoplay: false, // optional
-                    name: "Demo Animation", // optional
-                });
-                arraywithunits.set('key' + key, x);
-                console.log(arraywithunits);
-                document.getElementById("stay-container" + yyy).style.visibility = "visible";
-                animation8_stay.play();
-            }
-
     }
 
 
