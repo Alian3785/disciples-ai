@@ -31,7 +31,7 @@
         <option value="Ангел">Ангел</option>
         <option value="Паладин">Паладин</option>
         <option value="Великий инквизитор">Великий инквизитор</option>
-        <option value="Священный мститель">Священный мститель</option>
+        <option value="Мастер клинка">Мастер клинка</option>
         <option value="Защитник Веры">Защитник Веры</option>
         <option value="Ученик">Ученик</option>
         <option value="Волшебник">Волшебник</option>
@@ -115,7 +115,7 @@
         <option value="Хранитель кузни">Хранитель кузни</option>
         <option value="Огнеметчик">Огнеметчик</option>
         <option value="Холмовой гигант">Холмовой гигант</option>
-        <option value="Горный гигант">Горный гигант</option>
+        <option value="Скальной гигант">Скальной гигант</option>
         <option value="Штормовой гигант">Штормовой гигант</option>
         <option value="Ледяной гигант">Ледяной гигант</option>
         <option value="Старейшина">Старейшина</option>
@@ -363,7 +363,7 @@
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
-                path: 'stay2.json', // required
+                path: 'allanimations/stay1_2.json', // required
                 renderer: 'svg', // required
                 loop: true, // optional
                 autoplay: false, // optional
@@ -464,7 +464,7 @@
             document.getElementById("stay-container" + yyy).style.visibility = "visible";
             animation8_stay.play();
         }
-        else if (x === "Священный мститель")  {
+        else if (x === "Мастер клинка")  {
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -1665,7 +1665,7 @@
             document.getElementById("stay-container" + yyy).style.visibility = "visible";
             animation8_stay.play();
         }
-        else if (x === "Горный гигант")  {
+        else if (x === "Скальной гигант")  {
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
