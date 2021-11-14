@@ -280,6 +280,7 @@
         <option value="Зверь Галлеана">Зверь Галлеана</option>
         <option value="Гамтик кровавый">Гамтик кровавый</option>
         <option value="Сэр Аллемон">Сэр Аллемон</option>
+        <option value="Астерот">Астерот</option>
     </optgroup>
 </select>
 
@@ -341,10 +342,13 @@
         ['key12', 'value1'],
     ]);
 
+
+
     function myFunction() {
         yyy = "";
         key = 1;
         let x = document.getElementById("mySelect").value;
+
         if (x === "Скваер")  {
             let animation8_stay = bodymovin.loadAnimation({
                 container: document.getElementById('stay-container' + yyy), // required
@@ -4019,6 +4023,21 @@
                 console.log(arraywithunits);
                 document.getElementById("stay-container" + yyy).style.visibility = "visible";
                   animation8_stay.play();
+            }
+        else if (x === "Астерот")  {
+                let animation8_stay = bodymovin.loadAnimation({
+
+                    container: document.getElementById('stay-container' + yyy), // required
+                    path: 'allanimations/stay1_246.json', // required
+                    renderer: 'svg', // required
+                    loop: true, // optional
+                    autoplay: false, // optional
+                    name: "Demo Animation", // optional
+                });
+                arraywithunits.set('key' + key, x);
+                console.log(arraywithunits);
+                document.getElementById("stay-container" + yyy).style.visibility = "visible";
+                animation8_stay.play();
             }
     }
 
