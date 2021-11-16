@@ -19,7 +19,6 @@
 <body>
 
 
-
 <select id="mySelect" onchange="myFunction()">
     <option value="Юнит">Выбери юнита</option>
     <optgroup label="Империя">
@@ -283,6 +282,7 @@
         <option value="Астерот">Астерот</option>
     </optgroup>
 </select>
+
 
 <select id="mySelect3" onchange="myFunction3()">
     <option value="Юнит">Выбери юнита</option>
@@ -604,12 +604,18 @@
         ['key12', 'value1'],
     ]);
 
+    let arraywithbigguys = ["Титан", "Голем", "Гаргулья", "Мраморная гаргулья", "Ониксовая гаргулья", "Чёрт", "Демон", "Молох", "Тварь", "Повелитель демонов", "Тиамат", "Владыка", "Дьявол Бездны",
+        "Сатир", "Адская гончая", "Белиарх", "Мститель", "Холмовой гигант", "Скальной гигант", "Штормовой гигант", "Ледяной гигант", "Старейшина", "Сын Имира", "Йети", "Рух", "Валькирия", "Каменный предок",
+        "Виверна", "Дракон рока", "Дракон смерти", "Змей ужаса", "Драколич", "Темный энт", "Кошмар", "Танатос", "Грифон", "Повелитель небес", "Энт", "Великий энт", "Буйный энт", "Тролль", "Людоед", "Циклоп",
+        "Зелёный дракон", "Синий дракон", "Красный дракон", "Белый дракон", "Чёрный дракон", "Морской змей", "Кракен", "Медведь", "Белый медведь", "Мантикора", "Гигантский паук", "Гигантский чёрный паук",
+        "Толстый бес", "Дикий гигант", "Утер демон", "Нхиддог", "Королева эльфов", "Небирос", "Могильный голем", "Зверь Галлеана", "Гамтик кровавый", "Астерот"];
 
 
     function myFunction() {
         yyy = "";
         key = 1;
         let x = document.getElementById("mySelect").value;
+        zzz = mySelect3;
 
         if (x === "Скваер")  {
             let animation8_stay = bodymovin.loadAnimation({
@@ -624,6 +630,10 @@
             console.log(arraywithunits);
             document.getElementById("stay-container" + yyy).style.visibility = "visible";
             animation8_stay.play();
+
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+            }
         }
         else if (x === "Рыцарь")  {
             let animation8_stay = bodymovin.loadAnimation({
@@ -639,6 +649,9 @@
             console.log(arraywithunits);
             document.getElementById("stay-container" + yyy).style.visibility = "visible";
             animation8_stay.play();
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+            }
         }
         else if (x === "Охотник на ведьм")  {
             let animation8_stay = bodymovin.loadAnimation({
@@ -999,6 +1012,9 @@
             console.log(arraywithunits);
             document.getElementById("stay-container" + yyy).style.visibility = "visible";
             animation8_stay.play();
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+            }
         }
         else if (x === "Оживший доспех")  {
             let animation8_stay = bodymovin.loadAnimation({
