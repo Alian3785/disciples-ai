@@ -608,16 +608,23 @@
         "Сатир", "Адская гончая", "Белиарх", "Мститель", "Холмовой гигант", "Скальной гигант", "Штормовой гигант", "Ледяной гигант", "Старейшина", "Сын Имира", "Йети", "Рух", "Валькирия", "Каменный предок",
         "Виверна", "Дракон рока", "Дракон смерти", "Змей ужаса", "Драколич", "Темный энт", "Кошмар", "Танатос", "Грифон", "Повелитель небес", "Энт", "Великий энт", "Буйный энт", "Тролль", "Людоед", "Циклоп",
         "Зелёный дракон", "Синий дракон", "Красный дракон", "Белый дракон", "Чёрный дракон", "Морской змей", "Кракен", "Медведь", "Белый медведь", "Мантикора", "Гигантский паук", "Гигантский чёрный паук",
-        "Толстый бес", "Дикий гигант", "Утер демон", "Нхиддог", "Королева эльфов", "Небирос", "Могильный голем", "Зверь Галлеана", "Гамтик кровавый", "Астерот"];
+        "Толстый бес", "Дикий гигант", "Утер демон", "Нхиддог", "Королева эльфов", "Небирос", "Могильный голем", "Зверь Галлеана", "Гамтик кровавый", "Астерот",];
 
 
     function myFunction() {
         yyy = "";
+        bigyyy = "4"
         key = 1;
+        bigkey = 4;
         let x = document.getElementById("mySelect").value;
         zzz = mySelect3;
 
         if (x === "Скваер")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
                 container: document.getElementById('stay-container' + yyy), // required
                 path: 'allanimations/stay1_1.json', // required
@@ -630,10 +637,6 @@
             console.log(arraywithunits);
             document.getElementById("stay-container" + yyy).style.visibility = "visible";
             animation8_stay.play();
-
-            if (arraywithbigguys.includes(x)) {
-                zzz.classList.add("disappiar");
-            }
         }
         else if (x === "Рыцарь")  {
             let animation8_stay = bodymovin.loadAnimation({
@@ -649,9 +652,6 @@
             console.log(arraywithunits);
             document.getElementById("stay-container" + yyy).style.visibility = "visible";
             animation8_stay.play();
-            if (arraywithbigguys.includes(x)) {
-                zzz.classList.add("disappiar");
-            }
         }
         else if (x === "Охотник на ведьм")  {
             let animation8_stay = bodymovin.loadAnimation({
@@ -999,6 +999,11 @@
             animation8_stay.play();
         }
         else if (x === "Титан")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -1012,9 +1017,6 @@
             console.log(arraywithunits);
             document.getElementById("stay-container" + yyy).style.visibility = "visible";
             animation8_stay.play();
-            if (arraywithbigguys.includes(x)) {
-                zzz.classList.add("disappiar");
-            }
         }
         else if (x === "Оживший доспех")  {
             let animation8_stay = bodymovin.loadAnimation({
@@ -1347,6 +1349,11 @@
             animation8_stay.play();
         }
         else if (x === "Гаргулья")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -1362,6 +1369,11 @@
             animation8_stay.play();
         }
         else if (x === "Мраморная гаргулья")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -1377,6 +1389,11 @@
             animation8_stay.play();
         }
         else if (x === "Ониксовая гаргулья")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -1392,6 +1409,11 @@
             animation8_stay.play();
         }
         else if (x === "Чёрт")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -1407,6 +1429,11 @@
             animation8_stay.play();
         }
         else if (x === "Демон")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -1422,6 +1449,11 @@
             animation8_stay.play();
         }
         else if (x === "Молох")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -1437,6 +1469,11 @@
             animation8_stay.play();
         }
         else if (x === "Тварь")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -1452,6 +1489,11 @@
             animation8_stay.play();
         }
         else if (x === "Повелитель демонов")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -1467,6 +1509,11 @@
             animation8_stay.play();
         }
         else if (x === "Тиамат")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -1482,6 +1529,11 @@
             animation8_stay.play();
         }
         else if (x === "Владыка")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -1497,6 +1549,11 @@
             animation8_stay.play();
         }
         else if (x === "Дьявол Бездны")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -1512,6 +1569,11 @@
             animation8_stay.play();
         }
         else if (x === "Сатир")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -1527,6 +1589,11 @@
             animation8_stay.play();
         }
         else if (x === "Адская гончая")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -1542,6 +1609,11 @@
             animation8_stay.play();
         }
         else if (x === "Белиарх")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -1557,6 +1629,11 @@
             animation8_stay.play();
         }
         else if (x === "Мститель")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -1933,6 +2010,11 @@
             animation8_stay.play();
         }
         else if (x === "Холмовой гигант")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -1948,6 +2030,11 @@
             animation8_stay.play();
         }
         else if (x === "Скальной гигант")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -1963,6 +2050,11 @@
             animation8_stay.play();
         }
         else if (x === "Штормовой гигант")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -1978,6 +2070,11 @@
             animation8_stay.play();
         }
         else if (x === "Ледяной гигант")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -1993,6 +2090,11 @@
             animation8_stay.play();
         }
         else if (x === "Старейшина")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -2008,6 +2110,11 @@
             animation8_stay.play();
         }
         else if (x === "Сын Имира")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -2023,6 +2130,11 @@
             animation8_stay.play();
         }
         else if (x === "Йети")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -2038,6 +2150,11 @@
             animation8_stay.play();
         }
         else if (x === "Рух")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -2053,6 +2170,11 @@
             animation8_stay.play();
         }
         else if (x === "Валькирия")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -2068,6 +2190,11 @@
             animation8_stay.play();
         }
         else if (x === "Каменный предок")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -2473,6 +2600,11 @@
             animation8_stay.play();
         }
         else if (x === "Виверна")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -2488,6 +2620,11 @@
             animation8_stay.play();
         }
         else if (x === "Дракон рока")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -2503,6 +2640,11 @@
             animation8_stay.play();
         }
         else if (x === "Дракон смерти")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -2518,6 +2660,11 @@
             animation8_stay.play();
         }
         else if (x === "Змей ужаса")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -2533,6 +2680,11 @@
             animation8_stay.play();
         }
         else if (x === "Драколич")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -2578,6 +2730,11 @@
             animation8_stay.play();
         }
         else if (x === "Темный энт")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -2593,6 +2750,11 @@
             animation8_stay.play();
         }
         else if (x === "Кошмар")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -2608,6 +2770,11 @@
             animation8_stay.play();
         }
         else if (x === "Танатос")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -3043,6 +3210,11 @@
             animation8_stay.play();
         }
         else if (x === "Грифон")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -3058,6 +3230,11 @@
             animation8_stay.play();
         }
         else if (x === "Повелитель небес")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -3088,6 +3265,11 @@
             animation8_stay.play();
         }
         else if (x === "Энт")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -3103,6 +3285,11 @@
             animation8_stay.play();
         }
         else if (x === "Великий энт")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -3118,6 +3305,11 @@
             animation8_stay.play();
         }
         else if (x === "Буйный энт")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -3583,6 +3775,11 @@
             animation8_stay.play();
         }
         else if (x === "Тролль")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -3598,6 +3795,11 @@
             animation8_stay.play();
         }
         else if (x === "Людоед")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -3613,6 +3815,11 @@
             animation8_stay.play();
         }
         else if (x === "Циклоп")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -3628,6 +3835,11 @@
             animation8_stay.play();
         }
         else if (x === "Зелёный дракон")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -3643,6 +3855,11 @@
             animation8_stay.play();
         }
         else if (x === "Синий дракон")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -3658,6 +3875,11 @@
             animation8_stay.play();
         }
         else if (x === "Красный дракон")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -3673,6 +3895,11 @@
             animation8_stay.play();
         }
         else if (x === "Белый дракон")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -3688,6 +3915,11 @@
             animation8_stay.play();
         }
         else if (x === "Чёрный дракон")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -3763,6 +3995,11 @@
             animation8_stay.play();
         }
         else if (x === "Морской змей")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -3778,6 +4015,11 @@
             animation8_stay.play();
         }
         else if (x === "Кракен")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -3823,6 +4065,11 @@
             animation8_stay.play();
         }
         else if (x === "Медведь")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -3838,6 +4085,11 @@
             animation8_stay.play();
         }
         else if (x === "Белый медведь")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -3853,6 +4105,11 @@
             animation8_stay.play();
         }
         else if (x === "Мантикора")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -3868,6 +4125,11 @@
             animation8_stay.play();
         }
         else if (x === "Гигантский паук")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -3883,6 +4145,11 @@
             animation8_stay.play();
         }
         else if (x === "Гигантский чёрный паук")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -3928,6 +4195,11 @@
             animation8_stay.play();
         }
         else if (x === "Толстый бес")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -3943,6 +4215,11 @@
             animation8_stay.play();
         }
         else if (x === "Дикий гигант")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -4048,6 +4325,11 @@
             animation8_stay.play();
         }
         else if (x === "Утер демон")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -4108,6 +4390,11 @@
             animation8_stay.play();
         }
         else if (x === "Нхиддог")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -4138,6 +4425,11 @@
             animation8_stay.play();
         }
         else if (x === "Королева эльфов")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -4228,6 +4520,11 @@
             animation8_stay.play();
         }
         else if (x === "Небирос")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -4243,6 +4540,11 @@
             animation8_stay.play();
         }
         else if (x === "Могильный голем")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -4258,6 +4560,11 @@
             animation8_stay.play();
         }
         else if (x === "Зверь Галлеана")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -4273,6 +4580,11 @@
             animation8_stay.play();
         }
         else if (x === "Гамтик кровавый")  {
+            if (arraywithbigguys.includes(x)) {
+                zzz.classList.add("disappiar");
+                yyy = bigyyy;
+                key = bigkey;
+            }
             let animation8_stay = bodymovin.loadAnimation({
 
                 container: document.getElementById('stay-container' + yyy), // required
@@ -4303,6 +4615,11 @@
                   animation8_stay.play();
             }
         else if (x === "Астерот")  {
+                if (arraywithbigguys.includes(x)) {
+                    zzz.classList.add("disappiar");
+                    yyy = bigyyy;
+                    key = bigkey;
+                }
                 let animation8_stay = bodymovin.loadAnimation({
 
                     container: document.getElementById('stay-container' + yyy), // required
