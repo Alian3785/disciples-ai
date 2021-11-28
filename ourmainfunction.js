@@ -9,9 +9,18 @@ console.log(deliveredvalue2);
 
 alert(deliveredvalue2[0]["value"]);
 
-
-
-
+let firstanim = deliveredvalue2[0]["value"];
+let secondanim = deliveredvalue2[1]["value"];
+let thirdanim = deliveredvalue2[2]["value"];
+let forthanim = deliveredvalue2[3]["value"];
+let fifthdanim = deliveredvalue2[4]["value"];
+let sixthdanim = deliveredvalue2[5]["value"];
+let seventhdanim = deliveredvalue2[6]["value"];
+let eighthanim = deliveredvalue2[7]["value"];
+let ninethanim = deliveredvalue2[8]["value"];
+let tenthanim = deliveredvalue2[9]["value"];
+let eleventhanim = deliveredvalue2[10]["value"];
+let twelthhanim = deliveredvalue2[11]["value"];
 
 // Setup the new Howl.
 const sound1 = new Howl({
@@ -67,19 +76,18 @@ const sound12 = new Howl({
 let animation1_attack = bodymovin.loadAnimation({
 
     container: document.getElementById('attack-container'), // required
-    path: 'forbeta/attackstrelok.json', // required
+    path: 'allanimations/attack1_' + firstanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
     name: "Demo Animation", // optional
 });
 
-varforanim = 'forbeta/staystrelok.json';
 
 let animation1_stay = bodymovin.loadAnimation({
 
     container: document.getElementById('stay-container'), // required
-    path: varforanim, // required
+    path: 'allanimations/stay1_' + firstanim + '.json', // required
     renderer: 'svg', // required
     loop: true, // optional
     autoplay: false, // optional
@@ -89,7 +97,7 @@ let animation1_stay = bodymovin.loadAnimation({
 let animation1_hurt = bodymovin.loadAnimation({
 
     container: document.getElementById('hurt-container'), // required
-    path: 'forbeta/hurtstrelok.json', // required
+    path: 'allanimations/hurt1_' + firstanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -99,7 +107,7 @@ let animation1_hurt = bodymovin.loadAnimation({
 let animation1_weapon = bodymovin.loadAnimation({
 
     container: document.getElementById('weapon-container'), // required
-    path: 'forbeta/weaponstrelok.json', // required
+    path: 'allanimations/weapon1_' + firstanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -109,7 +117,7 @@ let animation1_weapon = bodymovin.loadAnimation({
 let animation2_attack = bodymovin.loadAnimation({
 
     container: document.getElementById('attack-container2'), // required
-    path: 'forbeta/attackmage.json', // required
+    path: 'allanimations/attack1_' + secondanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -119,7 +127,7 @@ let animation2_attack = bodymovin.loadAnimation({
 let animation2_stay = bodymovin.loadAnimation({
 
     container: document.getElementById('stay-container2'), // required
-    path: 'forbeta/staymage.json', // required
+    path: 'allanimations/stay1_' + secondanim + '.json', // required
     renderer: 'svg', // required
     loop: true, // optional
     autoplay: false, // optional
@@ -129,7 +137,7 @@ let animation2_stay = bodymovin.loadAnimation({
 let animation2_hurt = bodymovin.loadAnimation({
 
     container: document.getElementById('hurt-container2'), // required
-    path: 'forbeta/hurtmage.json', // required
+    path: 'allanimations/hurt1_' + secondanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -139,7 +147,7 @@ let animation2_hurt = bodymovin.loadAnimation({
 let animation2_weapon = bodymovin.loadAnimation({
 
     container: document.getElementById('weapon-container2'), // required
-    path: 'forbeta/weaponmage.json', // required
+    path: 'allanimations/weapon1_' + secondanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -149,7 +157,7 @@ let animation2_weapon = bodymovin.loadAnimation({
 let animation3_attack = bodymovin.loadAnimation({
 
     container: document.getElementById('attack-container3'), // required
-    path: 'forbeta/attackshoot.json', // required
+    path: 'allanimations/attack1_' + thirdanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -159,7 +167,7 @@ let animation3_attack = bodymovin.loadAnimation({
 let animation3_stay = bodymovin.loadAnimation({
 
     container: document.getElementById('stay-container3'), // required
-    path: 'forbeta/stayshoot.json', // required
+    path: 'allanimations/stay1_' + thirdanim + '.json', // required
     renderer: 'svg', // required
     loop: true, // optional
     autoplay: false, // optional
@@ -169,7 +177,7 @@ let animation3_stay = bodymovin.loadAnimation({
 let animation3_hurt = bodymovin.loadAnimation({
 
     container: document.getElementById('hurt-container3'), // required
-    path: 'forbeta/hurtshoot.json', // required
+    path: 'allanimations/hurt1_' + thirdanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -179,7 +187,7 @@ let animation3_hurt = bodymovin.loadAnimation({
 let animation3_weapon = bodymovin.loadAnimation({
 
     container: document.getElementById('weapon-container3'), // required
-    path: 'forbeta/weaponshoot.json', // required
+    path: 'allanimations/weapon1_' + thirdanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -189,7 +197,7 @@ let animation3_weapon = bodymovin.loadAnimation({
 let animation4_attack = bodymovin.loadAnimation({
 
     container: document.getElementById('attack-container4'), // required
-    path: 'forbeta/attackpaladin.json', // required
+    path: 'allanimations/attack1_' + forthanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -199,7 +207,7 @@ let animation4_attack = bodymovin.loadAnimation({
 let animation4_stay = bodymovin.loadAnimation({
 
     container: document.getElementById('stay-container4'), // required
-    path: 'forbeta/staypaladin.json', // required
+    path: 'allanimations/stay1_' + forthanim + '.json', // required
     renderer: 'svg', // required
     loop: true, // optional
     autoplay: false, // optional
@@ -209,7 +217,7 @@ let animation4_stay = bodymovin.loadAnimation({
 let animation4_hurt = bodymovin.loadAnimation({
 
     container: document.getElementById('hurt-container4'), // required
-    path: 'forbeta/hurtpaladin.json', // required
+    path: 'allanimations/hurt1_' + forthanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -219,7 +227,7 @@ let animation4_hurt = bodymovin.loadAnimation({
 let animation4_weapon = bodymovin.loadAnimation({
 
     container: document.getElementById('weapon-container4'), // required
-    path: 'forbeta/weaponpaladin.json', // required
+    path: 'allanimations/weapon1_' + forthanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -229,7 +237,7 @@ let animation4_weapon = bodymovin.loadAnimation({
 let animation5_attack = bodymovin.loadAnimation({
 
     container: document.getElementById('attack-container5'), // required
-    path: 'forbeta/attackberserk.json', // required
+    path: 'allanimations/attack2_' + eighthanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -239,7 +247,7 @@ let animation5_attack = bodymovin.loadAnimation({
 let animation5_stay = bodymovin.loadAnimation({
 
     container: document.getElementById('stay-container5'), // required
-    path: 'forbeta/stayberserk.json', // required
+    path: 'allanimations/stay2_' + eighthanim + '.json', // required
     renderer: 'svg', // required
     loop: true, // optional
     autoplay: false, // optional
@@ -249,7 +257,7 @@ let animation5_stay = bodymovin.loadAnimation({
 let animation5_hurt = bodymovin.loadAnimation({
 
     container: document.getElementById('hurt-container5'), // required
-    path: '/forbeta/hurtberserk.json', // required
+    path: 'allanimations/hurt2_' + eighthanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -259,7 +267,7 @@ let animation5_hurt = bodymovin.loadAnimation({
 let animation5_weapon = bodymovin.loadAnimation({
 
     container: document.getElementById('weapon-container5'), // required
-    path: 'forbeta/weaponberserk.json', // required
+    path: 'allanimations/weapon2_' + eighthanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -269,7 +277,7 @@ let animation5_weapon = bodymovin.loadAnimation({
 let animation6_attack = bodymovin.loadAnimation({
 
     container: document.getElementById('attack-container6'), // required
-    path: 'forbeta/attackdark.json', // required
+    path: 'allanimations/attack2_' + ninethanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -279,7 +287,7 @@ let animation6_attack = bodymovin.loadAnimation({
 let animation6_stay = bodymovin.loadAnimation({
 
     container: document.getElementById('stay-container6'), // required
-    path: 'forbeta/staydark.json', // required
+    path: 'allanimations/stay2_' + ninethanim + '.json', // required
     renderer: 'svg', // required
     loop: true, // optional
     autoplay: false, // optional
@@ -289,7 +297,7 @@ let animation6_stay = bodymovin.loadAnimation({
 let animation6_hurt = bodymovin.loadAnimation({
 
     container: document.getElementById('hurt-container6'), // required
-    path: 'forbeta/hurtdark.json', // required
+    path: 'allanimations/hurt2_' + ninethanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -299,7 +307,7 @@ let animation6_hurt = bodymovin.loadAnimation({
 let animation6_weapon = bodymovin.loadAnimation({
 
     container: document.getElementById('weapon-container6'), // required
-    path: 'forbeta/weapondark.json', // required
+    path: 'allanimations/weapon2_' + ninethanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -309,7 +317,7 @@ let animation6_weapon = bodymovin.loadAnimation({
 let animation7_attack = bodymovin.loadAnimation({
 
     container: document.getElementById('attack-container7'), // required
-    path: 'attack2.json', // required
+    path: 'allanimations/attack2_' + seventhdanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -319,7 +327,7 @@ let animation7_attack = bodymovin.loadAnimation({
 let animation7_stay = bodymovin.loadAnimation({
 
     container: document.getElementById('stay-container7'), // required
-    path: 'stay2.json', // required
+    path: 'allanimations/stay2_' + seventhdanim + '.json', // required
     renderer: 'svg', // required
     loop: true, // optional
     autoplay: false, // optional
@@ -329,7 +337,7 @@ let animation7_stay = bodymovin.loadAnimation({
 let animation7_hurt = bodymovin.loadAnimation({
 
     container: document.getElementById('hurt-container7'), // required
-    path: 'hurt2.json', // required
+    path: 'allanimations/hurt2_' + seventhdanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -339,7 +347,7 @@ let animation7_hurt = bodymovin.loadAnimation({
 let animation7_weapon = bodymovin.loadAnimation({
 
     container: document.getElementById('weapon-container7'), // required
-    path: 'weapon2.json', // required
+    path: 'allanimations/weapon2_' + seventhdanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -349,7 +357,7 @@ let animation7_weapon = bodymovin.loadAnimation({
 let animation8_attack = bodymovin.loadAnimation({
 
     container: document.getElementById('attack-container8'), // required
-    path: 'forbeta/attackpagas.json', // required
+    path: 'allanimations/attack1_' + fifthdanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -359,7 +367,7 @@ let animation8_attack = bodymovin.loadAnimation({
 let animation8_stay = bodymovin.loadAnimation({
 
     container: document.getElementById('stay-container8'), // required
-    path: 'forbeta/staypagas.json', // required
+    path: 'allanimations/stay1_' + fifthdanim + '.json', // required
     renderer: 'svg', // required
     loop: true, // optional
     autoplay: false, // optional
@@ -369,7 +377,7 @@ let animation8_stay = bodymovin.loadAnimation({
 let animation8_hurt = bodymovin.loadAnimation({
 
     container: document.getElementById('hurt-container8'), // required
-    path: 'forbeta/hurtpagas.json', // required
+    path: 'allanimations/hurt1_' + fifthdanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -379,7 +387,7 @@ let animation8_hurt = bodymovin.loadAnimation({
 let animation8_weapon = bodymovin.loadAnimation({
 
     container: document.getElementById('weapon-container8'), // required
-    path: 'forbeta/weaponpagas.json', // required
+    path: 'allanimations/weapon1_' + fifthdanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -389,7 +397,7 @@ let animation8_weapon = bodymovin.loadAnimation({
 let animation9_attack = bodymovin.loadAnimation({
 
     container: document.getElementById('attack-container9'), // required
-    path: 'forbeta/attackdospeh.json', // required
+    path: 'allanimations/attack1_' + sixthdanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -399,7 +407,7 @@ let animation9_attack = bodymovin.loadAnimation({
 let animation9_stay = bodymovin.loadAnimation({
 
     container: document.getElementById('stay-container9'), // required
-    path: 'forbeta/staydospeh.json', // required
+    path: 'allanimations/stay1_' + sixthdanim + '.json', // required
     renderer: 'svg', // required
     loop: true, // optional
     autoplay: false, // optional
@@ -409,7 +417,7 @@ let animation9_stay = bodymovin.loadAnimation({
 let animation9_hurt = bodymovin.loadAnimation({
 
     container: document.getElementById('hurt-container9'), // required
-    path: 'forbeta/hurtdospeh.json', // required
+    path: 'allanimations/hurt1_' + sixthdanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -419,7 +427,7 @@ let animation9_hurt = bodymovin.loadAnimation({
 let animation9_weapon = bodymovin.loadAnimation({
 
     container: document.getElementById('weapon-container9'), // required
-    path: 'forbeta/weapondospeh.json', // required
+    path: 'allanimations/weapon1_' + sixthdanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -429,7 +437,7 @@ let animation9_weapon = bodymovin.loadAnimation({
 let animation10_attack = bodymovin.loadAnimation({
 
     container: document.getElementById('attack-container10'), // required
-    path: 'forbeta/attacksovet.json', // required
+    path: 'allanimations/attack2_' + tenthanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -439,7 +447,7 @@ let animation10_attack = bodymovin.loadAnimation({
 let animation10_stay = bodymovin.loadAnimation({
 
     container: document.getElementById('stay-container10'), // required
-    path: 'forbeta/staysovet.json', // required
+    path: 'allanimations/stay2_' + tenthanim + '.json', // required
     renderer: 'svg', // required
     loop: true, // optional
     autoplay: false, // optional
@@ -449,7 +457,7 @@ let animation10_stay = bodymovin.loadAnimation({
 let animation10_hurt = bodymovin.loadAnimation({
 
     container: document.getElementById('hurt-container10'), // required
-    path: 'forbeta/hurtsovet.json', // required
+    path: 'allanimations/hurt2_' + tenthanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -459,7 +467,7 @@ let animation10_hurt = bodymovin.loadAnimation({
 let animation10_weapon = bodymovin.loadAnimation({
 
     container: document.getElementById('weapon-container10'), // required
-    path: 'forbeta/weaponsovet.json', // required
+    path: 'allanimations/weapon2_' + tenthanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -469,7 +477,7 @@ let animation10_weapon = bodymovin.loadAnimation({
 let animation11_attack = bodymovin.loadAnimation({
 
     container: document.getElementById('attack-container11'), // required
-    path: 'forbeta/attackdemon.json', // required
+    path: 'allanimations/attack2_' + eleventhanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -479,7 +487,7 @@ let animation11_attack = bodymovin.loadAnimation({
 let animation11_stay = bodymovin.loadAnimation({
 
     container: document.getElementById('stay-container11'), // required
-    path: 'forbeta/staydemon.json', // required
+    path: 'allanimations/stay2_' + eleventhanim + '.json', // required
     renderer: 'svg', // required
     loop: true, // optional
     autoplay: false, // optional
@@ -489,7 +497,7 @@ let animation11_stay = bodymovin.loadAnimation({
 let animation11_hurt = bodymovin.loadAnimation({
 
     container: document.getElementById('hurt-container11'), // required
-    path: 'forbeta/hurtdemon.json', // required
+    path: 'allanimations/hurt2_' + eleventhanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -499,7 +507,7 @@ let animation11_hurt = bodymovin.loadAnimation({
 let animation11_weapon = bodymovin.loadAnimation({
 
     container: document.getElementById('weapon-container11'), // required
-    path: 'forbeta/weapondemon.json', // required
+    path: 'allanimations/weapon2_' + eleventhanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -509,7 +517,7 @@ let animation11_weapon = bodymovin.loadAnimation({
 let animation12_attack = bodymovin.loadAnimation({
 
     container: document.getElementById('attack-container12'), // required
-    path: 'forbeta/attackdarkmage.json', // required
+    path: 'allanimations/attack2_' + twelthhanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -519,7 +527,7 @@ let animation12_attack = bodymovin.loadAnimation({
 let animation12_stay = bodymovin.loadAnimation({
 
     container: document.getElementById('stay-container12'), // required
-    path: 'forbeta/staydarkmage.json', // required
+    path: 'allanimations/stay2_' + twelthhanim + '.json', // required
     renderer: 'svg', // required
     loop: true, // optional
     autoplay: false, // optional
@@ -529,7 +537,7 @@ let animation12_stay = bodymovin.loadAnimation({
 let animation12_hurt = bodymovin.loadAnimation({
 
     container: document.getElementById('hurt-container12'), // required
-    path: 'forbeta/hurtdarkmage.json', // required
+    path: 'allanimations/hurt2_' + twelthhanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -539,7 +547,7 @@ let animation12_hurt = bodymovin.loadAnimation({
 let animation12_weapon = bodymovin.loadAnimation({
 
     container: document.getElementById('weapon-container12'), // required
-    path: 'forbeta/weapondarkmage.json', // required
+    path: 'allanimations/weapon2_' + twelthhanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
