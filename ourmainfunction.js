@@ -1,6 +1,18 @@
 // дисклеймер 5 это 8, а 6 это 9
 
 
+
+
+per = localStorage.getItem("test");
+var deliveredvalue2 = JSON.parse(per);
+console.log(deliveredvalue2);
+
+alert(deliveredvalue2[0]["value"]);
+
+
+
+
+
 // Setup the new Howl.
 const sound1 = new Howl({
     src: ['UNIT6111A.mp3']

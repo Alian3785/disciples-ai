@@ -17,7 +17,23 @@
 
 <body>
 
-<button class="btn first" style= "position: absolute; left: 1px; top: 150px" >Начать битву</button>
+<button class="btn first" id = "launch" style= "position: absolute; left: 1px; top: 150px" >Начать битву</button>
+
+<script>
+    //var arraywithunits = [1, 2, 3];
+
+    document.getElementById("launch").onclick = function() {
+
+        arraywithunits = [...arraywithunits].map(([key, value]) => ({ key, value }));
+
+        localStorage.setItem("buttonarray", JSON.stringify(arraywithunits));
+        allnewvaluenow = JSON.stringify(arraywithunits)
+        localStorage.setItem("test", allnewvaluenow);
+        window.location.href = "index.html";
+    }
+
+    //localStorage.setItem("test", "тестовая строка");
+</script>
 
 <div style="position: absolute; left: 1px; top: 50px ; z-index: -1; font-size: 30px" id="poster2">Играй в Disciples 2 в интернетике</div>
 
@@ -3225,7 +3241,7 @@
 </script>
 
 <script>
-    let arraywithunits = new Map([
+   arraywithunits = new Map([
         // 1 - 4
             // 2 - 8
               //   3 - 9
@@ -48446,7 +48462,7 @@
         bigyyy = "6"
         key = 3;
         bigkey = 9;
-        let x = document.getElementById("mySelect3").value;
+        x = document.getElementById("mySelect3").value;
         you = mySelect3;
         zzz = mySelect6;
         window.insidefunction();
