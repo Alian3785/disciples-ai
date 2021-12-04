@@ -797,7 +797,7 @@ let animation12_death = bodymovin.loadAnimation({
 
 const creatures = [
     {
-        damage: 20,
+        damage: deliveredvalue2[0][8],
         lastingdamage: 100,
     health: 45,
         mazhealth: 45,
@@ -806,8 +806,8 @@ const creatures = [
     position: 3,
     type: "mage",
     who: "Прорицательница",
-        initiative: 130,
-        realinit: 130,
+        initiative: deliveredvalue2[0][10],
+        realinit: deliveredvalue2[0][10],
     paralized: 0,
         petrification: 0,
         poisoned: 0,
@@ -1032,7 +1032,7 @@ const creatures = [
     position: 3,
     type: "archer",
     who: "Паладин",
-        initiative: 100,
+        initiative: 90,
         realinit: 100,
     paralized: 0,
         petrification: 0,
@@ -1705,7 +1705,7 @@ const creatures = [
 
 // Превращенные в импов
 
-alert(window.location.href);
+console.log(creatures);
 
 animation1_stay.play();
 animation2_stay.play();
