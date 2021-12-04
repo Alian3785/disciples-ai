@@ -7,20 +7,18 @@ per = localStorage.getItem("test");
 var deliveredvalue2 = JSON.parse(per);
 console.log(deliveredvalue2);
 
-alert(deliveredvalue2[0]["value"]);
-
-let firstanim = deliveredvalue2[0]["value"];
-let secondanim = deliveredvalue2[1]["value"];
-let thirdanim = deliveredvalue2[2]["value"];
-let forthanim = deliveredvalue2[3]["value"];
-let fifthdanim = deliveredvalue2[4]["value"];
-let sixthdanim = deliveredvalue2[5]["value"];
-let seventhdanim = deliveredvalue2[6]["value"];
-let eighthanim = deliveredvalue2[7]["value"];
-let ninethanim = deliveredvalue2[8]["value"];
-let tenthanim = deliveredvalue2[9]["value"];
-let eleventhanim = deliveredvalue2[10]["value"];
-let twelthhanim = deliveredvalue2[11]["value"];
+let firstanim = deliveredvalue2[0][14];
+let secondanim = deliveredvalue2[1][14];
+let thirdanim = deliveredvalue2[2][14];
+let forthanim = deliveredvalue2[3][14];
+let fifthdanim = deliveredvalue2[4][14];
+let sixthdanim = deliveredvalue2[5][14];
+let seventhdanim = deliveredvalue2[6][14];
+let eighthanim = deliveredvalue2[7][14];
+let ninethanim = deliveredvalue2[8][14];
+let tenthanim = deliveredvalue2[9][14];
+let eleventhanim = deliveredvalue2[10][14];
+let twelthhanim = deliveredvalue2[11][14];
 
 // Setup the new Howl.
 const sound1 = new Howl({
