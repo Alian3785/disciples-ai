@@ -7,18 +7,18 @@ per = localStorage.getItem("test");
 var deliveredvalue2 = JSON.parse(per);
 console.log(deliveredvalue2);
 
-let firstanim = deliveredvalue2[0][15];
-let secondanim = deliveredvalue2[1][15];
-let thirdanim = deliveredvalue2[2][15];
-let forthanim = deliveredvalue2[3][15];
-let fifthdanim = deliveredvalue2[4][15];
-let sixthdanim = deliveredvalue2[5][15];
-let seventhdanim = deliveredvalue2[6][15];
-let eighthanim = deliveredvalue2[7][15];
-let ninethanim = deliveredvalue2[8][15];
-let tenthanim = deliveredvalue2[9][15];
-let eleventhanim = deliveredvalue2[10][15];
-let twelthhanim = deliveredvalue2[11][15];
+let firstanim = deliveredvalue2[0][16];
+let secondanim = deliveredvalue2[1][16];
+let thirdanim = deliveredvalue2[2][16];
+let forthanim = deliveredvalue2[3][16];
+let fifthdanim = deliveredvalue2[4][16];
+let sixthdanim = deliveredvalue2[5][16];
+let seventhdanim = deliveredvalue2[6][16];
+let eighthanim = deliveredvalue2[7][16];
+let ninethanim = deliveredvalue2[8][16];
+let tenthanim = deliveredvalue2[9][16];
+let eleventhanim = deliveredvalue2[10][16];
+let twelthhanim = deliveredvalue2[11][16];
 
 // Setup the new Howl.
 const sound1 = new Howl({
@@ -3486,7 +3486,7 @@ firstpartofpuzzle = vampiresum;
             else {}
         }
 // Как лучник только добавляет яд, урон каждый ход тому кого атаковал
-        else if (attackerCreature.type === "Assasin") {
+        else if (attackerCreature.type === "assasin") {
             protectedornot = justattack();
             if (protectedornot === 1) {attackedCreature.health -= Math.floor((attackerCreature.damage * (1 - attackedCreature.armor) * (1 - attackedCreature.defensearmor)));}
             else {}
