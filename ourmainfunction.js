@@ -1908,7 +1908,7 @@ rect1.onclick = function() {
 
 sortByinit(creatures);
 
-rect1.classList.toggle("onewhomoves");
+//rect1.classList.toggle("onewhomoves");
 rect2.classList.toggle("onewhomoves");
 rect3.classList.toggle("onewhomoves");
 rect4.classList.toggle("onewhomoves");
@@ -1919,7 +1919,7 @@ rect8.classList.toggle("onewhomoves");
 rect9.classList.toggle("onewhomoves");
 rect10.classList.toggle("onewhomoves");
 rect11.classList.toggle("onewhomoves");
-rect12.classList.toggle("onewhomoves");
+//rect12.classList.toggle("onewhomoves");
 
 yourfucknigturn = creatures[0]["id"];
 console.log(yourfucknigturn);
