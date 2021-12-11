@@ -1129,7 +1129,7 @@ const creatures = [
         id: 6,
         team: "red",
         where: "ahead",
-        position: 3,
+        position: 1,
         animattack: function() {
             animation6_attack.playSegments([0, 46], true);
         },
@@ -1203,8 +1203,8 @@ const creatures = [
         alive: 1,
         id: 7,
         team: "red",
-        where: "behind",
-        position: 1,
+        where: "ahead",
+        position: 3,
         animattack: function() {
             animation7_attack.playSegments([0, 46], true);
         },
@@ -1278,7 +1278,7 @@ const creatures = [
         alive: 1,
         id: 8,
         team: "blue",
-        where: "behind",
+        where: "ahead",
         position: 2,
         animattack: function() {
             animation8_attack.playSegments([0, 46], true);
@@ -1355,7 +1355,7 @@ const creatures = [
         id: 5,
         team: "red",
         where: "ahead",
-        position: 1,
+        position: 2,
         animattack: function () {
             animation5_attack.playSegments([0, 46], true);
         },
@@ -1429,7 +1429,7 @@ const creatures = [
         alive: 1,
         id: 9,
         team: "blue",
-        where: "behind",
+        where: "ahead",
         position: 1,
         animattack: function() {
             animation9_attack.playSegments([0, 46], true);
@@ -1505,7 +1505,7 @@ const creatures = [
         id: 10,
         team: "red",
         where: "behind",
-        position: 2,
+        position: 1,
         animattack: function() {
             animation10_attack.playSegments([0, 46], true);
         },
@@ -1581,7 +1581,7 @@ const creatures = [
         id: 11,
         team: "red",
         where: "behind",
-        position: 3,
+        position: 2,
         animattack: function() {
             animation11_attack.playSegments([0, 46], true);
         },
@@ -3264,8 +3264,52 @@ firstpartofpuzzle = vampiresum;
             }
 
             protectedornot = justattack();
+            truedamage = Math.floor((attackerCreature.damage * (1 - attackedCreature.armor) * (1 - attackedCreature.defensearmor)));
             if (protectedornot === 1) {attackedCreature.health -= Math.floor((attackerCreature.damage * (1 - attackedCreature.armor) * (1 - attackedCreature.defensearmor)));}
             else {}
+
+            if (attackedCreature.team === "blue") {
+                attackerCreature.animat('attack', false);
+                attackerCreature.animat('weapon', false);
+                attackerCreature.animat('stay', true);
+                attackerCreature.animattack();
+                attackerCreature.sound();
+                attackerCreature.animweapon();
+                attackedCreature.glowred();
+                attackedCreature.glownumber(-truedamage);
+                attackedCreature.removenumbernow();
+                attackedCreature.removerednow();
+                console.log("Не синяя команда")
+                window.globalattacker = {
+                    realattacker: attackerCreature,
+                };
+                window.globalattacked = {
+                    realattacked: attackedCreature,
+                };
+                setTimeout(gethurt, 250, attackedCreature, attackerCreature);
+                setTimeout(backtostay, 710, attackedCreature, attackerCreature);
+            }
+            else {
+                attackerCreature.animat('attack', false);
+                attackerCreature.animat('weapon', false);
+                attackerCreature.animat('stay', true);
+                attackerCreature.animattack();
+                attackerCreature.sound();
+                attackerCreature.animweapon();
+                attackedCreature.glowred();
+                attackedCreature.glownumber(-truedamage);
+                attackedCreature.removenumbernow();
+                attackedCreature.removerednow();
+                console.log("Не синяя команда")
+                window.globalattacker = {
+                    realattacker: attackerCreature,
+                };
+                window.globalattacked = {
+                    realattacked: attackedCreature,
+                };
+                setTimeout(gethurt, 250, attackedCreature, attackerCreature);
+                setTimeout(backtostay, 710, attackedCreature, attackerCreature);
+            }
 
 
             if (attackerCreature.who === "Повелитель ада") {
