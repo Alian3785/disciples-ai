@@ -20,6 +20,8 @@ let tenthanim = deliveredvalue2[9][16];
 let eleventhanim = deliveredvalue2[10][16];
 let twelthhanim = deliveredvalue2[11][16];
 
+//deliveredvalue2[0]fill(0);
+
 // Setup the new Howl.
 const sound1 = new Howl({
     src: ['UNIT6111A.mp3']
@@ -71,7 +73,7 @@ const sound12 = new Howl({
     src: ['UNIT70C.mp3']
 });
 
-let animation1_attack = bodymovin.loadAnimation({
+/*let animation1_attack = bodymovin.loadAnimation({
 
     container: document.getElementById('attack-container'), // required
     path: 'allanimations/attack1_' + firstanim + '.json', // required
@@ -111,7 +113,7 @@ let animation1_weapon = bodymovin.loadAnimation({
     autoplay: false, // optional
     name: "Demo Animation", // optional
 });
-
+*/
 let animation2_attack = bodymovin.loadAnimation({
 
     container: document.getElementById('attack-container2'), // required
@@ -797,14 +799,14 @@ let animation12_death = bodymovin.loadAnimation({
 
 const creatures = [
     {
-        damage: deliveredvalue2[0][8],
-        lastingdamage: deliveredvalue2[0][9],
-    health: deliveredvalue2[0][0],
-        mazhealth: deliveredvalue2[0][0],
-    type: deliveredvalue2[0][11],
-    who: deliveredvalue2[0][12],
-        initiative: deliveredvalue2[0][10],
-        realinit: deliveredvalue2[0][10],
+        damage: 0,
+        lastingdamage: 0,
+    health: 0,
+        mazhealth: 0,
+    type: 0,
+    who: 0,
+        initiative: 0,
+        realinit: 0,
     paralized: 0,
         petrification: 0,
         poisoned: 0,
@@ -815,15 +817,15 @@ const creatures = [
         summoned: 0,
         teammated: 0,
         runningaway: 0,
-        shotsleft: deliveredvalue2[0][13],
-        typeofattack: deliveredvalue2[0][4],
-        typeofsecondattack: deliveredvalue2[0][5],
-        immunity: deliveredvalue2[0][2],
-        protection: deliveredvalue2[0][3],
-        moreprotection: [0, 1, 1],
-        armor: deliveredvalue2[0][1],
+        shotsleft: 0,
+        typeofattack: 0,
+        typeofsecondattack: 0,
+        immunity: 0,
+        protection: 0,
+        moreprotection: 0,
+        armor: 0,
         defensearmor: 0,
-        accuracy: [deliveredvalue2[0][6], deliveredvalue2[0][7]],
+        accuracy: 0,
         alive: 1,
         id: 1,
         team: "blue",
@@ -903,7 +905,7 @@ const creatures = [
         alive: 1,
         id: 2,
         team: "blue",
-        where: "ahead",
+        where: "behind",
         position: 2,
         animattack: function() {
             animation2_attack.playSegments([0, 46], true);
@@ -978,7 +980,7 @@ const creatures = [
         alive: 1,
         id: 3,
         team: "blue",
-        where: "ahead",
+        where: "behind",
         position: 1,
         animattack: function() {
             animation3_attack.playSegments([0, 46], true);
@@ -1707,7 +1709,7 @@ const creatures = [
 
 console.log(creatures);
 
-animation1_stay.play();
+//animation1_stay.play();
 animation2_stay.play();
 animation3_stay.play();
 animation4_stay.play();
@@ -3241,6 +3243,7 @@ firstpartofpuzzle = vampiresum;
         }
         // Воин с добавлением подтипов внизу
         else if (attackerCreature.type === "warrior") {
+
             const creaturesAhead = enemyTeam.filter(creature => creature.where === 'ahead')
             const creaturesBehind = enemyTeam.filter(creature => creature.where === 'behind')
             const mydamnteam = creatures
@@ -3256,13 +3259,17 @@ firstpartofpuzzle = vampiresum;
             let creaturesAttackable = creaturesAhead.length > 0 ? creaturesAhead : creaturesBehind
 
             if (creaturesAttackable.length > 1) {
+                console.log("111");
                 creaturesAttackable = creaturesAttackable.filter(creature => Math.abs(creature.position - attackerCreature.position) <= 1)
+                console.log(creaturesAttackable);
+                console.log("это срабатывает?");
             }
 
             if (!creaturesAttackable.includes(attackedCreature)) {
+                console.log("это срабатывает?");
                 return //can't attack this creature
             }
-
+            console.log("это срабатывает?");
             protectedornot = justattack();
             truedamage = Math.floor((attackerCreature.damage * (1 - attackedCreature.armor) * (1 - attackedCreature.defensearmor)));
             if (protectedornot === 1) {attackedCreature.health -= Math.floor((attackerCreature.damage * (1 - attackedCreature.armor) * (1 - attackedCreature.defensearmor)));}
