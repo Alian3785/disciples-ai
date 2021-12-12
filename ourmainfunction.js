@@ -25,6 +25,39 @@ console.log(deliveredvalue2[1]);
 if (deliveredvalue2[0].length === 0) {
     deliveredvalue2[0] = Array(16).fill(0);
 }
+if (deliveredvalue2[1].length === 0) {
+    deliveredvalue2[1] = Array(16).fill(0);
+}
+if (deliveredvalue2[2].length === 0) {
+    deliveredvalue2[2] = Array(16).fill(0);
+}
+if (deliveredvalue2[3].length === 0) {
+    deliveredvalue2[3] = Array(16).fill(0);
+}
+if (deliveredvalue2[4].length === 0) {
+    deliveredvalue2[4] = Array(16).fill(0);
+}
+if (deliveredvalue2[5].length === 0) {
+    deliveredvalue2[5] = Array(16).fill(0);
+}
+if (deliveredvalue2[6].length === 0) {
+    deliveredvalue2[6] = Array(16).fill(0);
+}
+if (deliveredvalue2[7].length === 0) {
+    deliveredvalue2[7] = Array(16).fill(0);
+}
+if (deliveredvalue2[8].length === 0) {
+    deliveredvalue2[8] = Array(16).fill(0);
+}
+if (deliveredvalue2[9].length === 0) {
+    deliveredvalue2[9] = Array(16).fill(0);
+}
+if (deliveredvalue2[10].length === 0) {
+    deliveredvalue2[10] = Array(16).fill(0);
+}
+if (deliveredvalue2[11].length === 0) {
+    deliveredvalue2[11] = Array(16).fill(0);
+}
 
 
 // Setup the new Howl.
@@ -119,118 +152,120 @@ if (deliveredvalue2[0].length === 0) {} else {
         name: "Demo Animation", // optional
     });
 }
+if (deliveredvalue2[1].length === 0) {} else {
+     animation2_attack = bodymovin.loadAnimation({
 
-let animation2_attack = bodymovin.loadAnimation({
+        container: document.getElementById('attack-container2'), // required
+        path: 'allanimations/attack1_' + secondanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
 
-    container: document.getElementById('attack-container2'), // required
-    path: 'allanimations/attack1_' + secondanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
+     animation2_stay = bodymovin.loadAnimation({
 
-let animation2_stay = bodymovin.loadAnimation({
+        container: document.getElementById('stay-container2'), // required
+        path: 'allanimations/stay1_' + secondanim + '.json', // required
+        renderer: 'svg', // required
+        loop: true, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
 
-    container: document.getElementById('stay-container2'), // required
-    path: 'allanimations/stay1_' + secondanim + '.json', // required
-    renderer: 'svg', // required
-    loop: true, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
+     animation2_hurt = bodymovin.loadAnimation({
 
-let animation2_hurt = bodymovin.loadAnimation({
+        container: document.getElementById('hurt-container2'), // required
+        path: 'allanimations/hurt1_' + secondanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
 
-    container: document.getElementById('hurt-container2'), // required
-    path: 'allanimations/hurt1_' + secondanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
+     animation2_weapon = bodymovin.loadAnimation({
 
-let animation2_weapon = bodymovin.loadAnimation({
+        container: document.getElementById('weapon-container2'), // required
+        path: 'allanimations/weapon1_' + secondanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+}
+if (deliveredvalue2[2].length === 0) {} else {
+     animation3_attack = bodymovin.loadAnimation({
 
-    container: document.getElementById('weapon-container2'), // required
-    path: 'allanimations/weapon1_' + secondanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
+        container: document.getElementById('attack-container3'), // required
+        path: 'allanimations/attack1_' + thirdanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
 
-let animation3_attack = bodymovin.loadAnimation({
+     animation3_stay = bodymovin.loadAnimation({
 
-    container: document.getElementById('attack-container3'), // required
-    path: 'allanimations/attack1_' + thirdanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
+        container: document.getElementById('stay-container3'), // required
+        path: 'allanimations/stay1_' + thirdanim + '.json', // required
+        renderer: 'svg', // required
+        loop: true, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
 
-let animation3_stay = bodymovin.loadAnimation({
+     animation3_hurt = bodymovin.loadAnimation({
 
-    container: document.getElementById('stay-container3'), // required
-    path: 'allanimations/stay1_' + thirdanim + '.json', // required
-    renderer: 'svg', // required
-    loop: true, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
+        container: document.getElementById('hurt-container3'), // required
+        path: 'allanimations/hurt1_' + thirdanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
 
-let animation3_hurt = bodymovin.loadAnimation({
+     animation3_weapon = bodymovin.loadAnimation({
 
-    container: document.getElementById('hurt-container3'), // required
-    path: 'allanimations/hurt1_' + thirdanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
+        container: document.getElementById('weapon-container3'), // required
+        path: 'allanimations/weapon1_' + thirdanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+}
+if (deliveredvalue2[3].length === 0) {} else {
+     animation4_attack = bodymovin.loadAnimation({
 
-let animation3_weapon = bodymovin.loadAnimation({
+        container: document.getElementById('attack-container4'), // required
+        path: 'allanimations/attack1_' + forthanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
 
-    container: document.getElementById('weapon-container3'), // required
-    path: 'allanimations/weapon1_' + thirdanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
+     animation4_stay = bodymovin.loadAnimation({
 
-let animation4_attack = bodymovin.loadAnimation({
+        container: document.getElementById('stay-container4'), // required
+        path: 'allanimations/stay1_' + forthanim + '.json', // required
+        renderer: 'svg', // required
+        loop: true, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
 
-    container: document.getElementById('attack-container4'), // required
-    path: 'allanimations/attack1_' + forthanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
+     animation4_hurt = bodymovin.loadAnimation({
 
-let animation4_stay = bodymovin.loadAnimation({
+        container: document.getElementById('hurt-container4'), // required
+        path: 'allanimations/hurt1_' + forthanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
 
-    container: document.getElementById('stay-container4'), // required
-    path: 'allanimations/stay1_' + forthanim + '.json', // required
-    renderer: 'svg', // required
-    loop: true, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation4_hurt = bodymovin.loadAnimation({
-
-    container: document.getElementById('hurt-container4'), // required
-    path: 'allanimations/hurt1_' + forthanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation4_weapon = bodymovin.loadAnimation({
+      animation4_weapon = bodymovin.loadAnimation({
 
     container: document.getElementById('weapon-container4'), // required
     path: 'allanimations/weapon1_' + forthanim + '.json', // required
@@ -239,327 +274,335 @@ let animation4_weapon = bodymovin.loadAnimation({
     autoplay: false, // optional
     name: "Demo Animation", // optional
 });
-
-let animation5_attack = bodymovin.loadAnimation({
-
-    container: document.getElementById('attack-container5'), // required
-    path: 'allanimations/attack2_' + eighthanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation5_stay = bodymovin.loadAnimation({
-
-    container: document.getElementById('stay-container5'), // required
-    path: 'allanimations/stay2_' + eighthanim + '.json', // required
-    renderer: 'svg', // required
-    loop: true, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation5_hurt = bodymovin.loadAnimation({
-
-    container: document.getElementById('hurt-container5'), // required
-    path: 'allanimations/hurt2_' + eighthanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation5_weapon = bodymovin.loadAnimation({
-
-    container: document.getElementById('weapon-container5'), // required
-    path: 'allanimations/weapon2_' + eighthanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation6_attack = bodymovin.loadAnimation({
-
-    container: document.getElementById('attack-container6'), // required
-    path: 'allanimations/attack2_' + ninethanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation6_stay = bodymovin.loadAnimation({
-
-    container: document.getElementById('stay-container6'), // required
-    path: 'allanimations/stay2_' + ninethanim + '.json', // required
-    renderer: 'svg', // required
-    loop: true, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation6_hurt = bodymovin.loadAnimation({
-
-    container: document.getElementById('hurt-container6'), // required
-    path: 'allanimations/hurt2_' + ninethanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation6_weapon = bodymovin.loadAnimation({
-
-    container: document.getElementById('weapon-container6'), // required
-    path: 'allanimations/weapon2_' + ninethanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation7_attack = bodymovin.loadAnimation({
-
-    container: document.getElementById('attack-container7'), // required
-    path: 'allanimations/attack2_' + seventhdanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation7_stay = bodymovin.loadAnimation({
-
-    container: document.getElementById('stay-container7'), // required
-    path: 'allanimations/stay2_' + seventhdanim + '.json', // required
-    renderer: 'svg', // required
-    loop: true, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation7_hurt = bodymovin.loadAnimation({
-
-    container: document.getElementById('hurt-container7'), // required
-    path: 'allanimations/hurt2_' + seventhdanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation7_weapon = bodymovin.loadAnimation({
-
-    container: document.getElementById('weapon-container7'), // required
-    path: 'allanimations/weapon2_' + seventhdanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation8_attack = bodymovin.loadAnimation({
-
-    container: document.getElementById('attack-container8'), // required
-    path: 'allanimations/attack1_' + fifthdanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation8_stay = bodymovin.loadAnimation({
-
-    container: document.getElementById('stay-container8'), // required
-    path: 'allanimations/stay1_' + fifthdanim + '.json', // required
-    renderer: 'svg', // required
-    loop: true, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation8_hurt = bodymovin.loadAnimation({
-
-    container: document.getElementById('hurt-container8'), // required
-    path: 'allanimations/hurt1_' + fifthdanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation8_weapon = bodymovin.loadAnimation({
-
-    container: document.getElementById('weapon-container8'), // required
-    path: 'allanimations/weapon1_' + fifthdanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation9_attack = bodymovin.loadAnimation({
-
-    container: document.getElementById('attack-container9'), // required
-    path: 'allanimations/attack1_' + sixthdanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation9_stay = bodymovin.loadAnimation({
-
-    container: document.getElementById('stay-container9'), // required
-    path: 'allanimations/stay1_' + sixthdanim + '.json', // required
-    renderer: 'svg', // required
-    loop: true, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation9_hurt = bodymovin.loadAnimation({
-
-    container: document.getElementById('hurt-container9'), // required
-    path: 'allanimations/hurt1_' + sixthdanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation9_weapon = bodymovin.loadAnimation({
-
-    container: document.getElementById('weapon-container9'), // required
-    path: 'allanimations/weapon1_' + sixthdanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation10_attack = bodymovin.loadAnimation({
-
-    container: document.getElementById('attack-container10'), // required
-    path: 'allanimations/attack2_' + tenthanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation10_stay = bodymovin.loadAnimation({
-
-    container: document.getElementById('stay-container10'), // required
-    path: 'allanimations/stay2_' + tenthanim + '.json', // required
-    renderer: 'svg', // required
-    loop: true, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation10_hurt = bodymovin.loadAnimation({
-
-    container: document.getElementById('hurt-container10'), // required
-    path: 'allanimations/hurt2_' + tenthanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation10_weapon = bodymovin.loadAnimation({
-
-    container: document.getElementById('weapon-container10'), // required
-    path: 'allanimations/weapon2_' + tenthanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation11_attack = bodymovin.loadAnimation({
-
-    container: document.getElementById('attack-container11'), // required
-    path: 'allanimations/attack2_' + eleventhanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation11_stay = bodymovin.loadAnimation({
-
-    container: document.getElementById('stay-container11'), // required
-    path: 'allanimations/stay2_' + eleventhanim + '.json', // required
-    renderer: 'svg', // required
-    loop: true, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation11_hurt = bodymovin.loadAnimation({
-
-    container: document.getElementById('hurt-container11'), // required
-    path: 'allanimations/hurt2_' + eleventhanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation11_weapon = bodymovin.loadAnimation({
-
-    container: document.getElementById('weapon-container11'), // required
-    path: 'allanimations/weapon2_' + eleventhanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation12_attack = bodymovin.loadAnimation({
-
-    container: document.getElementById('attack-container12'), // required
-    path: 'allanimations/attack2_' + twelthhanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation12_stay = bodymovin.loadAnimation({
-
-    container: document.getElementById('stay-container12'), // required
-    path: 'allanimations/stay2_' + twelthhanim + '.json', // required
-    renderer: 'svg', // required
-    loop: true, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation12_hurt = bodymovin.loadAnimation({
-
-    container: document.getElementById('hurt-container12'), // required
-    path: 'allanimations/hurt2_' + twelthhanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation12_weapon = bodymovin.loadAnimation({
-
-    container: document.getElementById('weapon-container12'), // required
-    path: 'allanimations/weapon2_' + twelthhanim + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
+}
+if (deliveredvalue2[4].length === 0) {} else {
+     animation5_attack = bodymovin.loadAnimation({
+
+        container: document.getElementById('attack-container5'), // required
+        path: 'allanimations/attack2_' + eighthanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
+     animation5_stay = bodymovin.loadAnimation({
+
+        container: document.getElementById('stay-container5'), // required
+        path: 'allanimations/stay2_' + eighthanim + '.json', // required
+        renderer: 'svg', // required
+        loop: true, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
+     animation5_hurt = bodymovin.loadAnimation({
+
+        container: document.getElementById('hurt-container5'), // required
+        path: 'allanimations/hurt2_' + eighthanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
+     animation5_weapon = bodymovin.loadAnimation({
+
+        container: document.getElementById('weapon-container5'), // required
+        path: 'allanimations/weapon2_' + eighthanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+}
+if (deliveredvalue2[5].length === 0) {} else {
+     animation6_attack = bodymovin.loadAnimation({
+
+        container: document.getElementById('attack-container6'), // required
+        path: 'allanimations/attack2_' + ninethanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
+     animation6_stay = bodymovin.loadAnimation({
+
+        container: document.getElementById('stay-container6'), // required
+        path: 'allanimations/stay2_' + ninethanim + '.json', // required
+        renderer: 'svg', // required
+        loop: true, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
+     animation6_hurt = bodymovin.loadAnimation({
+
+        container: document.getElementById('hurt-container6'), // required
+        path: 'allanimations/hurt2_' + ninethanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
+     animation6_weapon = bodymovin.loadAnimation({
+
+        container: document.getElementById('weapon-container6'), // required
+        path: 'allanimations/weapon2_' + ninethanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+}
+if (deliveredvalue2[6].length === 0) {} else {
+     animation7_attack = bodymovin.loadAnimation({
+
+        container: document.getElementById('attack-container7'), // required
+        path: 'allanimations/attack2_' + seventhdanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
+     animation7_stay = bodymovin.loadAnimation({
+
+        container: document.getElementById('stay-container7'), // required
+        path: 'allanimations/stay2_' + seventhdanim + '.json', // required
+        renderer: 'svg', // required
+        loop: true, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
+     animation7_hurt = bodymovin.loadAnimation({
+
+        container: document.getElementById('hurt-container7'), // required
+        path: 'allanimations/hurt2_' + seventhdanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
+     animation7_weapon = bodymovin.loadAnimation({
+
+        container: document.getElementById('weapon-container7'), // required
+        path: 'allanimations/weapon2_' + seventhdanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+}
+if (deliveredvalue2[7].length === 0) {} else {
+     animation8_attack = bodymovin.loadAnimation({
+
+        container: document.getElementById('attack-container8'), // required
+        path: 'allanimations/attack1_' + fifthdanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
+     animation8_stay = bodymovin.loadAnimation({
+
+        container: document.getElementById('stay-container8'), // required
+        path: 'allanimations/stay1_' + fifthdanim + '.json', // required
+        renderer: 'svg', // required
+        loop: true, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
+     animation8_hurt = bodymovin.loadAnimation({
+
+        container: document.getElementById('hurt-container8'), // required
+        path: 'allanimations/hurt1_' + fifthdanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
+     animation8_weapon = bodymovin.loadAnimation({
+
+        container: document.getElementById('weapon-container8'), // required
+        path: 'allanimations/weapon1_' + fifthdanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+}
+if (deliveredvalue2[8].length === 0) {} else {
+     animation9_attack = bodymovin.loadAnimation({
+
+        container: document.getElementById('attack-container9'), // required
+        path: 'allanimations/attack1_' + sixthdanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
+     animation9_stay = bodymovin.loadAnimation({
+
+        container: document.getElementById('stay-container9'), // required
+        path: 'allanimations/stay1_' + sixthdanim + '.json', // required
+        renderer: 'svg', // required
+        loop: true, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
+     animation9_hurt = bodymovin.loadAnimation({
+
+        container: document.getElementById('hurt-container9'), // required
+        path: 'allanimations/hurt1_' + sixthdanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
+     animation9_weapon = bodymovin.loadAnimation({
+
+        container: document.getElementById('weapon-container9'), // required
+        path: 'allanimations/weapon1_' + sixthdanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+}
+if (deliveredvalue2[9].length === 0) {} else {
+     animation10_attack = bodymovin.loadAnimation({
+
+        container: document.getElementById('attack-container10'), // required
+        path: 'allanimations/attack2_' + tenthanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
+     animation10_stay = bodymovin.loadAnimation({
+
+        container: document.getElementById('stay-container10'), // required
+        path: 'allanimations/stay2_' + tenthanim + '.json', // required
+        renderer: 'svg', // required
+        loop: true, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
+     animation10_hurt = bodymovin.loadAnimation({
+
+        container: document.getElementById('hurt-container10'), // required
+        path: 'allanimations/hurt2_' + tenthanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
+     animation10_weapon = bodymovin.loadAnimation({
+
+        container: document.getElementById('weapon-container10'), // required
+        path: 'allanimations/weapon2_' + tenthanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+}
+if (deliveredvalue2[10].length === 0) {} else {
+     animation11_attack = bodymovin.loadAnimation({
+
+        container: document.getElementById('attack-container11'), // required
+        path: 'allanimations/attack2_' + eleventhanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
+     animation11_stay = bodymovin.loadAnimation({
+
+        container: document.getElementById('stay-container11'), // required
+        path: 'allanimations/stay2_' + eleventhanim + '.json', // required
+        renderer: 'svg', // required
+        loop: true, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
+     animation11_hurt = bodymovin.loadAnimation({
+
+        container: document.getElementById('hurt-container11'), // required
+        path: 'allanimations/hurt2_' + eleventhanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
+     animation11_weapon = bodymovin.loadAnimation({
+
+        container: document.getElementById('weapon-container11'), // required
+        path: 'allanimations/weapon2_' + eleventhanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+}
+if (deliveredvalue2[11].length === 0) {} else {
+     animation12_attack = bodymovin.loadAnimation({
+
+        container: document.getElementById('attack-container12'), // required
+        path: 'allanimations/attack2_' + twelthhanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
+     animation12_stay = bodymovin.loadAnimation({
+
+        container: document.getElementById('stay-container12'), // required
+        path: 'allanimations/stay2_' + twelthhanim + '.json', // required
+        renderer: 'svg', // required
+        loop: true, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
+     animation12_hurt = bodymovin.loadAnimation({
+
+        container: document.getElementById('hurt-container12'), // required
+        path: 'allanimations/hurt2_' + twelthhanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
+     animation12_weapon = bodymovin.loadAnimation({
+
+        container: document.getElementById('weapon-container12'), // required
+        path: 'allanimations/weapon2_' + twelthhanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+}
 
 let animation_magic = bodymovin.loadAnimation({
 
@@ -1513,7 +1556,7 @@ const creatures = [
         id: 10,
         team: "red",
         where: "behind",
-        position: 1,
+        position: 3,
         animattack: function() {
             animation10_attack.playSegments([0, 46], true);
         },
@@ -1665,7 +1708,7 @@ const creatures = [
         id: 12,
         team: "red",
         where: "behind",
-        position: 3,
+        position: 1,
         animattack: function() {
             animation12_attack.playSegments([0, 46], true);
         },
