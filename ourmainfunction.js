@@ -33,6 +33,11 @@ let tenthdeath = deliveredvalue2[9][15];
 let eleventhdeath = deliveredvalue2[10][15];
 let twelthhdeath = deliveredvalue2[11][15];
 
+console.log(onedeath);
+console.log(twodeath);
+
+console.log(firstanim);
+console.log(secondanim);
 
 console.log(deliveredvalue2[1]);
 
@@ -141,7 +146,7 @@ if (deliveredvalue2[0].length === 0) {} else {
         container: document.getElementById('stay-container'), // required
         path: 'allanimations/stay1_' + firstanim + '.json', // required
         renderer: 'svg', // required
-        loop: true, // optional
+        loop: false, // optional
         autoplay: false, // optional
         name: "Demo Animation", // optional
     });
@@ -163,6 +168,16 @@ if (deliveredvalue2[0].length === 0) {} else {
         renderer: 'svg', // required
         loop: false, // optional
         autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
+    animation1_death = bodymovin.loadAnimation({
+
+        container: document.getElementById('death-container'), // required
+        path: 'allanimations/death' + onedeath + '.json', // required
+        renderer: 'svg', // required
+        loop: true, // optional
+        autoplay: true, // optional
         name: "Demo Animation", // optional
     });
 }
@@ -206,6 +221,16 @@ if (deliveredvalue2[1].length === 0) {} else {
         autoplay: false, // optional
         name: "Demo Animation", // optional
     });
+
+    animation2_death = bodymovin.loadAnimation({
+
+        container: document.getElementById('death-container2'), // required
+        path: 'allanimations/death' + twodeath + '.json', // required
+        renderer: 'svg', // required
+        loop: true, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
 }
 if (deliveredvalue2[2].length === 0) {} else {
      animation3_attack = bodymovin.loadAnimation({
@@ -242,6 +267,16 @@ if (deliveredvalue2[2].length === 0) {} else {
 
         container: document.getElementById('weapon-container3'), // required
         path: 'allanimations/weapon1_' + thirdanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
+    animation3_death = bodymovin.loadAnimation({
+
+        container: document.getElementById('death-container3'), // required
+        path: 'allanimations/death' + thirddeath + '.json', // required
         renderer: 'svg', // required
         loop: false, // optional
         autoplay: false, // optional
@@ -288,6 +323,16 @@ if (deliveredvalue2[3].length === 0) {} else {
     autoplay: false, // optional
     name: "Demo Animation", // optional
 });
+
+    animation4_death = bodymovin.loadAnimation({
+
+        container: document.getElementById('death-container4'), // required
+        path: 'allanimations/death' + forthdeath + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
 }
 if (deliveredvalue2[4].length === 0) {} else {
      animation5_attack = bodymovin.loadAnimation({
@@ -329,6 +374,17 @@ if (deliveredvalue2[4].length === 0) {} else {
         autoplay: false, // optional
         name: "Demo Animation", // optional
     });
+
+    animation5_death = bodymovin.loadAnimation({
+
+        container: document.getElementById('death-container5'), // required
+        path: 'allanimations/death' + fifthdeath + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
 }
 if (deliveredvalue2[5].length === 0) {} else {
      animation6_attack = bodymovin.loadAnimation({
@@ -365,6 +421,16 @@ if (deliveredvalue2[5].length === 0) {} else {
 
         container: document.getElementById('weapon-container6'), // required
         path: 'allanimations/weapon2_' + ninethanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
+    animation6_death = bodymovin.loadAnimation({
+
+        container: document.getElementById('death-container6'), // required
+        path: 'allanimations/death' + sixthdeath + '.json', // required
         renderer: 'svg', // required
         loop: false, // optional
         autoplay: false, // optional
@@ -411,6 +477,16 @@ if (deliveredvalue2[6].length === 0) {} else {
         autoplay: false, // optional
         name: "Demo Animation", // optional
     });
+
+    animation7_death = bodymovin.loadAnimation({
+
+        container: document.getElementById('death-container7'), // required
+        path: 'allanimations/death' + seventhdeath + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
 }
 if (deliveredvalue2[7].length === 0) {} else {
      animation8_attack = bodymovin.loadAnimation({
@@ -447,6 +523,16 @@ if (deliveredvalue2[7].length === 0) {} else {
 
         container: document.getElementById('weapon-container8'), // required
         path: 'allanimations/weapon1_' + fifthdanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
+    animation8_death = bodymovin.loadAnimation({
+
+        container: document.getElementById('death-container8'), // required
+        path: 'allanimations/death' + eighthdeath + '.json', // required
         renderer: 'svg', // required
         loop: false, // optional
         autoplay: false, // optional
@@ -493,6 +579,16 @@ if (deliveredvalue2[8].length === 0) {} else {
         autoplay: false, // optional
         name: "Demo Animation", // optional
     });
+
+    animation9_death = bodymovin.loadAnimation({
+
+        container: document.getElementById('death-container9'), // required
+        path: 'allanimations/death' + ninethdeath + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
 }
 if (deliveredvalue2[9].length === 0) {} else {
      animation10_attack = bodymovin.loadAnimation({
@@ -529,6 +625,16 @@ if (deliveredvalue2[9].length === 0) {} else {
 
         container: document.getElementById('weapon-container10'), // required
         path: 'allanimations/weapon2_' + tenthanim + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
+
+    animation10_death = bodymovin.loadAnimation({
+
+        container: document.getElementById('death-container10'), // required
+        path: 'allanimations/death' + tenthdeath + '.json', // required
         renderer: 'svg', // required
         loop: false, // optional
         autoplay: false, // optional
@@ -575,6 +681,16 @@ if (deliveredvalue2[10].length === 0) {} else {
         autoplay: false, // optional
         name: "Demo Animation", // optional
     });
+
+    animation11_death = bodymovin.loadAnimation({
+
+        container: document.getElementById('death-container11'), // required
+        path: 'allanimations/death' + eleventhdeath + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
 }
 if (deliveredvalue2[11].length === 0) {} else {
      animation12_attack = bodymovin.loadAnimation({
@@ -616,7 +732,20 @@ if (deliveredvalue2[11].length === 0) {} else {
         autoplay: false, // optional
         name: "Demo Animation", // optional
     });
+
+    animation12_death = bodymovin.loadAnimation({
+
+        container: document.getElementById('death-container12'), // required
+        path: 'allanimations/death' + twelthhdeath + '.json', // required
+        renderer: 'svg', // required
+        loop: false, // optional
+        autoplay: false, // optional
+        name: "Demo Animation", // optional
+    });
 }
+
+animation1_death.play();
+animation2_death.play();
 
 let animation_magic = bodymovin.loadAnimation({
 
@@ -732,126 +861,6 @@ let animation12_magic = bodymovin.loadAnimation({
 
     container: document.getElementById('mage-container12'), // required
     path: 'testmagic6.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation1_death = bodymovin.loadAnimation({
-
-    container: document.getElementById('death-container'), // required
-    path: 'allanimations/death_' + onedeath + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation2_death = bodymovin.loadAnimation({
-
-    container: document.getElementById('death-container'), // required
-    path: 'allanimations/death_' + twodeath + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation3_death = bodymovin.loadAnimation({
-
-    container: document.getElementById('death-container2'), // required
-    path: 'allanimations/death_' + thirddeath + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation4_death = bodymovin.loadAnimation({
-
-    container: document.getElementById('death-container3'), // required
-    path: 'allanimations/death_' + forthdeath + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation5_death = bodymovin.loadAnimation({
-
-    container: document.getElementById('death-container4'), // required
-    path: 'allanimations/death_' + fifthdeath + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation6_death = bodymovin.loadAnimation({
-
-    container: document.getElementById('death-container5'), // required
-    path: 'allanimations/death_' + sixthdeath + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation7_death = bodymovin.loadAnimation({
-
-    container: document.getElementById('death-container5'), // required
-    path: 'allanimations/death_' + seventhdeath + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation8_death = bodymovin.loadAnimation({
-
-    container: document.getElementById('death-container5'), // required
-    path: 'allanimations/death_' + eighthdeath + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation9_death = bodymovin.loadAnimation({
-
-    container: document.getElementById('death-container5'), // required
-    path: 'allanimations/death_' + ninethdeath + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation10_death = bodymovin.loadAnimation({
-
-    container: document.getElementById('death-container5'), // required
-    path: 'allanimations/death_' + tenthdeath + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation11_death = bodymovin.loadAnimation({
-
-    container: document.getElementById('death-container5'), // required
-    path: 'allanimations/death_' + eleventhdeath + '.json', // required
-    renderer: 'svg', // required
-    loop: false, // optional
-    autoplay: false, // optional
-    name: "Demo Animation", // optional
-});
-
-let animation12_death = bodymovin.loadAnimation({
-
-    container: document.getElementById('death-container5'), // required
-    path: 'allanimations/death_' + twelthhdeath + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -1771,9 +1780,9 @@ const creatures = [
 
 console.log(creatures);
 
-animation1_stay.play();
-animation2_stay.play();
-animation3_stay.play();
+//animation1_stay.play();
+//animation2_stay.play();
+//animation3_stay.play();
 animation4_stay.play();
 animation5_stay.play();
 animation6_stay.play();
@@ -1784,6 +1793,8 @@ animation10_stay.play();
 animation11_stay.play();
 animation12_stay.play();
 
+
+
 //animation11_magic.play();
 //animation12_magic.play();
 //animation2_magic.play();
@@ -1791,9 +1802,21 @@ animation12_stay.play();
 
 //animation11.play();
 //animation12.play();
+console.log(onedeath);
+animation1_death.play();
+animation2_death.play();
+animation12_death.play();
 
+//creatures[0].animdeath();
 
+document.getElementById("stay-container").style.visibility = "hidden";
+document.getElementById("stay-container2").style.visibility = "hidden";
+document.getElementById("stay-container3").style.visibility = "hidden";
 
+document.getElementById("death-container").style.visibility = "visible";
+document.getElementById("death-container2").style.visibility = "visible";
+document.getElementById("death-container3").style.visibility = "visible";
+/*
 document.getElementById("attack-container").style.visibility = "hidden";
 document.getElementById("attack-container2").style.visibility = "hidden";
 document.getElementById("attack-container3").style.visibility = "hidden";
@@ -1832,7 +1855,7 @@ document.getElementById("weapon-container9").style.visibility = "hidden";
 document.getElementById("weapon-container10").style.visibility = "hidden";
 document.getElementById("weapon-container11").style.visibility = "hidden";
 document.getElementById("weapon-container12").style.visibility = "hidden";
-
+/*
 document.getElementById("death-container").style.visibility = "hidden";
 document.getElementById("death-container2").style.visibility = "hidden";
 document.getElementById("death-container3").style.visibility = "hidden";
@@ -1845,7 +1868,7 @@ document.getElementById("death-container9").style.visibility = "hidden";
 document.getElementById("death-container10").style.visibility = "hidden";
 document.getElementById("death-container11").style.visibility = "hidden";
 document.getElementById("death-container12").style.visibility = "hidden";
-
+*/
 document.getElementById("mage-container").style.visibility = "hidden";
 document.getElementById("mage-container2").style.visibility = "hidden";
 document.getElementById("mage-container3").style.visibility = "hidden";
@@ -3348,6 +3371,7 @@ firstpartofpuzzle = vampiresum;
                 attackerCreature.animattack();
                 attackerCreature.sound();
                 attackerCreature.animweapon();
+                attackedCreature.animdeath();
                 attackedCreature.glowred();
                 attackedCreature.glownumber(-truedamage);
                 attackedCreature.removenumbernow();
@@ -3369,6 +3393,7 @@ firstpartofpuzzle = vampiresum;
                 attackerCreature.animattack();
                 attackerCreature.sound();
                 attackerCreature.animweapon();
+                attackedCreature.animdeath();
                 attackedCreature.glowred();
                 attackedCreature.glownumber(-truedamage);
                 attackedCreature.removenumbernow();
