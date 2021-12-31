@@ -3379,8 +3379,8 @@ firstpartofpuzzle = vampiresum;
                 window.globalattacked = {
                     realattacked: attackedCreature,
                 };
-                //setTimeout(gethurt, 250, attackedCreature, attackerCreature);
-                //setTimeout(backtostay, 710, attackedCreature, attackerCreature);
+                setTimeout(gethurt, 250, attackedCreature, attackerCreature);
+                setTimeout(backtostay, 710, attackedCreature, attackerCreature);
             }
             else {
                 attackerCreature.animat('attack', false);
@@ -3402,8 +3402,8 @@ firstpartofpuzzle = vampiresum;
                 window.globalattacked = {
                     realattacked: attackedCreature,
                 };
-                //setTimeout(gethurt, 250, attackedCreature, attackerCreature);
-                //setTimeout(backtostay, 710, attackedCreature, attackerCreature);
+                setTimeout(gethurt, 250, attackedCreature, attackerCreature);
+                setTimeout(backtostay, 710, attackedCreature, attackerCreature);
             }
 
 
