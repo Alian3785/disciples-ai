@@ -176,7 +176,7 @@ if (deliveredvalue2[0].length === 0) {} else {
         container: document.getElementById('death-container'), // required
         path: 'allanimations/death' + onedeath + '.json', // required
         renderer: 'svg', // required
-        loop: true, // optional
+        loop: false, // optional
         autoplay: false, // optional
         name: "Demo Animation", // optional
     });
@@ -227,7 +227,7 @@ if (deliveredvalue2[1].length === 0) {} else {
         container: document.getElementById('death-container2'), // required
         path: 'allanimations/death' + twodeath + '.json', // required
         renderer: 'svg', // required
-        loop: true, // optional
+        loop: false, // optional
         autoplay: false, // optional
         name: "Demo Animation", // optional
     });
@@ -278,7 +278,7 @@ if (deliveredvalue2[2].length === 0) {} else {
         container: document.getElementById('death-container3'), // required
         path: 'allanimations/death' + thirddeath + '.json', // required
         renderer: 'svg', // required
-        loop: true, // optional
+        loop: false, // optional
         autoplay: false, // optional
         name: "Demo Animation", // optional
     });
@@ -329,7 +329,7 @@ if (deliveredvalue2[3].length === 0) {} else {
         container: document.getElementById('death-container4'), // required
         path: 'allanimations/death' + forthdeath + '.json', // required
         renderer: 'svg', // required
-        loop: true, // optional
+        loop: false, // optional
         autoplay: false, // optional
         name: "Demo Animation", // optional
     });
@@ -380,7 +380,7 @@ if (deliveredvalue2[4].length === 0) {} else {
         container: document.getElementById('death-container5'), // required
         path: 'allanimations/death' + eighthdeath + '.json', // required
         renderer: 'svg', // required
-        loop: true, // optional
+        loop: false, // optional
         autoplay: false, // optional
         name: "Demo Animation", // optional
     });
@@ -432,7 +432,7 @@ if (deliveredvalue2[5].length === 0) {} else {
         container: document.getElementById('death-container6'), // required
         path: 'allanimations/death' + ninethdeath + '.json', // required
         renderer: 'svg', // required
-        loop: true, // optional
+        loop: false, // optional
         autoplay: false, // optional
         name: "Demo Animation", // optional
     });
@@ -483,7 +483,7 @@ if (deliveredvalue2[6].length === 0) {} else {
         container: document.getElementById('death-container7'), // required
         path: 'allanimations/death' + seventhdeath + '.json', // required
         renderer: 'svg', // required
-        loop: true, // optional
+        loop: false, // optional
         autoplay: false, // optional
         name: "Demo Animation", // optional
     });
@@ -534,7 +534,7 @@ if (deliveredvalue2[7].length === 0) {} else {
         container: document.getElementById('death-container8'), // required
         path: 'allanimations/death' + fifthdeath + '.json', // required
         renderer: 'svg', // required
-        loop: true, // optional
+        loop: false, // optional
         autoplay: false, // optional
         name: "Demo Animation", // optional
     });
@@ -585,7 +585,7 @@ if (deliveredvalue2[8].length === 0) {} else {
         container: document.getElementById('death-container9'), // required
         path: 'allanimations/death' + sixthdeath + '.json', // required
         renderer: 'svg', // required
-        loop: true, // optional
+        loop: false, // optional
         autoplay: false, // optional
         name: "Demo Animation", // optional
     });
@@ -2120,6 +2120,10 @@ function backtostay (attacked, attacker) {
     attacker.animat('weapon', true);
     attacked.animat('stay', false);
     attacked.animat('hurt', true);
+    if (attacked.health <= 0) {
+        attacked.animat('death', false);
+        attacked.animdeath();
+        attacked.animat('stay', true);}
 }
 
 // Функция для высшего вампира
@@ -3366,8 +3370,6 @@ firstpartofpuzzle = vampiresum;
                 attackerCreature.animat('stay', true);
                 attackerCreature.animattack();
                 attackerCreature.sound();
-                attackedCreature.animat('death', false);
-                attackedCreature.animdeath();
                 attackedCreature.glowred();
                 attackedCreature.glownumber(-truedamage);
                 attackedCreature.removenumbernow();
@@ -3389,8 +3391,6 @@ firstpartofpuzzle = vampiresum;
                 attackerCreature.animattack();
                 attackerCreature.sound();
                 attackerCreature.animweapon();
-                attackedCreature.animat('death', false);
-                attackedCreature.animdeath();
                 attackedCreature.glowred();
                 attackedCreature.glownumber(-truedamage);
                 attackedCreature.removenumbernow();
