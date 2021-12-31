@@ -20,6 +20,20 @@ let tenthanim = deliveredvalue2[9][16];
 let eleventhanim = deliveredvalue2[10][16];
 let twelthhanim = deliveredvalue2[11][16];
 
+let onedeath = deliveredvalue2[0][15];
+let twodeath = deliveredvalue2[1][15];
+let thirddeath = deliveredvalue2[2][15];
+let forthdeath = deliveredvalue2[3][15];
+let fifthdeath = deliveredvalue2[4][15];
+let sixthdeath = deliveredvalue2[5][15];
+let seventhdeath = deliveredvalue2[6][15];
+let eighthdeath = deliveredvalue2[7][15];
+let ninethdeath = deliveredvalue2[8][15];
+let tenthdeath = deliveredvalue2[9][15];
+let eleventhdeath = deliveredvalue2[10][15];
+let twelthhdeath = deliveredvalue2[11][15];
+
+
 console.log(deliveredvalue2[1]);
 
 if (deliveredvalue2[0].length === 0) {
@@ -727,7 +741,7 @@ let animation12_magic = bodymovin.loadAnimation({
 let animation1_death = bodymovin.loadAnimation({
 
     container: document.getElementById('death-container'), // required
-    path: 'forbeta/humandeath.json', // required
+    path: 'allanimations/death_' + onedeath + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -736,8 +750,8 @@ let animation1_death = bodymovin.loadAnimation({
 
 let animation2_death = bodymovin.loadAnimation({
 
-    container: document.getElementById('death-container2'), // required
-    path: 'forbeta/humandeath.json', // required
+    container: document.getElementById('death-container'), // required
+    path: 'allanimations/death_' + twodeath + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -746,8 +760,8 @@ let animation2_death = bodymovin.loadAnimation({
 
 let animation3_death = bodymovin.loadAnimation({
 
-    container: document.getElementById('death-container3'), // required
-    path: 'forbeta/humandeath.json', // required
+    container: document.getElementById('death-container2'), // required
+    path: 'allanimations/death_' + thirddeath + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -756,8 +770,8 @@ let animation3_death = bodymovin.loadAnimation({
 
 let animation4_death = bodymovin.loadAnimation({
 
-    container: document.getElementById('death-container4'), // required
-    path: 'forbeta/humandeath.json', // required
+    container: document.getElementById('death-container3'), // required
+    path: 'allanimations/death_' + forthdeath + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -766,8 +780,8 @@ let animation4_death = bodymovin.loadAnimation({
 
 let animation5_death = bodymovin.loadAnimation({
 
-    container: document.getElementById('death-container5'), // required
-    path: 'forbeta/humandeath.json', // required
+    container: document.getElementById('death-container4'), // required
+    path: 'allanimations/death_' + fifthdeath + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -776,8 +790,8 @@ let animation5_death = bodymovin.loadAnimation({
 
 let animation6_death = bodymovin.loadAnimation({
 
-    container: document.getElementById('death-container6'), // required
-    path: 'forbeta/humandeath.json', // required
+    container: document.getElementById('death-container5'), // required
+    path: 'allanimations/death_' + sixthdeath + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -786,8 +800,8 @@ let animation6_death = bodymovin.loadAnimation({
 
 let animation7_death = bodymovin.loadAnimation({
 
-    container: document.getElementById('death-container7'), // required
-    path: 'forbeta/humandeath.json', // required
+    container: document.getElementById('death-container5'), // required
+    path: 'allanimations/death_' + seventhdeath + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -796,8 +810,8 @@ let animation7_death = bodymovin.loadAnimation({
 
 let animation8_death = bodymovin.loadAnimation({
 
-    container: document.getElementById('death-container8'), // required
-    path: 'forbeta/humandeath.json', // required
+    container: document.getElementById('death-container5'), // required
+    path: 'allanimations/death_' + eighthdeath + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -806,8 +820,8 @@ let animation8_death = bodymovin.loadAnimation({
 
 let animation9_death = bodymovin.loadAnimation({
 
-    container: document.getElementById('death-container9'), // required
-    path: 'forbeta/humandeath.json', // required
+    container: document.getElementById('death-container5'), // required
+    path: 'allanimations/death_' + ninethdeath + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -816,8 +830,8 @@ let animation9_death = bodymovin.loadAnimation({
 
 let animation10_death = bodymovin.loadAnimation({
 
-    container: document.getElementById('death-container10'), // required
-    path: 'forbeta/demondeath.json', // required
+    container: document.getElementById('death-container5'), // required
+    path: 'allanimations/death_' + tenthdeath + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -826,8 +840,8 @@ let animation10_death = bodymovin.loadAnimation({
 
 let animation11_death = bodymovin.loadAnimation({
 
-    container: document.getElementById('death-container11'), // required
-    path: 'forbeta/demondeath.json', // required
+    container: document.getElementById('death-container5'), // required
+    path: 'allanimations/death_' + eleventhdeath + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -836,14 +850,13 @@ let animation11_death = bodymovin.loadAnimation({
 
 let animation12_death = bodymovin.loadAnimation({
 
-    container: document.getElementById('death-container12'), // required
-    path: 'forbeta/demondeath.json', // required
+    container: document.getElementById('death-container5'), // required
+    path: 'allanimations/death_' + twelthhdeath + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
     name: "Demo Animation", // optional
 });
-
 
 
 const creatures = [
@@ -2069,6 +2082,10 @@ const updateHealthView = (creature, i) => {
     elm.innerText = creatures[remembertheguy]["health"] > 0 ? creatures[remembertheguy]["health"] : 'Dead'
     if (creatures[remembertheguy]["type"] === "empty") {elm.innerText = 'Empty'}
     if (creatures[remembertheguy]["health"] < 0) {creatures[remembertheguy]["health"] = 0}
+
+}
+
+function deathcomestotheguy () {
 
 }
 
@@ -3308,17 +3325,17 @@ firstpartofpuzzle = vampiresum;
             let creaturesAttackable = creaturesAhead.length > 0 ? creaturesAhead : creaturesBehind
 
             if (creaturesAttackable.length > 1) {
-                console.log("111");
+
                 creaturesAttackable = creaturesAttackable.filter(creature => Math.abs(creature.position - attackerCreature.position) <= 1)
                 console.log(creaturesAttackable);
-                console.log("это срабатывает?");
+
             }
 
             if (!creaturesAttackable.includes(attackedCreature)) {
-                console.log("это срабатывает?");
+
                 return //can't attack this creature
             }
-            console.log("это срабатывает?");
+
             protectedornot = justattack();
             truedamage = Math.floor((attackerCreature.damage * (1 - attackedCreature.armor) * (1 - attackedCreature.defensearmor)));
             if (protectedornot === 1) {attackedCreature.health -= Math.floor((attackerCreature.damage * (1 - attackedCreature.armor) * (1 - attackedCreature.defensearmor)));}
