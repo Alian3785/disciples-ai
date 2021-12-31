@@ -146,7 +146,7 @@ if (deliveredvalue2[0].length === 0) {} else {
         container: document.getElementById('stay-container'), // required
         path: 'allanimations/stay1_' + firstanim + '.json', // required
         renderer: 'svg', // required
-        loop: false, // optional
+        loop: true, // optional
         autoplay: false, // optional
         name: "Demo Animation", // optional
     });
@@ -177,7 +177,7 @@ if (deliveredvalue2[0].length === 0) {} else {
         path: 'allanimations/death' + onedeath + '.json', // required
         renderer: 'svg', // required
         loop: true, // optional
-        autoplay: true, // optional
+        autoplay: false, // optional
         name: "Demo Animation", // optional
     });
 }
@@ -278,7 +278,7 @@ if (deliveredvalue2[2].length === 0) {} else {
         container: document.getElementById('death-container3'), // required
         path: 'allanimations/death' + thirddeath + '.json', // required
         renderer: 'svg', // required
-        loop: false, // optional
+        loop: true, // optional
         autoplay: false, // optional
         name: "Demo Animation", // optional
     });
@@ -329,7 +329,7 @@ if (deliveredvalue2[3].length === 0) {} else {
         container: document.getElementById('death-container4'), // required
         path: 'allanimations/death' + forthdeath + '.json', // required
         renderer: 'svg', // required
-        loop: false, // optional
+        loop: true, // optional
         autoplay: false, // optional
         name: "Demo Animation", // optional
     });
@@ -378,9 +378,9 @@ if (deliveredvalue2[4].length === 0) {} else {
     animation5_death = bodymovin.loadAnimation({
 
         container: document.getElementById('death-container5'), // required
-        path: 'allanimations/death' + fifthdeath + '.json', // required
+        path: 'allanimations/death' + eighthdeath + '.json', // required
         renderer: 'svg', // required
-        loop: false, // optional
+        loop: true, // optional
         autoplay: false, // optional
         name: "Demo Animation", // optional
     });
@@ -430,9 +430,9 @@ if (deliveredvalue2[5].length === 0) {} else {
     animation6_death = bodymovin.loadAnimation({
 
         container: document.getElementById('death-container6'), // required
-        path: 'allanimations/death' + sixthdeath + '.json', // required
+        path: 'allanimations/death' + ninethdeath + '.json', // required
         renderer: 'svg', // required
-        loop: false, // optional
+        loop: true, // optional
         autoplay: false, // optional
         name: "Demo Animation", // optional
     });
@@ -483,7 +483,7 @@ if (deliveredvalue2[6].length === 0) {} else {
         container: document.getElementById('death-container7'), // required
         path: 'allanimations/death' + seventhdeath + '.json', // required
         renderer: 'svg', // required
-        loop: false, // optional
+        loop: true, // optional
         autoplay: false, // optional
         name: "Demo Animation", // optional
     });
@@ -532,9 +532,9 @@ if (deliveredvalue2[7].length === 0) {} else {
     animation8_death = bodymovin.loadAnimation({
 
         container: document.getElementById('death-container8'), // required
-        path: 'allanimations/death' + eighthdeath + '.json', // required
+        path: 'allanimations/death' + fifthdeath + '.json', // required
         renderer: 'svg', // required
-        loop: false, // optional
+        loop: true, // optional
         autoplay: false, // optional
         name: "Demo Animation", // optional
     });
@@ -583,9 +583,9 @@ if (deliveredvalue2[8].length === 0) {} else {
     animation9_death = bodymovin.loadAnimation({
 
         container: document.getElementById('death-container9'), // required
-        path: 'allanimations/death' + ninethdeath + '.json', // required
+        path: 'allanimations/death' + sixthdeath + '.json', // required
         renderer: 'svg', // required
-        loop: false, // optional
+        loop: true, // optional
         autoplay: false, // optional
         name: "Demo Animation", // optional
     });
@@ -744,8 +744,8 @@ if (deliveredvalue2[11].length === 0) {} else {
     });
 }
 
-animation1_death.play();
-animation2_death.play();
+//animation1_death.play();
+//animation2_death.play();
 
 let animation_magic = bodymovin.loadAnimation({
 
@@ -1219,7 +1219,7 @@ const creatures = [
             animation5_magic.playSegments([0, 46], true);
         },
         animdeath: function() {
-            animation5_death.playSegments([0, 56], true);
+            animation6_death.playSegments([0, 56], true);
         },
         sound: function() {
             sound6.play();
@@ -1294,7 +1294,7 @@ const creatures = [
             animation6_magic.playSegments([0, 46], true);
         },
         animdeath: function() {
-            animation6_death.playSegments([0, 56], true);
+            animation7_death.playSegments([0, 56], true);
         },
         sound: function() {
             sound7.play();
@@ -1369,7 +1369,7 @@ const creatures = [
             animation7_magic.playSegments([0, 46], true);
         },
         animdeath: function() {
-            animation7_death.playSegments([0, 56], true);
+            animation8_death.playSegments([0, 56], true);
         },
         sound: function() {
             sound8.play();
@@ -1445,7 +1445,7 @@ const creatures = [
             animation8_magic.playSegments([0, 46], true);
         },
         animdeath: function() {
-            animation8_death.playSegments([0, 56], true);
+            animation5_death.playSegments([0, 56], true);
         },
         sound: function () {
             sound1.play();
@@ -1780,9 +1780,9 @@ const creatures = [
 
 console.log(creatures);
 
-//animation1_stay.play();
-//animation2_stay.play();
-//animation3_stay.play();
+animation1_stay.play();
+animation2_stay.play();
+animation3_stay.play();
 animation4_stay.play();
 animation5_stay.play();
 animation6_stay.play();
@@ -1803,20 +1803,14 @@ animation12_stay.play();
 //animation11.play();
 //animation12.play();
 console.log(onedeath);
-animation1_death.play();
-animation2_death.play();
-animation12_death.play();
+//animation1_death.play();
+//animation2_death.play();
 
 //creatures[0].animdeath();
 
-document.getElementById("stay-container").style.visibility = "hidden";
-document.getElementById("stay-container2").style.visibility = "hidden";
-document.getElementById("stay-container3").style.visibility = "hidden";
 
-document.getElementById("death-container").style.visibility = "visible";
-document.getElementById("death-container2").style.visibility = "visible";
-document.getElementById("death-container3").style.visibility = "visible";
-/*
+
+
 document.getElementById("attack-container").style.visibility = "hidden";
 document.getElementById("attack-container2").style.visibility = "hidden";
 document.getElementById("attack-container3").style.visibility = "hidden";
@@ -1855,7 +1849,8 @@ document.getElementById("weapon-container9").style.visibility = "hidden";
 document.getElementById("weapon-container10").style.visibility = "hidden";
 document.getElementById("weapon-container11").style.visibility = "hidden";
 document.getElementById("weapon-container12").style.visibility = "hidden";
-/*
+
+
 document.getElementById("death-container").style.visibility = "hidden";
 document.getElementById("death-container2").style.visibility = "hidden";
 document.getElementById("death-container3").style.visibility = "hidden";
@@ -1868,7 +1863,8 @@ document.getElementById("death-container9").style.visibility = "hidden";
 document.getElementById("death-container10").style.visibility = "hidden";
 document.getElementById("death-container11").style.visibility = "hidden";
 document.getElementById("death-container12").style.visibility = "hidden";
-*/
+
+
 document.getElementById("mage-container").style.visibility = "hidden";
 document.getElementById("mage-container2").style.visibility = "hidden";
 document.getElementById("mage-container3").style.visibility = "hidden";
@@ -3370,7 +3366,7 @@ firstpartofpuzzle = vampiresum;
                 attackerCreature.animat('stay', true);
                 attackerCreature.animattack();
                 attackerCreature.sound();
-                attackerCreature.animweapon();
+                attackedCreature.animat('death', false);
                 attackedCreature.animdeath();
                 attackedCreature.glowred();
                 attackedCreature.glownumber(-truedamage);
@@ -3383,8 +3379,8 @@ firstpartofpuzzle = vampiresum;
                 window.globalattacked = {
                     realattacked: attackedCreature,
                 };
-                setTimeout(gethurt, 250, attackedCreature, attackerCreature);
-                setTimeout(backtostay, 710, attackedCreature, attackerCreature);
+                //setTimeout(gethurt, 250, attackedCreature, attackerCreature);
+                //setTimeout(backtostay, 710, attackedCreature, attackerCreature);
             }
             else {
                 attackerCreature.animat('attack', false);
@@ -3393,6 +3389,7 @@ firstpartofpuzzle = vampiresum;
                 attackerCreature.animattack();
                 attackerCreature.sound();
                 attackerCreature.animweapon();
+                attackedCreature.animat('death', false);
                 attackedCreature.animdeath();
                 attackedCreature.glowred();
                 attackedCreature.glownumber(-truedamage);
@@ -3405,8 +3402,8 @@ firstpartofpuzzle = vampiresum;
                 window.globalattacked = {
                     realattacked: attackedCreature,
                 };
-                setTimeout(gethurt, 250, attackedCreature, attackerCreature);
-                setTimeout(backtostay, 710, attackedCreature, attackerCreature);
+                //setTimeout(gethurt, 250, attackedCreature, attackerCreature);
+                //setTimeout(backtostay, 710, attackedCreature, attackerCreature);
             }
 
 
