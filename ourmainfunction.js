@@ -1794,7 +1794,23 @@ animation11_stay.play();
 animation12_stay.play();
 
 
+document.getElementById("DIVmy9").src='allanimations/face' + firstanim + '.PNG';
+document.getElementById("DIVmy5").src='allanimations/face' + secondanim + '.PNG';
+document.getElementById("DIVmy").src='allanimations/face' + thirdanim + '.PNG';
+document.getElementById("DIVmy10").src='allanimations/face' + forthanim + '.PNG';
+document.getElementById("DIVmy6").src='allanimations/face' + fifthdanim + '.PNG';
+document.getElementById("DIVmy2").src='allanimations/face' + sixthdanim + '.PNG';
+document.getElementById("DIVmy11").src='allanimations/face' + seventhdanim + '.PNG';
+document.getElementById("DIVmy12").src='allanimations/face' + tenthanim + '.PNG';
+document.getElementById("DIVmy8").src='allanimations/face' + eleventhanim + '.PNG';
+document.getElementById("DIVmy4").src='allanimations/face' + twelthhanim + '.PNG';
+document.getElementById("DIVmy3").src='allanimations/face' + ninethanim + '.PNG';
+document.getElementById("DIVmy7").src='allanimations/face' + eighthanim + '.PNG';
 
+
+
+
+//forbeta/shooterface.PNG
 //animation11_magic.play();
 //animation12_magic.play();
 //animation2_magic.play();
