@@ -1156,11 +1156,13 @@ const creatures = [
         animat: (type, hide) => {
             document.getElementById(type + "-container4").style.visibility = hide ? "hidden" : "visible";
         },
-        glowred: function() {
-            document.getElementById("myDIV10").classList.add("el");
+        glowred: function() { if (this.size === 0) {
+            document.getElementById("myDIV10").classList.add("el");}
+            else {document.getElementById("DIVmybig13").classList.add("el");}
         },
-        removered: function() {
-            document.getElementById("myDIV10").classList.remove("el");
+        removered: function() { if (this.size === 0) {
+            document.getElementById("myDIV10").classList.remove("el");}
+            else {document.getElementById("DIVmybig13").classList.remove("el");}
         },
         removerednow: function() {
             setTimeout(this.removered, 1000);
@@ -1232,11 +1234,13 @@ const creatures = [
         animat: (type, hide) => {
             document.getElementById(type + "-container6").style.visibility = hide ? "hidden" : "visible";
         },
-        glowred: function() {
-            document.getElementById("myDIV3").classList.add("el");
+        glowred: function() { if (this.size === 0) {
+            document.getElementById("myDIV3").classList.add("el");}
+        else {document.getElementById("DIVmybig3").classList.add("el");}
         },
-        removered: function() {
-            document.getElementById("myDIV3").classList.remove("el");
+        removered: function() { if (this.size === 0) {
+            document.getElementById("myDIV3").classList.remove("el");}
+        else {document.getElementById("DIVmybig3").classList.remove("el");}
         },
         removerednow: function() {
             setTimeout(this.removered, 1000);
@@ -1308,11 +1312,13 @@ const creatures = [
         animat: (type, hide) => {
             document.getElementById(type + "-container7").style.visibility = hide ? "hidden" : "visible";
         },
-        glowred: function() {
-            document.getElementById("myDIV11").classList.add("el");
+        glowred: function() { if (this.size === 0) {
+            document.getElementById("myDIV11").classList.add("el");}
+        else {document.getElementById("DIVmybig15").classList.add("el");}
         },
-        removered: function() {
-            document.getElementById("myDIV11").classList.remove("el");
+        removered: function() { if (this.size === 0) {
+            document.getElementById("myDIV11").classList.remove("el");}
+        else {document.getElementById("DIVmybig15").classList.remove("el");}
         },
         removerednow: function() {
             setTimeout(this.removered, 1000);
@@ -1384,11 +1390,13 @@ const creatures = [
         animat: (type, hide) => {
             document.getElementById(type + "-container8").style.visibility = hide ? "hidden" : "visible";
         },
-        glowred: function() {
-            document.getElementById("myDIV6").classList.add("el");
+        glowred: function() { if (this.size === 0) {
+            document.getElementById("myDIV6").classList.add("el");}
+        else {document.getElementById("DIVmybig7").classList.add("el");}
         },
-        removered: function() {
-            document.getElementById("myDIV6").classList.remove("el");
+        removered: function() { if (this.size === 0) {
+            document.getElementById("myDIV6").classList.remove("el");}
+        else {document.getElementById("DIVmybig7").classList.remove("el");}
         },
         removerednow: function() {
             setTimeout(this.removered, 1000);
@@ -1461,11 +1469,13 @@ const creatures = [
         animat: (type, hide) => {
             document.getElementById(type + "-container5").style.visibility = hide ? "hidden" : "visible";
         },
-        glowred: function() {
-            document.getElementById("myDIV7").classList.add("el");
+        glowred: function() { if (this.size === 0) {
+            document.getElementById("myDIV7").classList.add("el");}
+        else {document.getElementById("DIVmybig9").classList.add("el");}
         },
-        removered: function() {
-            document.getElementById("myDIV7").classList.remove("el");
+        removered: function() { if (this.size === 0) {
+            document.getElementById("myDIV7").classList.remove("el");}
+        else {document.getElementById("DIVmybig9").classList.remove("el");}
         },
         removerednow: function() {
             setTimeout(this.removered, 1000);
@@ -1537,11 +1547,13 @@ const creatures = [
         animat: (type, hide) => {
             document.getElementById(type + "-container9").style.visibility = hide ? "hidden" : "visible";
         },
-        glowred: function() {
-            document.getElementById("myDIV2").classList.add("el");
+        glowred: function() { if (this.size === 0) {
+            document.getElementById("myDIV2").classList.add("el");}
+        else {document.getElementById("DIVmybig1").classList.add("el");}
         },
-        removered: function() {
-            document.getElementById("myDIV2").classList.remove("el");
+        removered: function() { if (this.size === 0) {
+            document.getElementById("myDIV2").classList.remove("el");}
+        else {document.getElementById("DIVmybig1").classList.remove("el");}
         },
         removerednow: function() {
             setTimeout(this.removered, 1000);
@@ -1613,11 +1625,13 @@ const creatures = [
         animat: (type, hide) => {
             document.getElementById(type + "-container10").style.visibility = hide ? "hidden" : "visible";
         },
-        glowred: function() {
-            document.getElementById("myDIV12").classList.add("el");
+        glowred: function() { if (this.size === 0) {
+            document.getElementById("myDIV12").classList.add("el");}
+        else {document.getElementById("DIVmybig13").classList.add("el");}
         },
-        removered: function() {
-            document.getElementById("myDIV12").classList.remove("el");
+        removered: function() { if (this.size === 0) {
+            document.getElementById("myDIV12").classList.remove("el");}
+        else {document.getElementById("DIVmybig13").classList.remove("el");}
         },
         removerednow: function() {
             setTimeout(this.removered, 1000);
@@ -1690,11 +1704,13 @@ const creatures = [
         animat: (type, hide) => {
             document.getElementById(type + "-container11").style.visibility = hide ? "hidden" : "visible";
         },
-        glowred: function() {
-            document.getElementById("myDIV8").classList.add("el");
+        glowred: function() { if (this.size === 0) {
+            document.getElementById("myDIV8").classList.add("el");}
+        else {document.getElementById("DIVmybig13").classList.add("el");}
         },
-        removered: function() {
-            document.getElementById("myDIV8").classList.remove("el");
+        removered: function() { if (this.size === 0) {
+            document.getElementById("myDIV8").classList.remove("el");}
+        else {document.getElementById("DIVmybig13").classList.remove("el");}
         },
         removerednow: function() {
             setTimeout(this.removered, 1000);
@@ -1767,11 +1783,13 @@ const creatures = [
         animat: (type, hide) => {
             document.getElementById(type + "-container12").style.visibility = hide ? "hidden" : "visible";
         },
-        glowred: function() {
-            document.getElementById("myDIV4").classList.add("el");
+        glowred: function() { if (this.size === 0) {
+            document.getElementById("myDIV4").classList.add("el");}
+        else {document.getElementById("DIVmybig13").classList.add("el");}
         },
-        removered: function() {
-            document.getElementById("myDIV4").classList.remove("el");
+        removered: function() { if (this.size === 0) {
+            document.getElementById("myDIV4").classList.remove("el");}
+        else {document.getElementById("DIVmybig13").classList.remove("el");}
         },
         removerednow: function() {
             setTimeout(this.removered, 1000);
