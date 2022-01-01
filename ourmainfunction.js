@@ -744,13 +744,10 @@ if (deliveredvalue2[11].length === 0) {} else {
     });
 }
 
-//animation1_death.play();
-//animation2_death.play();
-
 let animation_magic = bodymovin.loadAnimation({
 
     container: document.getElementById('mage-container'), // required
-    path: 'testmagic1.json', // required
+    path: 'allanimations/magic1_' + firstanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -760,7 +757,7 @@ let animation_magic = bodymovin.loadAnimation({
 let animation2_magic = bodymovin.loadAnimation({
 
     container: document.getElementById('mage-container2'), // required
-    path: 'testmagic2.json', // required
+    path: 'allanimations/magic1_' + secondanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -770,7 +767,7 @@ let animation2_magic = bodymovin.loadAnimation({
 let animation3_magic = bodymovin.loadAnimation({
 
     container: document.getElementById('mage-container3'), // required
-    path: 'testmagic3.json', // required
+    path: 'allanimations/magic1_' + thirdanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -780,7 +777,7 @@ let animation3_magic = bodymovin.loadAnimation({
 let animation4_magic = bodymovin.loadAnimation({
 
     container: document.getElementById('mage-container4'), // required
-    path: 'testmagic4.json', // required
+    path: 'allanimations/magic1_' + forthanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -790,7 +787,7 @@ let animation4_magic = bodymovin.loadAnimation({
 let animation5_magic = bodymovin.loadAnimation({
 
     container: document.getElementById('mage-container5'), // required
-    path: 'testmagic5.json', // required
+    path: 'allanimations/magic1_' + eighthanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -800,7 +797,7 @@ let animation5_magic = bodymovin.loadAnimation({
 let animation6_magic = bodymovin.loadAnimation({
 
     container: document.getElementById('mage-container6'), // required
-    path: 'testmagic6.json', // required
+    path: 'allanimations/magic1_' + ninethanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -810,7 +807,7 @@ let animation6_magic = bodymovin.loadAnimation({
 let animation7_magic = bodymovin.loadAnimation({
 
     container: document.getElementById('mage-container7'), // required
-    path: 'testmagic1.json', // required
+    path: 'allanimations/magic1_' + seventhdanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -820,7 +817,7 @@ let animation7_magic = bodymovin.loadAnimation({
 let animation8_magic = bodymovin.loadAnimation({
 
     container: document.getElementById('mage-container8'), // required
-    path: 'testmagic2.json', // required
+    path: 'allanimations/magic1_' + fifthdanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -830,7 +827,7 @@ let animation8_magic = bodymovin.loadAnimation({
 let animation9_magic = bodymovin.loadAnimation({
 
     container: document.getElementById('mage-container9'), // required
-    path: 'testmagic3.json', // required
+    path: 'allanimations/magic1_' + sixthdanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -840,7 +837,7 @@ let animation9_magic = bodymovin.loadAnimation({
 let animation10_magic = bodymovin.loadAnimation({
 
     container: document.getElementById('mage-container10'), // required
-    path: 'testmagic4.json', // required
+    path: 'allanimations/magic1_' + tenthanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -850,7 +847,7 @@ let animation10_magic = bodymovin.loadAnimation({
 let animation11_magic = bodymovin.loadAnimation({
 
     container: document.getElementById('mage-container11'), // required
-    path: 'testmagic5.json', // required
+    path: 'allanimations/magic1_' + eleventhanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
@@ -860,7 +857,7 @@ let animation11_magic = bodymovin.loadAnimation({
 let animation12_magic = bodymovin.loadAnimation({
 
     container: document.getElementById('mage-container12'), // required
-    path: 'testmagic6.json', // required
+    path: 'allanimations/magic1_' + twelthhanim + '.json', // required
     renderer: 'svg', // required
     loop: false, // optional
     autoplay: false, // optional
