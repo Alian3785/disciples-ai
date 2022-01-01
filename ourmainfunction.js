@@ -1859,7 +1859,10 @@ if (deliveredvalue2[5][14] === 0) {
     if (deliveredvalue2[4][0] === 0) {} else {
     document.getElementById("DIVmy6").src='allanimations/face' + fifthdanim + '.PNG';}
 }
-else {document.getElementById("DIVmybig1").src='allanimations/face' + sixthdanim + '.PNG';}
+else {document.getElementById("DIVmybig1").src='allanimations/face' + sixthdanim + '.PNG';
+    if (deliveredvalue2[4][0] === 0) {} else {
+        document.getElementById("DIVmy6").src='allanimations/face' + fifthdanim + '.PNG';}
+}
 
 if (deliveredvalue2[4][14] === 0) {
     console.log(deliveredvalue2[2][12])
@@ -1868,7 +1871,10 @@ if (deliveredvalue2[4][14] === 0) {
     if (deliveredvalue2[5][0] === 0) {} else {
     document.getElementById("DIVmy2").src = 'allanimations/face' + sixthdanim + '.PNG';}
 }
-else {document.getElementById("DIVmybig7").src='allanimations/face' + fifthdanim + '.PNG';}
+else {document.getElementById("DIVmybig7").src='allanimations/face' + fifthdanim + '.PNG';
+    if (deliveredvalue2[2][0] === 0) {} else {
+        document.getElementById("DIVmy").src = 'allanimations/face' + thirdanim + '.PNG';}
+}
 
 if (deliveredvalue2[3][14] === 0) {
     console.log(deliveredvalue2[2][12])
@@ -1877,7 +1883,8 @@ if (deliveredvalue2[3][14] === 0) {
     if (deliveredvalue2[11][0] === 0) {} else {
     document.getElementById("DIVmy4").src='allanimations/face' + twelthhanim + '.PNG';}
 }
-else {document.getElementById("DIVmybig13").src='allanimations/face' + forthanim + '.PNG';}
+else {document.getElementById("DIVmybig13").src='allanimations/face' + forthanim + '.PNG';
+}
 
 if (deliveredvalue2[6][14] === 0) {
     console.log(deliveredvalue2[2][12])
@@ -1905,7 +1912,6 @@ if (deliveredvalue2[8][14] === 0) {
     document.getElementById("DIVmy10").src='allanimations/face' + forthanim + '.PNG';}
 }
 else {document.getElementById("DIVmybig3").src='allanimations/face' + ninethanim + '.PNG';}
-
 
 
 
