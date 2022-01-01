@@ -1234,7 +1234,7 @@ const creatures = [
             animation6_weapon.playSegments([0, 18], true);
         },
         animmagic: function() {
-            animation5_magic.playSegments([0, 46], true);
+            animation6_magic.playSegments([0, 46], true);
         },
         animdeath: function() {
             animation6_death.playSegments([0, 56], true);
@@ -1314,7 +1314,7 @@ const creatures = [
             animation7_weapon.playSegments([0, 18], true);
         },
         animmagic: function() {
-            animation6_magic.playSegments([0, 46], true);
+            animation7_magic.playSegments([0, 46], true);
         },
         animdeath: function() {
             animation7_death.playSegments([0, 56], true);
@@ -1394,7 +1394,7 @@ const creatures = [
             animation8_weapon.playSegments([0, 18], true);
         },
         animmagic: function() {
-            animation7_magic.playSegments([0, 46], true);
+            animation8_magic.playSegments([0, 46], true);
         },
         animdeath: function() {
             animation8_death.playSegments([0, 56], true);
@@ -1475,7 +1475,7 @@ const creatures = [
             animation5_weapon.playSegments([0, 18], true);
         },
         animmagic: function() {
-            animation8_magic.playSegments([0, 46], true);
+            animation5_magic.playSegments([0, 46], true);
         },
         animdeath: function() {
             animation5_death.playSegments([0, 56], true);
@@ -1851,6 +1851,7 @@ animation11_stay.play();
 animation12_stay.play();
 
 
+
 if (deliveredvalue2[5][14] === 0) {
     console.log(deliveredvalue2[2][12])
     document.getElementById("DIVmy5").src='allanimations/face' + secondanim + '.PNG';
@@ -1860,8 +1861,10 @@ else {document.getElementById("DIVmybig1").src='allanimations/face' + sixthdanim
 
 if (deliveredvalue2[4][14] === 0) {
     console.log(deliveredvalue2[2][12])
-    document.getElementById("DIVmy").src = 'allanimations/face' + thirdanim + '.PNG';
-    document.getElementById("DIVmy2").src = 'allanimations/face' + sixthdanim + '.PNG';
+    if (deliveredvalue2[4][0] === 0) {} else {
+    document.getElementById("DIVmy").src = 'allanimations/face' + thirdanim + '.PNG';}
+    if (deliveredvalue2[5][0] === 0) {} else {
+    document.getElementById("DIVmy2").src = 'allanimations/face' + sixthdanim + '.PNG';}
 }
 else {document.getElementById("DIVmybig7").src='allanimations/face' + fifthdanim + '.PNG';}
 
