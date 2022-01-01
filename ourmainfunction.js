@@ -1157,15 +1157,16 @@ const creatures = [
             document.getElementById(type + "-container4").style.visibility = hide ? "hidden" : "visible";
         },
         glowred: function() { if (this.size === 0) {
-            document.getElementById("myDIV10").classList.add("el");}
+            setTimeout(this.removered, 2000);
+            document.getElementById("myDIV10").classList.add("el");
+        }
             else {document.getElementById("DIVmybig13").classList.add("el");}
         },
-        removered: function() { if (this.size === 0) {
+        removered: function() {
             document.getElementById("myDIV10").classList.remove("el");}
-            else {document.getElementById("DIVmybig13").classList.remove("el");}
-        },
+        ,
         removerednow: function() {
-            setTimeout(this.removered, 1000);
+            //setTimeout(this.removered, 1000)
         },
         glownumber: function(othertype) {
             document.getElementById("numberclass10").innerHTML = othertype;
@@ -1979,6 +1980,8 @@ document.getElementById("mage-container12").style.visibility = "hidden";
     container.appendChild(button);
 }, false);
 */
+
+function hisay() {}
 
 let rect12 = document.getElementById('rectangle12');
 
