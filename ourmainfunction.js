@@ -898,6 +898,7 @@ const creatures = [
         defensearmor: 0,
         accuracy: [deliveredvalue2[0][6], deliveredvalue2[0][7]],
         alive: 1,
+        size: deliveredvalue2[0][14],
         id: 1,
         team: "blue",
         where: "behind",
@@ -974,6 +975,7 @@ const creatures = [
         defensearmor: 0,
         accuracy: [deliveredvalue2[1][6], deliveredvalue2[1][7]],
         alive: 1,
+        size: deliveredvalue2[1][14],
         id: 2,
         team: "blue",
         where: "behind",
@@ -1049,6 +1051,7 @@ const creatures = [
         defensearmor: 0,
         accuracy: [deliveredvalue2[2][6], deliveredvalue2[2][7]],
         alive: 1,
+        size: deliveredvalue2[2][14],
         id: 3,
         team: "blue",
         where: "behind",
@@ -1124,6 +1127,7 @@ const creatures = [
         defensearmor: 0,
         accuracy: [deliveredvalue2[3][6], deliveredvalue2[3][7]],
         alive: 1,
+        size: deliveredvalue2[3][14],
         id: 4,
         team: "blue",
         where: "ahead",
@@ -1199,6 +1203,7 @@ const creatures = [
         defensearmor: 0,
         accuracy: [deliveredvalue2[8][6], deliveredvalue2[8][7]],
         alive: 1,
+        size: deliveredvalue2[8][14],
         id: 6,
         team: "red",
         where: "ahead",
@@ -1274,6 +1279,7 @@ const creatures = [
         defensearmor: 0,
         accuracy: [deliveredvalue2[6][6], deliveredvalue2[6][7]],
         alive: 1,
+        size: deliveredvalue2[6][14],
         id: 7,
         team: "red",
         where: "ahead",
@@ -1349,6 +1355,7 @@ const creatures = [
         defensearmor: 0,
         accuracy: [deliveredvalue2[4][6], deliveredvalue2[4][7]],
         alive: 1,
+        size: deliveredvalue2[4][14],
         id: 8,
         team: "blue",
         where: "ahead",
@@ -1425,6 +1432,7 @@ const creatures = [
         defensearmor: 0,
         accuracy: [deliveredvalue2[7][6], deliveredvalue2[7][7]],
         alive: 1,
+        size: deliveredvalue2[7][14],
         id: 5,
         team: "red",
         where: "ahead",
@@ -1500,6 +1508,7 @@ const creatures = [
         defensearmor: 0,
         accuracy: [deliveredvalue2[5][6], deliveredvalue2[5][7]],
         alive: 1,
+        size: deliveredvalue2[5][14],
         id: 9,
         team: "blue",
         where: "ahead",
@@ -1575,6 +1584,7 @@ const creatures = [
         defensearmor: 0,
         accuracy: [deliveredvalue2[9][6], deliveredvalue2[9][7]],
         alive: 1,
+        size: deliveredvalue2[9][14],
         id: 10,
         team: "red",
         where: "behind",
@@ -1651,6 +1661,7 @@ const creatures = [
         defensearmor: 0,
         accuracy: [deliveredvalue2[10][6], deliveredvalue2[10][7]],
         alive: 1,
+        size: deliveredvalue2[10][14],
         id: 11,
         team: "red",
         where: "behind",
@@ -1727,6 +1738,7 @@ const creatures = [
         defensearmor: 0,
         accuracy: [deliveredvalue2[11][6], deliveredvalue2[11][7]],
         alive: 1,
+        size: deliveredvalue2[11][14],
         id: 12,
         team: "red",
         where: "behind",
@@ -1794,21 +1806,49 @@ animation11_stay.play();
 animation12_stay.play();
 
 
-document.getElementById("DIVmy9").src='allanimations/face' + firstanim + '.PNG';
-document.getElementById("DIVmy5").src='allanimations/face' + secondanim + '.PNG';
-document.getElementById("DIVmy").src='allanimations/face' + thirdanim + '.PNG';
-document.getElementById("DIVmy10").src='allanimations/face' + forthanim + '.PNG';
-document.getElementById("DIVmy6").src='allanimations/face' + fifthdanim + '.PNG';
-document.getElementById("DIVmy2").src='allanimations/face' + sixthdanim + '.PNG';
-document.getElementById("DIVmy11").src='allanimations/face' + seventhdanim + '.PNG';
-document.getElementById("DIVmy12").src='allanimations/face' + tenthanim + '.PNG';
-document.getElementById("DIVmy8").src='allanimations/face' + eleventhanim + '.PNG';
-document.getElementById("DIVmy4").src='allanimations/face' + twelthhanim + '.PNG';
-document.getElementById("DIVmy3").src='allanimations/face' + ninethanim + '.PNG';
-document.getElementById("DIVmy7").src='allanimations/face' + eighthanim + '.PNG';
+if (deliveredvalue2[5][14] === 0) {
+    console.log(deliveredvalue2[2][12])
+    document.getElementById("DIVmy5").src='allanimations/face' + secondanim + '.PNG';
+    document.getElementById("DIVmy6").src='allanimations/face' + fifthdanim + '.PNG';
+}
+else {document.getElementById("DIVmybig1").src='allanimations/face' + sixthdanim + '.PNG';}
 
-document.getElementById("DIVmybig1").src='allanimations/face26.PNG';
-document.getElementById("DIVmybig3").src='allanimations/face26.PNG';
+if (deliveredvalue2[4][14] === 0) {
+    console.log(deliveredvalue2[2][12])
+    document.getElementById("DIVmy").src = 'allanimations/face' + thirdanim + '.PNG';
+    document.getElementById("DIVmy2").src = 'allanimations/face' + sixthdanim + '.PNG';
+}
+else {document.getElementById("DIVmybig7").src='allanimations/face' + fifthdanim + '.PNG';}
+
+if (deliveredvalue2[3][14] === 0) {
+    console.log(deliveredvalue2[2][12])
+    document.getElementById("DIVmy3").src='allanimations/face' + ninethanim + '.PNG';
+    document.getElementById("DIVmy4").src='allanimations/face' + twelthhanim + '.PNG';
+}
+else {document.getElementById("DIVmybig13").src='allanimations/face' + forthanim + '.PNG';}
+
+if (deliveredvalue2[6][14] === 0) {
+    console.log(deliveredvalue2[2][12])
+    document.getElementById("DIVmy11").src='allanimations/face' + seventhdanim + '.PNG';
+    document.getElementById("DIVmy12").src='allanimations/face' + tenthanim + '.PNG';
+}
+else {document.getElementById("DIVmybig15").src='allanimations/face' + seventhdanim + '.PNG';}
+
+if (deliveredvalue2[7][14] === 0) {
+    console.log(deliveredvalue2[2][12])
+    document.getElementById("DIVmy7").src='allanimations/face' + eighthanim + '.PNG';
+    document.getElementById("DIVmy8").src='allanimations/face' + eleventhanim + '.PNG';
+}
+else {document.getElementById("DIVmybig9").src='allanimations/face' + eighthanim + '.PNG';}
+
+if (deliveredvalue2[8][14] === 0) {
+    console.log(deliveredvalue2[2][12])
+    document.getElementById("DIVmy9").src='allanimations/face' + firstanim + '.PNG';
+    document.getElementById("DIVmy10").src='allanimations/face' + forthanim + '.PNG';
+}
+else {document.getElementById("DIVmybig3").src='allanimations/face' + ninethanim + '.PNG';}
+
+
 
 
 //forbeta/shooterface.PNG
