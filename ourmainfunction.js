@@ -927,6 +927,7 @@ const creatures = [
         glowred: function() { if (this.size === 0) {
             setTimeout(this.removered, 1000);
             document.getElementById("myDIV9").classList.add("el");
+            document.getElementById("myDIV9").style.opacity = "0.7";
         }
         else {document.getElementById("DIVmybig13").classList.add("el");}
             setTimeout(this.removerednow, 1000);
@@ -1008,6 +1009,7 @@ const creatures = [
         glowred: function() { if (this.size === 0) {
             setTimeout(this.removered, 1000);
             document.getElementById("myDIV5").classList.add("el");
+            document.getElementById("myDIV5").style.opacity = "0.7";
         }
         else {document.getElementById("DIVmybig13").classList.add("el");}
             setTimeout(this.removerednow, 1000);
@@ -1088,6 +1090,7 @@ const creatures = [
         glowred: function() { if (this.size === 0) {
             setTimeout(this.removered, 1000);
             document.getElementById("myDIV").classList.add("el");
+            document.getElementById("myDIV").style.opacity = "0.7";
         }
         else {document.getElementById("DIVmybig13").classList.add("el");}
             setTimeout(this.removerednow, 1000);
@@ -1168,6 +1171,8 @@ const creatures = [
         glowred: function() { if (this.size === 0) {
             setTimeout(this.removered, 1000);
             document.getElementById("myDIV10").classList.add("el");
+            document.getElementById("DIVm10").classList.add("bonespicture");
+            document.getElementById("DIVm10").classList.remove("skeletor");
         }
             else {document.getElementById("DIVmybig13").classList.add("el");}
             setTimeout(this.removerednow, 1000);
@@ -1884,6 +1889,8 @@ if (deliveredvalue2[3][14] === 0) {
     document.getElementById("DIVmy4").src='allanimations/face' + twelthhanim + '.PNG';}
 }
 else {document.getElementById("DIVmybig13").src='allanimations/face' + forthanim + '.PNG';
+    if (deliveredvalue2[11][0] === 0) {} else {
+        document.getElementById("DIVmy4").src='allanimations/face' + twelthhanim + '.PNG';}
 }
 
 if (deliveredvalue2[6][14] === 0) {
@@ -1893,7 +1900,8 @@ if (deliveredvalue2[6][14] === 0) {
     if (deliveredvalue2[9][0] === 0) {} else {
     document.getElementById("DIVmy12").src='allanimations/face' + tenthanim + '.PNG';}
 }
-else {document.getElementById("DIVmybig15").src='allanimations/face' + seventhdanim + '.PNG';}
+else {document.getElementById("DIVmybig15").src='allanimations/face' + seventhdanim + '.PNG';
+}
 
 if (deliveredvalue2[7][14] === 0) {
     console.log(deliveredvalue2[2][12])
