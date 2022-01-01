@@ -927,14 +927,18 @@ const creatures = [
         animat: (type, hide) => {
             document.getElementById(type + "-container").style.visibility = hide ? "hidden" : "visible";
         },
-        glowred: function() {
+        glowred: function() { if (this.size === 0) {
+            setTimeout(this.removered, 1000);
             document.getElementById("myDIV9").classList.add("el");
+        }
+        else {document.getElementById("DIVmybig13").classList.add("el");}
+            setTimeout(this.removerednow, 1000);
         },
         removered: function() {
-            document.getElementById("myDIV9").classList.remove("el");
-        },
+            document.getElementById("myDIV9").classList.remove("el");}
+        ,
         removerednow: function() {
-            setTimeout(this.removered, 1000);
+            document.getElementById("DIVmybig13").classList.remove("el");
         },
         glownumber: function(othertype) {
             document.getElementById("numberclass9").innerHTML = othertype;
@@ -1004,14 +1008,18 @@ const creatures = [
         animat: (type, hide) => {
             document.getElementById(type + "-container2").style.visibility = hide ? "hidden" : "visible";
         },
-        glowred: function() {
+        glowred: function() { if (this.size === 0) {
+            setTimeout(this.removered, 1000);
             document.getElementById("myDIV5").classList.add("el");
+        }
+        else {document.getElementById("DIVmybig13").classList.add("el");}
+            setTimeout(this.removerednow, 1000);
         },
         removered: function() {
-            document.getElementById("myDIV5").classList.remove("el");
-        },
+            document.getElementById("myDIV5").classList.remove("el");}
+        ,
         removerednow: function() {
-            setTimeout(this.removered, 1000);
+            document.getElementById("DIVmybig13").classList.remove("el");
         },
         glownumber: function(othertype) {
             document.getElementById("numberclass5").innerHTML = othertype;
@@ -1080,15 +1088,19 @@ const creatures = [
         animat: (type, hide) => {
             document.getElementById(type + "-container3").style.visibility = hide ? "hidden" : "visible";
         },
-        glowred: function() {
+        glowred: function() { if (this.size === 0) {
+            setTimeout(this.removered, 1000);
             document.getElementById("myDIV").classList.add("el");
+        }
+        else {document.getElementById("DIVmybig13").classList.add("el");}
+            setTimeout(this.removerednow, 1000);
         },
         removered: function() {
-            document.getElementById("myDIV").classList.remove("el");
-        },
+            document.getElementById("myDIV").classList.remove("el");}
+        ,
         removerednow: function() {
-        setTimeout(this.removered, 1000);
-},
+            document.getElementById("DIVmybig13").classList.remove("el");
+        },
         glownumber: function(othertype) {
             document.getElementById("numberclass").innerHTML = othertype;
         },
@@ -1157,16 +1169,17 @@ const creatures = [
             document.getElementById(type + "-container4").style.visibility = hide ? "hidden" : "visible";
         },
         glowred: function() { if (this.size === 0) {
-            setTimeout(this.removered, 2000);
+            setTimeout(this.removered, 1000);
             document.getElementById("myDIV10").classList.add("el");
         }
             else {document.getElementById("DIVmybig13").classList.add("el");}
+            setTimeout(this.removerednow, 1000);
         },
         removered: function() {
             document.getElementById("myDIV10").classList.remove("el");}
         ,
         removerednow: function() {
-            //setTimeout(this.removered, 1000)
+            document.getElementById("DIVmybig13").classList.remove("el");
         },
         glownumber: function(othertype) {
             document.getElementById("numberclass10").innerHTML = othertype;
@@ -1236,15 +1249,17 @@ const creatures = [
             document.getElementById(type + "-container6").style.visibility = hide ? "hidden" : "visible";
         },
         glowred: function() { if (this.size === 0) {
-            document.getElementById("myDIV3").classList.add("el");}
-        else {document.getElementById("DIVmybig3").classList.add("el");}
-        },
-        removered: function() { if (this.size === 0) {
-            document.getElementById("myDIV3").classList.remove("el");}
-        else {document.getElementById("DIVmybig3").classList.remove("el");}
-        },
-        removerednow: function() {
             setTimeout(this.removered, 1000);
+            document.getElementById("myDIV3").classList.add("el");
+        }
+        else {document.getElementById("DIVmybig3").classList.add("el");}
+            setTimeout(this.removerednow, 1000);
+        },
+        removered: function() {
+            document.getElementById("myDIV3").classList.remove("el");}
+        ,
+        removerednow: function() {
+            document.getElementById("DIVmybig3").classList.remove("el");
         },
         glownumber: function(othertype) {
             document.getElementById("numberclass3").innerHTML = othertype;
@@ -1314,15 +1329,17 @@ const creatures = [
             document.getElementById(type + "-container7").style.visibility = hide ? "hidden" : "visible";
         },
         glowred: function() { if (this.size === 0) {
-            document.getElementById("myDIV11").classList.add("el");}
-        else {document.getElementById("DIVmybig15").classList.add("el");}
-        },
-        removered: function() { if (this.size === 0) {
-            document.getElementById("myDIV11").classList.remove("el");}
-        else {document.getElementById("DIVmybig15").classList.remove("el");}
-        },
-        removerednow: function() {
             setTimeout(this.removered, 1000);
+            document.getElementById("myDIV11").classList.add("el");
+        }
+        else {document.getElementById("DIVmybig15").classList.add("el");}
+            setTimeout(this.removerednow, 1000);
+        },
+        removered: function() {
+            document.getElementById("myDIV11").classList.remove("el");}
+        ,
+        removerednow: function() {
+            document.getElementById("DIVmybig15").classList.remove("el");
         },
         glownumber: function(othertype) {
             document.getElementById("numberclass11").innerHTML = othertype;
@@ -1392,15 +1409,17 @@ const creatures = [
             document.getElementById(type + "-container8").style.visibility = hide ? "hidden" : "visible";
         },
         glowred: function() { if (this.size === 0) {
-            document.getElementById("myDIV6").classList.add("el");}
-        else {document.getElementById("DIVmybig7").classList.add("el");}
-        },
-        removered: function() { if (this.size === 0) {
-            document.getElementById("myDIV6").classList.remove("el");}
-        else {document.getElementById("DIVmybig7").classList.remove("el");}
-        },
-        removerednow: function() {
             setTimeout(this.removered, 1000);
+            document.getElementById("myDIV6").classList.add("el");
+        }
+        else {document.getElementById("DIVmybig7").classList.add("el");}
+            setTimeout(this.removerednow, 1000);
+        },
+        removered: function() {
+            document.getElementById("myDIV6").classList.remove("el");}
+        ,
+        removerednow: function() {
+            document.getElementById("DIVmybig7").classList.remove("el");
         },
         glownumber: function(othertype) {
             document.getElementById("numberclass6").innerHTML = othertype;
@@ -1471,15 +1490,17 @@ const creatures = [
             document.getElementById(type + "-container5").style.visibility = hide ? "hidden" : "visible";
         },
         glowred: function() { if (this.size === 0) {
-            document.getElementById("myDIV7").classList.add("el");}
-        else {document.getElementById("DIVmybig9").classList.add("el");}
-        },
-        removered: function() { if (this.size === 0) {
-            document.getElementById("myDIV7").classList.remove("el");}
-        else {document.getElementById("DIVmybig9").classList.remove("el");}
-        },
-        removerednow: function() {
             setTimeout(this.removered, 1000);
+            document.getElementById("myDIV7").classList.add("el");
+        }
+        else {document.getElementById("DIVmybig9").classList.add("el");}
+            setTimeout(this.removerednow, 1000);
+        },
+        removered: function() {
+            document.getElementById("myDIV7").classList.remove("el");}
+        ,
+        removerednow: function() {
+            document.getElementById("DIVmybig9").classList.remove("el");
         },
         glownumber: function(othertype) {
             document.getElementById("numberclass7").innerHTML = othertype;
@@ -1549,15 +1570,17 @@ const creatures = [
             document.getElementById(type + "-container9").style.visibility = hide ? "hidden" : "visible";
         },
         glowred: function() { if (this.size === 0) {
-            document.getElementById("myDIV2").classList.add("el");}
-        else {document.getElementById("DIVmybig1").classList.add("el");}
-        },
-        removered: function() { if (this.size === 0) {
-            document.getElementById("myDIV2").classList.remove("el");}
-        else {document.getElementById("DIVmybig1").classList.remove("el");}
-        },
-        removerednow: function() {
             setTimeout(this.removered, 1000);
+            document.getElementById("myDIV2").classList.add("el");
+        }
+        else {document.getElementById("DIVmybig1").classList.add("el");}
+            setTimeout(this.removerednow, 1000);
+        },
+        removered: function() {
+            document.getElementById("myDIV2").classList.remove("el");}
+        ,
+        removerednow: function() {
+            document.getElementById("DIVmybig1").classList.remove("el");
         },
         glownumber: function(othertype) {
             document.getElementById("numberclass2").innerHTML = othertype;
@@ -1627,15 +1650,17 @@ const creatures = [
             document.getElementById(type + "-container10").style.visibility = hide ? "hidden" : "visible";
         },
         glowred: function() { if (this.size === 0) {
-            document.getElementById("myDIV12").classList.add("el");}
-        else {document.getElementById("DIVmybig13").classList.add("el");}
-        },
-        removered: function() { if (this.size === 0) {
-            document.getElementById("myDIV12").classList.remove("el");}
-        else {document.getElementById("DIVmybig13").classList.remove("el");}
-        },
-        removerednow: function() {
             setTimeout(this.removered, 1000);
+            document.getElementById("myDIV12").classList.add("el");
+        }
+        else {document.getElementById("DIVmybig13").classList.add("el");}
+            setTimeout(this.removerednow, 1000);
+        },
+        removered: function() {
+            document.getElementById("myDIV12").classList.remove("el");}
+        ,
+        removerednow: function() {
+            document.getElementById("DIVmybig13").classList.remove("el");
         },
         glownumber: function(othertype) {
             document.getElementById("numberclass12").innerHTML = othertype;
@@ -1706,15 +1731,17 @@ const creatures = [
             document.getElementById(type + "-container11").style.visibility = hide ? "hidden" : "visible";
         },
         glowred: function() { if (this.size === 0) {
-            document.getElementById("myDIV8").classList.add("el");}
-        else {document.getElementById("DIVmybig13").classList.add("el");}
-        },
-        removered: function() { if (this.size === 0) {
-            document.getElementById("myDIV8").classList.remove("el");}
-        else {document.getElementById("DIVmybig13").classList.remove("el");}
-        },
-        removerednow: function() {
             setTimeout(this.removered, 1000);
+            document.getElementById("myDIV8").classList.add("el");
+        }
+        else {document.getElementById("DIVmybig13").classList.add("el");}
+            setTimeout(this.removerednow, 1000);
+        },
+        removered: function() {
+            document.getElementById("myDIV8").classList.remove("el");}
+        ,
+        removerednow: function() {
+            document.getElementById("DIVmybig13").classList.remove("el");
         },
         glownumber: function(othertype) {
             document.getElementById("numberclass8").innerHTML = othertype;
@@ -1785,15 +1812,17 @@ const creatures = [
             document.getElementById(type + "-container12").style.visibility = hide ? "hidden" : "visible";
         },
         glowred: function() { if (this.size === 0) {
-            document.getElementById("myDIV4").classList.add("el");}
-        else {document.getElementById("DIVmybig13").classList.add("el");}
-        },
-        removered: function() { if (this.size === 0) {
-            document.getElementById("myDIV4").classList.remove("el");}
-        else {document.getElementById("DIVmybig13").classList.remove("el");}
-        },
-        removerednow: function() {
             setTimeout(this.removered, 1000);
+            document.getElementById("myDIV4").classList.add("el");
+        }
+        else {document.getElementById("DIVmybig13").classList.add("el");}
+            setTimeout(this.removerednow, 1000);
+        },
+        removered: function() {
+            document.getElementById("myDIV4").classList.remove("el");}
+        ,
+        removerednow: function() {
+            document.getElementById("DIVmybig13").classList.remove("el");
         },
         glownumber: function(othertype) {
             document.getElementById("numberclass4").innerHTML = othertype;
@@ -3232,7 +3261,7 @@ else {
             checkshild ();
             enemyTeam.forEach(creature => creature.health -= Math.floor((attackerCreature.damage * (1 - creature.armor) * (1 - creature.defensearmor))));
             enemyTeam.forEach(creature => creature.glowred());
-            enemyTeam.forEach(creature => creature.removerednow());
+            //enemyTeam.forEach(creature => creature.removerednow());
             enemyTeam.forEach(creature => setTimeout(gethurt, 400, creature, attackerCreature));
             enemyTeam.forEach(creature => setTimeout(backtostay, 710, creature, attackerCreature));
             enemyTeam.forEach(creature => creature.glownumber(-Math.floor((attackerCreature.damage * (1 - creature.armor) * (1 - creature.defensearmor)))));
@@ -3451,7 +3480,7 @@ firstpartofpuzzle = vampiresum;
                 attackedCreature.glowred();
                 attackedCreature.glownumber(-truedamage);
                 attackedCreature.removenumbernow();
-                attackedCreature.removerednow();
+                //attackedCreature.removerednow();
                 console.log("Не синяя команда")
                 window.globalattacker = {
                     realattacker: attackerCreature,
@@ -3472,7 +3501,7 @@ firstpartofpuzzle = vampiresum;
                 attackedCreature.glowred();
                 attackedCreature.glownumber(-truedamage);
                 attackedCreature.removenumbernow();
-                attackedCreature.removerednow();
+                //attackedCreature.removerednow();
                 console.log("Не синяя команда")
                 window.globalattacker = {
                     realattacker: attackerCreature,
@@ -3663,7 +3692,7 @@ firstpartofpuzzle = vampiresum;
                 attackedCreature.glowred();
                 attackedCreature.glownumber(-truedamage);
                 attackedCreature.removenumbernow();
-                attackedCreature.removerednow();
+                //attackedCreature.removerednow();
                 console.log("Не синяя команда")
                 window.globalattacker = {
                     realattacker: attackerCreature,
@@ -3684,7 +3713,7 @@ firstpartofpuzzle = vampiresum;
                 attackedCreature.glowred();
                 attackedCreature.glownumber(-truedamage);
                 attackedCreature.removenumbernow();
-                attackedCreature.removerednow();
+                //attackedCreature.removerednow();
                 console.log("Не синяя команда")
                 window.globalattacker = {
                     realattacker: attackerCreature,
