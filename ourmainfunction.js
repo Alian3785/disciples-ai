@@ -1807,7 +1807,8 @@ document.getElementById("DIVmy4").src='allanimations/face' + twelthhanim + '.PNG
 document.getElementById("DIVmy3").src='allanimations/face' + ninethanim + '.PNG';
 document.getElementById("DIVmy7").src='allanimations/face' + eighthanim + '.PNG';
 
-
+document.getElementById("DIVmybig1").src='allanimations/face26.PNG';
+document.getElementById("DIVmybig3").src='allanimations/face26.PNG';
 
 
 //forbeta/shooterface.PNG
