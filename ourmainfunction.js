@@ -3753,6 +3753,73 @@ firstpartofpuzzle = vampiresum;
                 if (Math.random() < attackerCreature.accuracy[1]) {attackedCreature.poisoned = attackerCreature.lastingdamage};
             }}
 
+        else if (attackerCreature.type === "spider") {
+
+            const creaturesAhead = enemyTeam.filter(creature => creature.where === 'ahead')
+            const creaturesBehind = enemyTeam.filter(creature => creature.where === 'behind')
+            const mydamnteam = creatures
+                .filter(creature => creature.team === attackerCreature.team)
+                .filter(creature => creature.health > 0)
+            const mycreaturesAhead = mydamnteam.filter(creature => creature.where === 'ahead')
+            const mycreaturesBehind = mydamnteam.filter(creature => creature.where === 'behind')
+
+            if (mycreaturesAhead.length > 0 && attackerCreature.where === 'behind') {
+                console.log("Нельзя атаковать ребят из за спины")
+                return // no friendly fire}
+            }
+            let creaturesAttackable = creaturesAhead.length > 0 ? creaturesAhead : creaturesBehind
+            if (creaturesAttackable.length > 1) {
+                creaturesAttackable = creaturesAttackable.filter(creature => Math.abs(creature.position - attackerCreature.position) <= 1)
+                console.log(creaturesAttackable);
+            }
+            if (!creaturesAttackable.includes(attackedCreature)) {
+                return //can't attack this creature
+            }
+            protectedornot = justattack();
+            truedamage = Math.floor((attackerCreature.damage * (1 - attackedCreature.armor) * (1 - attackedCreature.defensearmor)));
+            if (protectedornot === 1) {attackedCreature.health -= Math.floor((attackerCreature.damage * (1 - attackedCreature.armor) * (1 - attackedCreature.defensearmor)));}
+            else {}
+            if (attackedCreature.team === "blue") {
+                attackerCreature.animat('attack', false);
+                attackerCreature.animat('weapon', false);
+                attackerCreature.animat('stay', true);
+                attackerCreature.animattack();
+                attackerCreature.sound();
+                attackedCreature.glowred();
+                attackedCreature.glownumber(-truedamage);
+                attackedCreature.removenumbernow();
+                console.log("Не синяя команда")
+                window.globalattacker = {
+                    realattacker: attackerCreature,
+                };
+                window.globalattacked = {
+                    realattacked: attackedCreature,
+                };
+                setTimeout(gethurt, 250, attackedCreature, attackerCreature);
+                setTimeout(backtostay, 710, attackedCreature, attackerCreature);
+            }
+            else {
+                attackerCreature.animat('attack', false);
+                attackerCreature.animat('weapon', false);
+                attackerCreature.animat('stay', true);
+                attackerCreature.animattack();
+                attackerCreature.sound();
+                attackerCreature.animweapon();
+                attackedCreature.glowred();
+                attackedCreature.glownumber(-truedamage);
+                attackedCreature.removenumbernow();
+                console.log("Не синяя команда")
+                window.globalattacker = {
+                    realattacker: attackerCreature,
+                };
+                window.globalattacked = {
+                    realattacked: attackedCreature,
+                };
+                setTimeout(gethurt, 250, attackedCreature, attackerCreature);
+                setTimeout(backtostay, 710, attackedCreature, attackerCreature);
+                if (Math.random() < attackerCreature.accuracy[1]) {attackedCreature.poisoned = attackerCreature.lastingdamage};
+            }}
+
         else if (attackerCreature.type === "uterchild") {
             const creaturesAhead = enemyTeam.filter(creature => creature.where === 'ahead')
             const creaturesBehind = enemyTeam.filter(creature => creature.where === 'behind')
