@@ -3651,6 +3651,27 @@ firstpartofpuzzle = vampiresum;
                 }
                 else {}
             }
+
+            if (attackerCreature.who === "Сэр Аллемон") {
+                protectedornot2 = justanotherattack();
+                if (protectedornot2 === 1) {
+                    console.log(attackerCreature.accuracy[1]);
+                    console.log(attackerCreature.accuracy[1]);
+                    console.log(attackerCreature.accuracy[1]);
+                    if (Math.random() < attackerCreature.accuracy[1]) {
+                        console.log(attackerCreature.accuracy[1]);
+                        console.log(attackedCreature);
+                        console.log(attackedCreature);
+                        attackedCreature.armor = attackedCreature.armor - 0.15;
+                        console.log(attackedCreature.armor);
+                        console.log(attackedCreature.armor);
+                        console.log(attackedCreature.armor);
+                        if (attackedCreature.armor < 0) {attackedCreature.armor = 0}
+                    }
+                    else {}
+                }
+                else {}
+            }
         }
 
         else if (attackerCreature.type === "uterchild") {
