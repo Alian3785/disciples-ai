@@ -10,7 +10,7 @@ div.enemyahead {
 div.enemybehind {
     position: relative;
     left: 350px;
-    top: 50px;
+    bottom: 3900px;
     width: 50px;
     display: inline;
 }

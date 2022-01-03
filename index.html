@@ -86,8 +86,6 @@
 <br>;
 <br>;
 
-
-
     <!-- создаём контейнер, который будет отвечать за нашу сетку -->
     <div class="grid">
         <!-- и создаём 16 вложенных элементов -->
@@ -282,7 +280,17 @@
 
 </div>
 
+<div class="enemybehind">
+    <button onclick="realdefense()">Защита</button>
+</div>
 
+<div class="enemybehind">
+    <button onclick="runrun()">Бежать</button>
+</div>
+
+<div class="enemybehind">
+    <button onclick="wait()">Ждать</button>
+</div>
 
 <div style="width: 800px; height: 600px; position: absolute; left: 400px;top: 1px" id="attack-container"></div>
 
@@ -559,17 +567,7 @@
     <p id="delta12">Сектант</p>
 </div>
 <!--Защита это пропуск хода вручную-->
-<div class="enemybehind">
-    <button onclick="realdefense()">Защита</button>
-</div>
 
-<div class="enemybehind">
-    <button onclick="runrun()">Бежать</button>
-</div>
-
-<div class="enemybehind">
-    <button onclick="wait()">Ждать</button>
-</div>
 
 
 </body>
