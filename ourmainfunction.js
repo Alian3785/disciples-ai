@@ -927,7 +927,6 @@ const creatures = [
         glowred: function() { if (this.size === 0) {
             setTimeout(this.removered, 1000);
             document.getElementById("myDIV9").classList.add("el");
-            document.getElementById("myDIV9").style.opacity = "0.7";
         }
         else {document.getElementById("DIVmybig13").classList.add("el");}
             setTimeout(this.removerednow, 1000);
@@ -938,8 +937,8 @@ const creatures = [
         removerednow: function() {
             document.getElementById("DIVmybig13").classList.remove("el");
         },
-        dienow: function() {
-        },
+        dienow: function() { document.getElementById("DIVm9").classList.add("bonespicture");
+            document.getElementById("DIVm9").classList.remove("skeletor");},
         glownumber: function(othertype) {
             document.getElementById("numberclass9").innerHTML = othertype;
         },
@@ -1021,8 +1020,9 @@ const creatures = [
         removerednow: function() {
             document.getElementById("DIVmybig13").classList.remove("el");
         },
-        dienow: function() {
-        },
+        dienow: function() { document.getElementById("DIVm5").classList.add("bonespicture");
+            document.getElementById("DIVm5").classList.remove("skeletor");},
+
         glownumber: function(othertype) {
             document.getElementById("numberclass5").innerHTML = othertype;
         },
@@ -1104,8 +1104,9 @@ const creatures = [
         removerednow: function() {
             document.getElementById("DIVmybig13").classList.remove("el");
         },
-        dienow: function() {
-        },
+        dienow: function() { document.getElementById("DIVm").classList.add("bonespicture");
+            document.getElementById("DIVm").classList.remove("skeletor");},
+
         glownumber: function(othertype) {
             document.getElementById("numberclass").innerHTML = othertype;
         },
