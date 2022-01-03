@@ -2430,6 +2430,22 @@ const nextTurn = () => {
             }
         }
 
+    else if (attackerCreature.type === "ragnagoklizard" && attackerCreature.shotsleft > 0) {
+
+        if (attackerCreature.defensearmor === 0.5) {
+            attackerCreature.shotsleft--;
+            nextTurn()
+            creatures.forEach((creature, i) => updateHealthView(creature, i))
+            document.getElementById("delta12").innerHTML = attackerCreature.who;
+            return // no friendly fire
+        }
+        else {
+            console.log("Второй удар")
+            attackerCreature.shotsleft--;
+            console.log(attackerCreature.shotsleft);
+        }
+    }
+
 
     else {
         console.log(creatures[creatures.length - 1]["initiative"]);
@@ -2632,6 +2648,19 @@ else {}
             console.log(aliveCreatures[checkarcher]);
             console.log(checkarcher);
             aliveCreatures[checkarcher]["shotsleft"] = 1;
+            console.log("Восстанавливаем 1")
+        }
+        else {}
+
+        checklizard = (aliveCreatures.indexOf(attackerCreature) - 1) % aliveCreatures.length;
+        console.log(checklizard);
+        if (checklizard === -1) {checklizard = aliveCreatures.length - 1}
+        else {}
+
+        if (aliveCreatures[checklizard]["type"] === "ragnagoklizard") {
+            console.log(aliveCreatures[checklizard]);
+            console.log(checklizard);
+            aliveCreatures[checklizard]["shotsleft"] = 1;
             console.log("Восстанавливаем 1")
         }
         else {}
@@ -3555,24 +3584,17 @@ firstpartofpuzzle = vampiresum;
                 return // no friendly fire}
             }
             let creaturesAttackable = creaturesAhead.length > 0 ? creaturesAhead : creaturesBehind
-
             if (creaturesAttackable.length > 1) {
-
                 creaturesAttackable = creaturesAttackable.filter(creature => Math.abs(creature.position - attackerCreature.position) <= 1)
                 console.log(creaturesAttackable);
-
             }
-
             if (!creaturesAttackable.includes(attackedCreature)) {
-
                 return //can't attack this creature
             }
-
             protectedornot = justattack();
             truedamage = Math.floor((attackerCreature.damage * (1 - attackedCreature.armor) * (1 - attackedCreature.defensearmor)));
             if (protectedornot === 1) {attackedCreature.health -= Math.floor((attackerCreature.damage * (1 - attackedCreature.armor) * (1 - attackedCreature.defensearmor)));}
             else {}
-
             if (attackedCreature.team === "blue") {
                 attackerCreature.animat('attack', false);
                 attackerCreature.animat('weapon', false);
@@ -3589,7 +3611,6 @@ firstpartofpuzzle = vampiresum;
                 window.globalattacked = {
                     realattacked: attackedCreature,
                 };
-
                 setTimeout(gethurt, 250, attackedCreature, attackerCreature);
                 setTimeout(backtostay, 710, attackedCreature, attackerCreature);
             }
@@ -3655,17 +3676,8 @@ firstpartofpuzzle = vampiresum;
             if (attackerCreature.who === "Сэр Аллемон") {
                 protectedornot2 = justanotherattack();
                 if (protectedornot2 === 1) {
-                    console.log(attackerCreature.accuracy[1]);
-                    console.log(attackerCreature.accuracy[1]);
-                    console.log(attackerCreature.accuracy[1]);
                     if (Math.random() < attackerCreature.accuracy[1]) {
-                        console.log(attackerCreature.accuracy[1]);
-                        console.log(attackedCreature);
-                        console.log(attackedCreature);
                         attackedCreature.armor = attackedCreature.armor - 0.15;
-                        console.log(attackedCreature.armor);
-                        console.log(attackedCreature.armor);
-                        console.log(attackedCreature.armor);
                         if (attackedCreature.armor < 0) {attackedCreature.armor = 0}
                     }
                     else {}
@@ -3673,6 +3685,73 @@ firstpartofpuzzle = vampiresum;
                 else {}
             }
         }
+
+        else if (attackerCreature.type === "ragnagoklizard") {
+
+            const creaturesAhead = enemyTeam.filter(creature => creature.where === 'ahead')
+            const creaturesBehind = enemyTeam.filter(creature => creature.where === 'behind')
+            const mydamnteam = creatures
+                .filter(creature => creature.team === attackerCreature.team)
+                .filter(creature => creature.health > 0)
+            const mycreaturesAhead = mydamnteam.filter(creature => creature.where === 'ahead')
+            const mycreaturesBehind = mydamnteam.filter(creature => creature.where === 'behind')
+
+            if (mycreaturesAhead.length > 0 && attackerCreature.where === 'behind') {
+                console.log("Нельзя атаковать ребят из за спины")
+                return // no friendly fire}
+            }
+            let creaturesAttackable = creaturesAhead.length > 0 ? creaturesAhead : creaturesBehind
+            if (creaturesAttackable.length > 1) {
+                creaturesAttackable = creaturesAttackable.filter(creature => Math.abs(creature.position - attackerCreature.position) <= 1)
+                console.log(creaturesAttackable);
+            }
+            if (!creaturesAttackable.includes(attackedCreature)) {
+                return //can't attack this creature
+            }
+            protectedornot = justattack();
+            truedamage = Math.floor((attackerCreature.damage * (1 - attackedCreature.armor) * (1 - attackedCreature.defensearmor)));
+            if (protectedornot === 1) {attackedCreature.health -= Math.floor((attackerCreature.damage * (1 - attackedCreature.armor) * (1 - attackedCreature.defensearmor)));}
+            else {}
+            if (attackedCreature.team === "blue") {
+                attackerCreature.animat('attack', false);
+                attackerCreature.animat('weapon', false);
+                attackerCreature.animat('stay', true);
+                attackerCreature.animattack();
+                attackerCreature.sound();
+                attackedCreature.glowred();
+                attackedCreature.glownumber(-truedamage);
+                attackedCreature.removenumbernow();
+                console.log("Не синяя команда")
+                window.globalattacker = {
+                    realattacker: attackerCreature,
+                };
+                window.globalattacked = {
+                    realattacked: attackedCreature,
+                };
+                setTimeout(gethurt, 250, attackedCreature, attackerCreature);
+                setTimeout(backtostay, 710, attackedCreature, attackerCreature);
+            }
+            else {
+                attackerCreature.animat('attack', false);
+                attackerCreature.animat('weapon', false);
+                attackerCreature.animat('stay', true);
+                attackerCreature.animattack();
+                attackerCreature.sound();
+                attackerCreature.animweapon();
+                attackedCreature.glowred();
+                attackedCreature.glownumber(-truedamage);
+                attackedCreature.removenumbernow();
+                console.log("Не синяя команда")
+                window.globalattacker = {
+                    realattacker: attackerCreature,
+                };
+                window.globalattacked = {
+                    realattacked: attackedCreature,
+                };
+                setTimeout(gethurt, 250, attackedCreature, attackerCreature);
+                setTimeout(backtostay, 710, attackedCreature, attackerCreature);
+                if (Math.random() < attackerCreature.accuracy[1]) {attackedCreature.poisoned = attackerCreature.lastingdamage};
+            }}
 
         else if (attackerCreature.type === "uterchild") {
             const creaturesAhead = enemyTeam.filter(creature => creature.where === 'ahead')
