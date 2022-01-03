@@ -77,7 +77,15 @@ div.heading {
     opacity: 0.4;
 }
 
+.bonespicture2 {
+    opacity: 0.4;
+}
+
 .skeletor {
+    display: none;
+}
+
+.skeletor2 {
     display: none;
 }
 
