@@ -10,9 +10,9 @@
     </style>
 </head>
 <body>
-  <button @click="currentCreature = thisCreature">Click</button>
+  <button oncontextmenu="return false;">Click</button>
 
-  <div class="hidden">{{ currentCreature }}</div>
+  <div class="hidden">Hidden</div>
 
   <script>
       document.querySelector('button').addEventListener('contextmenu', e => {
