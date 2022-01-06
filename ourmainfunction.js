@@ -1,5 +1,302 @@
 // дисклеймер 5 это 8, а 6 это 9
 
+// targeting the svg itself
+const svg = document.querySelector("#dinamichealth");;
+
+// variable for the namespace
+const svgns = "http://www.w3.org/2000/svg";
+
+// make a simple rectangle
+let newRect = document.createElementNS(svgns, "rect");
+
+newRect.setAttribute("x", "0");
+newRect.setAttribute("y", "10");
+newRect.setAttribute("width", "200");
+newRect.setAttribute("height", "200");
+newRect.setAttribute("fill", "red");
+newRect.setAttribute("opacity", "0.5");
+// append the new rectangle to the svg
+svg.appendChild(newRect);
+
+
+newRect.setAttribute("y", "50");
+
+// append the new rectangle to the svg
+svg.appendChild(newRect);
+
+
+const svg2 = document.querySelector("#dinamichealth2");
+
+// variable for the namespace
+const svgns2 = "http://www.w3.org/2000/svg";
+
+// make a simple rectangle
+let newRect2 = document.createElementNS(svgns2, "rect");
+
+newRect2.setAttribute("x", "0");
+newRect2.setAttribute("y", "10");
+newRect2.setAttribute("width", "200");
+newRect2.setAttribute("height", "200");
+newRect2.setAttribute("fill", "red");
+newRect2.setAttribute("opacity", "0.5");
+// append the new rectangle to the svg
+svg2.appendChild(newRect2);
+
+newRect2.setAttribute("y", "100");
+
+// append the new rectangle to the svg
+svg2.appendChild(newRect2);
+
+
+const svg3 = document.querySelector("#dinamichealth3");
+
+// variable for the namespace
+    const svgns3 = "http://www.w3.org/2000/svg";
+
+// make a simple rectangle
+
+    let newRect3 = document.createElementNS(svgns3, "rect");
+
+
+    newRect3.setAttribute("x", "0");
+    newRect3.setAttribute("y", "10");
+    newRect3.setAttribute("width", "200");
+    newRect3.setAttribute("height", "200");
+    newRect3.setAttribute("fill", "red");
+    newRect3.setAttribute("opacity", "0.5");
+// append the new rectangle to the svg
+    svg3.appendChild(newRect3);
+
+    newRect3.setAttribute("y", "100");
+
+// append the new rectangle to the svg
+    svg3.appendChild(newRect3);
+
+
+const svg4 = document.querySelector("#dinamichealth4");
+
+// variable for the namespace
+const svgns4 = "http://www.w3.org/2000/svg";
+
+// make a simple rectangle
+
+let newRect4 = document.createElementNS(svgns3, "rect");
+
+
+newRect4.setAttribute("x", "0");
+newRect4.setAttribute("y", "10");
+newRect4.setAttribute("width", "200");
+newRect4.setAttribute("height", "200");
+newRect4.setAttribute("fill", "red");
+newRect4.setAttribute("opacity", "0.5");
+// append the new rectangle to the svg
+svg4.appendChild(newRect4);
+
+newRect4.setAttribute("y", "100");
+
+// append the new rectangle to the svg
+svg4.appendChild(newRect4);
+
+
+const svg5 = document.querySelector("#dinamichealth5");
+
+// variable for the namespace
+const svgns5 = "http://www.w3.org/2000/svg";
+
+// make a simple rectangle
+
+let newRect5 = document.createElementNS(svgns5, "rect");
+
+
+newRect5.setAttribute("x", "0");
+newRect5.setAttribute("y", "10");
+newRect5.setAttribute("width", "200");
+newRect5.setAttribute("height", "200");
+newRect5.setAttribute("fill", "red");
+newRect5.setAttribute("opacity", "0.5");
+// append the new rectangle to the svg
+svg5.appendChild(newRect5);
+
+newRect5.setAttribute("y", "100");
+
+// append the new rectangle to the svg
+svg5.appendChild(newRect5);
+
+
+const svg6 = document.querySelector("#dinamichealth6");
+
+// variable for the namespace
+const svgns6 = "http://www.w3.org/2000/svg";
+
+// make a simple rectangle
+
+let newRect6 = document.createElementNS(svgns6, "rect");
+
+
+newRect6.setAttribute("x", "0");
+newRect6.setAttribute("y", "10");
+newRect6.setAttribute("width", "200");
+newRect6.setAttribute("height", "200");
+newRect6.setAttribute("fill", "red");
+newRect6.setAttribute("opacity", "0.5");
+// append the new rectangle to the svg
+svg6.appendChild(newRect6);
+
+newRect6.setAttribute("y", "100");
+
+// append the new rectangle to the svg
+svg6.appendChild(newRect6);
+
+const svg7 = document.querySelector("#dinamichealth7");
+
+// variable for the namespace
+const svgns7 = "http://www.w3.org/2000/svg";
+
+// make a simple rectangle
+
+let newRect7 = document.createElementNS(svgns7, "rect");
+
+
+newRect7.setAttribute("x", "0");
+newRect7.setAttribute("y", "10");
+newRect7.setAttribute("width", "200");
+newRect7.setAttribute("height", "200");
+newRect7.setAttribute("fill", "red");
+newRect7.setAttribute("opacity", "0.5");
+// append the new rectangle to the svg
+svg7.appendChild(newRect7);
+
+newRect7.setAttribute("y", "100");
+
+// append the new rectangle to the svg
+svg7.appendChild(newRect7);
+
+
+const svg8 = document.querySelector("#dinamichealth8");
+
+// variable for the namespace
+const svgns8 = "http://www.w3.org/2000/svg";
+
+// make a simple rectangle
+
+let newRect8 = document.createElementNS(svgns8, "rect");
+
+
+newRect8.setAttribute("x", "0");
+newRect8.setAttribute("y", "10");
+newRect8.setAttribute("width", "200");
+newRect8.setAttribute("height", "200");
+newRect8.setAttribute("fill", "red");
+newRect8.setAttribute("opacity", "0.5");
+// append the new rectangle to the svg
+svg8.appendChild(newRect8);
+
+newRect8.setAttribute("y", "100");
+
+// append the new rectangle to the svg
+svg8.appendChild(newRect8);
+
+
+const svg9 = document.querySelector("#dinamichealth9");
+
+// variable for the namespace
+const svgns9 = "http://www.w3.org/2000/svg";
+
+// make a simple rectangle
+
+let newRect9 = document.createElementNS(svgns9, "rect");
+
+
+newRect9.setAttribute("x", "0");
+newRect9.setAttribute("y", "10");
+newRect9.setAttribute("width", "200");
+newRect9.setAttribute("height", "200");
+newRect9.setAttribute("fill", "red");
+newRect9.setAttribute("opacity", "0.5");
+// append the new rectangle to the svg
+svg9.appendChild(newRect9);
+
+newRect9.setAttribute("y", "100");
+
+// append the new rectangle to the svg
+svg9.appendChild(newRect9);
+
+const svg10 = document.querySelector("#dinamichealth10");
+
+// variable for the namespace
+const svgns10 = "http://www.w3.org/2000/svg";
+
+// make a simple rectangle
+
+let newRect10 = document.createElementNS(svgns10, "rect");
+
+
+newRect10.setAttribute("x", "0");
+newRect10.setAttribute("y", "10");
+newRect10.setAttribute("width", "200");
+newRect10.setAttribute("height", "200");
+newRect10.setAttribute("fill", "red");
+newRect10.setAttribute("opacity", "0.5");
+// append the new rectangle to the svg
+svg10.appendChild(newRect10);
+
+newRect10.setAttribute("y", "100");
+
+// append the new rectangle to the svg
+svg10.appendChild(newRect10);
+
+
+const svg11 = document.querySelector("#dinamichealth11");
+
+// variable for the namespace
+const svgns11 = "http://www.w3.org/2000/svg";
+
+// make a simple rectangle
+
+let newRect11 = document.createElementNS(svgns11, "rect");
+
+
+newRect11.setAttribute("x", "0");
+newRect11.setAttribute("y", "10");
+newRect11.setAttribute("width", "200");
+newRect11.setAttribute("height", "200");
+newRect11.setAttribute("fill", "red");
+newRect11.setAttribute("opacity", "0.5");
+// append the new rectangle to the svg
+svg11.appendChild(newRect11);
+
+newRect11.setAttribute("y", "100");
+
+// append the new rectangle to the svg
+svg11.appendChild(newRect11);
+
+
+const svg12 = document.querySelector("#dinamichealth12");
+
+// variable for the namespace
+const svgns12 = "http://www.w3.org/2000/svg";
+
+// make a simple rectangle
+
+let newRect12 = document.createElementNS(svgns12, "rect");
+
+
+newRect12.setAttribute("x", "0");
+newRect12.setAttribute("y", "10");
+newRect12.setAttribute("width", "200");
+newRect12.setAttribute("height", "200");
+newRect12.setAttribute("fill", "red");
+newRect12.setAttribute("opacity", "0.5");
+// append the new rectangle to the svg
+svg12.appendChild(newRect12);
+
+newRect12.setAttribute("y", "100");
+
+// append the new rectangle to the svg
+svg12.appendChild(newRect12);
+
+
+
 
 
 
@@ -939,7 +1236,8 @@ const creatures = [
         },
         dienow: function() { if (this.size === 0) {
             document.getElementById("DIVm9").classList.add("bonespicture");
-            document.getElementById("DIVm9").classList.remove("skeletor");}
+            document.getElementById("DIVm9").classList.remove("skeletor");
+            newRect9.setAttribute("y", "150");}
         else {
             document.getElementById("DIVmybigdead13").classList.add("bonespicture2");
             document.getElementById("DIVmybigdead13").classList.remove("skeletor2");}
@@ -953,6 +1251,7 @@ const creatures = [
         removenumbernow: function() {
             setTimeout(this.removenumber, 1000);
         },
+        changehealth: function() {newRect9.setAttribute("y", this.health/this.mazhealth * 150);}
 },
     {
         damage: deliveredvalue2[1][8],
@@ -1027,7 +1326,8 @@ const creatures = [
         },
         dienow: function() { if (this.size === 0) {
             document.getElementById("DIVm5").classList.add("bonespicture");
-            document.getElementById("DIVm5").classList.remove("skeletor");}
+            document.getElementById("DIVm5").classList.remove("skeletor");
+            newRect5.setAttribute("y", "150");}
         else {
             document.getElementById("DIVmybigdead13").classList.add("bonespicture2");
             document.getElementById("DIVmybigdead13").classList.remove("skeletor2");}},
@@ -1040,6 +1340,8 @@ const creatures = [
         removenumbernow: function() {
             setTimeout(this.removenumber, 1000);
         },
+        changehealth: function() {newRect5.setAttribute("y", this.health/this.mazhealth * 150);}
+    ,
 }, {
         damage: deliveredvalue2[2][8],
         lastingdamage: deliveredvalue2[2][9],
@@ -1113,7 +1415,8 @@ const creatures = [
         },
         dienow: function() { if (this.size === 0) {
             document.getElementById("DIVm").classList.add("bonespicture");
-            document.getElementById("DIVm").classList.remove("skeletor");}
+            document.getElementById("DIVm").classList.remove("skeletor");
+            newRect.setAttribute("y", "150");}
         else {
             document.getElementById("DIVmybigdead13").classList.add("bonespicture2");
             document.getElementById("DIVmybigdead13").classList.remove("skeletor2");}},
@@ -1127,6 +1430,8 @@ const creatures = [
         removenumbernow: function() {
             setTimeout(this.removenumber, 1000);
         },
+        changehealth: function() {newRect.setAttribute("y", this.health/this.mazhealth * 150);}
+        ,
 }, {
         damage: deliveredvalue2[3][8],
         lastingdamage: deliveredvalue2[3][9],
@@ -1200,7 +1505,8 @@ const creatures = [
         },
         dienow: function() { if (this.size === 0) {
             document.getElementById("DIVm10").classList.add("bonespicture");
-            document.getElementById("DIVm10").classList.remove("skeletor");}
+            document.getElementById("DIVm10").classList.remove("skeletor");
+            newRect10.setAttribute("y", "150");}
         else {
             document.getElementById("DIVmybigdead13").classList.add("bonespicture2");
             document.getElementById("DIVmybigdead13").classList.remove("skeletor2");}},
@@ -1213,6 +1519,13 @@ const creatures = [
         removenumbernow: function() {
             setTimeout(this.removenumber, 1000);
         },
+        changehealth: function() {
+            if (this.size === 1) {
+                newRect10.setAttribute("y", this.health/this.mazhealth * 150);
+                newRect9.setAttribute("y", this.health/this.mazhealth * 150);
+            } else {
+            newRect10.setAttribute("y", this.health/this.mazhealth * 150);}}
+        ,
 },  {
         damage: deliveredvalue2[8][8],
         lastingdamage: deliveredvalue2[8][9],
@@ -1286,7 +1599,8 @@ const creatures = [
         },
         dienow: function() { if (this.size === 0) {
             document.getElementById("DIVm3").classList.add("bonespicture");
-            document.getElementById("DIVm3").classList.remove("skeletor");}
+            document.getElementById("DIVm3").classList.remove("skeletor");
+            newRect3.setAttribute("y", "150");}
         else {
             document.getElementById("DIVmybigdead3").classList.add("bonespicture2");
             document.getElementById("DIVmybigdead3").classList.remove("skeletor2");}
@@ -1300,6 +1614,13 @@ const creatures = [
         removenumbernow: function() {
             setTimeout(this.removenumber, 1000);
         },
+        changehealth: function() {
+            if (this.size === 1) {
+                newRect4.setAttribute("y", this.health/this.mazhealth * 150);
+                newRect3.setAttribute("y", this.health/this.mazhealth * 150);
+            } else {
+                newRect3.setAttribute("y", this.health/this.mazhealth * 150);}}
+        ,
 }, {
         damage: deliveredvalue2[6][8],
         lastingdamage: deliveredvalue2[6][9],
@@ -1373,7 +1694,8 @@ const creatures = [
         },
         dienow: function() { if (this.size === 0) {
             document.getElementById("DIVm11").classList.add("bonespicture");
-            document.getElementById("DIVm11").classList.remove("skeletor");}
+            document.getElementById("DIVm11").classList.remove("skeletor");
+            newRect11.setAttribute("y", "150");}
         else {
             document.getElementById("DIVmybigdead15").classList.add("bonespicture2");
             document.getElementById("DIVmybigdead15").classList.remove("skeletor2");}
@@ -1387,6 +1709,13 @@ const creatures = [
         removenumbernow: function() {
             setTimeout(this.removenumber, 1000);
         },
+        changehealth: function() {
+            if (this.size === 1) {
+                newRect12.setAttribute("y", this.health/this.mazhealth * 150);
+                newRect11.setAttribute("y", this.health/this.mazhealth * 150);
+            } else {
+                newRect11.setAttribute("y", this.health/this.mazhealth * 150);}}
+        ,
 }, {
         damage: deliveredvalue2[4][8],
         lastingdamage: deliveredvalue2[4][9],
@@ -1460,7 +1789,8 @@ const creatures = [
         },
         dienow: function() { if (this.size === 0) {
             document.getElementById("DIVm6").classList.add("bonespicture");
-            document.getElementById("DIVm6").classList.remove("skeletor");}
+            document.getElementById("DIVm6").classList.remove("skeletor");
+            newRect6.setAttribute("y", "150");}
         else {
             document.getElementById("DIVmybigdead7").classList.add("bonespicture2");
             document.getElementById("DIVmybigdead7").classList.remove("skeletor2");}
@@ -1474,6 +1804,13 @@ const creatures = [
         removenumbernow: function() {
             setTimeout(this.removenumber, 1000);
         },
+        changehealth: function() {
+            if (this.size === 1) {
+                newRect5.setAttribute("y", this.health/this.mazhealth * 150);
+                newRect6.setAttribute("y", this.health/this.mazhealth * 150);
+            } else {
+                newRect6.setAttribute("y", this.health/this.mazhealth * 150);}}
+        ,
 },
     {
         damage: deliveredvalue2[7][8],
@@ -1548,7 +1885,8 @@ const creatures = [
         },
         dienow: function() { if (this.size === 0) {
             document.getElementById("DIVm7").classList.add("bonespicture");
-            document.getElementById("DIVm7").classList.remove("skeletor");}
+            document.getElementById("DIVm7").classList.remove("skeletor");
+            newRect7.setAttribute("y", "150");}
         else {
             document.getElementById("DIVmybigdead9").classList.add("bonespicture2");
             document.getElementById("DIVmybigdead9").classList.remove("skeletor2");}
@@ -1562,6 +1900,13 @@ const creatures = [
         removenumbernow: function() {
             setTimeout(this.removenumber, 1000);
         },
+        changehealth: function() {
+            if (this.size === 1) {
+                newRect8.setAttribute("y", this.health/this.mazhealth * 150);
+                newRect7.setAttribute("y", this.health/this.mazhealth * 150);
+            } else {
+                newRect7.setAttribute("y", this.health/this.mazhealth * 150);}}
+        ,
     }, {
         damage: deliveredvalue2[5][8],
         lastingdamage: deliveredvalue2[5][9],
@@ -1635,7 +1980,8 @@ const creatures = [
         },
         dienow: function() { if (this.size === 0) {
             document.getElementById("DIVm2").classList.add("bonespicture");
-            document.getElementById("DIVm2").classList.remove("skeletor");}
+            document.getElementById("DIVm2").classList.remove("skeletor");
+            newRect2.setAttribute("y", "150");}
         else {
             document.getElementById("DIVmybigdead1").classList.add("bonespicture2");
             document.getElementById("DIVmybigdead1").classList.remove("skeletor2");}
@@ -1649,6 +1995,13 @@ const creatures = [
         removenumbernow: function() {
             setTimeout(this.removenumber, 1000);
         },
+        changehealth: function() {
+            if (this.size === 1) {
+                newRect.setAttribute("y", this.health/this.mazhealth * 150);
+                newRect2.setAttribute("y", this.health/this.mazhealth * 150);
+            } else {
+                newRect2.setAttribute("y", this.health/this.mazhealth * 150);}}
+        ,
     },{
         damage: deliveredvalue2[9][8],
         lastingdamage: deliveredvalue2[9][9],
@@ -1699,7 +2052,7 @@ const creatures = [
             animation10_magic.playSegments([0, 46], true);
         },
         animdeath: function() {
-            animation10_death.playSegments([0, 46], true);
+            animation10_death.playSegments([0, 56], true);
         },
         sound: function() {
             sound10.play();
@@ -1722,7 +2075,8 @@ const creatures = [
         },
         dienow: function() { if (this.size === 0) {
             document.getElementById("DIVm12").classList.add("bonespicture");
-            document.getElementById("DIVm12").classList.remove("skeletor");}
+            document.getElementById("DIVm12").classList.remove("skeletor");
+            newRect12.setAttribute("y", "150");}
         else {
             document.getElementById("DIVmybigdead13").classList.add("bonespicture2");
             document.getElementById("DIVmybigdead13").classList.remove("skeletor2");}
@@ -1736,6 +2090,8 @@ const creatures = [
         removenumbernow: function() {
             setTimeout(this.removenumber, 1000);
         },
+        changehealth: function() {newRect12.setAttribute("y", this.health/this.mazhealth * 150);}
+        ,
     },
     {
         damage: deliveredvalue2[10][8],
@@ -1787,7 +2143,7 @@ const creatures = [
             animation11_magic.playSegments([0, 46], true);
         },
         animdeath: function() {
-            animation11_death.playSegments([0, 46], true);
+            animation11_death.playSegments([0, 56], true);
         },
         sound: function() {
             sound11.play();
@@ -1810,7 +2166,8 @@ const creatures = [
         },
         dienow: function() { if (this.size === 0) {
             document.getElementById("DIVm8").classList.add("bonespicture");
-            document.getElementById("DIVm8").classList.remove("skeletor");}
+            document.getElementById("DIVm8").classList.remove("skeletor");
+            newRect8.setAttribute("y", "150");}
         else {
             document.getElementById("DIVmybigdead13").classList.add("bonespicture2");
             document.getElementById("DIVmybigdead13").classList.remove("skeletor2");}
@@ -1824,6 +2181,8 @@ const creatures = [
         removenumbernow: function() {
             setTimeout(this.removenumber, 1000);
         },
+        changehealth: function() {newRect8.setAttribute("y", this.health/this.mazhealth * 150);}
+        ,
     },
     {
         damage: deliveredvalue2[11][8],
@@ -1875,7 +2234,7 @@ const creatures = [
             animation12_magic.playSegments([0, 46], true);
         },
         animdeath: function() {
-            animation12_death.playSegments([0, 46], true);
+            animation12_death.playSegments([0, 56], true);
         },
         sound: function() {
             sound12.play();
@@ -1898,7 +2257,8 @@ const creatures = [
         },
         dienow: function() { if (this.size === 0) {
             document.getElementById("DIVm4").classList.add("bonespicture");
-            document.getElementById("DIVm4").classList.remove("skeletor");}
+            document.getElementById("DIVm4").classList.remove("skeletor");
+            newRect4.setAttribute("y", "150");}
         else {
             document.getElementById("DIVmybigdead13").classList.add("bonespicture2");
             document.getElementById("DIVmybigdead13").classList.remove("skeletor2");}
@@ -1912,6 +2272,8 @@ const creatures = [
         removenumbernow: function() {
             setTimeout(this.removenumber, 1000);
         },
+        changehealth: function() {newRect4.setAttribute("y", this.health/this.mazhealth * 150);}
+        ,
     },
     ];
 
@@ -3604,6 +3966,7 @@ firstpartofpuzzle = vampiresum;
                 attackedCreature.glowred();
                 attackedCreature.glownumber(-truedamage);
                 attackedCreature.removenumbernow();
+                attackedCreature.changehealth();
                 console.log("Не синяя команда")
                 window.globalattacker = {
                     realattacker: attackerCreature,
@@ -3624,6 +3987,7 @@ firstpartofpuzzle = vampiresum;
                 attackedCreature.glowred();
                 attackedCreature.glownumber(-truedamage);
                 attackedCreature.removenumbernow();
+                attackedCreature.changehealth();
                 console.log("Не синяя команда")
                 window.globalattacker = {
                     realattacker: attackerCreature,
@@ -3970,6 +4334,7 @@ firstpartofpuzzle = vampiresum;
                 };
                 setTimeout(gethurt, 250, attackedCreature, attackerCreature);
                 setTimeout(backtostay, 710, attackedCreature, attackerCreature);
+                attackedCreature.changehealth();
             }
             else {
                 attackerCreature.animat('attack', false);
@@ -3991,6 +4356,7 @@ firstpartofpuzzle = vampiresum;
                 };
                 setTimeout(gethurt, 250, attackedCreature, attackerCreature);
                 setTimeout(backtostay, 710, attackedCreature, attackerCreature);
+                attackedCreature.changehealth();
             }
         }
 
