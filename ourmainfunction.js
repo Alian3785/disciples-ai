@@ -363,6 +363,241 @@ document.addEventListener('mouseup', e => {
     divdiv.classList.add('hidden');
 })
 
+document.getElementById('rectangle3').addEventListener('contextmenu', e => {
+    e.preventDefault()
+    return false
+});
+
+
+document.getElementById('rectangle3').addEventListener('mousedown', e => {
+    if (e.buttons === 2) {
+        e.preventDefault()
+        e.stopPropagation()
+    } else {
+        return
+    }
+    secondanim = deliveredvalue2[2][16];
+    document.getElementById("unitdescription").src='allanimations/description' + secondanim + '.PNG';
+    document.getElementById('normalid').classList.remove('hidden')
+})
+
+document.addEventListener('mouseup', e => {
+    const divdiv = document.getElementById('normalid')
+    divdiv.classList.add('hidden');
+})
+
+document.getElementById('rectangle4').addEventListener('contextmenu', e => {
+    e.preventDefault()
+    return false
+});
+
+
+document.getElementById('rectangle4').addEventListener('mousedown', e => {
+    if (e.buttons === 2) {
+        e.preventDefault()
+        e.stopPropagation()
+    } else {
+        return
+    }
+    secondanim = deliveredvalue2[3][16];
+    document.getElementById("unitdescription").src='allanimations/description' + secondanim + '.PNG';
+    document.getElementById('normalid').classList.remove('hidden')
+})
+
+document.addEventListener('mouseup', e => {
+    const divdiv = document.getElementById('normalid')
+    divdiv.classList.add('hidden');
+})
+
+document.getElementById('rectangle5').addEventListener('contextmenu', e => {
+    e.preventDefault()
+    return false
+});
+
+
+document.getElementById('rectangle5').addEventListener('mousedown', e => {
+    if (e.buttons === 2) {
+        e.preventDefault()
+        e.stopPropagation()
+    } else {
+        return
+    }
+    secondanim = deliveredvalue2[4][16];
+    document.getElementById("unitdescription").src='allanimations/description' + secondanim + '.PNG';
+    document.getElementById('normalid').classList.remove('hidden')
+})
+
+document.addEventListener('mouseup', e => {
+    const divdiv = document.getElementById('normalid')
+    divdiv.classList.add('hidden');
+})
+
+document.getElementById('rectangle6').addEventListener('contextmenu', e => {
+    e.preventDefault()
+    return false
+});
+
+
+document.getElementById('rectangle6').addEventListener('mousedown', e => {
+    if (e.buttons === 2) {
+        e.preventDefault()
+        e.stopPropagation()
+    } else {
+        return
+    }
+    secondanim = deliveredvalue2[5][16];
+    document.getElementById("unitdescription").src='allanimations/description' + secondanim + '.PNG';
+    document.getElementById('normalid').classList.remove('hidden')
+})
+
+document.addEventListener('mouseup', e => {
+    const divdiv = document.getElementById('normalid')
+    divdiv.classList.add('hidden');
+})
+
+document.getElementById('rectangle7').addEventListener('contextmenu', e => {
+    e.preventDefault()
+    return false
+});
+
+
+document.getElementById('rectangle7').addEventListener('mousedown', e => {
+    if (e.buttons === 2) {
+        e.preventDefault()
+        e.stopPropagation()
+    } else {
+        return
+    }
+    secondanim = deliveredvalue2[6][16];
+    document.getElementById("unitdescription").src='allanimations/description' + secondanim + '.PNG';
+    document.getElementById('normalid').classList.remove('hidden')
+})
+
+document.addEventListener('mouseup', e => {
+    const divdiv = document.getElementById('normalid')
+    divdiv.classList.add('hidden');
+})
+
+
+document.getElementById('rectangle8').addEventListener('contextmenu', e => {
+    e.preventDefault()
+    return false
+});
+
+
+document.getElementById('rectangle8').addEventListener('mousedown', e => {
+    if (e.buttons === 2) {
+        e.preventDefault()
+        e.stopPropagation()
+    } else {
+        return
+    }
+    secondanim = deliveredvalue2[7][16];
+    document.getElementById("unitdescription").src='allanimations/description' + secondanim + '.PNG';
+    document.getElementById('normalid').classList.remove('hidden')
+})
+
+document.addEventListener('mouseup', e => {
+    const divdiv = document.getElementById('normalid')
+    divdiv.classList.add('hidden');
+})
+
+
+document.getElementById('rectangle9').addEventListener('contextmenu', e => {
+    e.preventDefault()
+    return false
+});
+
+
+document.getElementById('rectangle9').addEventListener('mousedown', e => {
+    if (e.buttons === 2) {
+        e.preventDefault()
+        e.stopPropagation()
+    } else {
+        return
+    }
+    secondanim = deliveredvalue2[8][16];
+    document.getElementById("unitdescription").src='allanimations/description' + secondanim + '.PNG';
+    document.getElementById('normalid').classList.remove('hidden')
+})
+
+document.addEventListener('mouseup', e => {
+    const divdiv = document.getElementById('normalid')
+    divdiv.classList.add('hidden');
+})
+
+
+document.getElementById('rectangle10').addEventListener('contextmenu', e => {
+    e.preventDefault()
+    return false
+});
+
+
+document.getElementById('rectangle10').addEventListener('mousedown', e => {
+    if (e.buttons === 2) {
+        e.preventDefault()
+        e.stopPropagation()
+    } else {
+        return
+    }
+    secondanim = deliveredvalue2[9][16];
+    document.getElementById("unitdescription").src='allanimations/description' + secondanim + '.PNG';
+    document.getElementById('normalid').classList.remove('hidden')
+})
+
+document.addEventListener('mouseup', e => {
+    const divdiv = document.getElementById('normalid')
+    divdiv.classList.add('hidden');
+})
+
+
+document.getElementById('rectangle11').addEventListener('contextmenu', e => {
+    e.preventDefault()
+    return false
+});
+
+
+document.getElementById('rectangle11').addEventListener('mousedown', e => {
+    if (e.buttons === 2) {
+        e.preventDefault()
+        e.stopPropagation()
+    } else {
+        return
+    }
+    secondanim = deliveredvalue2[10][16];
+    document.getElementById("unitdescription").src='allanimations/description' + secondanim + '.PNG';
+    document.getElementById('normalid').classList.remove('hidden')
+})
+
+document.addEventListener('mouseup', e => {
+    const divdiv = document.getElementById('normalid')
+    divdiv.classList.add('hidden');
+})
+
+
+document.getElementById('rectangle12').addEventListener('contextmenu', e => {
+    e.preventDefault()
+    return false
+});
+
+
+document.getElementById('rectangle12').addEventListener('mousedown', e => {
+    if (e.buttons === 2) {
+        e.preventDefault()
+        e.stopPropagation()
+    } else {
+        return
+    }
+    secondanim = deliveredvalue2[11][16];
+    document.getElementById("unitdescription").src='allanimations/description' + secondanim + '.PNG';
+    document.getElementById('normalid').classList.remove('hidden')
+})
+
+document.addEventListener('mouseup', e => {
+    const divdiv = document.getElementById('normalid')
+    divdiv.classList.add('hidden');
+})
+
 
 // Setup the new Howl.
 const sound1 = new Howl({

@@ -186,6 +186,7 @@ p {
     position: absolute;
     width: 850px;
     height: 700px;
+    z-index: 7;
 }
 
 
