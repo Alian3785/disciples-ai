@@ -1,6 +1,10 @@
 // дисклеймер 5 это 8, а 6 это 9
 
 // targeting the svg itself
+
+
+
+
 const svg = document.querySelector("#dinamichealth");;
 
 // variable for the namespace
@@ -10,17 +14,11 @@ const svgns = "http://www.w3.org/2000/svg";
 let newRect = document.createElementNS(svgns, "rect");
 
 newRect.setAttribute("x", "0");
-newRect.setAttribute("y", "10");
+newRect.setAttribute("y", "150");
 newRect.setAttribute("width", "200");
 newRect.setAttribute("height", "200");
 newRect.setAttribute("fill", "red");
 newRect.setAttribute("opacity", "0.5");
-// append the new rectangle to the svg
-svg.appendChild(newRect);
-
-
-newRect.setAttribute("y", "50");
-
 // append the new rectangle to the svg
 svg.appendChild(newRect);
 
@@ -34,16 +32,11 @@ const svgns2 = "http://www.w3.org/2000/svg";
 let newRect2 = document.createElementNS(svgns2, "rect");
 
 newRect2.setAttribute("x", "0");
-newRect2.setAttribute("y", "10");
+newRect2.setAttribute("y", "150");
 newRect2.setAttribute("width", "200");
 newRect2.setAttribute("height", "200");
 newRect2.setAttribute("fill", "red");
 newRect2.setAttribute("opacity", "0.5");
-// append the new rectangle to the svg
-svg2.appendChild(newRect2);
-
-newRect2.setAttribute("y", "100");
-
 // append the new rectangle to the svg
 svg2.appendChild(newRect2);
 
@@ -59,16 +52,11 @@ const svg3 = document.querySelector("#dinamichealth3");
 
 
     newRect3.setAttribute("x", "0");
-    newRect3.setAttribute("y", "10");
+    newRect3.setAttribute("y", "150");
     newRect3.setAttribute("width", "200");
     newRect3.setAttribute("height", "200");
     newRect3.setAttribute("fill", "red");
     newRect3.setAttribute("opacity", "0.5");
-// append the new rectangle to the svg
-    svg3.appendChild(newRect3);
-
-    newRect3.setAttribute("y", "100");
-
 // append the new rectangle to the svg
     svg3.appendChild(newRect3);
 
@@ -84,16 +72,11 @@ let newRect4 = document.createElementNS(svgns3, "rect");
 
 
 newRect4.setAttribute("x", "0");
-newRect4.setAttribute("y", "10");
+newRect4.setAttribute("y", "150");
 newRect4.setAttribute("width", "200");
 newRect4.setAttribute("height", "200");
 newRect4.setAttribute("fill", "red");
 newRect4.setAttribute("opacity", "0.5");
-// append the new rectangle to the svg
-svg4.appendChild(newRect4);
-
-newRect4.setAttribute("y", "100");
-
 // append the new rectangle to the svg
 svg4.appendChild(newRect4);
 
@@ -109,16 +92,11 @@ let newRect5 = document.createElementNS(svgns5, "rect");
 
 
 newRect5.setAttribute("x", "0");
-newRect5.setAttribute("y", "10");
+newRect5.setAttribute("y", "150");
 newRect5.setAttribute("width", "200");
 newRect5.setAttribute("height", "200");
 newRect5.setAttribute("fill", "red");
 newRect5.setAttribute("opacity", "0.5");
-// append the new rectangle to the svg
-svg5.appendChild(newRect5);
-
-newRect5.setAttribute("y", "100");
-
 // append the new rectangle to the svg
 svg5.appendChild(newRect5);
 
@@ -134,7 +112,7 @@ let newRect6 = document.createElementNS(svgns6, "rect");
 
 
 newRect6.setAttribute("x", "0");
-newRect6.setAttribute("y", "10");
+newRect6.setAttribute("y", "150");
 newRect6.setAttribute("width", "200");
 newRect6.setAttribute("height", "200");
 newRect6.setAttribute("fill", "red");
@@ -142,10 +120,6 @@ newRect6.setAttribute("opacity", "0.5");
 // append the new rectangle to the svg
 svg6.appendChild(newRect6);
 
-newRect6.setAttribute("y", "100");
-
-// append the new rectangle to the svg
-svg6.appendChild(newRect6);
 
 const svg7 = document.querySelector("#dinamichealth7");
 
@@ -158,16 +132,11 @@ let newRect7 = document.createElementNS(svgns7, "rect");
 
 
 newRect7.setAttribute("x", "0");
-newRect7.setAttribute("y", "10");
+newRect7.setAttribute("y", "150");
 newRect7.setAttribute("width", "200");
 newRect7.setAttribute("height", "200");
 newRect7.setAttribute("fill", "red");
 newRect7.setAttribute("opacity", "0.5");
-// append the new rectangle to the svg
-svg7.appendChild(newRect7);
-
-newRect7.setAttribute("y", "100");
-
 // append the new rectangle to the svg
 svg7.appendChild(newRect7);
 
@@ -183,16 +152,11 @@ let newRect8 = document.createElementNS(svgns8, "rect");
 
 
 newRect8.setAttribute("x", "0");
-newRect8.setAttribute("y", "10");
+newRect8.setAttribute("y", "150");
 newRect8.setAttribute("width", "200");
 newRect8.setAttribute("height", "200");
 newRect8.setAttribute("fill", "red");
 newRect8.setAttribute("opacity", "0.5");
-// append the new rectangle to the svg
-svg8.appendChild(newRect8);
-
-newRect8.setAttribute("y", "100");
-
 // append the new rectangle to the svg
 svg8.appendChild(newRect8);
 
@@ -208,7 +172,7 @@ let newRect9 = document.createElementNS(svgns9, "rect");
 
 
 newRect9.setAttribute("x", "0");
-newRect9.setAttribute("y", "10");
+newRect9.setAttribute("y", "150");
 newRect9.setAttribute("width", "200");
 newRect9.setAttribute("height", "200");
 newRect9.setAttribute("fill", "red");
@@ -216,10 +180,6 @@ newRect9.setAttribute("opacity", "0.5");
 // append the new rectangle to the svg
 svg9.appendChild(newRect9);
 
-newRect9.setAttribute("y", "100");
-
-// append the new rectangle to the svg
-svg9.appendChild(newRect9);
 
 const svg10 = document.querySelector("#dinamichealth10");
 
@@ -232,16 +192,11 @@ let newRect10 = document.createElementNS(svgns10, "rect");
 
 
 newRect10.setAttribute("x", "0");
-newRect10.setAttribute("y", "10");
+newRect10.setAttribute("y", "150");
 newRect10.setAttribute("width", "200");
 newRect10.setAttribute("height", "200");
 newRect10.setAttribute("fill", "red");
 newRect10.setAttribute("opacity", "0.5");
-// append the new rectangle to the svg
-svg10.appendChild(newRect10);
-
-newRect10.setAttribute("y", "100");
-
 // append the new rectangle to the svg
 svg10.appendChild(newRect10);
 
@@ -257,19 +212,13 @@ let newRect11 = document.createElementNS(svgns11, "rect");
 
 
 newRect11.setAttribute("x", "0");
-newRect11.setAttribute("y", "10");
+newRect11.setAttribute("y", "150");
 newRect11.setAttribute("width", "200");
 newRect11.setAttribute("height", "200");
 newRect11.setAttribute("fill", "red");
 newRect11.setAttribute("opacity", "0.5");
 // append the new rectangle to the svg
 svg11.appendChild(newRect11);
-
-newRect11.setAttribute("y", "100");
-
-// append the new rectangle to the svg
-svg11.appendChild(newRect11);
-
 
 const svg12 = document.querySelector("#dinamichealth12");
 
@@ -282,20 +231,13 @@ let newRect12 = document.createElementNS(svgns12, "rect");
 
 
 newRect12.setAttribute("x", "0");
-newRect12.setAttribute("y", "10");
+newRect12.setAttribute("y", "150");
 newRect12.setAttribute("width", "200");
 newRect12.setAttribute("height", "200");
 newRect12.setAttribute("fill", "red");
 newRect12.setAttribute("opacity", "0.5");
 // append the new rectangle to the svg
 svg12.appendChild(newRect12);
-
-newRect12.setAttribute("y", "100");
-
-// append the new rectangle to the svg
-svg12.appendChild(newRect12);
-
-
 
 
 
@@ -374,6 +316,52 @@ if (deliveredvalue2[10].length === 0) {
 if (deliveredvalue2[11].length === 0) {
     deliveredvalue2[11] = Array(16).fill(0);
 }
+
+
+document.getElementById('rectangle1').addEventListener('contextmenu', e => {
+    e.preventDefault()
+    return false
+});
+
+document.getElementById('rectangle1').addEventListener('mousedown', e => {
+    if (e.buttons === 2) {
+        e.preventDefault()
+        e.stopPropagation()
+    } else {
+        return
+    }
+    secondanim = deliveredvalue2[0][16];
+    document.getElementById("unitdescription").src='allanimations/description' + secondanim + '.PNG';
+    document.getElementById('normalid').classList.remove('hidden')
+})
+
+document.addEventListener('mouseup', e => {
+    const divdiv = document.getElementById('normalid')
+    divdiv.classList.add('hidden');
+})
+
+document.getElementById('rectangle2').addEventListener('contextmenu', e => {
+    e.preventDefault()
+    return false
+});
+
+
+document.getElementById('rectangle2').addEventListener('mousedown', e => {
+    if (e.buttons === 2) {
+        e.preventDefault()
+        e.stopPropagation()
+    } else {
+        return
+    }
+    secondanim = deliveredvalue2[1][16];
+    document.getElementById("unitdescription").src='allanimations/description' + secondanim + '.PNG';
+    document.getElementById('normalid').classList.remove('hidden')
+})
+
+document.addEventListener('mouseup', e => {
+    const divdiv = document.getElementById('normalid')
+    divdiv.classList.add('hidden');
+})
 
 
 // Setup the new Howl.
