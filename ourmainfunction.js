@@ -3709,7 +3709,9 @@ console.log(attackedCreature.id);
         if (attackedCreature.health <= 0 && attackedCreature.team === attackerCreature.team) {
             if (attackerCreature.team === "red") {
                 if (deliveredvalue2[8][0] === 0 && deliveredvalue2[11][0] === 0) {
-alert("Призываем дракона направо")}
+                    alert("Призываем дракона направо")
+                    summondragonright();
+                }
                 else if (deliveredvalue2[8][0] >= 0 && deliveredvalue2[8][14] === 1) {alert("Не призываем никого потому что право занято большим существом")}
                 else if (deliveredvalue2[8][0] >= 0 && deliveredvalue2[8][14] === 0 && deliveredvalue2[11][0] <= 0) {alert("Призываем юнита в правый нижний угол")}
                 else if (deliveredvalue2[11][0] >= 0 && deliveredvalue2[8][0] <= 0) {alert("Призываем юнита в правый верхний угол")}
@@ -3725,173 +3727,6 @@ alert("Призываем дракона направо")}
                 else if (deliveredvalue2[6][0] >= 0 && deliveredvalue2[6][14] === 1) {alert("Не призываем никого потому что лево занято большим существом")}
                 else if (deliveredvalue2[6][0] >= 0 && deliveredvalue2[6][14] === 0 && deliveredvalue2[9][0] <= 0) {alert("Призываем юнита в левый нижний угол")}
                 else if (deliveredvalue2[9][0] >= 0 && deliveredvalue2[6][0] <= 0) {alert("Призываем юнита в левый верхний угол")}
-
-                alert(attackedCreature.id);
-                indextofind = creatures.findIndex(x => x.id === attackedCreature.id);
-                alert(indextofind);
-                console.log(creatures);
-                //deliveredvalue2[8] = [/*здоровье*/375, /*броня*/0, /*иммунитет*/["death"],/*защита*/[], /*тип атаки1*/"death", /*тип атаки2*/"", /*точн*/0.8, /*точн2*/0, /*урон*/55, /*урон2*/0, /*инит*/35, /*тип*/"mage", /*кто*/"Дракон смерти", /*дваудара*/0, /*размер*/1, /*смерть*/3, /*аним*/126];
-                deliveredvalue2[8] = [/*здоровье*/525, /*броня*/0, /*иммунитет*/["death"],/*защита*/[], /*тип атаки1*/"death", /*тип атаки2*/"", /*точн*/0.8, /*точн2*/0, /*урон*/75, /*урон2*/0, /*инит*/35, /*тип*/"mage", /*кто*/"Драколич", /*дваудара*/0, /*размер*/1, /*смерть*/3, /*аним*/128];
-                console.log(deliveredvalue2);
-                creatures[indextofind] = {
-                    damage: deliveredvalue2[8][8],
-                    lastingdamage: deliveredvalue2[8][9],
-                    health: deliveredvalue2[8][0],
-                    mazhealth: deliveredvalue2[8][0],
-                    type: deliveredvalue2[8][11],
-                    who: deliveredvalue2[8][12],
-                    initiative: deliveredvalue2[8][10],
-                    realinit: deliveredvalue2[8][10],
-                    paralized: 0,
-                    petrification: 0,
-                    poisoned: 0,
-                    effect: 0,
-                    fireeffect: 0,
-                    watereffect: 0,
-                    imp: 0,
-                    summoned: 0,
-                    teammated: 0,
-                    runningaway: 0,
-                    shotsleft: deliveredvalue2[8][13],
-                    typeofattack: deliveredvalue2[8][4],
-                    typeofsecondattack: deliveredvalue2[8][5],
-                    immunity: deliveredvalue2[8][2],
-                    protection: deliveredvalue2[8][3],
-                    moreprotection: [0, 1, 1],
-                    armor: deliveredvalue2[8][1],
-                    defensearmor: 0,
-                    accuracy: [deliveredvalue2[8][6], deliveredvalue2[8][7]],
-                    alive: 1,
-                    size: deliveredvalue2[8][14],
-                    id: 6,
-                    team: "red",
-                    where: "ahead",
-                    position: 1,
-                    animattack: function () {
-                        animation6_attack.playSegments([0, 46], true);
-                    },
-                    animstay: function () {
-                        animation6_stay.play();
-                    },
-                    animhurt: function () {
-                        animation6_hurt.playSegments([0, 18], true);
-                    },
-                    animweapon: function () {
-                        animation6_weapon.playSegments([0, 18], true);
-                    },
-                    animmagic: function () {
-                        animation6_magic.playSegments([0, 46], true);
-                    },
-                    animdeath: function () {
-                        animation6_death.playSegments([0, 56], true);
-                    },
-                    sound: function () {
-                        sound6.play();
-                    },
-                    animat: (type, hide) => {
-                        document.getElementById(type + "-container6").style.visibility = hide ? "hidden" : "visible";
-                    },
-                    glowred: function () {
-                        if (this.size === 0) {
-                            setTimeout(this.removered, 1000);
-                            document.getElementById("myDIV3").classList.add("el");
-                        } else {
-                            document.getElementById("DIVmybig3").classList.add("el");
-                        }
-                        setTimeout(this.removerednow, 1000);
-                    },
-                    removered: function () {
-                        document.getElementById("myDIV3").classList.remove("el");
-                    }
-                    ,
-                    removerednow: function () {
-                        document.getElementById("DIVmybig3").classList.remove("el");
-                    },
-                    dienow: function () {
-                        if (this.size === 0) {
-                            document.getElementById("DIVm3").classList.add("bonespicture");
-                            document.getElementById("DIVm3").classList.remove("skeletor");
-                            newRect3.setAttribute("y", "150");
-                        } else {
-                            document.getElementById("DIVmybigdead3").classList.add("bonespicture2");
-                            document.getElementById("DIVmybigdead3").classList.remove("skeletor2");
-                            newRect3.setAttribute("y", "150");
-                            newRect4.setAttribute("y", "150");
-                        }
-                    },
-                    glownumber: function (othertype) {
-                        document.getElementById("numberclass3").innerHTML = othertype;
-                    },
-                    removenumber: function () {
-                        document.getElementById("numberclass3").innerHTML = "";
-                    },
-                    removenumbernow: function () {
-                        setTimeout(this.removenumber, 1000);
-                    },
-                    changehealth: function () {
-                        if (this.size === 1) {
-                            newRect4.setAttribute("y", this.health / this.mazhealth * 150);
-                            newRect3.setAttribute("y", this.health / this.mazhealth * 150);
-                        } else {
-                            newRect3.setAttribute("y", this.health / this.mazhealth * 150);
-                        }
-                    }
-                    ,
-                }
-                let ninethanim = deliveredvalue2[8][16];
-                animation6_attack = bodymovin.loadAnimation({
-
-                    container: document.getElementById('attack-container6'), // required
-                    path: 'allanimations/attack2_' + ninethanim + '.json', // required
-                    renderer: 'svg', // required
-                    loop: false, // optional
-                    autoplay: false, // optional
-                    name: "Demo Animation", // optional
-                });
-
-                animation6_stay = bodymovin.loadAnimation({
-
-                    container: document.getElementById('stay-container6'), // required
-                    path: 'allanimations/stay2_' + ninethanim + '.json', // required
-                    renderer: 'svg', // required
-                    loop: true, // optional
-                    autoplay: false, // optional
-                    name: "Demo Animation", // optional
-                });
-
-                animation6_hurt = bodymovin.loadAnimation({
-
-                    container: document.getElementById('hurt-container6'), // required
-                    path: 'allanimations/hurt2_' + ninethanim + '.json', // required
-                    renderer: 'svg', // required
-                    loop: false, // optional
-                    autoplay: false, // optional
-                    name: "Demo Animation", // optional
-                });
-
-                animation6_weapon = bodymovin.loadAnimation({
-
-                    container: document.getElementById('weapon-container6'), // required
-                    path: 'allanimations/weapon2_' + ninethanim + '.json', // required
-                    renderer: 'svg', // required
-                    loop: false, // optional
-                    autoplay: false, // optional
-                    name: "Demo Animation", // optional
-                });
-
-                animation6_death = bodymovin.loadAnimation({
-
-                    container: document.getElementById('death-container6'), // required
-                    path: 'allanimations/death' + ninethdeath + '.json', // required
-                    renderer: 'svg', // required
-                    loop: false, // optional
-                    autoplay: false, // optional
-                    name: "Demo Animation", // optional
-                });
-                animation6_stay.play();
-                document.getElementById("DIVmybig3").src='allanimations/face' + ninethanim + '.PNG';
-
-
                 }
         }
         else {
@@ -4970,5 +4805,184 @@ if (batterarray.imp !== 1) {
 
     document.getElementById("delta12").innerHTML = attackerCreature.who;
 
+    //Функции для призыва
+
+    function summondragonright () {
+        alert(attackedCreature.id);
+        indextofind = creatures.findIndex(x => x.id === attackedCreature.id);
+        alert(indextofind);
+        console.log(creatures);
+        randomdragon = Math.round(Math.random());
+        if (randomdragon === 0) {
+            deliveredvalue2[8] = [/*здоровье*/375, /*броня*/0, /*иммунитет*/["death"],/*защита*/[], /*тип атаки1*/"death", /*тип атаки2*/"", /*точн*/0.8, /*точн2*/0, /*урон*/55, /*урон2*/0, /*инит*/35, /*тип*/"mage", /*кто*/"Дракон смерти", /*дваудара*/0, /*размер*/1, /*смерть*/3, /*аним*/126];
+        } else {
+            deliveredvalue2[8] = [/*здоровье*/525, /*броня*/0, /*иммунитет*/["death"],/*защита*/[], /*тип атаки1*/"death", /*тип атаки2*/"", /*точн*/0.8, /*точн2*/0, /*урон*/75, /*урон2*/0, /*инит*/35, /*тип*/"mage", /*кто*/"Драколич", /*дваудара*/0, /*размер*/1, /*смерть*/3, /*аним*/128];
+        }
+        console.log(deliveredvalue2);
+        creatures[indextofind] = {
+            damage: deliveredvalue2[8][8],
+            lastingdamage: deliveredvalue2[8][9],
+            health: deliveredvalue2[8][0],
+            mazhealth: deliveredvalue2[8][0],
+            type: deliveredvalue2[8][11],
+            who: deliveredvalue2[8][12],
+            initiative: -5,
+            realinit: deliveredvalue2[8][10],
+            paralized: 0,
+            petrification: 0,
+            poisoned: 0,
+            effect: 0,
+            fireeffect: 0,
+            watereffect: 0,
+            imp: 0,
+            summoned: 0,
+            teammated: 0,
+            runningaway: 0,
+            shotsleft: deliveredvalue2[8][13],
+            typeofattack: deliveredvalue2[8][4],
+            typeofsecondattack: deliveredvalue2[8][5],
+            immunity: deliveredvalue2[8][2],
+            protection: deliveredvalue2[8][3],
+            moreprotection: [0, 1, 1],
+            armor: deliveredvalue2[8][1],
+            defensearmor: 0,
+            accuracy: [deliveredvalue2[8][6], deliveredvalue2[8][7]],
+            alive: 1,
+            size: deliveredvalue2[8][14],
+            id: 6,
+            team: "red",
+            where: "ahead",
+            position: 1,
+            animattack: function () {
+                animation6_attack.playSegments([0, 46], true);
+            },
+            animstay: function () {
+                animation6_stay.play();
+            },
+            animhurt: function () {
+                animation6_hurt.playSegments([0, 18], true);
+            },
+            animweapon: function () {
+                animation6_weapon.playSegments([0, 18], true);
+            },
+            animmagic: function () {
+                animation6_magic.playSegments([0, 46], true);
+            },
+            animdeath: function () {
+                animation6_death.playSegments([0, 56], true);
+            },
+            sound: function () {
+                sound6.play();
+            },
+            animat: (type, hide) => {
+                document.getElementById(type + "-container6").style.visibility = hide ? "hidden" : "visible";
+            },
+            glowred: function () {
+                if (this.size === 0) {
+                    setTimeout(this.removered, 1000);
+                    document.getElementById("myDIV3").classList.add("el");
+                } else {
+                    document.getElementById("DIVmybig3").classList.add("el");
+                }
+                setTimeout(this.removerednow, 1000);
+            },
+            removered: function () {
+                document.getElementById("myDIV3").classList.remove("el");
+            }
+            ,
+            removerednow: function () {
+                document.getElementById("DIVmybig3").classList.remove("el");
+            },
+            dienow: function () {
+                if (this.size === 0) {
+                    document.getElementById("DIVm3").classList.add("bonespicture");
+                    document.getElementById("DIVm3").classList.remove("skeletor");
+                    newRect3.setAttribute("y", "150");
+                } else {
+                    document.getElementById("DIVmybigdead3").classList.add("bonespicture2");
+                    document.getElementById("DIVmybigdead3").classList.remove("skeletor2");
+                    newRect3.setAttribute("y", "150");
+                    newRect4.setAttribute("y", "150");
+                }
+            },
+            glownumber: function (othertype) {
+                document.getElementById("numberclass3").innerHTML = othertype;
+            },
+            removenumber: function () {
+                document.getElementById("numberclass3").innerHTML = "";
+            },
+            removenumbernow: function () {
+                setTimeout(this.removenumber, 1000);
+            },
+            changehealth: function () {
+                if (this.size === 1) {
+                    newRect4.setAttribute("y", this.health / this.mazhealth * 150);
+                    newRect3.setAttribute("y", this.health / this.mazhealth * 150);
+                } else {
+                    newRect3.setAttribute("y", this.health / this.mazhealth * 150);
+                }
+            }
+            ,
+        }
+        let ninethanim = deliveredvalue2[8][16];
+        animation6_attack = bodymovin.loadAnimation({
+
+            container: document.getElementById('attack-container6'), // required
+            path: 'allanimations/attack2_' + ninethanim + '.json', // required
+            renderer: 'svg', // required
+            loop: false, // optional
+            autoplay: false, // optional
+            name: "Demo Animation", // optional
+        });
+
+        animation6_stay = bodymovin.loadAnimation({
+
+            container: document.getElementById('stay-container6'), // required
+            path: 'allanimations/stay2_' + ninethanim + '.json', // required
+            renderer: 'svg', // required
+            loop: true, // optional
+            autoplay: false, // optional
+            name: "Demo Animation", // optional
+        });
+
+        animation6_hurt = bodymovin.loadAnimation({
+
+            container: document.getElementById('hurt-container6'), // required
+            path: 'allanimations/hurt2_' + ninethanim + '.json', // required
+            renderer: 'svg', // required
+            loop: false, // optional
+            autoplay: false, // optional
+            name: "Demo Animation", // optional
+        });
+
+        animation6_weapon = bodymovin.loadAnimation({
+
+            container: document.getElementById('weapon-container6'), // required
+            path: 'allanimations/weapon2_' + ninethanim + '.json', // required
+            renderer: 'svg', // required
+            loop: false, // optional
+            autoplay: false, // optional
+            name: "Demo Animation", // optional
+        });
+
+        animation6_death = bodymovin.loadAnimation({
+
+            container: document.getElementById('death-container6'), // required
+            path: 'allanimations/death' + ninethdeath + '.json', // required
+            renderer: 'svg', // required
+            loop: false, // optional
+            autoplay: false, // optional
+            name: "Demo Animation", // optional
+        });
+        animation6_stay.play();
+        document.getElementById("DIVmybig3").src = 'allanimations/face' + ninethanim + '.PNG';
+    }
+
 };
+
+
+
+
+
+
 
