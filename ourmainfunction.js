@@ -3704,6 +3704,33 @@ console.log(attackedCreature.id);
             document.getElementById("delta12").innerHTML = attackerCreature.who;
             return // no friendly fire
         }
+
+    else if (attackerCreature.type === "okkultsummoner") {
+        if (attackedCreature.health <= 0 && attackedCreature.team === attackerCreature.team) {
+            if (attackerCreature.team === "red") {
+                if (deliveredvalue2[8][0] === 0 && deliveredvalue2[11][0] === 0) {
+alert("Призываем дракона направо")}
+                else if (deliveredvalue2[8][0] >= 0 && deliveredvalue2[8][14] === 1) {alert("Не призываем никого потому что право занято большим существом")}
+                else if (deliveredvalue2[8][0] >= 0 && deliveredvalue2[8][14] === 0 && deliveredvalue2[11][0] <= 0) {alert("Призываем юнита в правый нижний угол")}
+                else if (deliveredvalue2[11][0] >= 0 && deliveredvalue2[8][0] <= 0) {alert("Призываем юнита в правый верхний угол")}
+
+            if (deliveredvalue2[7][0] === 0 && deliveredvalue2[10][0] === 0) {
+                alert("Призываем дракона в центр")}
+            else if (deliveredvalue2[7][0] >= 0 && deliveredvalue2[7][14] === 1) {alert("Не призываем никого потому что центр занят большим существом")}
+            else if (deliveredvalue2[7][0] >= 0 && deliveredvalue2[7][14] === 0 && deliveredvalue2[10][0] <= 0) {alert("Призываем юнита в центральный нижний угол")}
+            else if (deliveredvalue2[10][0] >= 0 && deliveredvalue2[7][0] <= 0) {alert("Призываем юнита в центральный верхний угол")}
+
+                if (deliveredvalue2[6][0] === 0 && deliveredvalue2[9][0] === 0) {
+                    alert("Призываем дракона налево")}
+                else if (deliveredvalue2[6][0] >= 0 && deliveredvalue2[6][14] === 1) {alert("Не призываем никого потому что лево занято большим существом")}
+                else if (deliveredvalue2[6][0] >= 0 && deliveredvalue2[6][14] === 0 && deliveredvalue2[9][0] <= 0) {alert("Призываем юнита в левый нижний угол")}
+                else if (deliveredvalue2[9][0] >= 0 && deliveredvalue2[6][0] <= 0) {alert("Призываем юнита в левый верхний угол")}
+        }
+        }
+        else {
+            return;
+        }
+    }
 // Двойник навсегда превращается в любого юнита в начале боя
         else if (attackerCreature.type === "doppelganger") {
             attackerCreature.who = attackedCreature.who;
@@ -4610,8 +4637,6 @@ firstpartofpuzzle = vampiresum;
         }
 
 
-
-
 // Призрак парализует а утер-демон парализует всех
         else if (attackerCreature.type === "ghost") {
             protectedornot = justattack();
@@ -4758,6 +4783,10 @@ if (batterarray.imp !== 1) {
             return // no friendly fire
         }
         else if (attackerCreature.type === "profit") {
+            console.log("нет");
+            return // no friendly fire
+        }
+        else if (attackerCreature.type === "okkultsummoner") {
             console.log("нет");
             return // no friendly fire
         }
