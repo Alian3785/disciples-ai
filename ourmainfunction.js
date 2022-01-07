@@ -1732,7 +1732,9 @@ const creatures = [
             newRect10.setAttribute("y", "150");}
         else {
             document.getElementById("DIVmybigdead13").classList.add("bonespicture2");
-            document.getElementById("DIVmybigdead13").classList.remove("skeletor2");}},
+            document.getElementById("DIVmybigdead13").classList.remove("skeletor2");}
+            newRect10.setAttribute("y", "150");
+            newRect9.setAttribute("y", "150");},
         glownumber: function(othertype) {
             document.getElementById("numberclass10").innerHTML = othertype;
         },
@@ -1826,7 +1828,9 @@ const creatures = [
             newRect3.setAttribute("y", "150");}
         else {
             document.getElementById("DIVmybigdead3").classList.add("bonespicture2");
-            document.getElementById("DIVmybigdead3").classList.remove("skeletor2");}
+            document.getElementById("DIVmybigdead3").classList.remove("skeletor2");
+            newRect3.setAttribute("y", "150");
+            newRect4.setAttribute("y", "150");}
         },
         glownumber: function(othertype) {
             document.getElementById("numberclass3").innerHTML = othertype;
@@ -1921,7 +1925,9 @@ const creatures = [
             newRect11.setAttribute("y", "150");}
         else {
             document.getElementById("DIVmybigdead15").classList.add("bonespicture2");
-            document.getElementById("DIVmybigdead15").classList.remove("skeletor2");}
+            document.getElementById("DIVmybigdead15").classList.remove("skeletor2");
+            newRect11.setAttribute("y", "150");
+            newRect12.setAttribute("y", "150");}
         },
         glownumber: function(othertype) {
             document.getElementById("numberclass11").innerHTML = othertype;
@@ -2016,7 +2022,9 @@ const creatures = [
             newRect6.setAttribute("y", "150");}
         else {
             document.getElementById("DIVmybigdead7").classList.add("bonespicture2");
-            document.getElementById("DIVmybigdead7").classList.remove("skeletor2");}
+            document.getElementById("DIVmybigdead7").classList.remove("skeletor2");
+            newRect5.setAttribute("y", "150");
+            newRect6.setAttribute("y", "150");}
         },
         glownumber: function(othertype) {
             document.getElementById("numberclass6").innerHTML = othertype;
@@ -2112,7 +2120,9 @@ const creatures = [
             newRect7.setAttribute("y", "150");}
         else {
             document.getElementById("DIVmybigdead9").classList.add("bonespicture2");
-            document.getElementById("DIVmybigdead9").classList.remove("skeletor2");}
+            document.getElementById("DIVmybigdead9").classList.remove("skeletor2");
+            newRect7.setAttribute("y", "150");
+            newRect8.setAttribute("y", "150");}
         },
         glownumber: function(othertype) {
             document.getElementById("numberclass7").innerHTML = othertype;
@@ -2207,7 +2217,9 @@ const creatures = [
             newRect2.setAttribute("y", "150");}
         else {
             document.getElementById("DIVmybigdead1").classList.add("bonespicture2");
-            document.getElementById("DIVmybigdead1").classList.remove("skeletor2");}
+            document.getElementById("DIVmybigdead1").classList.remove("skeletor2");
+            newRect.setAttribute("y", "150");
+            newRect2.setAttribute("y", "150");}
         },
         glownumber: function(othertype) {
             document.getElementById("numberclass2").innerHTML = othertype;
