@@ -2926,6 +2926,7 @@ function backtostay (attacked, attacker) {
     attacked.animat('stay', false);
     attacked.animat('hurt', true);
     if (attacked.health <= 0) {
+        alert("ты добираешься до сюда?");
         attacked.animat('death', false);
         attacked.animdeath();
         attacked.animat('stay', true);
@@ -4917,7 +4918,11 @@ if (batterarray.imp !== 1) {
                     newRect3.setAttribute("y", "150");
                     newRect4.setAttribute("y", "150");
                     deliveredvalue2[8][0] = 0;
-                    animation6_stay.stop();
+                    animation6_stay.destroy();
+                    animation6_hurt.destroy();
+                    animation6_attack.destroy();
+                    animation6_weapon.destroy();
+                    animation6_death.destroy();
                     console.log(deliveredvalue2);
                 }
             },
@@ -4990,6 +4995,9 @@ if (batterarray.imp !== 1) {
             autoplay: false, // optional
             name: "Demo Animation", // optional
         });
+
+        creatures[indextofind].animat('stay', true);
+        creatures[indextofind].animat('stay', false);
         animation6_stay.play();
         document.getElementById("DIVmybig3").src = 'allanimations/face' + ninethanim + '.PNG';
     }
@@ -5153,6 +5161,7 @@ if (batterarray.imp !== 1) {
             autoplay: false, // optional
             name: "Demo Animation", // optional
         });
+        document.getElementById("stay-container6").style.visibility = "visible";
         animation5_stay.play();
         document.getElementById("DIVmybig9").src='allanimations/face' + eighthanim + '.PNG';
     }
