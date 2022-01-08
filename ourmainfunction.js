@@ -3713,7 +3713,9 @@ console.log(attackedCreature.id);
                     alert("Призываем дракона направо");
                     summondragonright();
                 }
-                else if (deliveredvalue2[8][0] > 0 && deliveredvalue2[8][14] === 1) {alert("Не призываем никого потому что право занято большим существом")}
+                else if (deliveredvalue2[8][0] > 0 && deliveredvalue2[8][14] === 1) {alert("Не призываем никого потому что право занято большим существом");
+                    notnextturtn = 1;
+                }
                 else if (deliveredvalue2[8][0] > 0 && deliveredvalue2[8][14] === 0 && deliveredvalue2[11][0] <= 0) {alert("Призываем юнита в правый нижний угол")}
                 else if (deliveredvalue2[11][0] > 0 && deliveredvalue2[8][0] <= 0) {
                     alert("Призываем юнита в правый верхний угол");
@@ -3724,7 +3726,8 @@ console.log(attackedCreature.id);
                 alert("Призываем дракона в центр");
                 summondragoncenter();
             }
-            else if (deliveredvalue2[7][0] > 0 && deliveredvalue2[7][14] === 1) {alert("Не призываем никого потому что центр занят большим существом")}
+            else if (deliveredvalue2[7][0] > 0 && deliveredvalue2[7][14] === 1) {alert("Не призываем никого потому что центр занят большим существом");
+                notnextturtn = 1;}
             else if (deliveredvalue2[7][0] > 0 && deliveredvalue2[7][14] === 0 && deliveredvalue2[10][0] <= 0) {alert("Призываем юнита в центральный нижний угол")}
             else if (deliveredvalue2[10][0] > 0 && deliveredvalue2[7][0] <= 0) {
                 alert("Призываем юнита в центральный верхний угол");
@@ -3735,14 +3738,17 @@ console.log(attackedCreature.id);
                     alert("Призываем дракона налево")
                     summondragonleft ();
                 }
-                else if (deliveredvalue2[6][0] > 0 && deliveredvalue2[6][14] === 1) {alert("Не призываем никого потому что лево занято большим существом")}
+                else if (deliveredvalue2[6][0] > 0 && deliveredvalue2[6][14] === 1) {alert("Не призываем никого потому что лево занято большим существом");
+                    notnextturtn = 1;}
                 else if (deliveredvalue2[6][0] > 0 && deliveredvalue2[6][14] === 0 && deliveredvalue2[9][0] <= 0) {alert("Призываем юнита в левый нижний угол")}
                 else if (deliveredvalue2[9][0] > 0 && deliveredvalue2[6][0] <= 0) {
                     alert("Призываем юнита в левый верхний угол")
                     summonundeadhighleft ()
                 }
                 }
+            nextTurn();
         }
+
         else {
             return;
         }
@@ -4995,7 +5001,6 @@ if (batterarray.imp !== 1) {
             autoplay: false, // optional
             name: "Demo Animation", // optional
         });
-
         creatures[indextofind].animat('stay', true);
         creatures[indextofind].animat('stay', false);
         animation6_stay.play();
@@ -5093,7 +5098,13 @@ if (batterarray.imp !== 1) {
                 document.getElementById("DIVmybigdead9").classList.add("bonespicture2");
                 document.getElementById("DIVmybigdead9").classList.remove("skeletor2");
                 newRect7.setAttribute("y", "150");
-                newRect8.setAttribute("y", "150");}
+                newRect8.setAttribute("y", "150");
+                deliveredvalue2[7][0] = 0;
+                animation5_stay.destroy();
+                animation5_hurt.destroy();
+                animation5_attack.destroy();
+                animation5_weapon.destroy();
+                animation5_death.destroy();}
             },
             glownumber: function(othertype) {
                 document.getElementById("numberclass7").innerHTML = othertype;
@@ -5161,7 +5172,8 @@ if (batterarray.imp !== 1) {
             autoplay: false, // optional
             name: "Demo Animation", // optional
         });
-        document.getElementById("stay-container6").style.visibility = "visible";
+        creatures[indextofind].animat('stay', true);
+        creatures[indextofind].animat('stay', false);
         animation5_stay.play();
         document.getElementById("DIVmybig9").src='allanimations/face' + eighthanim + '.PNG';
     }
@@ -5326,6 +5338,8 @@ if (batterarray.imp !== 1) {
             autoplay: false, // optional
             name: "Demo Animation", // optional
         });
+        creatures[indextofind].animat('stay', true);
+        creatures[indextofind].animat('stay', false);
         animation7_stay.play();
         document.getElementById("DIVmybig15").src='allanimations/face' + seventhdanim + '.PNG';
     }
