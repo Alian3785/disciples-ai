@@ -2926,7 +2926,6 @@ function backtostay (attacked, attacker) {
     attacked.animat('stay', false);
     attacked.animat('hurt', true);
     if (attacked.health <= 0) {
-        alert("ты добираешься до сюда?");
         attacked.animat('death', false);
         attacked.animdeath();
         attacked.animat('stay', true);
