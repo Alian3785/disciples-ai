@@ -5268,7 +5268,13 @@ if (batterarray.imp !== 1) {
                 document.getElementById("DIVmybigdead15").classList.add("bonespicture2");
                 document.getElementById("DIVmybigdead15").classList.remove("skeletor2");
                 newRect11.setAttribute("y", "150");
-                newRect12.setAttribute("y", "150");}
+                newRect12.setAttribute("y", "150");
+                deliveredvalue2[6][0] = 0;
+                animation7_stay.destroy();
+                animation7_hurt.destroy();
+                animation7_attack.destroy();
+                animation7_weapon.destroy();
+                animation7_death.destroy();}
             },
             glownumber: function(othertype) {
                 document.getElementById("numberclass11").innerHTML = othertype;
