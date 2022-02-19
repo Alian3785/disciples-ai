@@ -1416,6 +1416,7 @@ const creatures = [
         accuracy: [deliveredvalue2[0][6], deliveredvalue2[0][7]],
         alive: 1,
         size: deliveredvalue2[0][14],
+        summonedunits: [],
         id: 1,
         team: "blue",
         where: "behind",
@@ -1506,6 +1507,7 @@ const creatures = [
         accuracy: [deliveredvalue2[1][6], deliveredvalue2[1][7]],
         alive: 1,
         size: deliveredvalue2[1][14],
+        summonedunits: [],
         id: 2,
         team: "blue",
         where: "behind",
@@ -1595,6 +1597,7 @@ const creatures = [
         accuracy: [deliveredvalue2[2][6], deliveredvalue2[2][7]],
         alive: 1,
         size: deliveredvalue2[2][14],
+        summonedunits: [],
         id: 3,
         team: "blue",
         where: "behind",
@@ -1685,6 +1688,7 @@ const creatures = [
         accuracy: [deliveredvalue2[3][6], deliveredvalue2[3][7]],
         alive: 1,
         size: deliveredvalue2[3][14],
+        summonedunits: [],
         id: 4,
         team: "blue",
         where: "ahead",
@@ -1781,6 +1785,7 @@ const creatures = [
         accuracy: [deliveredvalue2[8][6], deliveredvalue2[8][7]],
         alive: 1,
         size: deliveredvalue2[8][14],
+        summonedunits: [],
         id: 6,
         team: "red",
         where: "ahead",
@@ -1878,6 +1883,7 @@ const creatures = [
         accuracy: [deliveredvalue2[6][6], deliveredvalue2[6][7]],
         alive: 1,
         size: deliveredvalue2[6][14],
+        summonedunits: [],
         id: 7,
         team: "red",
         where: "ahead",
@@ -1975,6 +1981,7 @@ const creatures = [
         accuracy: [deliveredvalue2[4][6], deliveredvalue2[4][7]],
         alive: 1,
         size: deliveredvalue2[4][14],
+        summonedunits: [],
         id: 8,
         team: "blue",
         where: "ahead",
@@ -2073,6 +2080,7 @@ const creatures = [
         accuracy: [deliveredvalue2[7][6], deliveredvalue2[7][7]],
         alive: 1,
         size: deliveredvalue2[7][14],
+        summonedunits: [],
         id: 5,
         team: "red",
         where: "ahead",
@@ -2170,6 +2178,7 @@ const creatures = [
         accuracy: [deliveredvalue2[5][6], deliveredvalue2[5][7]],
         alive: 1,
         size: deliveredvalue2[5][14],
+        summonedunits: [],
         id: 9,
         team: "blue",
         where: "ahead",
@@ -2267,6 +2276,7 @@ const creatures = [
         accuracy: [deliveredvalue2[9][6], deliveredvalue2[9][7]],
         alive: 1,
         size: deliveredvalue2[9][14],
+        summonedunits: [],
         id: 10,
         team: "red",
         where: "behind",
@@ -2358,6 +2368,7 @@ const creatures = [
         accuracy: [deliveredvalue2[10][6], deliveredvalue2[10][7]],
         alive: 1,
         size: deliveredvalue2[10][14],
+        summonedunits: [],
         id: 11,
         team: "red",
         where: "behind",
@@ -2449,6 +2460,7 @@ const creatures = [
         accuracy: [deliveredvalue2[11][6], deliveredvalue2[11][7]],
         alive: 1,
         size: deliveredvalue2[11][14],
+        summonedunits: [],
         id: 12,
         team: "red",
         where: "behind",
@@ -4839,6 +4851,8 @@ if (batterarray.imp !== 1) {
     function summondragonright () {
         alert(attackedCreature.id);
         indextofind = creatures.findIndex(x => x.id === 6);
+        attackerCreature.summonedunits.push(6);
+        console.log(attackerCreature.summonedunits);
         alert(indextofind);
         console.log(creatures);
         randomdragon = Math.round(Math.random());
@@ -5020,6 +5034,7 @@ if (batterarray.imp !== 1) {
         alert(attackedCreature.id);
         indextofind = creatures.findIndex(x => x.id === 5);
         alert(indextofind);
+        attackerCreature.summonedunits.push(5);
         console.log(creatures);
         randomdragon = Math.round(Math.random());
         if (randomdragon === 0) {
@@ -5190,6 +5205,7 @@ if (batterarray.imp !== 1) {
     function summondragonleft () {
         alert(attackedCreature.id);
         indextofind = creatures.findIndex(x => x.id === 7);
+        attackerCreature.summonedunits.push(7);
         alert(indextofind);
         console.log(creatures);
         randomdragon = Math.round(Math.random());
@@ -5362,6 +5378,7 @@ if (batterarray.imp !== 1) {
     function summonundeadhighleft () {
         alert(attackedCreature.id);
         indextofind = creatures.findIndex(x => x.id === 7);
+        attackerCreature.summonedunits.push(7);
         alert(indextofind);
         console.log(creatures);
         randomdragon = randomInteger(1, 5);
@@ -5547,6 +5564,7 @@ if (batterarray.imp !== 1) {
     function summonundeadcenter () {
         alert(attackedCreature.id);
         indextofind = creatures.findIndex(x => x.id === 5);
+        attackerCreature.summonedunits.push(5);
         alert(indextofind);
         console.log(creatures);
         randomdragon = randomInteger(1, 5);
@@ -5731,6 +5749,7 @@ if (batterarray.imp !== 1) {
     function summonundeadright () {
         alert(attackedCreature.id);
         indextofind = creatures.findIndex(x => x.id === 6);
+        attackerCreature.summonedunits.push(6);
         alert(indextofind);
         console.log(creatures);
         randomdragon = randomInteger(1, 5);
@@ -5922,6 +5941,7 @@ if (batterarray.imp !== 1) {
     function summonundeadlowcenter () {
         alert(attackedCreature.id);
         indextofind = creatures.findIndex(x => x.id === 11);
+        attackerCreature.summonedunits.push(11);
         alert(indextofind);
         console.log(creatures);
         randomdragon = randomInteger(1, 5);
@@ -6113,6 +6133,7 @@ if (batterarray.imp !== 1) {
     function summonundeadlowleft () {
         alert(attackedCreature.id);
         indextofind = creatures.findIndex(x => x.id === 10);
+        attackerCreature.summonedunits.push(10);
         alert(indextofind);
         console.log(creatures);
         randomdragon = randomInteger(1, 5);
@@ -6305,6 +6326,7 @@ if (batterarray.imp !== 1) {
     function summonundeadlowright () {
         alert(attackedCreature.id);
         indextofind = creatures.findIndex(x => x.id === 12);
+        attackerCreature.summonedunits.push(12);
         alert(indextofind);
         console.log(creatures);
         randomdragon = randomInteger(1, 5);
