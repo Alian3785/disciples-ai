@@ -5448,7 +5448,13 @@ if (batterarray.imp !== 1) {
             dienow: function() { if (this.size === 0) {
                 document.getElementById("DIVm11").classList.add("bonespicture");
                 document.getElementById("DIVm11").classList.remove("skeletor");
-                newRect11.setAttribute("y", "150");}
+                newRect11.setAttribute("y", "150");
+                deliveredvalue2[6][0] = 0;
+                animation7_stay.destroy();
+                animation7_hurt.destroy();
+                animation7_attack.destroy();
+                animation7_weapon.destroy();
+                animation7_death.destroy();}
             else {
                 document.getElementById("DIVmybigdead15").classList.add("bonespicture2");
                 document.getElementById("DIVmybigdead15").classList.remove("skeletor2");
@@ -5522,6 +5528,8 @@ if (batterarray.imp !== 1) {
             autoplay: false, // optional
             name: "Demo Animation", // optional
         });
+        creatures[indextofind].animat('stay', true);
+        creatures[indextofind].animat('stay', false);
         animation7_stay.play();
         document.getElementById("DIVmy11").src='allanimations/face' + seventhdanim + '.PNG';
     }
@@ -5625,7 +5633,13 @@ if (batterarray.imp !== 1) {
             dienow: function() { if (this.size === 0) {
                 document.getElementById("DIVm7").classList.add("bonespicture");
                 document.getElementById("DIVm7").classList.remove("skeletor");
-                newRect7.setAttribute("y", "150");}
+                newRect7.setAttribute("y", "150");
+                deliveredvalue2[7][0] = 0;
+                animation5_stay.destroy();
+                animation5_hurt.destroy();
+                animation5_attack.destroy();
+                animation5_weapon.destroy();
+                animation5_death.destroy();}
             else {
                 document.getElementById("DIVmybigdead9").classList.add("bonespicture2");
                 document.getElementById("DIVmybigdead9").classList.remove("skeletor2");
@@ -5807,6 +5821,11 @@ if (batterarray.imp !== 1) {
                     document.getElementById("DIVm3").classList.remove("skeletor");
                     newRect3.setAttribute("y", "150");
                     deliveredvalue2[8][0] = 0;
+                    animation6_stay.destroy();
+                    animation6_hurt.destroy();
+                    animation6_attack.destroy();
+                    animation6_weapon.destroy();
+                    animation6_death.destroy();
                 } else {
                     document.getElementById("DIVmybigdead3").classList.add("bonespicture2");
                     document.getElementById("DIVmybigdead3").classList.remove("skeletor2");
