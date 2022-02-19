@@ -5974,22 +5974,22 @@ if (batterarray.imp !== 1) {
             where: "behind",
             position: 2,
             animattack: function () {
-                animation6_attack.playSegments([0, 46], true);
+                animation11_attack.playSegments([0, 46], true);
             },
             animstay: function () {
-                animation6_stay.play();
+                animation11_stay.play();
             },
             animhurt: function () {
-                animation6_hurt.playSegments([0, 18], true);
+                animation11_hurt.playSegments([0, 18], true);
             },
             animweapon: function () {
-                animation6_weapon.playSegments([0, 18], true);
+                animation11_weapon.playSegments([0, 18], true);
             },
             animmagic: function () {
-                animation6_magic.playSegments([0, 46], true);
+                animation11_magic.playSegments([0, 46], true);
             },
             animdeath: function () {
-                animation6_death.playSegments([0, 56], true);
+                animation11_death.playSegments([0, 56], true);
             },
             sound: function () {
                 sound6.play();
@@ -6019,11 +6019,11 @@ if (batterarray.imp !== 1) {
                     document.getElementById("DIVm8").classList.remove("skeletor");
                     newRect3.setAttribute("y", "150");
                     deliveredvalue2[10][0] = 0;
-                    animation6_stay.destroy();
-                    animation6_hurt.destroy();
-                    animation6_attack.destroy();
-                    animation6_weapon.destroy();
-                    animation6_death.destroy();
+                    animation11_stay.destroy();
+                    animation11_hurt.destroy();
+                    animation11_attack.destroy();
+                    animation11_weapon.destroy();
+                    animation11_death.destroy();
                 } else {
                     document.getElementById("DIVmybigdead13").classList.add("bonespicture2");
                     document.getElementById("DIVmybigdead13").classList.remove("skeletor2");
