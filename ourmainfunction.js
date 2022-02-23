@@ -1462,19 +1462,21 @@ const creatures = [
             document.getElementById("DIVm9").classList.add("bonespicture");
             document.getElementById("DIVm9").classList.remove("skeletor");
             newRect9.setAttribute("y", "150");
-        if (this.type === "okkultsummoner") {
-            summonedarray = [];
-            this.summonedunits.forEach(
-                summoned => summonedarray.push(creatures.findIndex(x => x.id === summoned)))
-            newi = 0;
-            while (newi < summonedarray.length)
-            {
-                console.log(creatures.summonedarray[newi]);
-                creatures.summonedarray[newi].health = 0;
-                creatures.summonedarray[newi].dienow();
-                newi++;
+            if (this.type === "okkultsummoner") {
+                summonedarray = [];
+                this.summonedunits.forEach(
+                    summoned => summonedarray.push(creatures.findIndex(x => x.id === summoned)))
+                newi = 0;
+                while (newi < summonedarray.length)
+                {
+                    justindex = summonedarray[newi];
+                    console.log(creatures[justindex]);
+                    creatures[justindex].health = 0;
+                    creatures[justindex].type = 0;
+                    creatures[justindex].dienow();
+                    newi++;
+                }
             }
-        }
         }
         else {
             document.getElementById("DIVmybigdead13").classList.add("bonespicture2");
@@ -1574,9 +1576,11 @@ const creatures = [
                 newi = 0;
                 while (newi < summonedarray.length)
                 {
-                    console.log(creatures.summonedarray[newi]);
-                    creatures.summonedarray[newi].health = 0;
-                    creatures.summonedarray[newi].dienow();
+                    justindex = summonedarray[newi];
+                    console.log(creatures[justindex]);
+                    creatures[justindex].health = 0;
+                    creatures[justindex].type = 0;
+                    creatures[justindex].dienow();
                     newi++;
                 }
             }
@@ -1678,9 +1682,11 @@ const creatures = [
                 newi = 0;
                 while (newi < summonedarray.length)
                 {
-                    console.log(creatures.summonedarray[newi]);
-                    creatures.summonedarray[newi].health = 0;
-                    creatures.summonedarray[newi].dienow();
+                    justindex = summonedarray[newi];
+                    console.log(creatures[justindex]);
+                    creatures[justindex].health = 0;
+                    creatures[justindex].type = 0;
+                    creatures[justindex].dienow();
                     newi++;
                 }
             }
@@ -1783,9 +1789,11 @@ const creatures = [
                 newi = 0;
                 while (newi < summonedarray.length)
                 {
-                    console.log(creatures.summonedarray[newi]);
-                    creatures.summonedarray[newi].health = 0;
-                    creatures.summonedarray[newi].dienow();
+                    justindex = summonedarray[newi];
+                    console.log(creatures[justindex]);
+                    creatures[justindex].health = 0;
+                    creatures[justindex].type = 0;
+                    creatures[justindex].dienow();
                     newi++;
                 }
             }
@@ -1894,9 +1902,11 @@ const creatures = [
                 newi = 0;
                 while (newi < summonedarray.length)
                 {
-                    console.log(creatures.summonedarray[newi]);
-                    creatures.summonedarray[newi].health = 0;
-                    creatures.summonedarray[newi].dienow();
+                    justindex = summonedarray[newi];
+                    console.log(creatures[justindex]);
+                    creatures[justindex].health = 0;
+                    creatures[justindex].type = 0;
+                    creatures[justindex].dienow();
                     newi++;
                 }
             }
@@ -2006,9 +2016,11 @@ const creatures = [
                 newi = 0;
                 while (newi < summonedarray.length)
                 {
-                    console.log(creatures.summonedarray[newi]);
-                    creatures.summonedarray[newi].health = 0;
-                    creatures.summonedarray[newi].dienow();
+                    justindex = summonedarray[newi];
+                    console.log(creatures[justindex]);
+                    creatures[justindex].health = 0;
+                    creatures[justindex].type = 0;
+                    creatures[justindex].dienow();
                     newi++;
                 }
             }
@@ -2118,9 +2130,11 @@ const creatures = [
                 newi = 0;
                 while (newi < summonedarray.length)
                 {
-                    console.log(creatures.summonedarray[newi]);
-                    creatures.summonedarray[newi].health = 0;
-                    creatures.summonedarray[newi].dienow();
+                    justindex = summonedarray[newi];
+                    console.log(creatures[justindex]);
+                    creatures[justindex].health = 0;
+                    creatures[justindex].type = 0;
+                    creatures[justindex].dienow();
                     newi++;
                 }
             }
@@ -2231,9 +2245,11 @@ const creatures = [
                 newi = 0;
                 while (newi < summonedarray.length)
                 {
-                    console.log(creatures.summonedarray[newi]);
-                    creatures.summonedarray[newi].health = 0;
-                    creatures.summonedarray[newi].dienow();
+                    justindex = summonedarray[newi];
+                    console.log(creatures[justindex]);
+                    creatures[justindex].health = 0;
+                    creatures[justindex].type = 0;
+                    creatures[justindex].dienow();
                     newi++;
                 }
             }
@@ -2343,9 +2359,11 @@ const creatures = [
                 newi = 0;
                 while (newi < summonedarray.length)
                 {
-                    console.log(creatures.summonedarray[newi]);
-                    creatures.summonedarray[newi].health = 0;
-                    creatures.summonedarray[newi].dienow();
+                    justindex = summonedarray[newi];
+                    console.log(creatures[justindex]);
+                    creatures[justindex].health = 0;
+                    creatures[justindex].type = 0;
+                    creatures[justindex].dienow();
                     newi++;
                 }
             }
@@ -2455,9 +2473,11 @@ const creatures = [
                 newi = 0;
                 while (newi < summonedarray.length)
                 {
-                    console.log(creatures.summonedarray.newi);
-                    creatures.summonedarray[newi].health = 0;
-                    creatures.summonedarray[newi].dienow();
+                    justindex = summonedarray[newi];
+                    console.log(creatures[justindex]);
+                    creatures[justindex].health = 0;
+                    creatures[justindex].type = 0;
+                    creatures[justindex].dienow();
                     newi++;
                 }
             }
@@ -2558,8 +2578,17 @@ const creatures = [
                 summonedarray = [];
                 this.summonedunits.forEach(
                     summoned => summonedarray.push(creatures.findIndex(x => x.id === summoned)))
+                newi = 0;
+                while (newi < summonedarray.length)
+                {
+                    justindex = summonedarray[newi];
+                    console.log(creatures[justindex]);
+                    creatures[justindex].health = 0;
+                    creatures[justindex].type = 0;
+                    creatures[justindex].dienow();
+                    newi++;
+                }
             }
-            console.log(summonedarray);
         }
         else {
             document.getElementById("DIVmybigdead13").classList.add("bonespicture2");
@@ -2657,8 +2686,17 @@ const creatures = [
                 summonedarray = [];
                 this.summonedunits.forEach(
                     summoned => summonedarray.push(creatures.findIndex(x => x.id === summoned)))
+                newi = 0;
+                while (newi < summonedarray.length)
+                {
+                    justindex = summonedarray[newi];
+                    console.log(creatures[justindex]);
+                    creatures[justindex].health = 0;
+                    creatures[justindex].type = 0;
+                    creatures[justindex].dienow();
+                    newi++;
+                }
             }
-            console.log(summonedarray);
         }
         else {
             document.getElementById("DIVmybigdead13").classList.add("bonespicture2");
@@ -5108,6 +5146,10 @@ if (batterarray.imp !== 1) {
                     animation6_death.destroy();
                     console.log(deliveredvalue2);
                 }
+                findoccultist = creatures.findIndex(x => x.id === this.summoned);
+                occultistunits = creatures[findoccultist].summonedunits;
+                moreofi = occultistunits.indexOf(this.id);
+                occultistunits.splice(moreofi,1);
             },
             glownumber: function (othertype) {
                 document.getElementById("numberclass3").innerHTML = othertype;
@@ -5283,6 +5325,10 @@ if (batterarray.imp !== 1) {
                 animation5_attack.destroy();
                 animation5_weapon.destroy();
                 animation5_death.destroy();}
+                findoccultist = creatures.findIndex(x => x.id === this.summoned);
+                occultistunits = creatures[findoccultist].summonedunits;
+                moreofi = occultistunits.indexOf(this.id);
+                occultistunits.splice(moreofi,1);
             },
             glownumber: function(othertype) {
                 document.getElementById("numberclass7").innerHTML = othertype;
@@ -5455,6 +5501,10 @@ if (batterarray.imp !== 1) {
                 animation7_attack.destroy();
                 animation7_weapon.destroy();
                 animation7_death.destroy();}
+                findoccultist = creatures.findIndex(x => x.id === this.summoned);
+                occultistunits = creatures[findoccultist].summonedunits;
+                moreofi = occultistunits.indexOf(this.id);
+                occultistunits.splice(moreofi,1);
             },
             glownumber: function(othertype) {
                 document.getElementById("numberclass11").innerHTML = othertype;
@@ -5641,6 +5691,10 @@ if (batterarray.imp !== 1) {
                 document.getElementById("DIVmybigdead15").classList.remove("skeletor2");
                 newRect11.setAttribute("y", "150");
                 newRect12.setAttribute("y", "150");}
+                findoccultist = creatures.findIndex(x => x.id === this.summoned);
+                occultistunits = creatures[findoccultist].summonedunits;
+                moreofi = occultistunits.indexOf(this.id);
+                occultistunits.splice(moreofi,1);
             },
             glownumber: function(othertype) {
                 document.getElementById("numberclass11").innerHTML = othertype;
@@ -5827,6 +5881,10 @@ if (batterarray.imp !== 1) {
                 document.getElementById("DIVmybigdead9").classList.remove("skeletor2");
                 newRect7.setAttribute("y", "150");
                 newRect8.setAttribute("y", "150");}
+                findoccultist = creatures.findIndex(x => x.id === this.summoned);
+                occultistunits = creatures[findoccultist].summonedunits;
+                moreofi = occultistunits.indexOf(this.id);
+                occultistunits.splice(moreofi,1);
             },
             glownumber: function(othertype) {
                 document.getElementById("numberclass7").innerHTML = othertype;
@@ -6017,6 +6075,10 @@ if (batterarray.imp !== 1) {
                     newRect3.setAttribute("y", "150");
                     newRect4.setAttribute("y", "150");
                 }
+                findoccultist = creatures.findIndex(x => x.id === this.summoned);
+                occultistunits = creatures[findoccultist].summonedunits;
+                moreofi = occultistunits.indexOf(this.id);
+                occultistunits.splice(moreofi,1);
             },
             glownumber: function (othertype) {
                 document.getElementById("numberclass3").innerHTML = othertype;
@@ -6209,6 +6271,10 @@ if (batterarray.imp !== 1) {
                     newRect3.setAttribute("y", "150");
                     newRect4.setAttribute("y", "150");
                 }
+                findoccultist = creatures.findIndex(x => x.id === this.summoned);
+                occultistunits = creatures[findoccultist].summonedunits;
+                moreofi = occultistunits.indexOf(this.id);
+                occultistunits.splice(moreofi,1);
             },
             glownumber: function (othertype) {
                 document.getElementById("numberclass8").innerHTML = othertype;
@@ -6401,6 +6467,10 @@ if (batterarray.imp !== 1) {
                     newRect3.setAttribute("y", "150");
                     newRect4.setAttribute("y", "150");
                 }
+                findoccultist = creatures.findIndex(x => x.id === this.summoned);
+                occultistunits = creatures[findoccultist].summonedunits;
+                moreofi = occultistunits.indexOf(this.id);
+                occultistunits.splice(moreofi,1);
             },
             glownumber: function (othertype) {
                 document.getElementById("numberclass12").innerHTML = othertype;
@@ -6594,6 +6664,10 @@ if (batterarray.imp !== 1) {
                     newRect3.setAttribute("y", "150");
                     newRect4.setAttribute("y", "150");
                 }
+                findoccultist = creatures.findIndex(x => x.id === this.summoned);
+                occultistunits = creatures[findoccultist].summonedunits;
+                moreofi = occultistunits.indexOf(this.id);
+                occultistunits.splice(moreofi,1);
             },
             glownumber: function (othertype) {
                 document.getElementById("numberclass4").innerHTML = othertype;
