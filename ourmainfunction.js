@@ -5,7 +5,7 @@
 
 
 
-const svg = document.querySelector("#dinamichealth");;
+const svg = document.querySelector("#dinamichealth");
 
 // variable for the namespace
 const svgns = "http://www.w3.org/2000/svg";
@@ -1461,7 +1461,21 @@ const creatures = [
         dienow: function() { if (this.size === 0) {
             document.getElementById("DIVm9").classList.add("bonespicture");
             document.getElementById("DIVm9").classList.remove("skeletor");
-            newRect9.setAttribute("y", "150");}
+            newRect9.setAttribute("y", "150");
+        if (this.type === "okkultsummoner") {
+            summonedarray = [];
+            this.summonedunits.forEach(
+                summoned => summonedarray.push(creatures.findIndex(x => x.id === summoned)))
+            newi = 0;
+            while (newi < summonedarray.length)
+            {
+                console.log(creatures.summonedarray[newi]);
+                creatures.summonedarray[newi].health = 0;
+                creatures.summonedarray[newi].dienow();
+                newi++;
+            }
+        }
+        }
         else {
             document.getElementById("DIVmybigdead13").classList.add("bonespicture2");
             document.getElementById("DIVmybigdead13").classList.remove("skeletor2");}
@@ -1552,7 +1566,21 @@ const creatures = [
         dienow: function() { if (this.size === 0) {
             document.getElementById("DIVm5").classList.add("bonespicture");
             document.getElementById("DIVm5").classList.remove("skeletor");
-            newRect5.setAttribute("y", "150");}
+            newRect5.setAttribute("y", "150");
+            if (this.type === "okkultsummoner") {
+                summonedarray = [];
+                this.summonedunits.forEach(
+                    summoned => summonedarray.push(creatures.findIndex(x => x.id === summoned)))
+                newi = 0;
+                while (newi < summonedarray.length)
+                {
+                    console.log(creatures.summonedarray[newi]);
+                    creatures.summonedarray[newi].health = 0;
+                    creatures.summonedarray[newi].dienow();
+                    newi++;
+                }
+            }
+        }
         else {
             document.getElementById("DIVmybigdead13").classList.add("bonespicture2");
             document.getElementById("DIVmybigdead13").classList.remove("skeletor2");}},
@@ -1642,7 +1670,21 @@ const creatures = [
         dienow: function() { if (this.size === 0) {
             document.getElementById("DIVm").classList.add("bonespicture");
             document.getElementById("DIVm").classList.remove("skeletor");
-            newRect.setAttribute("y", "150");}
+            newRect.setAttribute("y", "150");
+            if (this.type === "okkultsummoner") {
+                summonedarray = [];
+                this.summonedunits.forEach(
+                    summoned => summonedarray.push(creatures.findIndex(x => x.id === summoned)))
+                newi = 0;
+                while (newi < summonedarray.length)
+                {
+                    console.log(creatures.summonedarray[newi]);
+                    creatures.summonedarray[newi].health = 0;
+                    creatures.summonedarray[newi].dienow();
+                    newi++;
+                }
+            }
+        }
         else {
             document.getElementById("DIVmybigdead13").classList.add("bonespicture2");
             document.getElementById("DIVmybigdead13").classList.remove("skeletor2");}},
@@ -1733,7 +1775,21 @@ const creatures = [
         dienow: function() { if (this.size === 0) {
             document.getElementById("DIVm10").classList.add("bonespicture");
             document.getElementById("DIVm10").classList.remove("skeletor");
-            newRect10.setAttribute("y", "150");}
+            newRect10.setAttribute("y", "150");
+            if (this.type === "okkultsummoner") {
+                summonedarray = [];
+                this.summonedunits.forEach(
+                    summoned => summonedarray.push(creatures.findIndex(x => x.id === summoned)))
+                newi = 0;
+                while (newi < summonedarray.length)
+                {
+                    console.log(creatures.summonedarray[newi]);
+                    creatures.summonedarray[newi].health = 0;
+                    creatures.summonedarray[newi].dienow();
+                    newi++;
+                }
+            }
+        }
         else {
             document.getElementById("DIVmybigdead13").classList.add("bonespicture2");
             document.getElementById("DIVmybigdead13").classList.remove("skeletor2");}
@@ -1830,7 +1886,21 @@ const creatures = [
         dienow: function() { if (this.size === 0) {
             document.getElementById("DIVm3").classList.add("bonespicture");
             document.getElementById("DIVm3").classList.remove("skeletor");
-            newRect3.setAttribute("y", "150");}
+            newRect3.setAttribute("y", "150");
+            if (this.type === "okkultsummoner") {
+                summonedarray = [];
+                this.summonedunits.forEach(
+                    summoned => summonedarray.push(creatures.findIndex(x => x.id === summoned)))
+                newi = 0;
+                while (newi < summonedarray.length)
+                {
+                    console.log(creatures.summonedarray[newi]);
+                    creatures.summonedarray[newi].health = 0;
+                    creatures.summonedarray[newi].dienow();
+                    newi++;
+                }
+            }
+        }
         else {
             document.getElementById("DIVmybigdead3").classList.add("bonespicture2");
             document.getElementById("DIVmybigdead3").classList.remove("skeletor2");
@@ -1928,7 +1998,21 @@ const creatures = [
         dienow: function() { if (this.size === 0) {
             document.getElementById("DIVm11").classList.add("bonespicture");
             document.getElementById("DIVm11").classList.remove("skeletor");
-            newRect11.setAttribute("y", "150");}
+            newRect11.setAttribute("y", "150");
+            if (this.type === "okkultsummoner") {
+                summonedarray = [];
+                this.summonedunits.forEach(
+                    summoned => summonedarray.push(creatures.findIndex(x => x.id === summoned)))
+                newi = 0;
+                while (newi < summonedarray.length)
+                {
+                    console.log(creatures.summonedarray[newi]);
+                    creatures.summonedarray[newi].health = 0;
+                    creatures.summonedarray[newi].dienow();
+                    newi++;
+                }
+            }
+        }
         else {
             document.getElementById("DIVmybigdead15").classList.add("bonespicture2");
             document.getElementById("DIVmybigdead15").classList.remove("skeletor2");
@@ -2026,7 +2110,21 @@ const creatures = [
         dienow: function() { if (this.size === 0) {
             document.getElementById("DIVm6").classList.add("bonespicture");
             document.getElementById("DIVm6").classList.remove("skeletor");
-            newRect6.setAttribute("y", "150");}
+            newRect6.setAttribute("y", "150");
+            if (this.type === "okkultsummoner") {
+                summonedarray = [];
+                this.summonedunits.forEach(
+                    summoned => summonedarray.push(creatures.findIndex(x => x.id === summoned)))
+                newi = 0;
+                while (newi < summonedarray.length)
+                {
+                    console.log(creatures.summonedarray[newi]);
+                    creatures.summonedarray[newi].health = 0;
+                    creatures.summonedarray[newi].dienow();
+                    newi++;
+                }
+            }
+        }
         else {
             document.getElementById("DIVmybigdead7").classList.add("bonespicture2");
             document.getElementById("DIVmybigdead7").classList.remove("skeletor2");
@@ -2125,7 +2223,21 @@ const creatures = [
         dienow: function() { if (this.size === 0) {
             document.getElementById("DIVm7").classList.add("bonespicture");
             document.getElementById("DIVm7").classList.remove("skeletor");
-            newRect7.setAttribute("y", "150");}
+            newRect7.setAttribute("y", "150");
+            if (this.type === "okkultsummoner") {
+                summonedarray = [];
+                this.summonedunits.forEach(
+                    summoned => summonedarray.push(creatures.findIndex(x => x.id === summoned)))
+                newi = 0;
+                while (newi < summonedarray.length)
+                {
+                    console.log(creatures.summonedarray[newi]);
+                    creatures.summonedarray[newi].health = 0;
+                    creatures.summonedarray[newi].dienow();
+                    newi++;
+                }
+            }
+        }
         else {
             document.getElementById("DIVmybigdead9").classList.add("bonespicture2");
             document.getElementById("DIVmybigdead9").classList.remove("skeletor2");
@@ -2223,7 +2335,21 @@ const creatures = [
         dienow: function() { if (this.size === 0) {
             document.getElementById("DIVm2").classList.add("bonespicture");
             document.getElementById("DIVm2").classList.remove("skeletor");
-            newRect2.setAttribute("y", "150");}
+            newRect2.setAttribute("y", "150");
+            if (this.type === "okkultsummoner") {
+                summonedarray = [];
+                this.summonedunits.forEach(
+                    summoned => summonedarray.push(creatures.findIndex(x => x.id === summoned)))
+                newi = 0;
+                while (newi < summonedarray.length)
+                {
+                    console.log(creatures.summonedarray[newi]);
+                    creatures.summonedarray[newi].health = 0;
+                    creatures.summonedarray[newi].dienow();
+                    newi++;
+                }
+            }
+        }
         else {
             document.getElementById("DIVmybigdead1").classList.add("bonespicture2");
             document.getElementById("DIVmybigdead1").classList.remove("skeletor2");
@@ -2321,7 +2447,21 @@ const creatures = [
         dienow: function() { if (this.size === 0) {
             document.getElementById("DIVm12").classList.add("bonespicture");
             document.getElementById("DIVm12").classList.remove("skeletor");
-            newRect12.setAttribute("y", "150");}
+            newRect12.setAttribute("y", "150");
+            if (this.type === "okkultsummoner") {
+                summonedarray = [];
+                this.summonedunits.forEach(
+                    summoned => summonedarray.push(creatures.findIndex(x => x.id === summoned)))
+                newi = 0;
+                while (newi < summonedarray.length)
+                {
+                    console.log(creatures.summonedarray.newi);
+                    creatures.summonedarray[newi].health = 0;
+                    creatures.summonedarray[newi].dienow();
+                    newi++;
+                }
+            }
+        }
         else {
             document.getElementById("DIVmybigdead13").classList.add("bonespicture2");
             document.getElementById("DIVmybigdead13").classList.remove("skeletor2");}
@@ -2413,7 +2553,14 @@ const creatures = [
         dienow: function() { if (this.size === 0) {
             document.getElementById("DIVm8").classList.add("bonespicture");
             document.getElementById("DIVm8").classList.remove("skeletor");
-            newRect8.setAttribute("y", "150");}
+            newRect8.setAttribute("y", "150");
+            if (this.type === "okkultsummoner") {
+                summonedarray = [];
+                this.summonedunits.forEach(
+                    summoned => summonedarray.push(creatures.findIndex(x => x.id === summoned)))
+            }
+            console.log(summonedarray);
+        }
         else {
             document.getElementById("DIVmybigdead13").classList.add("bonespicture2");
             document.getElementById("DIVmybigdead13").classList.remove("skeletor2");}
@@ -2505,7 +2652,14 @@ const creatures = [
         dienow: function() { if (this.size === 0) {
             document.getElementById("DIVm4").classList.add("bonespicture");
             document.getElementById("DIVm4").classList.remove("skeletor");
-            newRect4.setAttribute("y", "150");}
+            newRect4.setAttribute("y", "150");
+            if (this.type === "okkultsummoner") {
+                summonedarray = [];
+                this.summonedunits.forEach(
+                    summoned => summonedarray.push(creatures.findIndex(x => x.id === summoned)))
+            }
+            console.log(summonedarray);
+        }
         else {
             document.getElementById("DIVmybigdead13").classList.add("bonespicture2");
             document.getElementById("DIVmybigdead13").classList.remove("skeletor2");}
@@ -4878,7 +5032,7 @@ if (batterarray.imp !== 1) {
             fireeffect: 0,
             watereffect: 0,
             imp: 0,
-            summoned: 0,
+            summoned: attackerCreature.id,
             teammated: 0,
             runningaway: 0,
             shotsleft: deliveredvalue2[8][13],
@@ -5059,7 +5213,7 @@ if (batterarray.imp !== 1) {
             fireeffect: 0,
             watereffect: 0,
             imp: 0,
-            summoned: 0,
+            summoned: attackerCreature.id,
             teammated: 0,
             runningaway: 0,
             shotsleft: deliveredvalue2[7][13],
@@ -5231,7 +5385,7 @@ if (batterarray.imp !== 1) {
             fireeffect: 0,
             watereffect: 0,
             imp: 0,
-            summoned: 0,
+            summoned: attackerCreature.id,
             teammated: 0,
             runningaway: 0,
             shotsleft: deliveredvalue2[6][13],
@@ -5417,7 +5571,7 @@ if (batterarray.imp !== 1) {
             fireeffect: 0,
             watereffect: 0,
             imp: 0,
-            summoned: 0,
+            summoned: attackerCreature.id,
             teammated: 0,
             runningaway: 0,
             shotsleft: deliveredvalue2[6][13],
@@ -5603,7 +5757,7 @@ if (batterarray.imp !== 1) {
             fireeffect: 0,
             watereffect: 0,
             imp: 0,
-            summoned: 0,
+            summoned: attackerCreature.id,
             teammated: 0,
             runningaway: 0,
             shotsleft: deliveredvalue2[7][13],
@@ -5788,7 +5942,7 @@ if (batterarray.imp !== 1) {
             fireeffect: 0,
             watereffect: 0,
             imp: 0,
-            summoned: 0,
+            summoned: attackerCreature.id,
             teammated: 0,
             runningaway: 0,
             shotsleft: deliveredvalue2[8][13],
@@ -5980,7 +6134,7 @@ if (batterarray.imp !== 1) {
             fireeffect: 0,
             watereffect: 0,
             imp: 0,
-            summoned: 0,
+            summoned: attackerCreature.id,
             teammated: 0,
             runningaway: 0,
             shotsleft: deliveredvalue2[10][13],
@@ -6172,7 +6326,7 @@ if (batterarray.imp !== 1) {
             fireeffect: 0,
             watereffect: 0,
             imp: 0,
-            summoned: 0,
+            summoned: attackerCreature.id,
             teammated: 0,
             runningaway: 0,
             shotsleft: deliveredvalue2[9][13],
@@ -6365,7 +6519,7 @@ if (batterarray.imp !== 1) {
             fireeffect: 0,
             watereffect: 0,
             imp: 0,
-            summoned: 0,
+            summoned: attackerCreature.id,
             teammated: 0,
             runningaway: 0,
             shotsleft: deliveredvalue2[11][13],
