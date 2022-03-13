@@ -1,0 +1,17 @@
+print(env.observation_space)
+print(env.action_space)
+print(env.action_space.sample())
+
+GoLeftEnv(grid_size=10)
+obs = env.reset()
+n_steps = 20
+for _ in range(n_steps):
+    # Random action
+    action = env.action_space.sample()
+    print("Action: ", action)
+    obs, reward, done, info = env.step(action)
+    print('obs=', obs, 'reward=', reward, 'done=', done)
+    env.render()
+    if done:
+      print("Goal reached!", "reward=", reward)
+      break
