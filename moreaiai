@@ -1,0 +1,13 @@
+env = GoLeftEnv(grid_size=10)
+obs = env.reset()
+n_steps = 40
+for _ in range(n_steps):
+    # Random action
+    action = env.action_space.sample()
+    print("Action: ", action)
+    obs, reward, done, info = env.step(action)
+    print('obs=', obs, 'reward=', reward, 'done=', done)
+    env.render(mode='console')
+    if (done == 1):
+      print("Goal reached!", "reward=", reward)
+      break
