@@ -1,0 +1,119 @@
+# Основной код со средой где призрак сражается с пиратами
+
+import numpy as np
+import gym
+from gym import spaces
+
+
+class GoLeftEnv(gym.Env):
+  """
+  Custom Environment that follows gym interface.
+  This is a simple env where the agent must learn to go always left. 
+  """
+  # Because of google colab, we cannot implement the GUI ('human' render mode)
+  metadata = {'render.modes': ['console']}
+  # Define constants for clearer code  
+  ATTACK = 0
+  ATTACK2 = 1
+  ATTACK3 = 2
+
+
+  def __init__(self, grid_size=100):
+    super(GoLeftEnv, self).__init__()
+
+    # Size of the 1D-grid
+    self.grid_size = grid_size
+    # Initialize the agent at the right of the grid
+    self.agent_pos = grid_size - 1
+    self.ghost = 64
+    self.firstpiratehealth = 10
+    self.secondpiratehealth = 10
+    self.thirdpiratehealth = 10
+    self.ghostdamage = 2
+    self.firstpiratedamage = 2
+    self.secondpiratedamage = 2
+    self.thirdpiratedamage = 2
+    # Define action and observation space
+    # They must be gym.spaces objects
+    # Example when using discrete actions, we have two: left and right
+    n_actions = 3
+    self.action_space = spaces.Discrete(n_actions)
+    # The observation will be the coordinate of the agent
+    # this can be described both by Discrete and Box space
+    self.observation_space = spaces.Box(low=-100, high=100,
+                                        shape=(4,2), dtype=np.float32)
+
+  def reset(self):
+    """
+    Important: the observation must be a numpy array
+    :return: (np.array) 
+    """
+    # Initialize the agent at the right of the grid
+    #self.agent_pos = self.grid_size - 1
+    self.ghost = 64
+    self.firstpiratehealth = 10
+    self.secondpiratehealth = 10
+    self.thirdpiratehealth = 10
+    self.ghostdamage = 2
+    self.firstpiratedamage = 2
+    self.secondpiratedamage = 2
+    self.thirdpiratedamage = 2
+    # here we convert to float32 to make it more general (in case we want to use continuous actions)
+    return np.array([[self.ghost, self.ghostdamage], [self.firstpiratehealth, self.firstpiratedamage], [self.secondpiratehealth, self.secondpiratedamage], [self.thirdpiratehealth, self.thirdpiratedamage]]).astype(np.float32)
+
+  def step(self, action):
+    if action == self.ATTACK:
+     # self.agent_pos -= 1
+      self.firstpiratehealth = self.firstpiratehealth - self.ghostdamage
+    elif action == self.ATTACK2:
+      self.secondpiratehealth = self.secondpiratehealth - self.ghostdamage
+    elif action == self.ATTACK3:
+      self.thirdpiratehealth = self.thirdpiratehealth - self.ghostdamage
+     # self.agent_pos += 1
+      #self.ghost = self.ghost + 2
+    else:
+      raise ValueError("Received invalid action={} which is not part of the action space".format(action))
+
+    if self.firstpiratehealth > 0:
+      self.ghost = self.ghost - self.firstpiratedamage 
+    else:
+      self.ghost = self.ghost 
+
+    if self.secondpiratehealth > 0:
+      self.ghost = self.ghost - self.secondpiratedamage 
+    else:
+      self.ghost = self.ghost 
+
+    if self.thirdpiratehealth > 0:
+      self.ghost = self.ghost - self.thirdpiratedamage 
+    else:
+      self.ghost = self.ghost 
+
+ 
+    done = bool((self.secondpiratehealth <= 0 and self.firstpiratehealth <= 0 and self.thirdpiratehealth <= 0) or self.ghost <= 0) 
+
+
+    if (self.secondpiratehealth <= 0 and self.firstpiratehealth <= 0 and self.thirdpiratehealth <= 0 and self.ghost > 0):
+      reward = 100 
+    else:
+      reward = 0
+
+    # Optionally we can pass additional info, we are not using that for now
+    info = {}
+
+    return np.array([[self.ghost, self.ghostdamage], [self.firstpiratehealth, self.firstpiratedamage], [self.secondpiratehealth, self.secondpiratedamage], [self.thirdpiratehealth, self.thirdpiratedamage]]).astype(np.float32), reward, done, info
+
+  def render(self, mode='console'):
+    print("Здоровье призрака - ")
+    print(self.ghost)
+    print("Здоровье первого пирата - ")
+    print(self.firstpiratehealth)
+    print("Здоровье второго пирата - ")
+    print(self.secondpiratehealth)
+    print("Здоровье третьего пирата - ")
+    print(self.thirdpiratehealth)
+    if mode != 'console':
+      raise NotImplementedError()
+
+  def close(self):
+    pass
