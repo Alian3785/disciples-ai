@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Socket.IO chat</title>
+  <style>
+    body { margin: 0; padding-bottom: 3rem; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+
+    #form { background: rgba(0, 0, 0, 0.15); padding: 0.25rem; position: fixed; bottom: 0; left: 0; right: 0; display: flex; height: 3rem; box-sizing: border-box; backdrop-filter: blur(10px); }
+    #input { border: none; padding: 0 1rem; flex-grow: 1; border-radius: 2rem; margin: 0.25rem; }
+    #input:focus { outline: none; }
+    #form > button { background: #333; border: none; padding: 0 1rem; margin: 0.25rem; border-radius: 3px; outline: none; color: #fff; }
+
+    #messages { list-style-type: none; margin: 0; padding: 0; }
+    #messages > li { padding: 0.5rem 1rem; }
+    #messages > li:nth-child(odd) { background: #efefef; }
+  </style>
+</head>
+<body>
+<link rel="stylesheet" href="/styles.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.1.1/svg.min.js" integrity="sha512-Aj0P6wguH3GVlCfbvTyMM90Zq886ePyMEYlZooRfx+3wcSYyUa6Uv4iAjoJ7yiWdKamqQzKp7yr/TkMQ8EEWbQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"> </script>
+
+<ul id="messages"></ul>
+<form id="form" action="">
+  <input id="input" autocomplete="off" /><button>Send</button>
+</form>
+
+<img src="/dice1.png" alt="" id="red-piece" />
+<script src="/socket.io/socket.io.js"></script>
+
+
+<script>
+
+
+
+  var pirate = {
+    damage: 30,
+    health: 100,
+  };
+
+  var pirate2 = {
+    damage: 30,
+    health: 100,
+  };
+
+
+  var ghost = {
+    damage: 50,
+    health: 100,
+  };
+
+
+  let fruits = [ghost, pirate, pirate2];
+
+  let ii = 0;
+
+</script>
+
+<p id="arrr"></p>
+
+<script>
+
+  let animation10_magic = bodymovin.loadAnimation({
+
+    container: document.getElementById('arrr'), // required
+    path: 'animm.json', // required
+    renderer: 'svg', // required
+    loop: true, // optional
+    autoplay: true, // optional
+    name: "Demo Animation", // optional
+  });
+
+</script>
+
+<button onclick="myFunction()">Призрак</button>
+
+<p id="beta"></p>
+
+<script>
+
+  function myFunction()
+  {
+    if (ii === 0) {console.log(5)}
+
+    else
+
+    {document.getElementById("beta").innerHTML = fruits[0].health -=
+            fruits[ii].damage;
+      if (ii < 2) {ii++;} else (ii = 0)
+      socket.emit('chat message', [fruits[0].health, fruits[1].health,
+        fruits[2].health, ii]);
+      somealpha.innerHTML = msg[2];
+      somebeta.innerHTML = msg[0];
+      somegamma.innerHTML = msg[1];
+      ii = msg[3];
+      ghost.health = msg[0];
+      pirate.health = msg[2];
+      pirate.health = msg[1];
+      console.log(ii);}
+
+
+
+  }
+
+
+</script>
+
+<br>
+<br>
+<br>
+<br>
+
+<button onclick="ourFunction()">Пират</button>
+
+<p id="gamma"></p>
+
+<script>
+
+  function ourFunction() {
+
+    if (ii === 1 || ii === 2) {console.log(5)}
+
+    else
+
+    {document.getElementById("gamma").innerHTML = fruits[1].health -= fruits[ii].damage;
+      if (ii <2) {ii++} else (ii = 0)
+      socket.emit('chat message', [fruits[0].health, fruits[1].health,
+        fruits[2].health, ii]);
+      somealpha.innerHTML = msg[2];
+      somebeta.innerHTML = msg[0];
+      somegamma.innerHTML = msg[1];
+      ii = msg[3];
+      ghost.health = msg[0];
+      pirate2.health = msg[2];
+      pirate.health = msg[1];
+      console.log(ii);}
+
+
+
+  }
+</script>
+
+
+<br>
+<br>
+<br>
+<br>
+
+<button onclick="hisFunction()">Пират</button>
+
+<p id="alpha"></p>
+
+<script>
+
+
+
+  function hisFunction() {
+
+
+    if (ii === 1 || ii === 2) {console.log(5)}
+
+    else
+
+    {document.getElementById("alpha").innerHTML = fruits[2].health -=
+            fruits[ii].damage;
+      if (ii <2) {ii++} else (ii = 0)
+      socket.emit('chat message', [fruits[0].health, fruits[1].health,
+        fruits[2].health, ii]);
+      somealpha.innerHTML = msg[2];
+      somebeta.innerHTML = msg[0];
+      somegamma.innerHTML = msg[1];
+      ii = msg[3];
+      ghost.health = msg[0];
+      pirate2.health = msg[2];
+      pirate.health = msg[1];
+      console.log(ii);}
+  }
+</script>
+
+
+<script>
+  var socket = io();
+
+  var somealpha = document.getElementById("alpha");
+  var somegamma = document.getElementById("gamma");
+  var somebeta = document.getElementById("beta");
+
+  var messages = document.getElementById('messages');
+  var form = document.getElementById('form');
+  var input = document.getElementById('input');
+
+
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (input.value) {
+      //   socket.emit('chat message', [fruits[0].health, fruits[1].health,
+      //   fruits[2].health]);
+      //socket.emit('chat message', ghost.damage);
+      //somealpha.innerHTML = 100500;
+      //socket.emit('chat message', "justemit");
+      //alert(input.value);
+      if (input.value == 100) {alert("ааааа");}
+      input.value = '';
+    }
+  });
+
+
+
+  socket.on('chat message', function(msg) {
+    var item = document.createElement('li');
+    item.textContent = msg;
+    somealpha.innerHTML = msg[2];
+    somebeta.innerHTML = msg[0];
+    somegamma.innerHTML = msg[1];
+    ii = msg[3];
+    ghost.health = msg[0];
+    pirate2.health = msg[2];
+    pirate.health = msg[1];
+    messages.appendChild(item);
+    //if (ii = 0) {document.write("мой ход");}
+    window.scrollTo(0, document.body.scrollHeight);
+  });
+</script>
+</body>
+</html>
