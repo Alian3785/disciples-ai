@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+  <button oncontextmenu="return false;">Click</button>
+
+  <div class="hidden">Hidden</div>
+
+  <script>
+      document.querySelector('button').addEventListener('contextmenu', e => {
+          e.preventDefault()
+          return false
+      });
+
+      document.querySelector('button').addEventListener('mousedown', e => {
+          if (e.buttons === 2) {
+              e.preventDefault()
+              e.stopPropagation()
+          } else {
+              return
+          }
+
+          document.querySelector('div').classList.remove('hidden')
+      })
+
+      document.addEventListener('mouseup', e => {
+          const div = document.querySelector('div')
+
+          !div.classList.contains('hidden') && div.classList.add('hidden')
+      })
+  </script>
+</body>
+</html>
