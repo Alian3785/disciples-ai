@@ -1,0 +1,305 @@
+import numpy as np
+import gym
+from gym import spaces
+from stable_baselines3 import PPO
+from stable_baselines3 import DQN
+from stable_baselines3 import A2C
+from sb3_contrib import TRPO
+from sb3_contrib import ARS 
+from stable_baselines3 import SAC
+from stable_baselines3.common.monitor import Monitor
+from stable_baselines3.common.vec_env import DummyVecEnv, VecVideoRecorder
+import wandb
+from wandb.integration.sb3 import WandbCallback
+import random
+#random.randint(0, 10)
+firstrandom = random.randint(0, 10)
+secondrandom = random.randint(0, 10)
+print(firstrandom)
+print(secondrandom)
+
+class GoLeftEnv(gym.Env):
+  """
+  Custom Environment that follows gym interface.
+  This is a simple env where the agent must learn to go always left. 
+  """
+  # Because of google colab, we cannot implement the GUI ('human' render mode)
+  metadata = {'render.modes': ['console']}
+  # Define constants for clearer code  
+  ATTACK = 0
+  ATTACK2 = 1
+  ATTACK3 = 2
+  LEFT = 3
+  RIGHT = 4 
+  LOW = 5
+  HIGH = 6
+  RIGHTHIGH = 7
+  RIGHTLOW = 8
+  LEFTHIGH = 9
+  LEFTLOW = 10
+  PICK = 11
+
+  def __init__(self, grid_size=100):
+    super(GoLeftEnv, self).__init__()
+
+    # Size of the 1D-grid
+    self.grid_size = grid_size
+    # Initialize the agent at the right of the grid
+    self.piratespower = 8
+    self.ghost = 66
+    self.firstpiratehealth = self.piratespower
+    self.secondpiratehealth = self.piratespower
+    self.thirdpiratehealth = self.piratespower
+    self.positionx = 1
+    self.positiony = 1
+    self.destination = firstrandom
+    self.destination2 = secondrandom
+    self.destination3 = 1
+    self.destination4 = 1
+    self.border1 = 10
+    self.border2 = 0
+    self.timetime = 0
+    self.items = 0
+    # Define action and observation space
+    # They must be gym.spaces objects
+    # Example when using discrete actions, we have two: left and right
+    n_actions = 12
+    self.action_space = spaces.Discrete(n_actions)
+    # The observation will be the coordinate of the agent
+    # this can be described both by Discrete and Box space
+    self.observation_space = spaces.Box(low=-100, high=100,
+                                        shape=(11,))
+
+  def reset(self):
+    """
+    Important: the observation must be a numpy array
+    :return: (np.array) 
+    """
+    # Initialize the agent at the right of the grid
+    #self.agent_pos = self.grid_size - 1
+    self.piratespower = 8
+    self.ghost = 66
+    self.firstpiratehealth = self.piratespower
+    self.secondpiratehealth = self.piratespower
+    self.thirdpiratehealth = self.piratespower
+    self.positionx = 1
+    self.positiony = 1
+    self.destination = firstrandom
+    self.destination2 = secondrandom
+    self.destination3 = 1
+    self.destination4 = 1
+    self.border1 = 10
+    self.border2 = 0
+    self.timetime = 0
+    self.items = 0
+    # here we convert to float32 to make it more general (in case we want to use continuous actions)
+    return np.array([self.ghost, self.firstpiratehealth, self.secondpiratehealth, self.thirdpiratehealth, self.positionx, self.positiony, self.destination, self.destination2, self.destination3, self.destination4, self.items])
+
+  def step(self, action):
+    self.timetime = self.timetime + 1
+    if action == self.ATTACK:
+      if self.positionx == self.destination and self.positiony == self.destination2:
+        if self.firstpiratehealth <= 0:
+          self.firstpiratehealth = self.firstpiratehealth - 0 
+        else:
+          self.firstpiratehealth = self.firstpiratehealth - 2
+      else:
+        self.firstpiratehealth = self.firstpiratehealth
+    elif action == self.ATTACK2:
+      if self.positionx == self.destination and self.positiony == self.destination2:
+         if self.secondpiratehealth <= 0:
+           self.secondpiratehealth = self.secondpiratehealth - 0
+         else:
+           self.secondpiratehealth = self.secondpiratehealth - 2
+      else:
+        self.secondpiratehealth = self.secondpiratehealth
+    elif action == self.ATTACK3:
+      if self.positionx == self.destination and self.positiony == self.destination2:
+        if self.thirdpiratehealth <= 0:
+           self.thirdpiratehealth = self.thirdpiratehealth - 0
+        else:   
+           self.thirdpiratehealth = self.thirdpiratehealth - 2
+      else:
+        self.thirdpiratehealth = self.thirdpiratehealth
+    elif action == self.LEFT:
+      if (self.positionx == self.destination and self.positiony == self.destination2) and (self.thirdpiratehealth <= 0 and self.firstpiratehealth <= 0 and self.secondpiratehealth <= 0):
+         self.positionx = self.positionx - 1
+      if self.positionx == self.destination and self.positiony == self.destination2:        
+        self.positionx = self.positionx - 0
+      elif self.positionx == self.border2:
+        self.positionx = self.positionx - 0
+      else: 
+        self.positionx = self.positionx - 1
+    elif action == self.RIGHT:
+      if (self.positionx == self.destination and self.positiony == self.destination2) and (self.thirdpiratehealth <= 0 and self.firstpiratehealth <= 0 and self.secondpiratehealth <= 0):
+         self.positionx = self.positionx + 1
+      if self.positionx == self.destination and self.positiony == self.destination2:        
+        self.positionx = self.positionx + 0
+      elif self.positionx == self.border1:
+        self.positionx = self.positionx + 0
+      else: 
+        self.positionx = self.positionx + 1 
+    elif action == self.LOW:
+      if (self.positionx == self.destination and self.positiony == self.destination2) and (self.thirdpiratehealth <= 0 and self.firstpiratehealth <= 0 and self.secondpiratehealth <= 0):
+         self.positiony = self.positiony - 1
+      if self.positionx == self.destination and self.positiony == self.destination2:        
+         self.positiony = self.positiony - 0
+      elif self.positiony == self.border2:
+         self.positiony = self.positiony - 0 
+      else:  
+         self.positiony = self.positiony - 1
+    elif action == self.HIGH:
+      if (self.positionx == self.destination and self.positiony == self.destination2) and (self.thirdpiratehealth <= 0 and self.firstpiratehealth <= 0 and self.secondpiratehealth <= 0):
+         self.positiony = self.positiony + 1
+      if self.positionx == self.destination and self.positiony == self.destination2:        
+         self.positiony = self.positiony + 0   
+      elif self.positiony == self.border1:
+         self.positiony = self.positiony + 0 
+      else:  
+         self.positiony = self.positiony + 1
+    elif action == self.RIGHTHIGH:
+      if (self.positionx == self.destination and self.positiony == self.destination2) and (self.thirdpiratehealth <= 0 and self.firstpiratehealth <= 0 and self.secondpiratehealth <= 0):
+         self.positiony = self.positiony + 1
+         self.positionx = self.positionx + 1
+      if self.positionx == self.destination and self.positiony == self.destination2:
+         self.positionx = self.positionx - 0
+      elif self.positionx == self.border1 or self.positiony == self.border1:
+         self.positionx = self.positionx + 0
+      else:
+         self.positiony = self.positiony + 1
+         self.positionx = self.positionx + 1
+    elif action == self.LEFTHIGH:
+      if (self.positionx == self.destination and self.positiony == self.destination2) and (self.thirdpiratehealth <= 0 and self.firstpiratehealth <= 0 and self.secondpiratehealth <= 0):
+         self.positiony = self.positiony + 1
+         self.positionx = self.positionx - 1
+      if self.positionx == self.destination and self.positiony == self.destination2:
+         self.positionx = self.positionx - 0
+      elif self.positionx == self.border2 or self.positiony == self.border1:
+         self.positionx = self.positionx + 0
+      else:
+         self.positiony = self.positiony + 1
+         self.positionx = self.positionx - 1
+    elif action == self.RIGHTLOW:
+      if (self.positionx == self.destination and self.positiony == self.destination2) and (self.thirdpiratehealth <= 0 and self.firstpiratehealth <= 0 and self.secondpiratehealth <= 0):
+         self.positiony = self.positiony - 1
+         self.positionx = self.positionx + 1
+      if self.positionx == self.destination and self.positiony == self.destination2:
+         self.positionx = self.positionx - 0
+      elif self.positionx == self.border1 or self.positiony == self.border2:
+         self.positionx = self.positionx + 0
+      else:
+         self.positiony = self.positiony - 1
+         self.positionx = self.positionx + 1
+    elif action == self.LEFTLOW:
+      if (self.positionx == self.destination and self.positiony == self.destination2) and (self.thirdpiratehealth <= 0 and self.firstpiratehealth <= 0 and self.secondpiratehealth <= 0):
+         self.positiony = self.positiony - 1
+         self.positionx = self.positionx - 1
+      if self.positionx == self.destination and self.positiony == self.destination2:
+         self.positionx = self.positionx - 0
+      elif self.positionx == self.border2 or self.positiony == self.border2:
+         self.positionx = self.positionx + 0
+      else:
+         self.positiony = self.positiony - 1
+         self.positionx = self.positionx - 1
+    elif action == self.PICK:
+      if self.thirdpiratehealth <= 0 and self.firstpiratehealth <= 0 and self.secondpiratehealth <= 0 and self.positionx == self.destination3 and self.positiony == self.destination4:
+        self.items = 1
+    else:
+      raise ValueError("Received invalid action={} which is not part of the action space".format(action))
+    
+
+
+    if self.firstpiratehealth > 0 and self.positionx == self.destination and self.positiony == self.destination2:
+      self.ghost = self.ghost - 2 
+    else:
+      self.ghost = self.ghost 
+
+    if self.secondpiratehealth > 0 and self.positionx == self.destination and self.positiony == self.destination2:
+      self.ghost = self.ghost - 2 
+    else:
+      self.ghost = self.ghost 
+
+    if self.thirdpiratehealth > 0 and self.positionx == self.destination and self.positiony == self.destination2:
+      self.ghost = self.ghost - 2 
+    else:
+      self.ghost = self.ghost 
+
+
+    done = bool((self.secondpiratehealth <= 0 and self.firstpiratehealth <= 0 and self.thirdpiratehealth <= 0 and self.items == 1) or self.timetime > 200) 
+
+    if (self.secondpiratehealth <= 0 and self.firstpiratehealth <= 0 and self.thirdpiratehealth <= 0 and self.ghost > 0 and self.items == 1):
+      reward = 10
+    elif (self.secondpiratehealth <= 0 and self.firstpiratehealth <= 0 and self.thirdpiratehealth <= 0 and self.ghost > 0):
+      reward = +0.01     
+    elif (self.secondpiratehealth <= 0 and self.firstpiratehealth <= 0 and self.thirdpiratehealth <= 0):
+      reward = -0.01  
+    else:
+      reward = -0.1
+
+ #   if self.ghost <= 10:
+ #    reward = -2
+
+  #  if (self.firstpiratehealth <= 0 and self.ghost > 0):
+  #     reward = 3 
+    
+  #  if (self.secondpiratehealth <= 0 and self.ghost > 0):
+  #     reward = 3 
+        
+  #  if (self.thirdpiratehealth <= 0 and self.ghost > 0):
+  #     reward = 3 
+     
+   
+   # elif self.ghost < 0:
+   #   reward = -2
+
+
+    # Optionally we can pass additional info, we are not using that for now
+    info = {}
+
+    return np.array([self.ghost, self.firstpiratehealth, self.secondpiratehealth, self.thirdpiratehealth, self.positionx, self.positiony, self.destination, self.destination2, self.destination3, self.destination4, self.items]), reward, done, info
+
+  def render(self, mode='console'):
+    print("Позиция 1 - ")
+    print(self.positionx)
+    print("Позиция 2 - ")
+    print(self.positiony)
+    print("Здоровье призрака - ")
+    print(self.ghost)
+    print("Здоровье первого пирата - ")
+    print(self.firstpiratehealth)
+    print("Здоровье второго пирата - ")
+    print(self.secondpiratehealth)
+    print("Здоровье третьего пирата - ")
+    print(self.thirdpiratehealth)
+    print(self.timetime)
+    if mode != 'console':
+      raise NotImplementedError()
+
+  def close(self):
+    pass
+
+from stable_baselines3.common.env_util import make_vec_env
+
+# Instantiate the env
+env = GoLeftEnv(grid_size=10)
+# wrap it
+env = make_vec_env(lambda: env, n_envs=1)
+
+# Train the agent
+
+config = {
+    "policy": 'MlpPolicy',
+    "total_timesteps": 250000
+}
+
+wandb.init(
+    config=config,
+    sync_tensorboard=True,  # automatically upload SB3's tensorboard metrics to W&B
+    project="goturnbased",
+  #  monitor_gym=True,       # automatically upload gym environements' videos
+  # save_code=True,
+)
+
+model = PPO(config['policy'], env, verbose=1, tensorboard_log=f"runs/ppo")
+model.learn(total_timesteps=config['total_timesteps'])
+wandb.finish()
