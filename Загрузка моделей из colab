@@ -1,0 +1,9 @@
+env.reset()
+model_path = "Training/Saved Models/PPO_CartPole_10k.zip"
+model = PPO.load(model_path, env=env)
+
+
+# Evaluate the trained agent
+mean_reward, std_reward = evaluate_policy(model, env, n_eval_episodes=10, deterministic=True)
+
+print(f"mean_reward={mean_reward:.2f} +/- {std_reward}")
