@@ -1,0 +1,240 @@
+import numpy as np
+import gym
+from gym import spaces
+from stable_baselines3 import PPO
+from stable_baselines3 import DQN
+from stable_baselines3 import A2C
+from stable_baselines3 import SAC
+from stable_baselines3.common.monitor import Monitor
+from stable_baselines3.common.vec_env import DummyVecEnv, VecVideoRecorder
+import wandb
+from wandb.integration.sb3 import WandbCallback
+import random
+#random.randint(0, 10)
+firstrandom = random.randint(0, 10)
+secondrandom = random.randint(0, 10)
+print(firstrandom)
+print(secondrandom)
+
+# Основной код со средой где призрак сражается с пиратами
+
+import numpy as np
+import gym
+from gym import spaces
+
+
+class GoLeftEnv(gym.Env):
+  """
+  Custom Environment that follows gym interface.
+  This is a simple env where the agent must learn to go always left. 
+  """
+  # Because of google colab, we cannot implement the GUI ('human' render mode)
+  metadata = {'render.modes': ['console']}
+  # Define constants for clearer code  
+  ATTACK = 0
+  ATTACK1 = 1
+  ATTACK2 = 2
+  ATTACK3 = 3
+  ATTACK4 = 4
+  ATTACK5 = 5
+
+
+  def __init__(self, grid_size=100):
+    super(GoLeftEnv, self).__init__()
+
+    # Size of the 1D-grid
+    self.grid_size = grid_size
+    # Initialize the agent at the right of the grid
+    self.agent_pos = grid_size - 1
+    self.ghost = 270
+    self.firstpiratehealth = 100
+    self.secondpiratehealth = 100
+    self.thirdpiratehealth = 100
+    self.ghostdamage = 80
+    self.firstpiratedamage = 25
+    self.secondpiratedamage = 25
+    self.thirdpiratedamage = 25
+    self.firstpirateweapon = 0
+    self.secondpirateweapon = 0
+    self.thirdpirateweapon = 0
+    self.ghostweapon = 0
+    self.firstpirateshield = 0
+    self.secondpirateshield = 0
+    self.thirdpirateshield = 0
+    self.ghostshield = 0
+    self.firstpirateinit = 50
+    self.secondpirateinit = 50
+    self.thirdpirateinit = 50
+    self.ghostinit = 35
+    # Define action and observation space
+    # They must be gym.spaces objects
+    # Example when using discrete actions, we have two: left and right
+    n_actions = 6
+    self.action_space = spaces.Discrete(n_actions)
+    # The observation will be the coordinate of the agent
+    # this can be described both by Discrete and Box space
+    self.observation_space = spaces.Box(low=-100, high=100,
+                                        shape=(4,5), dtype=np.float32)
+
+  def reset(self):
+    """
+    Important: the observation must be a numpy array
+    :return: (np.array) 
+    """
+
+    # Initialize the agent at the right of the grid
+    #self.agent_pos = self.grid_size - 1
+    self.ghost = 270
+    self.firstpiratehealth = 100
+    self.secondpiratehealth = 100
+    self.thirdpiratehealth = 100
+    self.ghostdamage = 80
+    self.firstpiratedamage = 25
+    self.secondpiratedamage = 25
+    self.thirdpiratedamage = 25
+    self.firstpirateweapon = 0
+    self.secondpirateweapon = 0
+    self.thirdpirateweapon = 0
+    self.ghostweapon = 0
+    self.firstpirateshield = 0
+    self.secondpirateshield = 0
+    self.thirdpirateshield = 0
+    self.ghostshield = 0
+    self.firstpirateinit = 50
+    self.secondpirateinit = 50
+    self.thirdpirateinit = 50
+    self.ghostinit = 35
+    # here we convert to float32 to make it more general (in case we want to use continuous actions)
+    return np.array([[self.ghost, self.ghostdamage, self.ghostweapon, self.firstpirateshield, self.firstpirateinit], 
+                     [self.firstpiratehealth, self.firstpiratedamage, self.firstpirateweapon, self.secondpirateshield, self.secondpirateinit], 
+                     [self.secondpiratehealth, self.secondpiratedamage, self.secondpirateweapon, self.thirdpirateshield, self.thirdpirateinit], 
+                     [self.thirdpiratehealth, self.thirdpiratedamage, self.thirdpirateweapon, self.ghostshield, self.ghostinit]]).astype(np.float32)
+
+  def step(self, action):
+    if action == self.ATTACK:
+     # self.agent_pos -= 1
+      self.firstpiratehealth = self.firstpiratehealth - self.ghostdamage
+    elif action == self.ATTACK1:
+      self.secondpiratehealth = self.secondpiratehealth - self.ghostdamage
+    elif action == self.ATTACK2:
+      self.thirdpiratehealth = self.thirdpiratehealth - self.ghostdamage
+    elif action == self.ATTACK3:
+      self.ghost = self.ghost
+    elif action == self.ATTACK4:
+      self.ghost = self.ghost
+    elif action == self.ATTACK5:
+      self.ghost = self.ghost
+    else:
+      raise ValueError("Received invalid action={} which is not part of the action space".format(action))
+
+    if self.firstpiratehealth > 0:
+      self.ghost = self.ghost - self.firstpiratedamage 
+    else:
+      self.ghost = self.ghost 
+
+    if self.secondpiratehealth > 0:
+      self.ghost = self.ghost - self.secondpiratedamage 
+    else:
+      self.ghost = self.ghost 
+
+    if self.thirdpiratehealth > 0:
+      self.ghost = self.ghost - self.thirdpiratedamage 
+    else:
+      self.ghost = self.ghost 
+
+
+    done = bool((self.secondpiratehealth <= 0 and self.firstpiratehealth <= 0 and self.thirdpiratehealth <= 0) or self.ghost <= 0) 
+
+
+    if (self.secondpiratehealth <= 0 and self.firstpiratehealth <= 0 and self.thirdpiratehealth <= 0 and self.ghost > 0):
+      reward = 100 
+    else:
+      reward = 0
+
+    # Optionally we can pass additional info, we are not using that for now
+    info = {}
+
+    return np.array([[self.ghost, self.ghostdamage, self.ghostweapon, self.firstpirateshield, self.firstpirateinit], 
+                     [self.firstpiratehealth, self.firstpiratedamage, self.firstpirateweapon, self.secondpirateshield, self.secondpirateinit], 
+                     [self.secondpiratehealth, self.secondpiratedamage, self.secondpirateweapon, self.thirdpirateshield, self.thirdpirateinit], 
+                     [self.thirdpiratehealth, self.thirdpiratedamage, self.thirdpirateweapon, self.ghostshield, self.ghostinit]]).astype(np.float32), reward, done, info
+
+  def render(self, mode='console'):
+    print("Здоровье призрака - ")
+    print(self.ghost)
+    print("Здоровье первого пирата - ")
+    print(self.firstpiratehealth)
+    print("Здоровье второго пирата - ")
+    print(self.secondpiratehealth)
+    print("Здоровье третьего пирата - ")
+    print(self.thirdpiratehealth)
+    if mode != 'console':
+      raise NotImplementedError()
+
+  def close(self):
+    pass
+
+from stable_baselines3.common.env_util import make_vec_env
+
+# Instantiate the env
+env = GoLeftEnv(grid_size=10)
+# wrap it
+env = make_vec_env(lambda: env, n_envs=1)
+
+# Train the agent
+
+config = {
+    "policy": 'MlpPolicy',
+    "total_timesteps": 100000
+}
+
+wandb.init(
+    config=config,
+    sync_tensorboard=True,  # automatically upload SB3's tensorboard metrics to W&B
+    project="goturnbased2",
+    save_code=True,
+)
+
+model = PPO(config['policy'], env, verbose=1, tensorboard_log=f"runs/ppo")
+model.learn(
+    total_timesteps=config["total_timesteps"],
+    callback=WandbCallback(
+        gradient_save_freq=100,
+        model_save_path=f"models/{1234}",
+        verbose=2,
+    ),
+)
+
+wandb.finish()
+
+from stable_baselines3.common.env_util import make_vec_env
+
+# Instantiate the env
+env = GoLeftEnv(grid_size=10)
+# wrap it
+env = make_vec_env(lambda: env, n_envs=1)
+
+
+from stable_baselines3.common.evaluation import evaluate_policy
+
+# Evaluate the trained agent
+mean_reward, std_reward = evaluate_policy(model, env, n_eval_episodes=100, deterministic=True)
+
+print(f"mean_reward={mean_reward:.2f} +/- {std_reward}")
+
+
+# Test the trained agent
+obs = env.reset()
+n_steps = 50
+for step in range(n_steps):
+  action, _ = model.predict(obs, deterministic=True)
+  print("Step {}".format(step + 1))
+  print("Action: ", action)
+  obs, reward, done, info = env.step(action)
+  print('obs=', obs, 'reward=', reward, 'done=', done)
+  env.render(mode='console')
+  if done:
+    # Note that the VecEnv resets automatically
+    # when a done signal is encountered
+    print("Goal reached!", "reward=", reward)
+    break
