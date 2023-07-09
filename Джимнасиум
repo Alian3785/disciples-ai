@@ -1,0 +1,174 @@
+class GoLeftEnv(gym.Env):
+    """
+    Custom Environment that follows gym interface.
+    This is a simple env where the agent must learn to go always left.
+    """
+
+    # Because of google colab, we cannot implement the GUI ('human' render mode)
+    metadata = {"render_modes": ["console"]}
+
+    # Define constants for clearer code
+    ATTACK = 0
+    ATTACK1 = 1
+    ATTACK2 = 2
+    ATTACK3 = 3
+    ATTACK4 = 4
+    ATTACK5 = 5
+
+    def __init__(self, grid_size=10, render_mode="console"):
+        super(GoLeftEnv, self).__init__()
+        self.render_mode = render_mode
+
+
+        self.grid_size = grid_size
+
+        self.agent_pos = grid_size - 1
+        self.ghost = 270
+        self.firstpiratehealth = 100
+        self.secondpiratehealth = 100
+        self.thirdpiratehealth = 100
+        self.fullghost = 270
+        self.firstpiratefullhealth = 100
+        self.secondpiratefullhealth = 100
+        self.thirdpiratefullhealth = 100
+        self.ghostdamage = 80
+        self.firstpiratedamage = 25
+        self.secondpiratedamage = 25
+        self.thirdpiratedamage = 25
+        self.firstpirateweapon = 0
+        self.secondpirateweapon = 0
+        self.thirdpirateweapon = 0
+        self.ghostweapon = 0
+        self.firstpirateshield = 0
+        self.secondpirateshield = 0
+        self.thirdpirateshield = 0
+        self.ghostshield = 0
+        self.firstpirateinit = 50
+        self.secondpirateinit = 50
+        self.thirdpirateinit = 50
+        self.ghostinit = 35
+        self.firstpirateaccuracy = 80
+        self.secondpirateaccuracy = 80
+        self.thirdpirateaccuracy = 80
+        self.ghostaccuracy = 80
+    # Define action and observation space
+    # They must be gym.spaces objects
+
+        n_actions = 6
+        self.action_space = spaces.Discrete(n_actions)
+        # The observation will be the coordinate of the agent
+        # this can be described both by Discrete and Box space
+        self.observation_space = spaces.Box(low=-500, high=500,
+                                            shape=(4,7), dtype=np.float32)
+
+    def reset(self, seed=None, options=None):
+        """
+        Important: the observation must be a numpy array
+        :return: (np.array)
+        """
+        super().reset(seed=seed, options=options)
+        # Initialize the agent at the right of the grid
+        self.ghost = 270
+        self.firstpiratehealth = 100
+        self.secondpiratehealth = 100
+        self.thirdpiratehealth = 100
+        self.fullghost = 270
+        self.firstpiratefullhealth = 100
+        self.secondpiratefullhealth = 100
+        self.thirdpiratefullhealth = 100
+        self.ghostdamage = 80
+        self.firstpiratedamage = 25
+        self.secondpiratedamage = 25
+        self.thirdpiratedamage = 25
+        self.firstpirateweapon = 0
+        self.secondpirateweapon = 0
+        self.thirdpirateweapon = 0
+        self.ghostweapon = 0
+        self.firstpirateshield = 0
+        self.secondpirateshield = 0
+        self.thirdpirateshield = 0
+        self.ghostshield = 0
+        self.firstpirateinit = 50
+        self.secondpirateinit = 50
+        self.thirdpirateinit = 50
+        self.ghostinit = 35
+        self.firstpirateaccuracy = 80
+        self.secondpirateaccuracy = 80
+        self.thirdpirateaccuracy = 80
+        self.ghostaccuracy = 80
+        # here we convert to float32 to make it more general (in case we want to use continuous actions)
+        return np.array([[self.ghost, self.ghostdamage, self.ghostweapon, self.ghostshield, self.ghostinit, self.ghostaccuracy, self.fullghost],
+                        [self.firstpiratehealth, self.firstpiratedamage, self.firstpirateweapon, self.secondpirateshield, self.secondpirateinit, self.firstpirateaccuracy, self.firstpiratefullhealth],
+                        [self.secondpiratehealth, self.secondpiratedamage, self.secondpirateweapon, self.thirdpirateshield, self.thirdpirateinit, self.firstpirateaccuracy, self.secondpiratefullhealth],
+                        [self.thirdpiratehealth, self.thirdpiratedamage, self.thirdpirateweapon, self.ghostshield, self.ghostinit, self.firstpirateaccuracy, self.thirdpiratefullhealth]]).astype(np.float32), {}
+
+    def step(self, action):
+        if action == self.ATTACK:
+        # self.agent_pos -= 1
+          self.firstpiratehealth = self.firstpiratehealth - self.ghostdamage
+        elif action == self.ATTACK1:
+          self.secondpiratehealth = self.secondpiratehealth - self.ghostdamage
+        elif action == self.ATTACK2:
+          self.thirdpiratehealth = self.thirdpiratehealth - self.ghostdamage
+        elif action == self.ATTACK3:
+          self.ghost = self.ghost
+        elif action == self.ATTACK4:
+          self.ghost = self.ghost
+        elif action == self.ATTACK5:
+          self.ghost = self.ghost
+        else:
+          raise ValueError("Received invalid action={} which is not part of the action space".format(action))
+
+        if self.firstpiratehealth > 0:
+          self.ghost = self.ghost - self.firstpiratedamage
+        else:
+          self.ghost = self.ghost
+
+        if self.secondpiratehealth > 0:
+          self.ghost = self.ghost - self.secondpiratedamage
+        else:
+          self.ghost = self.ghost
+
+        if self.thirdpiratehealth > 0:
+          self.ghost = self.ghost - self.thirdpiratedamage
+        else:
+          self.ghost = self.ghost
+
+        # Are we at the left of the grid?
+        terminated = bool((self.secondpiratehealth <= 0 and self.firstpiratehealth <= 0 and self.thirdpiratehealth <= 0) or self.ghost <= 0)
+        truncated = False  # we do not limit the number of steps here
+
+        # Null reward everywhere except when reaching the goal (left of the grid)
+        if (self.secondpiratehealth <= 0 and self.firstpiratehealth <= 0 and self.thirdpiratehealth <= 0 and self.ghost > 0):
+          reward = 100
+        else:
+          reward = 0
+
+        # Optionally we can pass additional info, we are not using that for now
+        info = {}
+
+        return (
+            np.array([[self.ghost, self.ghostdamage, self.ghostweapon, self.ghostshield, self.ghostinit, self.ghostaccuracy, self.fullghost],
+                     [self.firstpiratehealth, self.firstpiratedamage, self.firstpirateweapon, self.secondpirateshield, self.secondpirateinit, self.firstpirateaccuracy, self.firstpiratefullhealth],
+                     [self.secondpiratehealth, self.secondpiratedamage, self.secondpirateweapon, self.thirdpirateshield, self.thirdpirateinit, self.firstpirateaccuracy, self.secondpiratefullhealth],
+                     [self.thirdpiratehealth, self.thirdpiratedamage, self.thirdpirateweapon, self.ghostshield, self.ghostinit, self.firstpirateaccuracy, self.thirdpiratefullhealth]]).astype(np.float32),
+            reward,
+            terminated,
+            truncated,
+            info,
+        )
+
+    def render(self):
+        # agent is represented as a cross, rest as a dot
+        if self.render_mode == "console":
+            print("Здоровье призрака - ")
+            print(self.ghost)
+            print("Здоровье первого пирата - ")
+            print(self.firstpiratehealth)
+            print("Здоровье второго пирата - ")
+            print(self.secondpiratehealth)
+            print("Здоровье третьего пирата - ")
+            print(self.thirdpiratehealth)
+
+    def close(self):
+        pass
